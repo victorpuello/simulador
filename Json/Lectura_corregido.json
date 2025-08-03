@@ -1,0 +1,1278 @@
+[
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión y análisis de la estructura textual.",
+    "contexto": "El primer gran filósofo del siglo diecisiete (si exceptuamos a Bacon y Galileo) fue Descartes, y si alguna vez se dijo de alguien que estuvo a punto de ser asesinado habrá que decirlo de él. La historia es la siguiente, según la cuenta Baillet en su Vie de M. Descartes, tomo I, páginas 102-103. En 1621, Descartes, que tenía unos veintiséis años, se hallaba como siempre viajando (pues era inquieto como una hiena) y, al llegar al Elba, tomó una embarcación para Friezland oriental. Nadie se ha enterado nunca de lo que podía buscar en Friezland oriental y tal vez él se hiciera la misma pregunta, ya que, al llegar a Embden, decidió dirigirse al instante a Friezland occidental, y siendo demasiado impaciente para tolerar cualquier demora, alquiló una barca y contrató a unos cuantos marineros. Tan pronto habían salido al mar cuando hizo un agradable descubrimiento, al saber que se había encerrado en una guarida de asesinos. Se dio cuenta, dice M. Baillet, de que su tripulación estaba formada por criminales, no aficionados, señores, como lo somos nosotros, sino profesionales cuya máxima ambición, por el momento, era degollarlo. La historia es demasiado amena para resumirla y a continuación la traduzco cuidadosamente del original francés de la biografía: “M. Descartes no tenía más compañía que su criado, con quien conversaba en francés. Los marineros, creyendo que se trataba de un comerciante y no de un caballero, pensaron que llevaría dinero consigo y pronto llegaron a una decisión que no era en modo alguno ventajosa para su bolsa. Entre los ladrones de mar y los ladrones de bosques, hay esta diferencia, que los últimos pueden perdonar la vida a sus víctimas sin peligro para ellos, en tanto que si los otros llevan a sus pasajeros a la costa, corren grave peligro de ir a parar a la cárcel. La tripulación de M. Descartes tomó sus precauciones para evitar todo riesgo de esta naturaleza. Lo suponían un extranjero venido de lejos, sin relaciones en el país, y se dijeron que nadie se daría el trabajo de averiguar su paradero cuando desapareciera”. Piensen, señores, en estos perros de Friezland que hablan de un filósofo como si fuese una barrica de ron consignada a un barco de carga. “Notaron que era de carácter manso y paciente y, juzgándolo por la gentileza de su comportamiento y la cortesía de su trato, se imaginaron que debía ser un joven inexperimentado, sin situación ni raíces en la vida, y concluyeron que les sería fácil quitarle la vida. No tuvieron empacho en discutir la cuestión en presencia suya pues no creían que entendiese otro idioma además del que empleaba para hablar con su criado; como resultado de sus deliberaciones decidieron asesinarlo, arrojar sus restos al mar y dividirse el botín”. Perdonen que me ría, caballeros, pero a decir verdad me río siempre que recuerdo esta historia, en la que hay dos cosas que me parecen muy cómicas. Una de ellas es el pánico de Descartes, a quien se le debieron poner los pelos de punta, ante el pequeño drama de su propia muerte, funeral, herencia y administración de bienes. Pero hay otro aspecto que me parece aún más gracioso, y es que si los mastines de Friezland hubieran estado “a la altura”, no tendríamos filosofía cartesiana.",
+    "enunciado": "A juzgar por su estilo, tema y estructura, ¿en cuál de los siguientes contextos estaría inscrito más apropiadamente el pasaje anterior?",
+    "opciones": {
+      "A": "En una revista académica, como parte de un artículo sobre los orígenes y la importancia de la filosofía cartesiana.",
+      "B": "En un discurso ofrecido a un grupo conformado por aficionados al estudio de asesinatos en la historia de la filosofía.",
+      "C": "En una crónica periodística, con motivo de un especial acerca de las muertes más curiosas de la historia.",
+      "D": "En un seminario dirigido a historiadores especialistas en la vida de los personajes insignes del siglo XX."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El estilo del texto es narrativo, humorístico e interpela directamente al público ('Piensen, señores', 'Perdonen que me ría, caballeros'), lo cual es característico de un discurso oral dirigido a una audiencia de aficionados, no a un público académico o especializado.",
+    "explicacion": "El tono del autor es coloquial y ameno, utilizando el humor y dirigiéndose a 'caballeros'. Esto descarta el formato de una revista académica (A) o un seminario para especialistas (D), que serían formales y rigurosos. Aunque narra un evento histórico, el enfoque en lo 'cómico' y el asesinato como una de las 'bellas artes' (según la fuente) lo aleja de una crónica periodística tradicional (C) y lo acerca a un discurso para un público con intereses particulares en el tema de los asesinatos históricos desde una perspectiva amena.",
+    "habilidad_evaluada": "Identificar el propósito comunicativo y el contexto de un texto a partir de su estilo y estructura.",
+    "explicacion_opciones_incorrectas": {
+      "A": "El estilo es demasiado informal y humorístico para una revista académica.",
+      "C": "El enfoque no es puramente informativo como en una crónica, sino que tiene un tono de entretenimiento y reflexión personal.",
+      "D": "El lenguaje y el enfoque no son los de un seminario para especialistas; es un relato accesible para no expertos."
+    },
+    "estrategias_resolucion": "1. Analizar el tono del narrador (humorístico, directo). 2. Identificar a quién se dirige el texto ('caballeros'). 3. Evaluar qué tipo de publicación o evento se ajusta a ese estilo. 4. Descartar los contextos que exigen un lenguaje formal y académico.",
+    "errores_comunes": "Confundir el tema (un filósofo) con el contexto de publicación (creer que debe ser académico) sin analizar el estilo del lenguaje.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["estilo textual", "propósito comunicativo", "contexto", "Descartes", "narrativa"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Identificación y entendimiento de los contenidos locales que conforman un texto.",
+    "contexto": "Uno de los escenarios donde empezó a codearse el vallenato con la música que escuchaba y bailaba la burguesía —valses, mazurcas, canciones napolitanas— fue el de las colitas. Era este el nombre que recibían las ‘colas' o finales de fiesta de la clase adinerada: bodas, bautizos, cumpleaños, festejos religiosos... Durante el sarao, mientras los señores se divertían con la música europea que interpretaba una precaria orquesta provinciana, los trabajadores pasaban la fiesta en la cocina y los galpones a punta de acordeón, guacharaca y caja. Despachada la orquesta, los de atrás eran invitados a pasar adelante, y patrones y vaqueros se sentaban a tomar y cantar juntos. Se ha discutido acerca del papel que cumplieron las colitas en esta historia. Algunos dicen que estos remates de fiesta fueron el pabellón de maternidad del vallenato, pues combinaron ritmos europeos y nativos: entre ambos dieron a luz los aires vallenatos. “Las colitas son el ancestro directo del vallenato moderno”, afirma López Michelsen. Pero parece más acertado pensar que las colitas no ayudaron a formar el género, sino a divulgarlo. Para empezar, esta clase de fiestas improvisadas no se conocieron en toda la región, sino tan sólo en la zona del Valle de Upar. En El Paso no hubo colitas. En muchos lugares del río tampoco. Y, por otra parte, los historiadores indican que las colitas surgieron a comienzos del siglo XX, cuando ya el vallenato había empezado a coger ritmo con el trío del instrumental clásico. En cambio, las piquerias y retos sí constituyeron desde el principio uno de los más efectivos moldes de creación, propagación y desarrollo del vallenato. La leyenda de Francisco el Hombre habla de su desafío con el diablo, a quien únicamente logra derrotar cuando le canta el Credo al revés. Los grandes acordeoneros viajaban durante días para acudir a piquerias, concertadas de antemano o a través de recados, como lo atestigua 'La gota fría': \"Acordate Moralitos de aquel día / que estuviste en Urumita/y no quisiste hacer parada”.",
+    "enunciado": "El autor introduce la cita de López Michelsen con el fin de presentar la opinión de un conocedor del vallenato y",
+    "opciones": {
+      "A": "reforzar la tesis principal del texto, según la cual las colitas fueron divulgadoras del género.",
+      "B": "señalar una posición discutible sobre el papel que desempeñaron las colitas en el origen del género.",
+      "C": "legitimar la tesis principal del texto, según la cual las colitas originaron el vallenato moderno.",
+      "D": "convencer al lector de que las colitas fueron las únicas divulgadoras del vallenato moderno."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El autor presenta la cita de López Michelsen, que afirma que las colitas son el 'ancestro directo' del vallenato, para inmediatamente después contradecirla ('Pero parece más acertado pensar que...'), mostrando que es una posición debatible.",
+    "explicacion": "La estructura argumentativa del texto es presentar una idea (la de López Michelsen) y luego refutarla con argumentos propios. La frase que sigue a la cita comienza con 'Pero', un conector adversativo que indica oposición. Por lo tanto, la cita se usa para introducir una opinión que el autor considera discutible y que procederá a rebatir. No busca reforzar ni legitimar su propia tesis con esa cita, sino usarla como contrapunto.",
+    "habilidad_evaluada": "Analizar la función de una cita dentro de la estructura argumentativa de un texto.",
+    "explicacion_opciones_incorrectas": {
+      "A": "La tesis principal del autor es que las colitas fueron divulgadoras, no que originaron el género. La cita de Michelsen dice lo contrario, por lo que no la refuerza.",
+      "C": "El autor no busca legitimar la idea de que las colitas originaron el vallenato; de hecho, la refuta.",
+      "D": "El autor argumenta que las piquerias fueron un molde más efectivo de propagación, por lo que no afirmaría que las colitas fueron las 'únicas' divulgadoras."
+    },
+    "estrategias_resolucion": "1. Leer la cita de López Michelsen. 2. Leer la frase que sigue inmediatamente a la cita. 3. Identificar el conector 'Pero' y entender su función de oposición. 4. Concluir que la cita se presenta como un punto de vista a debatir.",
+    "errores_comunes": "Asumir que todas las citas en un texto se usan para apoyar la tesis del autor, sin fijarse en el contexto y los conectores que la rodean.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["argumentación", "cita textual", "conectores lógicos", "vallenato", "tesis"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Identificación y entendimiento de los contenidos locales que conforman un texto.",
+    "contexto": "Uno de los escenarios donde empezó a codearse el vallenato con la música que escuchaba y bailaba la burguesía —valses, mazurcas, canciones napolitanas— fue el de las colitas. Era este el nombre que recibían las ‘colas' o finales de fiesta de la clase adinerada: bodas, bautizos, cumpleaños, festejos religiosos... Durante el sarao, mientras los señores se divertían con la música europea que interpretaba una precaria orquesta provinciana, los trabajadores pasaban la fiesta en la cocina y los galpones a punta de acordeón, guacharaca y caja. Despachada la orquesta, los de atrás eran invitados a pasar adelante, y patrones y vaqueros se sentaban a tomar y cantar juntos. Se ha discutido acerca del papel que cumplieron las colitas en esta historia. Algunos dicen que estos remates de fiesta fueron el pabellón de maternidad del vallenato, pues combinaron ritmos europeos y nativos: entre ambos dieron a luz los aires vallenatos. “Las colitas son el ancestro directo del vallenato moderno”, afirma López Michelsen. Pero parece más acertado pensar que las colitas no ayudaron a formar el género, sino a divulgarlo. Para empezar, esta clase de fiestas improvisadas no se conocieron en toda la región, sino tan sólo en la zona del Valle de Upar. En El Paso no hubo colitas. En muchos lugares del río tampoco. Y, por otra parte, los historiadores indican que las colitas surgieron a comienzos del siglo XX, cuando ya el vallenato había empezado a coger ritmo con el trío del instrumental clásico. En cambio, las piquerias y retos sí constituyeron desde el principio uno de los más efectivos moldes de creación, propagación y desarrollo del vallenato. La leyenda de Francisco el Hombre habla de su desafío con el diablo, a quien únicamente logra derrotar cuando le canta el Credo al revés. Los grandes acordeoneros viajaban durante días para acudir a piquerias, concertadas de antemano o a través de recados, como lo atestigua 'La gota fría': \"Acordate Moralitos de aquel día / que estuviste en Urumita/y no quisiste hacer parada”.",
+    "enunciado": "El autor cita el verso de La gota fría para apoyar la idea de que los acordeoneros viajaban para asistir a diferentes piquerias, porque en este se hace referencia a",
+    "opciones": {
+      "A": "un acordeonero que cantaba colitas, llamado Lorenzo Morales.",
+      "B": "Urumita, un pueblo famoso por la realización de colitas.",
+      "C": "un acordeonero que se encontraba de paso por un pueblo.",
+      "D": "Urumita, un pueblo al cual iban los acordeoneros."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El verso 'Acordate Moralitos de aquel día / que estuviste en Urumita/y no quisiste hacer parada' se usa como evidencia de que los acordeoneros viajaban para las piquerias. El verso implica que Moralitos estaba en Urumita, pero decidió no detenerse ('no quisiste hacer parada'), lo que sugiere que estaba de paso en su viaje.",
+    "explicacion": "El autor introduce la cita de 'La gota fría' para ejemplificar cómo los acordeoneros viajaban a las piquerias. La frase clave es 'no quisiste hacer parada', que indica que el personaje estaba en tránsito. Esto apoya la idea de que los músicos se desplazaban grandes distancias para estos duelos musicales, en lugar de que Urumita fuera el destino final o un lugar de 'colitas'.",
+    "habilidad_evaluada": "Interpretar el significado de una cita textual para validar una afirmación del autor.",
+    "explicacion_opciones_incorrectas": {
+      "A": "El texto no dice que Morales cantara colitas, sino que viajaba para piquerias.",
+      "B": "El texto no menciona que Urumita fuera famosa por las colitas; de hecho, las colitas se asocian principalmente al Valle de Upar.",
+      "D": "El verso no dice que Urumita fuera el destino, sino un lugar por el que pasó sin detenerse, lo cual no apoya la idea de que fuera un destino para los acordeoneros."
+    },
+    "estrategias_resolucion": "1. Identificar la afirmación que el autor quiere apoyar ('Los grandes acordeoneros viajaban durante días para acudir a piquerias'). 2. Leer la cita y analizar su contenido literal. 3. Conectar el significado de la cita ('no quisiste hacer parada') con la afirmación del autor.",
+    "errores_comunes": "Interpretar la mención de un lugar como el destino final, sin prestar atención al resto de la frase que modifica su significado.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["interpretación textual", "cita textual", "vallenato", "La gota fría", "evidencia"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "Con el siguiente fragmento comienza la novela “Sin remedio” de Antonio Caballero. Los sucesos tienen lugar en la madrugada. Los protagonistas son Escobar, un poeta frustrado, y Fina, la mujer con quien vive. A los treinta y un años Rimbaud estaba muerto. Desde la madrugada de sus treinta y un años Escobar contempló la revelación, parada en el alféizar como un pájaro: a los treinta y un años Rimbaud estaba muerto. Increíble. Fina seguía durmiendo junto a él, como si no se diera cuenta de la gravedad de la cosa. Le tapó las narices con dos dedos. Fina gimió, se revolvió en las sábanas; y después, con un ronquido, empezó a respirar tranquilamente por la boca. Las mujeres no entienden. Afuera cantaron los primeros pájaros, se oyó el ruido del primer motor, que es siempre el de una motocicleta. Es la hora de morir. Sentado sobre el coxis, con la nuca apoyada en el filo del espaldar de la cama y los ojos mirando el techo sin molduras, Escobar se esforzó por no pensar en nada. Que el universo lo absorbiera dulcemente, sin ruido. Que cuando Fina al fin se despertara hallara apenas un charquito de humedad entre las sábanas revueltas. Pensó que ya nunca más sería el mismo que se esforzaba ahora por no pensar en nada; pensó que nunca más sería el mismo que ahora pensaba que nunca más sería el mismo. Pero afuera crecían los ruidos de la vida. Sintió en su bajo vientre una punzada de advertencia: las ganas de orinar. La vida. Ah, levantarse. Tampoco esta vez moriremos. Vio asomar una raja delgada de sol por sobre el filo de los cerros, como un ascua. El sol entero se alzó de un solo golpe, globuloso, rosado oscuro en la neblina, y más arriba el cielo era ya azul, azul añil, tal vez: ¿Cuál es el azul añil? Y más arriba todavía, de un azul más profundo, tal vez azul cobalto. Como todos los días, probablemente. Aunque esas no eran horas de despertarse a ver todos los días. Nada garantizaba que el sol saliera así todos los días. No era posible. Decidió brindarle un poema, como un acto de fe. Sol puntual, sol igual, sol fatal, lento sol caracol, sol de Colombia. Y era un lánguido sol lleno de eles, de día que promete lluvia. Quiso despertar a Fina para recitarle su poema. Pero ya había pasado el entusiasmo. Quieto en la cama vio el lento ensombrecerse del día, las agrias nubes grises crecer sobre los cerros, el trazado plomizo de las primeras gotas de la lluvia, pesadas como piedras. Tal vez hubiera sido preferible estar muerto. No soportar el mismo día una vez y otra vez, el mismo sol, la misma lluvia, el tedio hasta los mismos bordes: la vida que va pasando y va volviendo en redondo. Y si se acaba la vida, faltan las reencarnaciones. El previsible despertar de Fina, el jugo de naranja, el desayuno.",
+    "enunciado": "A partir de sus pensamientos y actitudes, es posible concluir que Escobar es un hombre",
+    "opciones": {
+      "A": "psicótico y con tendencias depresivas.",
+      "B": "entusiasta y entregado a su pareja.",
+      "C": "organizado e inmerso en la rutina.",
+      "D": "sensible y con angustias."
+    },
+    "respuesta_correcta": "D",
+    "retroalimentacion": "El texto muestra a Escobar reflexionando profundamente sobre la muerte, la vida, el paso del tiempo y el tedio. Su sensibilidad se ve en su intento de escribir un poema y sus angustias en frases como 'Es la hora de morir', 'Tal vez hubiera sido preferible estar muerto' y 'No soportar el mismo día una vez y otra vez'.",
+    "explicacion": "Los pensamientos de Escobar giran en torno a temas existenciales como la muerte (la de Rimbaud, la suya propia), el significado de la vida y el tedio de la repetición. Esto demuestra una gran angustia. Su sensibilidad se manifiesta en su percepción poética del amanecer ('azul añil', 'azul cobalto') y su impulso de crear un poema. Por lo tanto, 'sensible y con angustias' es la descripción que mejor recoge la complejidad del personaje presentada en el fragmento.",
+    "habilidad_evaluada": "Inferir características de un personaje a partir de sus pensamientos y acciones en un texto narrativo.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Aunque tiene pensamientos oscuros, el término 'psicótico' es una etiqueta clínica que no se puede justificar con el texto; sus pensamientos, aunque angustiosos, son coherentes.",
+      "B": "Es lo contrario a entusiasta; su entusiasmo por el poema 'ya había pasado'. Su interacción con Fina es distante y hasta un poco agresiva ('Le tapó las narices').",
+      "C": "Aunque reflexiona sobre la rutina ('el mismo sol, la misma lluvia'), lo hace con tedio y desesperación, no como alguien que está cómodamente 'inmerso' en ella."
+    },
+    "estrategias_resolucion": "1. Rastrear las frases que describen los pensamientos y sentimientos de Escobar. 2. Clasificar estas frases en categorías (ej. pensamientos sobre la muerte, la vida, el arte, su pareja). 3. Evaluar cuál de las opciones resume mejor el conjunto de estas características.",
+    "errores_comunes": "Fijarse en un solo aspecto del personaje (como su pensamiento sobre la muerte) y elegir una opción extrema (como 'psicótico') sin considerar la totalidad de sus acciones y reflexiones.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["caracterización de personaje", "inferencia", "narrativa", "Antonio Caballero", "angustia existencial"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "LA PÉRDIDA DE LA PRIVACIDAD. El primer efecto de la globalización de la comunicación por Internet ha sido la crisis de la noción de límite. El concepto de límite es tan antiguo como la especie humana, incluso como todas las especies animales. La etología nos enseña que todos los animales reconocen que hay a su alrededor y en torno a sus semejantes una burbuja de respeto, un área territorial dentro de la cual se sienten seguros, y reconocen como adversario al que sobrepasa dicho límite. La antropología cultural nos ha demostrado que esta burbuja varía según las culturas, y que la proximidad, que para unos pueblos es expresión de confianza, para otros es una intrusión y una agresión.",
+    "enunciado": "¿Cuál de los siguientes enunciados sintetiza mejor el contenido del primer párrafo?",
+    "opciones": {
+      "A": "Una profunda tradición intelectual ha configurado el concepto de límite como el espacio de defensa que crean los seres a su alrededor.",
+      "B": "Internet ha generado cambios en el concepto tradicional de límite, tal como lo define la etología y la antropología.",
+      "C": "Por naturaleza los seres vivos exigen el respeto del propio espacio, y esto aplica incluso para las relaciones que se dan en Internet.",
+      "D": "Los estudios de la etología y la antropología nos permiten comprender por qué Internet vulnera la intimidad de las personas."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El párrafo comienza estableciendo que el 'primer efecto... por Internet ha sido la crisis de la noción de límite'. Luego, procede a definir ese concepto tradicional de límite desde la etología y la antropología. Por lo tanto, la síntesis es que Internet ha cambiado un concepto antiguo.",
+    "explicacion": "La primera oración del párrafo establece la idea principal: la crisis de la noción de límite a causa de Internet. El resto del párrafo se dedica a explicar qué es esa 'noción de límite' tradicional, recurriendo a la etología (animales) y la antropología (humanos). La opción B es la única que conecta ambos elementos: el cambio provocado por Internet y la definición del concepto tradicional.",
+    "habilidad_evaluada": "Identificar la idea principal y la estructura de un párrafo.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Aunque habla del concepto de límite, omite la idea central del párrafo que es el impacto de Internet sobre este.",
+      "C": "El párrafo no menciona las relaciones que se dan en Internet, solo define el concepto de límite en el mundo físico y cultural tradicional.",
+      "D": "El párrafo se centra en definir el límite; la vulneración de la intimidad por Internet es una idea que se desarrolla más adelante en el texto completo, no la síntesis de este primer párrafo."
+    },
+    "estrategias_resolucion": "1. Leer la primera oración del párrafo para identificar el tema principal. 2. Observar cómo se desarrollan las ideas siguientes. 3. Identificar que el párrafo presenta una causa (Internet) y un efecto (crisis del límite), y luego define el concepto afectado. 4. Elegir la opción que resuma esta relación.",
+    "errores_comunes": "Concentrarse solo en la definición del 'límite' y olvidar la primera frase que enmarca todo el párrafo en el contexto de Internet.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["idea principal", "síntesis de párrafo", "Internet", "privacidad", "Umberto Eco"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Identificación y entendimiento de los contenidos locales que conforman un texto.",
+    "contexto": "No obstante, con Internet se rompen los límites que nos protegían y la privacidad queda expuesta. Esta desaparición de las fronteras ha provocado dos fenómenos opuestos. Por un lado, ya no hay comunidad nacional que pueda impedir a sus ciudadanos que sepan lo que sucede en otros países, y pronto será imposible impedir que el súbdito de cualquier dictadura conozca en tiempo real lo que ocurre en otros lugares; además, en medio de una oleada migratoria imparable, se forman naciones por fuera de las fronteras físicas: es cada vez más fácil para una comunidad musulmana de Roma establecer vínculos con una comunidad musulmana de Berlín. Por otro lado, el severo control que los Estados ejercían sobre las actividades de los ciudadanos ha pasado a otros centros de poder que están técnicamente preparados (aunque no siempre con medios legales) para saber a quién hemos escrito, qué hemos comprado, qué viajes hemos hecho, cuáles son nuestras curiosidades enciclopédicas y hasta nuestras preferencias sexuales. El gran problema del ciudadano celoso no es defenderse de los hackers sino de las cookies, y de todas esas otras maravillas tecnológicas que permiten recoger información sobre cada uno de nosotros.",
+    "enunciado": "En el tercer párrafo, cuando el autor menciona a las naciones que se forman fuera de las fronteras físicas, hace referencia a",
+    "opciones": {
+      "A": "los individuos de una misma cultura que viven en territorios diferentes.",
+      "B": "la fluencia migratoria que genera el amplio número de turistas.",
+      "C": "el encuentro virtual de personas de pensamientos diferentes.",
+      "D": "las comunidades virtuales que se crean en el ciberespacio."
+    },
+    "respuesta_correcta": "A",
+    "retroalimentacion": "El autor ejemplifica las 'naciones fuera de las fronteras físicas' con el caso de una 'comunidad musulmana de Roma' estableciendo vínculos con una 'comunidad musulmana de Berlín'. Esto se refiere a grupos con una identidad cultural común (religión) que están en lugares geográficos distintos.",
+    "explicacion": "La frase 'naciones que se forman fuera de las fronteras físicas' es una metáfora para describir comunidades que no se definen por un territorio geográfico compartido, sino por una cultura o identidad común. El ejemplo de las comunidades musulmanas en diferentes ciudades europeas aclara que se trata de individuos de una misma cultura (nación cultural) que viven en territorios diferentes (fuera de una frontera física única).",
+    "habilidad_evaluada": "Interpretar el significado de una expresión metafórica a partir de un ejemplo concreto en el texto.",
+    "explicacion_opciones_incorrectas": {
+      "B": "El texto habla de migración, no de turismo, y se enfoca en la formación de comunidades, no en el flujo de personas.",
+      "C": "El ejemplo muestra personas con un pensamiento y cultura en común (musulmanes), no de pensamientos diferentes.",
+      "D": "Aunque estas comunidades usan el ciberespacio, la opción A es más precisa al definir a los miembros de esas comunidades (misma cultura, diferente territorio), que es el punto del autor."
+    },
+    "estrategias_resolucion": "1. Localizar la frase 'naciones que se forman fuera de las fronteras físicas'. 2. Leer con atención el ejemplo que el autor proporciona para aclarar la frase. 3. Analizar el ejemplo: se trata de grupos con la misma cultura (musulmana) en ciudades distintas (Roma y Berlín). 4. Escoger la opción que mejor describe esta situación.",
+    "errores_comunes": "Interpretar la metáfora de forma literal o no utilizar el ejemplo proporcionado por el autor para entenderla.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["metáfora", "interpretación", "comunidades virtuales", "globalización", "Umberto Eco"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "¿SERÁ QUE GOOGLE NOS ESTÁ VOLVIENDO ESTOOPIDOS? ... A mayor velocidad con la que navegamos en la red, a mayor número de enlaces sobre los que hacemos clic y el número de páginas que visitamos, mayores las oportunidades que Google y otras compañías tienen para recoger información sobre nosotros y nutrirnos con anuncios publicitarios. Para bien de sus intereses económicos, les conviene distraernos a como dé lugar.",
+    "enunciado": "En el último párrafo del texto se",
+    "opciones": {
+      "A": "legitiman las prácticas del manejo de información en Internet que buscan distraernos a como dé lugar.",
+      "B": "desestima la efectividad de las estrategias publicitarias utilizadas en la web para obtener información.",
+      "C": "denuncian las motivaciones de varias compañías al respecto de cómo se maneja la información en Internet.",
+      "D": "rescatan estrategias para procesar datos a alta velocidad, sin caer en las manos de las empresas imperantes."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El párrafo afirma explícitamente que a las compañías como Google, 'para bien de sus intereses económicos, les conviene distraernos'. Esto es una denuncia directa de las motivaciones económicas que hay detrás de la forma en que se maneja la información y la atención del usuario en internet.",
+    "explicacion": "El autor utiliza este párrafo para cerrar su argumento, conectando el cambio en nuestros hábitos de lectura con el modelo de negocio de las grandes empresas tecnológicas. Al decir que la distracción del usuario beneficia sus 'intereses económicos', está haciendo una crítica, una denuncia, sobre las verdaderas intenciones de estas compañías. No las está aprobando (legitimando) ni diciendo que no funcionan (desestimando).",
+    "habilidad_evaluada": "Identificar la intención comunicativa (denunciar, criticar) de un párrafo argumentativo.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Legitimar es aprobar o justificar. El autor hace lo contrario, critica estas prácticas.",
+      "B": "El autor no dice que las estrategias no sean efectivas; al contrario, su efectividad es el problema que está señalando.",
+      "D": "El párrafo no rescata ninguna estrategia, sino que critica las existentes."
+    },
+    "estrategias_resolucion": "1. Leer el último párrafo. 2. Analizar el tono y las palabras clave ('intereses económicos', 'conviene distraernos'). 3. Determinar la postura del autor frente a lo que describe (crítica, aprobación, etc.). 4. Seleccionar el verbo que mejor describa esa postura (denunciar).",
+    "errores_comunes": "Confundir la descripción de una práctica con su aprobación. El hecho de que el autor explique cómo funciona el modelo de negocio no significa que lo esté justificando.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["intención del autor", "argumentación", "crítica", "Google", "modelo de negocio"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión y análisis de la estructura textual.",
+    "contexto": "¿SERÁ QUE GOOGLE NOS ESTÁ VOLVIENDO ESTOOPIDOS? ... Durante los últimos años he tenido la incómoda sensación de que alguien (o algo) ha estado cacharreando con mi cerebro... Ya no pienso como antes... la lectura profunda, que solía ser fácil, se ha vuelto una lucha. Y creo saber qué es lo que está ocurriendo... los medios no son meros canales pasivos... configuran el proceso de pensamiento. Y lo que la red parece estar haciendo... es socavar poco a poco mi capacidad de concentración y contemplación... Gracias a la omnipresencia del texto en internet... es probable que hoy estemos leyendo cuantitativamente más de lo que leíamos... Pero, sea lo que sea, se trata de otra forma de leer, y detrás subyace otra forma de pensar... Quizás incluso, una nueva manera de ser. La idea de que nuestra mente debiera operar como una máquina-procesadora-de-datos-de-alta-velocidad no solo está incorporada al funcionamiento de internet, sino que al mismo tiempo se trata del modelo empresarial imperante de la red.",
+    "enunciado": "Considere el siguiente enunciado: 'Pero, sea lo que sea, se trata de otra forma de leer, y detrás subyace otra forma de pensar... Quizás incluso, una nueva manera de ser'. Esta frase, dentro de la globalidad del texto, es",
+    "opciones": {
+      "A": "una idea introductoria.",
+      "B": "una conclusión del texto.",
+      "C": "una idea de importancia secundaria.",
+      "D": "una evidencia que apoya la tesis principal."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "Esta frase sintetiza la tesis central del autor: el cambio en la forma de leer (inducido por Internet) no es un hecho superficial, sino que está provocando un cambio profundo en el pensamiento y la identidad ('una nueva manera de ser'). Es la culminación de toda su reflexión anterior.",
+    "explicacion": "A lo largo del texto, el autor describe su experiencia personal (pérdida de concentración), la analiza a la luz de la teoría de los medios (McLuhan) y la conecta con el funcionamiento de Internet. La frase citada es el punto donde todas estas ideas convergen para formular la afirmación más importante y general del texto. Pasa de un problema de 'lectura' a un cambio en el 'pensar' y el 'ser'. Por su carácter sintético y su alcance, funciona como la conclusión o tesis principal del ensayo.",
+    "habilidad_evaluada": "Identificar la función de una frase o enunciado clave (tesis/conclusión) en la estructura global de un texto argumentativo.",
+    "explicacion_opciones_incorrectas": {
+      "A": "No es introductoria, aparece hacia el final del texto, después de haber presentado las evidencias y el desarrollo del argumento.",
+      "C": "No es secundaria, es la idea más importante y abarcadora del texto.",
+      "D": "No es una evidencia, es la afirmación que las evidencias anteriores (como su propia experiencia de lectura) intentan apoyar."
+    },
+    "estrategias_resolucion": "1. Comprender el argumento general del texto. 2. Localizar la frase en el texto y notar su posición (hacia el final). 3. Analizar el contenido de la frase y ver si resume la idea principal del autor. 4. Determinar si la frase es una premisa, una evidencia o una conclusión.",
+    "errores_comunes": "Confundir la tesis o conclusión con una de las evidencias que la sustentan.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["tesis", "conclusión", "estructura argumentativa", "Nicholas Carr", "Internet"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Identificación y entendimiento de los contenidos locales que conforman un texto.",
+    "contexto": "(iii). 'Aunque la tradición política democrática se remonta a la antigua Grecia, los pensadores políticos no se ocuparon de la causa democrática hasta el siglo XIX. Hasta entonces venía desechándose la democracia como el gobierno de las masas ignorantes y sin luces. Hoy parece que todos nos hemos vuelto demócratas sin contar con argumentos sólidos a favor. Los liberales, los conservadores, los socialistas, los comunistas, los anarquistas y hasta los fascistas se han apresurado a proclamar las virtudes de la democracia y a mostrar sus credenciales demócratas'.",
+    "enunciado": "Según el texto (iii), ¿qué posiciones políticas se identifican como democráticas?",
+    "opciones": {
+      "A": "Solo las posiciones políticas que no son extremistas.",
+      "B": "Las posiciones políticas más recientes históricamente.",
+      "C": "La mayoría de posiciones políticas existentes.",
+      "D": "La totalidad de corrientes políticas posibles."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El texto enumera una amplia gama de corrientes políticas, incluyendo algunas antagónicas entre sí ('liberales, los conservadores, los socialistas, los comunistas, los anarquistas y hasta los fascistas'), que se han autoproclamado demócratas. Esta lista abarca la gran mayoría del espectro político.",
+    "explicacion": "La pregunta pide identificar qué posiciones políticas, según el texto, se autodenominan demócratas. El texto proporciona una lista explícita y muy diversa que va desde el liberalismo hasta el fascismo. Esta enumeración tan amplia y variada sugiere que casi todas las corrientes políticas importantes han adoptado, al menos de palabra, la democracia. Por lo tanto, 'La mayoría de posiciones políticas existentes' es la respuesta más precisa.",
+    "habilidad_evaluada": "Extraer información explícita de un texto.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Es incorrecto, ya que la lista incluye posiciones consideradas extremistas como el comunismo y el fascismo.",
+      "B": "El texto no da suficiente información para concluir que son las más recientes, solo que se han proclamado demócratas.",
+      "D": "Aunque la lista es muy amplia, 'totalidad' es una palabra demasiado fuerte; siempre podría existir alguna corriente que no se identifique como tal. 'Mayoría' es más cauto y se ajusta mejor a la lista proporcionada."
+    },
+    "estrategias_resolucion": "1. Leer la pregunta y enfocarse en el texto (iii). 2. Localizar la lista de posiciones políticas en el texto. 3. Analizar la diversidad y el alcance de esa lista. 4. Escoger la opción que mejor describa la amplitud de la lista proporcionada.",
+    "errores_comunes": "No leer la lista completa y hacer suposiciones basadas en el conocimiento previo sobre qué ideologías son 'democráticas'. La pregunta es sobre lo que dice el texto.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["información explícita", "democracia", "ideologías políticas", "lectura literal"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "(i). 'El argumento más poderoso contra la democracia es una conversación de cinco minutos con el votante medio'. - Winston Churchill",
+    "enunciado": "¿Cuál de las siguientes afirmaciones se infiere del texto (i)?",
+    "opciones": {
+      "A": "El votante medio no podría explicar en cinco minutos qué es la democracia.",
+      "B": "La mayoría de los votantes en los sistemas democráticos son ignorantes o incompetentes.",
+      "C": "Con una conversación corta con el votante medio, cualquier persona se da cuenta de que la democracia no funciona.",
+      "D": "Cinco minutos toma exponer el argumento básico contra la conveniencia del sistema político democrático."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "La cita es una hipérbole que sugiere que la prueba más contundente ('el argumento más poderoso') de las fallas de la democracia se obtiene al interactuar brevemente con un votante promedio, cuya supuesta falta de preparación o conocimiento evidenciaría las debilidades del sistema.",
+    "explicacion": "La cita de Churchill es irónica y crítica. No debe interpretarse literalmente. El 'argumento' no es algo que se expone, sino algo que se 'descubre' al hablar con el 'votante medio'. La inferencia es que esa conversación revela de manera tan obvia la ignorancia o irracionalidad del electorado que sirve como una demostración práctica y rápida de por qué la democracia es un sistema defectuoso. La opción C captura esta idea: la conversación corta lleva a la conclusión de que el sistema no funciona como debería.",
+    "habilidad_evaluada": "Inferir el significado implícito y el tono irónico de una cita.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Aunque se podría inferir, el foco de la crítica de Churchill no es la capacidad del votante para definir la democracia, sino su juicio general, que afecta el funcionamiento del sistema.",
+      "B": "Esta es una posible interpretación, pero la opción C es más precisa sobre lo que la cita afirma: la conversación es el 'argumento' que demuestra que no funciona.",
+      "D": "Interpreta la cita de forma literal. La conversación de cinco minutos no es el tiempo que toma 'exponer' un argumento, sino la 'prueba' misma."
+    },
+    "estrategias_resolucion": "1. Reconocer que la cita es una frase ingeniosa y no una afirmación literal. 2. Identificar el tono crítico hacia la democracia. 3. Entender qué representa el 'votante medio' en la cita (la base del sistema). 4. Conectar la 'conversación' con la 'prueba' o 'argumento' contra el sistema.",
+    "errores_comunes": "Tomar la cita de forma literal, pensando que se trata de la duración de una exposición verbal.",
+    "dificultad": "alta",
+    "tiempo_estimado": 120,
+    "tags": ["inferencia", "ironía", "Winston Churchill", "democracia", "epigrama"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "El conocimiento no consiste en una serie de teorías autoconsistentes que tiende a converger en una perspectiva ideal; no consiste en un acercamiento gradual hacia la verdad. Por el contrario, el conocimiento es un océano, siempre en aumento, de alternativas incompatibles entre sí (y tal vez inconmensurables); toda teoría particular, todo cuento de hadas, todo mito, forman parte del conjunto que obliga al resto a una articulación mayor, y todos ellos contribuyen, por medio de este proceso competitivo, al desarrollo de nuestro conocimiento. No hay nada establecido para siempre, ningún punto de vista puede quedar omitido en una explicación comprehensiva (...). Expertos y profanos, profesionales y diletantes, forjadores de utopías y mentirosos, todos ellos están invitados a participar en el debate y a contribuir al enriquecimiento de la cultura. La tarea del científico no ha de ser por más tiempo “la búsqueda de la verdad”, o “la glorificación de dios”, o “la sistematización de las observaciones” o “el perfeccionamiento de predicciones”. Todas estas cosas no son más que efectos marginales de una actividad a la que se dirige ahora su atención y que consiste en “hacer de la causa más débil la causa más fuerte\", como dijo el sofista, “por ello en apoyar el movimiento de conjunto”. (Extraído de: Paul Feyerabend (1986). Tratado contra el método.)",
+    "enunciado": "¿Cuál de las siguientes opciones describe mejor la relación entre el contenido del texto y el título de la obra de la que se extrajo?",
+    "opciones": {
+      "A": "El texto introduce la propuesta de un nuevo método para la investigación científica, diferente del tradicional.",
+      "B": "El texto ataca diferentes ideas a propósito de qué es aquello en lo que consiste el llamado 'método científico'.",
+      "C": "El texto critica concepciones del conocimiento científico, el cual se ha concebido como resultado de un método.",
+      "D": "El texto argumenta a favor de la pluralidad de métodos disponibles para que cada ciencia alcance sus verdades."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El texto ataca directamente la idea de que el conocimiento es un avance ordenado y lineal hacia la verdad (un 'acercamiento gradual'). Esta es una concepción del conocimiento que se asocia con la aplicación de un método científico riguroso. Al criticar esta concepción, el texto va 'contra el método' como único camino al conocimiento.",
+    "explicacion": "El título de la obra es 'Tratado contra el método'. El texto expone una visión del conocimiento como un 'océano' caótico y competitivo de ideas (incluyendo mitos y cuentos), en lugar de un proceso ordenado y metódico. Critica la idea de que la ciencia es una 'búsqueda de la verdad' a través de un camino único. Por lo tanto, el contenido del texto es una crítica directa a las concepciones tradicionales sobre el conocimiento científico, que se basan en la idea de un método privilegiado. La opción C resume esto perfectamente.",
+    "habilidad_evaluada": "Relacionar el contenido de un fragmento con el título de la obra a la que pertenece, infiriendo la tesis general del autor.",
+    "explicacion_opciones_incorrectas": {
+      "A": "No introduce un 'nuevo método', sino que parece argumentar en contra de la idea misma de un método único y privilegiado.",
+      "B": "Es cercano, pero la opción C es más precisa. No ataca tanto el 'método' en sí, sino la 'concepción del conocimiento' que resulta de creer en un método único.",
+      "D": "Aunque se infiere un pluralismo, el énfasis del fragmento está en la crítica a la concepción tradicional del conocimiento, más que en la defensa explícita de una pluralidad de métodos."
+    },
+    "estrategias_resolucion": "1. Entender el significado del título 'Tratado contra el método'. 2. Leer el texto e identificar su tesis principal: el conocimiento no es un proceso lineal y metódico. 3. Conectar la tesis del texto con la idea expresada en el título. 4. Evaluar cuál de las opciones establece la conexión más precisa.",
+    "errores_comunes": "Pensar que 'contra el método' significa proponer un 'método alternativo', cuando en realidad puede significar una crítica a la noción misma de método.",
+    "dificultad": "alta",
+    "tiempo_estimado": 120,
+    "tags": ["epistemología", "Paul Feyerabend", "método científico", "filosofía de la ciencia", "tesis"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "El conocimiento es un océano, siempre en aumento, de alternativas incompatibles entre sí (...); toda teoría particular, todo cuento de hadas, todo mito, forman parte del conjunto que obliga al resto a una articulación mayor, y todos ellos contribuyen, por medio de este proceso competitivo, al desarrollo de nuestro conocimiento. No hay nada establecido para siempre, ningún punto de vista puede quedar omitido en una explicación comprehensiva (...). Expertos y profanos, profesionales y diletantes, forjadores de utopías y mentirosos, todos ellos están invitados a participar en el debate y a contribuir al enriquecimiento de la cultura. La tarea del científico no ha de ser por más tiempo “la búsqueda de la verdad”... sino que consiste en “hacer de la causa más débil la causa más fuerte\".",
+    "enunciado": "El autor del texto aplica a la filosofía de la ciencia el principio del liberalismo, según el cual 'todos los ciudadanos son iguales ante la ley y ante el Estado”. De acuerdo con esto, ¿cuál de las siguientes afirmaciones refleja de manera más directa la influencia de las ideas liberales?",
+    "opciones": {
+      "A": "La tarea del científico no ha de ser por más tiempo la glorificación de dios.",
+      "B": "Toda teoría particular, todo cuento de hadas, todo mito, forman parte del conocimiento.",
+      "C": "Hacer de la causa más débil la causa más fuerte, por ello en apoyar el movimiento de conjunto.",
+      "D": "El conocimiento no consiste en una serie de teorías autoconsistentes que tiende a converger en una perspectiva ideal."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El principio liberal de igualdad ante la ley, aplicado al conocimiento, implica que todas las ideas tienen el mismo derecho a participar y competir. La afirmación de que 'toda teoría particular, todo cuento de hadas, todo mito, forman parte del conocimiento' es la aplicación directa de este principio: no hay ideas privilegiadas o de 'clase alta'; todas (teorías, mitos, etc.) son 'ciudadanas' iguales en el debate del conocimiento.",
+    "explicacion": "La analogía se establece entre 'ciudadanos iguales ante la ley' y 'fuentes de conocimiento iguales en el debate'. La opción B es la que mejor materializa esta analogía. Al poner en el mismo nivel a una 'teoría particular' (ciencia), un 'cuento de hadas' y un 'mito', el autor está declarando su igualdad de condiciones para participar en el 'océano' del conocimiento, tal como el liberalismo postula la igualdad de todos los ciudadanos ante el estado.",
+    "habilidad_evaluada": "Aplicar un principio o analogía externa para interpretar una afirmación dentro de un texto.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Esto es una crítica a una visión particular de la ciencia, pero no refleja directamente el principio de igualdad entre todas las ideas.",
+      "C": "Esto describe la 'tarea' del científico dentro de este nuevo paradigma, pero la opción B describe la 'constitución' misma de este paradigma, que es donde se refleja el principio liberal.",
+      "D": "Esta es una negación de la visión tradicional, es la parte crítica. La opción B es la afirmación positiva que se construye sobre la base de la igualdad liberal."
+    },
+    "estrategias_resolucion": "1. Entender el principio liberal dado: 'todos son iguales'. 2. Buscar en el texto una afirmación donde diferentes tipos de ideas o discursos sean tratados como iguales. 3. Identificar la lista 'teoría, cuento de hadas, mito' como el punto donde se aplica esta igualdad. 4. Seleccionar la opción que contiene esta lista.",
+    "errores_comunes": "No entender la analogía entre 'ciudadanos' e 'ideas' y buscar una conexión más literal con la política o la ley.",
+    "dificultad": "alta",
+    "tiempo_estimado": 120,
+    "tags": ["analogía", "liberalismo", "epistemología", "Paul Feyerabend", "igualdad"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "Tira cómica de Calvin y Hobbes. Calvin vende limonada a 15 dólares. Ante la pregunta de cómo justifica el precio, invoca la 'Ley de la oferta y la demanda'. Cuando se le señala que no hay demanda, responde '¡Hay muchísima demanda! ¡Claro! Como único accionista en esta empresa, ¡¡DEMANDO enormes beneficios por mi inversión!! Y como presidente... ¡DEMANDO un salario anual exorbitante! Y como soy mi propio empleado, ¡DEMANDO un alto salario y toda clase de beneficios!...'. Al final, el cliente se va y Calvin se queja de que '¡La gente anti-sistema como tú es quien arruina la economía!' y pide un subsidio.",
+    "enunciado": "El niño intenta justificar el alto precio de la limonada recurriendo a",
+    "opciones": {
+      "A": "argumentos absurdos pero consistentes.",
+      "B": "un modelo económico fiel a la realidad.",
+      "C": "una ley de mercado que no existe.",
+      "D": "su propia versión de la economía."
+    },
+    "respuesta_correcta": "D",
+    "retroalimentacion": "Calvin toma conceptos económicos reales ('oferta y demanda', 'accionista', 'presidente', 'empleado', 'beneficios', 'salario') pero los redefine y aplica de una manera completamente personal y egoísta, creando su propio sistema económico para justificar el precio. Su 'demanda' no es la del mercado, sino su propia demanda de dinero.",
+    "explicacion": "Calvin no usa argumentos simplemente absurdos (opción A), sino que retuerce la lógica económica. No usa un modelo fiel a la realidad (opción B), sino todo lo contrario. La 'ley de la oferta y la demanda' sí existe (opción C), pero él la malinterpreta. Lo que hace es tomar términos económicos y darles un nuevo significado dentro de su propio sistema: la 'demanda' relevante es la suya como capitalista/trabajador. Por tanto, está creando 'su propia versión de la economía'.",
+    "habilidad_evaluada": "Interpretar el humor y la sátira en un texto multimodal (cómic) para identificar la estrategia argumentativa del personaje.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Aunque son absurdos, la clave es que no son inconsistentes, sino que parten de una lógica económica retorcida. La opción D es más precisa sobre la naturaleza de esa lógica.",
+      "B": "Claramente no es un modelo fiel a la realidad.",
+      "C": "La ley de la oferta y la demanda sí existe, lo que es incorrecto es cómo la aplica Calvin."
+    },
+    "estrategias_resolucion": "1. Analizar el diálogo de Calvin. 2. Identificar los términos económicos que utiliza. 3. Darse cuenta de que redefine el término 'demanda' para ajustarlo a sus necesidades. 4. Concluir que ha creado un sistema económico a su medida.",
+    "errores_comunes": "Creer que la 'ley de la oferta y la demanda' es un invento de Calvin, en lugar de darse cuenta de que la está parodiando.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["cómic", "Calvin and Hobbes", "sátira", "economía", "humor gráfico"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "Caricatura de Quino. Se ve a un hombre con alas, como un ángel, muerto o malherido en el suelo. Una multitud lo rodea. Un hombre con un micrófono, como un periodista, entrevista a otro hombre de la multitud, quien dice: '-LLEGÓ HABLANDO DE COSAS MUY RARAS,... BONDAD, AMOR, TOLERANCIA, CARIDAD, CUANDO AQUÍ LO QUE NECESITAMOS ES SEGURIDAD, CASA, PAN Y TRABAJO. PERO LO QUE NOS HIZO SOSPECHAR ENSEGUIDA DE ÉL ES QUE NO RECORDAMOS HABERLO VISTO SIQUIERA UNA VEZ EN TELEVISIÓN.'",
+    "enunciado": "¿Cuál de los siguientes enunciados describe mejor la caricatura?",
+    "opciones": {
+      "A": "El pueblo hace justicia por su propia mano.",
+      "B": "El linchamiento de un ángel.",
+      "C": "Entrevista con el asesino.",
+      "D": "Un ángel bajó del cielo."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "La imagen central es un ser con alas (un ángel) que yace en el suelo, rodeado por una multitud hostil. El texto justifica la agresión ('lo que nos hizo sospechar'). La combinación de la víctima, la multitud y la justificación de la violencia describe una escena de linchamiento.",
+    "explicacion": "La caricatura presenta varios elementos: una víctima con características angelicales, una multitud y una justificación para la agresión. 'Linchamiento' es el término que describe la ejecución de alguien por parte de una turba sin proceso legal. El texto del personaje entrevistado funciona como la justificación prejuiciosa y superficial que suele acompañar a estos actos. La opción B, 'El linchamiento de un ángel', sintetiza de la manera más completa tanto el elemento visual (ángel, multitud) como la acción implícita (violencia colectiva).",
+    "habilidad_evaluada": "Sintetizar la información de un texto multimodal (imagen y texto) para describir su evento central.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Decir que 'hace justicia' es tomar partido y aceptar la justificación del personaje, lo cual la caricatura critica. Es una descripción sesgada.",
+      "C": "Es una parte de la escena, pero no la describe en su totalidad. El evento central es el linchamiento, no solo la entrevista.",
+      "D": "Describe un evento previo, pero no la situación actual que muestra la caricatura, que es la consecuencia de esa llegada."
+    },
+    "estrategias_resolucion": "1. Observar la imagen: ¿quién es la víctima?, ¿quiénes son los agresores? 2. Leer el texto: ¿qué dice el personaje?, ¿cuál es su actitud? 3. Combinar la información visual y textual para entender el evento completo. 4. Elegir la opción que describa la acción principal y central de la escena.",
+    "errores_comunes": "Centrarse solo en una parte de la caricatura (la entrevista) o interpretar la justificación del personaje como un hecho en lugar de una crítica.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["caricatura", "Quino", "texto multimodal", "crítica social", "linchamiento", "medios de comunicación"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "1984 es una novela futurista que tiene lugar en una sociedad totalitaria. Los ciudadanos de esta sociedad son controlados por una figura omnipresente conocida como el Gran Hermano. En el siguiente apartado, un miembro defensor del orden le explica al protagonista el principal propósito del régimen. No habrá lealtad; no existirá más fidelidad que la que se debe al Partido, ni más amor que el amor al Gran Hermano. No habrá risa, excepto la risa triunfal cuando se derrota a un enemigo. No habrá arte, ni literatura, ni ciencia. No habrá ya distinción entre la belleza y la fealdad. Todos los placeres serán destruidos. Pero siempre, no lo olvides, Winston, siempre habrá el afán de poder, la sed de dominio, que aumentará constantemente y se hará cada vez más sutil. Siempre existirá la emoción de la victoria, la sensación de pisotear a un enemigo indefenso. Si quieres hacerte una idea de cómo será el futuro, figúrate una bota aplastando un rostro humano... incesantemente.",
+    "enunciado": "¿Cuál de las siguientes afirmaciones es compatible con las políticas del Partido?",
+    "opciones": {
+      "A": "El pueblo debe mantenerse unido.",
+      "B": "La individualidad debe ser eliminada.",
+      "C": "El poder está en ser fiel a uno mismo.",
+      "D": "Un pueblo ignorante es más poderoso."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El texto afirma que 'No habrá lealtad; no existirá más fidelidad que la que se debe al Partido, ni más amor que el amor al Gran Hermano'. Esto implica la supresión de todos los lazos personales, emociones y lealtades individuales, que son la base de la individualidad, para reemplazarlos por una única lealtad al Partido.",
+    "explicacion": "Las políticas descritas en el texto buscan erradicar todas las esferas de la vida personal y privada: el amor, la lealtad familiar, el arte, la ciencia, el placer. El objetivo es que el ser humano no tenga ninguna fuente de identidad, valor o emoción que no provenga directamente del Partido. Este proceso es, en esencia, la eliminación total de la individualidad.",
+    "habilidad_evaluada": "Inferir un principio general a partir de una serie de afirmaciones específicas en un texto.",
+    "explicacion_opciones_incorrectas": {
+      "A": "El Partido busca la unión, pero una unión basada en la sumisión total, no en lazos comunitarios. La opción B es la causa subyacente de esta 'unión' forzada.",
+      "C": "Es lo opuesto a lo que busca el Partido. La fidelidad a uno mismo es individualidad, y debe ser erradicada.",
+      "D": "Aunque es una máxima común en las tiranías y es coherente con el texto, la 'eliminación de la individualidad' es una afirmación más directa y central en el fragmento proporcionado."
+    },
+    "estrategias_resolucion": "1. Leer la lista de cosas que el Partido eliminará (lealtad, amor, arte, etc.). 2. Buscar un concepto general que englobe todas estas eliminaciones. 3. Darse cuenta de que todas ellas son manifestaciones de la vida individual. 4. Concluir que la política central es la eliminación de la individualidad.",
+    "errores_comunes": "Confundir una consecuencia (unión forzada) con la política central (eliminación de la individualidad).",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["1984", "George Orwell", "totalitarismo", "distopía", "individualidad", "inferencia"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión y análisis de la estructura textual.",
+    "contexto": "Si quieres hacerte una idea de cómo será el futuro, figúrate una bota aplastando un rostro humano... incesantemente.",
+    "enunciado": "La frase 'figúrate una bota aplastando un rostro humano...incesantemente'",
+    "opciones": {
+      "A": "explica los planes para el futuro del régimen.",
+      "B": "ejemplifica las ideas transmitidas al pueblo.",
+      "C": "expone el verdadero propósito del sistema de gobierno.",
+      "D": "ilustra las condiciones de los ciudadanos bajo el régimen."
+    },
+    "respuesta_correcta": "D",
+    "retroalimentacion": "La frase es una imagen poderosa y metafórica. Se presenta como la respuesta a 'cómo será el futuro'. Describe la experiencia perpetua de opresión, violencia y deshumanización que sufrirán los ciudadanos. Es, por tanto, una ilustración de sus futuras condiciones de vida.",
+    "explicacion": "La frase no es una explicación racional (A), ni un ejemplo de propaganda (B), sino una imagen simbólica. Su propósito es hacer tangible y visual la naturaleza del poder que el Partido ejercerá. El 'propósito' del régimen es el poder por el poder mismo (C), pero la imagen de la 'bota aplastando un rostro' muestra la consecuencia de ese propósito: las condiciones de vida brutales y de constante sufrimiento impuestas a los ciudadanos (D). La frase responde a la pregunta '¿cómo será?' vivir en ese futuro.",
+    "habilidad_evaluada": "Analizar la función retórica de una metáfora o imagen en un texto argumentativo.",
+    "explicacion_opciones_incorrectas": {
+      "A": "No 'explica' los planes de forma lógica, sino que los 'ilustra' de forma metafórica.",
+      "B": "No es una idea transmitida al pueblo (que sería propaganda), sino una revelación sincera de la élite del Partido al protagonista.",
+      "C": "El propósito es el 'afán de poder'. La bota es la manifestación de ese poder, la condición resultante, no el propósito en sí mismo."
+    },
+    "estrategias_resolucion": "1. Identificar que la frase es una imagen o metáfora. 2. Leer la pregunta que introduce la frase ('Si quieres hacerte una idea de cómo será el futuro...'). 3. Comprender que la frase describe cómo se sentirá vivir en ese futuro. 4. Asociar esta descripción con las 'condiciones' de vida de los ciudadanos.",
+    "errores_comunes": "Confundir la manifestación del poder (la bota) con el propósito del poder (el poder mismo).",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["metáfora", "retórica", "1984", "George Orwell", "totalitarismo", "opresión"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Identificación y entendimiento de los contenidos locales que conforman un texto.",
+    "contexto": "Las fotografías son la prueba irrecusable de que se hizo la excursión, se cumplió el programa, se gozó del viaje.",
+    "enunciado": "En la frase 'Las fotografías son la prueba irrecusable de que se hizo la excursión...', ¿cuál de las siguientes palabras es un sinónimo de la palabra 'irrecusable'?",
+    "opciones": {
+      "A": "Inminente.",
+      "B": "Concluyente.",
+      "C": "Irremplazable.",
+      "D": "Cuestionable."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "Irrecusable significa que no se puede rechazar o refutar. En el contexto de 'una prueba', esto equivale a decir que la prueba es definitiva, decisiva, es decir, concluyente.",
+    "explicacion": "Una 'prueba irrecusable' es una evidencia tan fuerte que no admite discusión ni puede ser negada. Entre las opciones, 'concluyente' es la que mejor captura este significado de ser final y definitivo. Una prueba concluyente cierra el debate.",
+    "habilidad_evaluada": "Identificar el significado de una palabra en contexto y encontrar su sinónimo.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Inminente significa que está a punto de suceder.",
+      "C": "Irremplazable significa que no se puede sustituir por otra cosa.",
+      "D": "Cuestionable es el antónimo de irrecusable."
+    },
+    "estrategias_resolucion": "1. Entender el significado de la frase: la fotografía es una prueba que no se puede negar. 2. Analizar el significado de las opciones. 3. Determinar cuál de las opciones significa 'que no se puede negar o refutar'.",
+    "errores_comunes": "Confundir el prefijo 'irre-' con otros prefijos negativos y no analizar el significado completo de la palabra en su contexto.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["vocabulario", "sinónimos", "contexto"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "El acto de fotografiar satisface las mismas necesidades para los cosmopolitas que acumulan trofeos fotográficos de su excursión en barco por el Nilo o sus catorce días en China, que para los turistas de clase media que hacen instantáneas de la Torre Eiffel o las cataratas del Niágara. El acto fotográfico... es también un modo de rechazarla [la experiencia]... El método seduce sobre todo a gente subyugada a una ética de trabajo implacable: alemanes, japoneses y estadounidenses.",
+    "enunciado": "Considere el siguiente resumen del texto anterior: 'La autora analiza la relación entre el turismo y la fotografía, teniendo en cuenta que los cosmopolitas ven en sus viajes al acto de fotografiar como una necesidad. Según ella, ese acto acaba por convertirse en una práctica trivial con la que solo se busca mitigar la desorientación general que causan los viajes. Así, la fotografía se convierte para los cosmopolitas japoneses, estadounidenses y alemanes en una especie de reemplazo del trabajo al que están acostumbrados'. El anterior resumen se puede describir como inadecuado porque",
+    "opciones": {
+      "A": "expone ideas contrarias a las afirmaciones principales del texto.",
+      "B": "se centra en un tipo particular de turistas y no en los turistas en general.",
+      "C": "omite el tono irónico y burlón con que la autora se refiere al arte de la fotografía.",
+      "D": "se detiene en presentar información en extremo detallada y secundaria del texto."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El texto original establece explícitamente que la necesidad de fotografiar es la misma para 'los cosmopolitas' y para 'los turistas de clase media'. Sin embargo, el resumen atribuye las conclusiones del análisis solo a los 'cosmopolitas', ignorando la generalización que hace la autora.",
+    "explicacion": "Un buen resumen debe capturar la idea principal en toda su generalidad. El texto de Sontag argumenta que el fenómeno de la fotografía en los viajes es universal, afectando a diferentes clases de turistas. El resumen propuesto es inadecuado porque toma una parte del argumento (la que se refiere a los 'cosmopolitas' y a ciertas nacionalidades) y la presenta como si fuera la totalidad de la tesis, restringiendo así el alcance del argumento original del autor.",
+    "habilidad_evaluada": "Evaluar la calidad de un resumen, identificando si representa adecuadamente el alcance y las ideas principales del texto original.",
+    "explicacion_opciones_incorrectas": {
+      "A": "No expone ideas contrarias, sino que las presenta de forma incompleta, limitando su alcance.",
+      "C": "Aunque el tono del texto original puede ser irónico, la principal falla del resumen es de contenido, no de tono.",
+      "D": "Al contrario, no se detiene en detalles, sino que generaliza a partir de una parte específica, lo cual es el error."
+    },
+    "estrategias_resolucion": "1. Leer el texto original y identificar la tesis principal (la fotografía como certificadora/rechazadora de la experiencia para todo tipo de turistas). 2. Leer el resumen y compararlo con la tesis original. 3. Notar que el resumen limita el sujeto del análisis a 'cosmopolitas'. 4. Concluir que el resumen falla al no ser general y centrarse en un subgrupo.",
+    "errores_comunes": "Aceptar el resumen como correcto porque menciona ideas que sí están en el texto, sin darse cuenta de que omite partes cruciales que cambian el alcance del argumento.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["resumen", "evaluación de texto", "tesis", "Susan Sontag", "fotografía"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Identificación y entendimiento de los contenidos locales que conforman un texto.",
+    "contexto": "Fray Pedro de Aguado fue un misionero español que vivió en el Nuevo Reino de Granada entre 1560 y 1590, aproximadamente. Se le atribuye la autoría de la Recopilación historial... En el relato de las campañas del capitán Galarza y sus soldados en los actuales territorios del Tolima, Aguado se refiere de esta manera a los indios de la región: Son estos indios de Ibagué grandes carniceros de carne humana...",
+    "enunciado": "De acuerdo con el texto, se puede afirmar que la descripción de los indios de Ibagué hecha por Aguado corresponde a",
+    "opciones": {
+      "A": "un periodo anterior a la llegada de los españoles al continente americano, pues presenta a los indígenas en una situación de “salvajismo” absoluto.",
+      "B": "el proceso de fundación de la ciudad colonial de Ibagué, pues la dinámica de colonización consistía en fundar las ciudades y luego someter a los indígenas de la zona.",
+      "C": "la etapa de “conquista” de los territorios que se anexarían a la colonia neogranadina, pues la descripción es parte de un relato de una campaña militar.",
+      "D": "un periodo histórico indeterminado, pues el texto no ofrece información cronológica que permita identificar el momento que corresponde a la descripción."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El texto establece explícitamente que la descripción de los indios de Ibagué se encuentra 'En el relato de las campañas del capitán Galarza y sus soldados'. Una campaña militar en este contexto es parte de la etapa de conquista de los territorios.",
+    "explicacion": "La pregunta pide contextualizar la descripción de Aguado. El propio texto nos da la clave al ubicar dicha descripción dentro de la narración de las 'campañas del capitán Galarza'. Estas campañas militares eran el método por el cual la corona española sometía territorios y poblaciones para incorporarlos a sus colonias. Este proceso se conoce históricamente como la Conquista.",
+    "habilidad_evaluada": "Localizar información explícita en el texto para contextualizar un evento.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Es incorrecto. La descripción la hace un español (Aguado) que vivió entre 1560 y 1590, por lo tanto, es post-llegada de los españoles.",
+      "B": "El texto no menciona la fundación de Ibagué, solo una campaña militar en la región.",
+      "D": "El periodo no es indeterminado. El texto da las fechas en las que vivió Aguado (1560-1590) y el contexto específico (campañas de Galarza)."
+    },
+    "estrategias_resolucion": "1. Leer la pregunta para saber qué información se necesita. 2. Rastrear en el texto la parte donde se introduce la descripción de Aguado. 3. Leer la frase contextualizadora: 'En el relato de las campañas del capitán Galarza...'. 4. Relacionar 'campaña militar' con 'etapa de conquista'.",
+    "errores_comunes": "Ignorar la información contextual que el texto proporciona antes de la cita y tratar de adivinar el periodo basándose solo en el contenido de la descripción.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["contexto histórico", "información explícita", "conquista", "crónicas de Indias", "Fray Pedro de Aguado"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "En su estudio Los indios medievales de fray Pedro de Aguado, el historiador Jaime Humberto Borja sostuvo que la Recopilación historial no puede ser tomada como una fuente fiable... ante todo, debe asumirse como un texto que respondía ideológica y culturalmente a una tradición europea... Frente a descripciones como la que acabamos de citar, afirma Borja que el de Aguado 'es un indio retórico, que surge de una realidad textual y no de una realidad aprehendida por la experiencia'. Además, la construcción narrativa del indio de la crónica de Aguado reúne imágenes conocidas por la tradición cristiana y los imaginarios bíblicos: 'El canibalismo, las exacerbadas costumbres, la fiereza de sus armas, su alianza con traidores, el engaño...'",
+    "enunciado": "¿Cuál de los siguientes títulos se ajusta mejor al contenido del texto?",
+    "opciones": {
+      "A": "Civilización y barbarie en la colonización española.",
+      "B": "Fray Pedro de Aguado y la construcción retórica del indígena.",
+      "C": "El canibalismo ritual en la crónica de fray Pedro de Aguado.",
+      "D": "La influencia de los autores clásicos en los cronistas neogranadinos: el caso de Aguado."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El texto se centra en dos puntos: la crónica de Fray Pedro de Aguado y el análisis del historiador Borja, quien afirma que el indio descrito por Aguado no es real, sino un 'indio retórico', una 'construcción narrativa'. Por lo tanto, el título que mejor resume esta dualidad es 'Fray Pedro de Aguado y la construcción retórica del indígena'.",
+    "explicacion": "El fragmento completo no trata sobre la civilización y la barbarie en general (A), ni se enfoca únicamente en el canibalismo (C). Tampoco habla de 'autores clásicos' (D). Su eje central es contrastar la crónica de un autor específico (Fray Pedro de Aguado) con un análisis moderno que la interpreta no como un documento histórico fiel, sino como una construcción literaria y retórica. La opción B captura perfectamente ambos elementos del texto: el autor y el concepto clave de su análisis.",
+    "habilidad_evaluada": "Sintetizar el contenido global de un texto para determinar el título más adecuado.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Es demasiado general. El texto se enfoca en un autor y un concepto específicos.",
+      "C": "Es demasiado específico. El canibalismo se menciona solo como un ejemplo de las características del 'indio retórico'.",
+      "D": "El texto menciona la 'tradición cristiana y los imaginarios bíblicos', no a los 'autores clásicos'."
+    },
+    "estrategias_resolucion": "1. Identificar los dos sujetos principales del texto: Fray Pedro de Aguado y el análisis de Borja. 2. Identificar el concepto clave del análisis de Borja: 'indio retórico' o 'construcción narrativa'. 3. Buscar un título que combine al autor (Aguado) con el concepto clave de su análisis (construcción retórica).",
+    "errores_comunes": "Elegir un título basado en un detalle del texto (como el canibalismo) en lugar de su idea central y global.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["idea principal", "síntesis", "título", "historiografía", "crónicas de Indias", "retórica"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión y análisis de la estructura textual.",
+    "contexto": "Caricatura de Quino. Un hombre está sentado en un sillón viendo la televisión. A su lado, en el suelo, juega un niño pequeño. Detrás, una mujer está de pie. Todo el entorno (paredes, suelo, sillón, ropa de los personajes) está cubierto por el mismo patrón de cuadrícula repetitiva, creando una sensación de encierro y monotonía. El único lugar que no tiene este patrón es la pantalla del televisor, que está en blanco.",
+    "enunciado": "¿En cuál de los siguientes contextos se inscribe mejor la caricatura?",
+    "opciones": {
+      "A": "Anuncio publicitario.",
+      "B": "Reportaje gráfico.",
+      "C": "Humor gráfico.",
+      "D": "Sátira política."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "La caricatura utiliza la exageración visual (el patrón repetitivo) y un estilo de dibujo no realista para transmitir una idea o crítica sobre la vida moderna y la alienación. Este uso de recursos gráficos para generar reflexión o risa es la definición del humor gráfico.",
+    "explicacion": "La imagen no está vendiendo un producto (A). No documenta un evento real de forma objetiva como un reportaje (B). Aunque podría contener una crítica que roce lo político (la alienación en la sociedad de consumo), su enfoque no es sobre un político o partido específico, por lo que 'sátira política' es demasiado específico (D). El término que mejor engloba el uso de dibujos para comentar críticamente sobre la sociedad de una manera ingeniosa es 'humor gráfico'. Quino es un maestro de este género.",
+    "habilidad_evaluada": "Clasificar un texto multimodal en un género discursivo específico.",
+    "explicacion_opciones_incorrectas": {
+      "A": "No tiene las características de un anuncio: no hay marca, eslogan ni producto a la venta.",
+      "B": "Un reportaje gráfico utiliza fotografías para documentar la realidad, no dibujos para comentarla.",
+      "D": "La sátira política se centra en criticar a figuras o instituciones del poder político, mientras que esta caricatura tiene un enfoque más amplio sobre la vida cotidiana y la cultura (crítica social)."
+    },
+    "estrategias_resolucion": "1. Analizar las características del texto: es un dibujo, no una foto; usa la exageración; transmite una crítica. 2. Evaluar las definiciones de los géneros propuestos. 3. Determinar qué género se define por el uso de dibujos para la crítica social o el comentario ingenioso.",
+    "errores_comunes": "Confundir crítica social (típica del humor gráfico) con sátira política (más específica).",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["género textual", "caricatura", "humor gráfico", "Quino", "texto multimodal", "crítica social"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Identificación y entendimiento de los contenidos locales que conforman un texto.",
+    "contexto": "DEL DEBER DE LA DESOBEDIENCIA CIVIL (1849) ... Somos testigos de la actual guerra con México, obra de unos pocos individuos comparativamente, que utilizan como herramienta al gobierno actual; en principio, el pueblo no habría aprobado esta medida. Pero, para hablar en forma práctica y como ciudadano, a diferencia de aquellos que se llaman “antigobiernistas”, yo pido, no como “antigobiernista” sino como ciudadano, y de inmediato, un mejor gobierno.",
+    "enunciado": "¿Cuál de los siguientes es un ejemplo que menciona el autor para apoyar su posición frente a los Gobiernos?",
+    "opciones": {
+      "A": "La guerra con México.",
+      "B": "Los abusos del ejército.",
+      "C": "La tiranía de las mayorías.",
+      "D": "La debilidad de las minorías."
+    },
+    "respuesta_correcta": "A",
+    "retroalimentacion": "El texto dice explícitamente: 'Somos testigos de la actual guerra con México, obra de unos pocos individuos... que utilizan como herramienta al gobierno actual'. El autor usa este evento como un ejemplo concreto de cómo el gobierno puede ser abusado y utilizado para fines que el pueblo no aprueba.",
+    "explicacion": "El autor argumenta que el gobierno, aunque es la voluntad del pueblo, puede ser corrompido y abusado. Para demostrar este punto, no se queda en la teoría, sino que recurre a un ejemplo contemporáneo a su escritura. Menciona directamente 'la actual guerra con México' como la prueba ('somos testigos') de su afirmación. Las otras opciones son temas relacionados con su filosofía, pero la guerra con México es el ejemplo específico que se cita en este fragmento.",
+    "habilidad_evaluada": "Identificar un ejemplo específico que el autor utiliza para sustentar una afirmación.",
+    "explicacion_opciones_incorrectas": {
+      "B": "Menciona el ejército permanente como el 'brazo' del gobierno, pero el ejemplo principal de abuso es la guerra, no el ejército en sí.",
+      "C": "Habla de que la mayoría rige por ser más fuerte, no por ser justa, pero el ejemplo para ilustrar el abuso del gobierno es la guerra, no un caso de tiranía de la mayoría.",
+      "D": "Menciona la minoría en el contexto de la justicia, pero no es el ejemplo que usa para criticar al gobierno."
+    },
+    "estrategias_resolucion": "1. Leer la pregunta, que pide un 'ejemplo'. 2. Rastrear en el texto frases que introduzcan casos concretos. 3. Localizar la oración 'Somos testigos de la actual guerra con México...'. 4. Reconocer que esta es la evidencia o ejemplo que el autor presenta.",
+    "errores_comunes": "Confundir los argumentos teóricos del autor (sobre la mayoría, la justicia, etc.) con los ejemplos concretos que usa para ilustrarlos.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["ejemplo", "argumentación", "Henry David Thoreau", "desobediencia civil", "gobierno"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "Aforismo: 'Los sistemas filosóficos difieren los unos de los otros menos en la manera de resolver que en la manera de escamotear los problemas'.",
+    "enunciado": "De acuerdo con el aforismo “Los sistemas filosóficos difieren los unos de los otros menos en la manera de resolver que en la manera de escamotear los problemas”, la principal diferencia entre un sistema filosófico y otro consiste en la manera de",
+    "opciones": {
+      "A": "plantear los problemas.",
+      "B": "resolver los problemas.",
+      "C": "esquivar los problemas.",
+      "D": "burlarse de los problemas."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El aforismo establece una comparación: la diferencia es MENOS en cómo resuelven y MÁS en cómo escamotean. 'Escamotear' significa hacer desaparecer, ocultar o eludir algo. Por lo tanto, la principal diferencia radica en la forma en que cada sistema filosófico evita, oculta o esquiva los problemas.",
+    "explicacion": "La estructura del aforismo es 'difieren menos en X que en Y'. Esto significa que la diferencia principal está en Y. En este caso, Y es 'la manera de escamotear los problemas'. El verbo 'escamotear' es sinónimo de robar o quitar algo con agilidad, y por extensión, de eludir o esquivar una dificultad. Por lo tanto, la tesis del aforismo es que cada filosofía tiene su propia estrategia para ignorar o hacer a un lado las preguntas que no puede responder. La opción 'esquivar' es el mejor sinónimo de 'escamotear' en este contexto.",
+    "habilidad_evaluada": "Interpretar el significado de un aforismo, prestando atención a su estructura comparativa y al vocabulario clave.",
+    "explicacion_opciones_incorrectas": {
+      "A": "El aforismo no habla de 'plantear', sino de 'resolver' y 'escamotear'.",
+      "B": "El aforismo dice explícitamente que la diferencia es 'menos' en la manera de resolver los problemas.",
+      "D": "Aunque el tono puede ser cínico, 'burlarse' no es un sinónimo preciso de 'escamotear'. Esquivar es más cercano a la idea de evadir una dificultad."
+    },
+    "estrategias_resolucion": "1. Analizar la estructura comparativa 'menos en... que en...'. 2. Identificar que el énfasis está en la segunda parte de la comparación. 3. Buscar el significado de la palabra clave 'escamotear'. 4. Encontrar el sinónimo más adecuado entre las opciones.",
+    "errores_comunes": "No entender la estructura comparativa y pensar que la diferencia está en 'resolver'. No conocer el significado de 'escamotear'.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["aforismo", "Nicolás Gómez Dávila", "filosofía", "vocabulario", "interpretación"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "Qué ingenua era. Como no había tenido una educación científica de pregrado, no me di cuenta de que en teoría los animales no debían tener personalidades, pensar o sentir emociones o dolor. No tenía idea de que hubiera sido más apropiado —una vez que llegara a conocerla o conocerlo— asignarle a cada uno de los chimpancés un número en lugar de un nombre. No me di cuenta de que no era científico discutir sobre el comportamiento en términos de motivación o propósito. No era respetable, en círculos científicos, hablar sobre la personalidad de los animales. Eso era algo que estaba reservado para los humanos.",
+    "enunciado": "Considere el siguiente enunciado: 'No me di cuenta de que no era científico discutir sobre el comportamiento en términos de motivación o propósito'. ¿Qué prejuicio cuestiona la autora por medio del enunciado anterior?",
+    "opciones": {
+      "A": "Los animales tienen mente y, por tanto, deben tratarse como seres con personalidades o emociones.",
+      "B": "La etología es una ciencia “dura” que se esfuerza por mantener a raya las explicaciones subjetivas.",
+      "C": "Las explicaciones científicas sobre el comportamiento no deben tener en cuenta la intención al explicar la conducta.",
+      "D": "La variabilidad entre animales individuales es un hecho contingente que la etología no debe considerar."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "La frase citada expresa la sorpresa de la autora al descubrir que en la ciencia no se debía hablar de 'motivación o propósito'. Esto revela que la autora está cuestionando el prejuicio científico que prohíbe atribuir intencionalidad ('motivación o propósito') a la conducta animal para que la explicación sea considerada 'científica'.",
+    "explicacion": "El enunciado expresa la norma científica que la autora encontró: era 'no científico' hablar de 'motivación o propósito'. Esto es, precisamente, hablar de la intención detrás de una conducta. La autora, al narrar su ingenuidad y su posterior rebeldía contra esta norma (al nombrar a los chimpancés y describir sus personalidades), está cuestionando este prejuicio. El prejuicio es la idea de que una explicación científica del comportamiento debe ser puramente mecanicista y no debe incluir conceptos como la intención.",
+    "habilidad_evaluada": "Identificar el prejuicio o supuesto que un autor está criticando a través de una afirmación irónica o un recuento personal.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Esta es la tesis que la autora defiende, no el prejuicio que cuestiona. Ella cuestiona lo opuesto.",
+      "B": "Esto describe la razón del prejuicio (la búsqueda de la objetividad en una ciencia 'dura'), pero el prejuicio en sí es la norma específica descrita en C.",
+      "D": "El texto menciona que un etólogo reconocía la variabilidad pero prefería 'esconderla debajo de la alfombra', pero la frase específica sobre 'motivación y propósito' se refiere directamente a la intencionalidad."
+    },
+    "estrategias_resolucion": "1. Leer el enunciado citado: el foco está en la prohibición de discutir 'motivación o propósito'. 2. Entender que 'motivación o propósito' se refiere a la intención. 3. Reconocer que la autora presenta esta prohibición como algo que ella, en su 'ingenuidad', no compartía, lo que implica una crítica. 4. Seleccionar la opción que mejor formula esta prohibición como un prejuicio.",
+    "errores_comunes": "Confundir la postura del autor con el prejuicio que está atacando.",
+    "dificultad": "alta",
+    "tiempo_estimado": 120,
+    "tags": ["prejuicio", "crítica", "Jane Goodall", "etología", "antropomorfismo", "filosofía de la ciencia"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "Cómic. Un discípulo se va de su maestro, Crates. El discípulo dice: 'Me enseñaste a usar la razón como una forma de libertad. Y ahora, Crates, me libero de ti.' Luego, el discípulo explica su razonamiento: 'Todo lo que existe se divide en lo que depende de nosotros y en lo que no. De nosotros dependen el juicio, el deseo y todo lo que hacemos. Por eso depende de mí separarme de ti, Crates.'",
+    "enunciado": "¿Cuál de los siguientes enunciados se contradice con la tesis central del texto?",
+    "opciones": {
+      "A": "No todo se divide entre lo que depende y lo que no depende de nosotros.",
+      "B": "Alejarnos de alguien no depende de nosotros mismos.",
+      "C": "La mente de un filósofo funciona de la misma manera que su cuerpo.",
+      "D": "El juicio y el deseo no dependen de nosotros."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "La tesis central del discípulo es que su decisión de irse es un acto de libertad basado en la razón, porque es algo que 'depende de nosotros'. La afirmación 'Alejarnos de alguien no depende de nosotros mismos' es una contradicción directa de la conclusión a la que llega el discípulo y del principio que usa para justificarla.",
+    "explicacion": "El cómic expone una versión de la filosofía estoica. La tesis del discípulo se basa en dos premisas y una conclusión: Premisa 1: Hay cosas que dependen de nosotros y otras que no. Premisa 2: El juicio, el deseo y nuestras acciones dependen de nosotros. Conclusión: Por lo tanto, la acción de separarme de ti depende de mí. Cualquier enunciado que niegue alguna de estas tres partes contradice la tesis. La opción B niega la conclusión de forma directa.",
+    "habilidad_evaluada": "Identificar la tesis de un argumento y reconocer una afirmación que la contradice directamente.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Aunque contradice una premisa del discípulo, no ataca directamente la tesis central de su decisión personal.",
+      "D": "Contradice una premisa del discípulo, pero la pregunta busca lo que contradice la tesis central específica, no las premisas generales.",
+      "C": "El texto indica que la mente puede liberarse del cuerpo ('mi cuerpo puede seguirte, pero mi mente ya no'), sugiriendo que funcionan de manera diferente, no igual. Aunque contradice el texto, no es la contradicción más directa de la tesis central."
+    },
+      "estrategias_resolucion": "1. Identificar el argumento del discípulo: premisas y conclusión. 2. La tesis central es la conclusión aplicada a su vida: 'me voy porque es una decisión que depende de mí'. 3. Evaluar cada opción para ver si niega alguna parte del argumento. 4. Determinar cuál opción niega la conclusión o la premisa más fundamental de la manera más directa.",
+    "errores_comunes": "No identificar correctamente la estructura del argumento (premisas y conclusión) y ver todas las contradicciones como igualmente válidas.",
+    "dificultad": "alta",
+    "tiempo_estimado": 120,
+    "tags": ["filosofía", "estoicismo", "argumento", "tesis", "contradicción", "cómic"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Identificación y entendimiento de los contenidos locales que conforman un texto.",
+    "contexto": "A mucha gente le gusta ver en los cuadros lo que también le gustaría ver en la realidad. Se trata de una preferencia perfectamente comprensible. A todos nos atrae lo bello en la naturaleza y agradecemos a los artistas que lo recojan en sus obras. Esos mismos artistas no nos censurarían por nuestros gustos. Cuando el gran artista flamenco Rubens dibujó a su hijo, estaba orgulloso de sus agradables acciones y deseaba que también nosotros admiráramos al pequeño. Pero esta inclinación a los temas bonitos y atractivos puede convertirse en nociva si nos conduce a rechazar obras que representan asuntos menos agradables...",
+    "enunciado": "En el texto, el autor hace referencia a Rubens para mostrar que",
+    "opciones": {
+      "A": "a todos nos atrae lo bello y por fortuna el arte lo recoge en la pintura.",
+      "B": "el público siempre exige que el artista refleje la realidad en los cuadros.",
+      "C": "algunos artistas plasman en sus obras lo que nos gusta ver en la realidad.",
+      "D": "la inclinación en el arte por los temas bonitos y atractivos es bastante nociva."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El autor utiliza a Rubens y el retrato de su hijo como un ejemplo concreto de su afirmación inicial: a la gente le gusta ver cosas bonitas y 'agradecemos a los artistas que lo recojan en sus obras'. Rubens, al dibujar a su bello hijo, es el ejemplo perfecto de un artista que plasma en su obra un tema atractivo y agradable, algo que al público (y al propio artista) le gusta.",
+    "explicacion": "El autor está construyendo un argumento. Primero, presenta una idea general: nos gusta la belleza y nos gusta que el arte la represente. Luego, para que esta idea no sea abstracta, introduce un ejemplo: 'Cuando el gran artista flamenco Rubens dibujó a su hijo...'. Este caso sirve para ilustrar y dar credibilidad a la idea general. Por lo tanto, Rubens es el ejemplo que demuestra que los artistas a menudo pintan temas atractivos que son del gusto del público.",
+    "habilidad_evaluada": "Identificar la función de un ejemplo dentro de un texto argumentativo.",
+    "explicacion_opciones_incorrectas": {
+      "A": "El ejemplo de Rubens apoya esta idea, pero la función del ejemplo no es la idea misma, sino 'mostrar' o 'ejemplificar' la idea. La opción C describe mejor la función.",
+      "B": "El texto no habla de 'exigencias' del público ni de 'reflejar la realidad', sino de una preferencia por temas 'bonitos y atractivos'.",
+      "D": "Esta es la siguiente parte del argumento del autor, que introduce con la palabra 'Pero'. El ejemplo de Rubens sirve para establecer la primera parte (que nos gustan los temas bonitos), no la segunda (que esa preferencia puede ser nociva)."
+    },
+    "estrategias_resolucion": "1. Identificar la idea principal del párrafo: nos gustan los temas bellos en el arte. 2. Notar cómo se introduce el caso de Rubens (como un ejemplo de esa idea). 3. Leer la frase que sigue, que empieza con 'Pero', para entender que el argumento va a cambiar de dirección. 4. Concluir que Rubens ejemplifica la primera parte del argumento, no la segunda.",
+    "errores_comunes": "Asociar el ejemplo de Rubens con todo el argumento del autor, incluyendo la parte crítica, cuando en realidad solo sirve para ilustrar la premisa inicial.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["argumentación", "ejemplo", "historia del arte", "E. H. Gombrich", "Rubens"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "El gran pintor alemán Alberto Durero seguramente dibujó a su madre con tanta devoción y cariño como Rubens a su hijo. Su verista estudio de la vejez y la decrepitud puede producirnos tan viva impresión que nos haga apartar los ojos de él y, sin embargo, si reaccionamos contra esta primera aversión, quedaremos recompensados con creces, pues el dibujo de Durero, en su tremenda sinceridad, es una gran obra. En efecto, de pronto descubrimos que la hermosura de un cuadro no reside realmente en la belleza de su tema. No sé si los golfillos que el pintor español Murillo se complacía en pintar eran estrictamente bellos o no, pero tal como fueron pintados por él, poseen desde luego gran encanto.",
+    "enunciado": "¿Cuál de los siguientes enunciados expresa un juicio de valor presente en el texto?",
+    "opciones": {
+      "A": "Mientras Rubens dibujó la juventud, Durero dibujó la vejez.",
+      "B": "Los golfillos del pintor español Murillo tienen gran encanto.",
+      "C": "Rubens estaba orgulloso de su hijo y deseaba que lo admiráramos.",
+      "D": "Para el público, la hermosura de un cuadro reside en la belleza de su tema."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "Un juicio de valor es una opinión subjetiva sobre si algo es bueno, malo, bello, etc. La afirmación 'Los golfillos del pintor español Murillo tienen gran encanto' es una apreciación personal del autor sobre la calidad estética de esas obras. No es un hecho objetivo, sino una valoración.",
+    "explicacion": "Los enunciados A, C y D describen hechos o creencias (A describe el tema de los cuadros, C describe el sentimiento de Rubens, D describe la creencia del público). Son afirmaciones descriptivas. En cambio, el enunciado B califica a las obras de Murillo con el adjetivo 'gran encanto'. Este calificativo no es un hecho verificable, sino una opinión, un juicio estético emitido por el autor. Por lo tanto, es un juicio de valor.",
+    "habilidad_evaluada": "Distinguir entre hechos y juicios de valor en un texto.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Es un hecho descriptivo que compara los temas de ambos artistas.",
+      "C": "Es una afirmación sobre los sentimientos de Rubens, presentada como un hecho en el texto.",
+      "D": "Describe una creencia o preferencia del público, no la opinión directa del autor."
+    },
+    "estrategias_resolucion": "1. Comprender la diferencia entre un hecho (algo descriptivo y verificable) y un juicio de valor (una opinión subjetiva que califica). 2. Analizar cada opción y preguntarse: '¿Esto es un hecho o una opinión del autor?'. 3. Identificar adjetivos calificativos como 'gran encanto' como indicadores de un juicio de valor.",
+    "errores_comunes": "No diferenciar claramente entre describir una creencia ajena y expresar una creencia propia.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["juicio de valor", "hechos vs. opiniones", "E. H. Gombrich", "estética"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "A mucha gente le gusta ver en los cuadros lo que también le gustaría ver en la realidad... Pero esta inclinación a los temas bonitos y atractivos puede convertirse en nociva si nos conduce a rechazar obras que representan asuntos menos agradables. El gran pintor alemán Alberto Durero... dibujó a su madre... Su verista estudio de la vejez y la decrepitud... si reaccionamos contra esta primera aversión, quedaremos recompensados con creces, pues el dibujo de Durero, en su tremenda sinceridad, es una gran obra. En efecto, de pronto descubrimos que la hermosura de un cuadro no reside realmente en la belleza de su tema.",
+    "enunciado": "¿Cuál de los siguientes títulos podría ser el más adecuado para el texto anterior?",
+    "opciones": {
+      "A": "En defensa del mal gusto en el arte.",
+      "B": "El arte como modelo de la realidad.",
+      "C": "La representación de la belleza en el arte.",
+      "D": "Rubens, Durero y Murillo: el arte de la pintura."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El texto explora la relación entre la 'hermosura de un cuadro' y la 'belleza de su tema'. Argumenta que la belleza artística no siempre coincide con la belleza del tema representado, utilizando ejemplos como Rubens (tema bello) y Durero (tema no convencionalmente bello). Por lo tanto, el tema central es la naturaleza y representación de la belleza en el arte.",
+    "explicacion": "El hilo conductor del texto es una reflexión sobre qué constituye la belleza en una obra de arte. Comienza con la idea popular de que la belleza del arte es la belleza de su tema, y luego la cuestiona, argumentando que una obra puede ser hermosa ('una gran obra') incluso si su tema no lo es (la 'vejez y decrepitud'). Todos los ejemplos giran en torno a esta discusión. La opción C, 'La representación de la belleza en el arte', captura perfectamente este tema central.",
+    "habilidad_evaluada": "Sintetizar el contenido global de un texto para determinar el título más adecuado.",
+    "explicacion_opciones_incorrectas": {
+      "A": "El autor no defiende el 'mal gusto', sino que amplía el concepto de 'buen gusto' para incluir obras con temas difíciles.",
+      "B": "El texto no se centra en si el arte es un modelo de la realidad (mimesis), sino en el valor estético de esa representación.",
+      "D": "Los artistas son los ejemplos, no el tema principal. El tema es la idea que se ilustra con esos ejemplos."
+    },
+    "estrategias_resolucion": "1. Identificar el tema recurrente en todo el texto (belleza, hermosura, tema bonito, tema desagradable). 2. Formular la pregunta que el autor parece estar respondiendo ('¿Dónde reside la belleza de un cuadro?'). 3. Elegir el título que mejor se relacione con esta pregunta central.",
+    "errores_comunes": "Confundir los ejemplos (los artistas) con el tema principal (la idea sobre la belleza).",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["título", "idea principal", "síntesis", "estética", "belleza", "E. H. Gombrich"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "Nadie es justo por voluntad sino porque no tiene el poder de cometer injusticias. (...) si hubiese dos anillos como el de Giges y se diera uno a un hombre justo y otro a uno injusto, ninguno perseveraría en la justicia ni soportaría abstenerse de bienes ajenos, cuando podría tanto apoderarse impunemente de lo que quisiera (...) todo hombre piensa que la injusticia le brinda más ventajas individuales que la justicia...",
+    "enunciado": "¿Cuál de las siguientes afirmaciones contradice las ideas que presenta el autor?",
+    "opciones": {
+      "A": "Algunas personas actúan justamente a pesar de poder actuar de manera injusta.",
+      "B": "La injusticia, contrariamente a la justicia, es natural en el ser humano.",
+      "C": "Actuar con justicia brinda menos ventajas que hacerlo con injusticia.",
+      "D": "La injusticia, contrariamente a la justicia, se comete voluntariamente."
+    },
+    "respuesta_correcta": "A",
+    "retroalimentacion": "La tesis central del autor (Glaucón, en la República de Platón) es que nadie es justo por voluntad propia. Afirma que si un hombre justo tuviera el poder de ser injusto impunemente (como con el anillo de Giges), lo sería. La afirmación 'Algunas personas actúan justamente a pesar de poder actuar de manera injusta' niega directamente esta tesis.",
+    "explicacion": "El texto argumenta que la justicia es una imposición social y que, si se elimina el miedo al castigo, todos los hombres actuarían injustamente en busca de su propio interés. La idea de que alguien, teniendo el poder y la oportunidad de ser injusto, elija voluntariamente ser justo, es exactamente lo que el autor niega. Por lo tanto, la opción A es una contradicción fundamental a la tesis del texto.",
+    "habilidad_evaluada": "Identificar la tesis de un argumento y reconocer una afirmación que la contradice.",
+    "explicacion_opciones_incorrectas": {
+      "B": "Esta idea es compatible con el texto. El autor afirma que perseguir el propio interés (que él asocia con la injusticia) es lo que 'toda criatura persigue por naturaleza'.",
+      "C": "Esta idea es compatible y explícita en el texto: 'todo hombre piensa que la injusticia le brinda más ventajas individuales que la justicia'.",
+      "D": "Esta idea es compatible. Si la justicia es forzada, la injusticia (cuando se puede) se comete por voluntad."
+    },
+    "estrategias_resolucion": "1. Identificar la tesis principal del texto: 'Nadie es justo por voluntad, sino por obligación o falta de poder'. 2. Evaluar cada opción para ver si apoya o contradice esta tesis. 3. Reconocer que la opción A postula la existencia de personas que son justas por voluntad, lo cual es la negación directa de la tesis.",
+    "errores_comunes": "No identificar correctamente la tesis principal y confundirla con los argumentos secundarios.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["tesis", "contradicción", "Platón", "República", "Anillo de Giges", "ética", "justicia"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "Nadie es justo por voluntad sino porque no tiene el poder de cometer injusticias. (...) En efecto, todo hombre piensa que la injusticia le brinda más ventajas individuales que la justicia, y está en lo cierto, si habla de acuerdo con esta teoría.",
+    "enunciado": "De los siguientes enunciados, ¿cuál presenta un supuesto subyacente a la afirmación “Todo hombre piensa que la injusticia le brinda más ventajas individuales que la justicia, y está en lo cierto, si habla de acuerdo con esta teoría”?",
+    "opciones": {
+      "A": "La injusticia brinda las mismas ventajas individuales que la justicia.",
+      "B": "La justicia, al igual que la injusticia, brinda ventajas individuales.",
+      "C": "La injusticia, a diferencia de la justicia, brinda pocas ventajas individuales.",
+      "D": "La justicia no brinda ninguna de las ventajas individuales que la injusticia brinda."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "La afirmación compara las 'ventajas' de la injusticia con las de la justicia, diciendo que la primera brinda 'más' que la segunda. Para que esta comparación tenga sentido, se debe suponer que ambas brindan algún tipo de ventaja. No se puede tener 'más' de algo si el otro término tiene 'cero'. Por lo tanto, se asume que la justicia también ofrece ventajas, aunque menores.",
+    "explicacion": "Un supuesto subyacente es una idea no explícita que es necesaria para que el argumento tenga sentido. La afirmación central es una comparación: Injusticia > Justicia (en términos de ventajas). Esta comparación solo es lógica si ambos términos del enunciado (justicia e injusticia) son del mismo tipo, es decir, ambos son cosas que 'brindan ventajas individuales'. Si la justicia no brindara ninguna ventaja, la frase sería 'la injusticia brinda ventajas, mientras que la justicia no', y no una comparación de grado ('más ventajas').",
+    "habilidad_evaluada": "Identificar un supuesto subyacente o una premisa implícita en un argumento.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Contradice la afirmación, que dice que la injusticia brinda 'más' ventajas, no las mismas.",
+      "C": "Contradice la afirmación, que dice que la injusticia brinda 'más' ventajas, no 'pocas'.",
+      "D": "Si la justicia no brindara ninguna ventaja, la comparación 'más ventajas' no tendría sentido. Este es un posible supuesto, pero el B es más preciso al afirmar que sí brinda, permitiendo la comparación."
+    },
+    "estrategias_resolucion": "1. Analizar la estructura de la afirmación: es una comparación de grado ('más... que'). 2. Preguntarse qué se necesita para que esta comparación sea válida. 3. Darse cuenta de que para comparar dos cosas en términos de 'más' o 'menos', ambas deben poseer el atributo que se está comparando (en este caso, 'ventajas individuales').",
+    "errores_comunes": "Interpretar la afirmación como si la justicia no tuviera ningún valor, en lugar de entender que se le atribuye un valor menor en la escala de 'ventajas individuales'.",
+    "dificultad": "alta",
+    "tiempo_estimado": 120,
+    "tags": ["supuesto subyacente", "premisa implícita", "lógica", "argumentación", "Platón", "justicia"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "Nadie es justo por voluntad sino porque no tiene el poder de cometer injusticias. Esto lo percibiremos mejor si nos imaginamos las cosas del siguiente modo: demos tanto al justo como al injusto el poder de hacer lo que cada uno de ellos quiere... Entonces sorprenderemos al justo tomando el mismo camino que el injusto, siguiendo sus propios intereses...",
+    "enunciado": "¿Cuál de las siguientes afirmaciones constituye una razón a favor de la tesis principal del texto anterior, a saber, que cuando alguien actúa justamente lo hace por obligación y no voluntariamente?",
+    "opciones": {
+      "A": "La gente se ve obligada a actuar justamente.",
+      "B": "Solo la igualdad garantiza el respeto por la ley.",
+      "C": "La injusticia brinda las mismas ventajas individuales que la justicia.",
+      "D": "Siempre que una persona cuente con la libertad para cometer injusticias lo hará."
+    },
+    "respuesta_correcta": "D",
+    "retroalimentacion": "La tesis es que la justicia no es voluntaria. La razón principal que ofrece el texto para apoyar esto es el experimento mental del anillo de Giges: si a una persona (justa o injusta) se le da la libertad y el poder de cometer injusticias sin ser castigada, lo hará. Esta idea se resume en la opción D.",
+    "explicacion": "La pregunta pide una 'razón' que apoye la tesis. La tesis es 'la gente es justa por obligación'. ¿Por qué? El texto responde: porque si no estuvieran obligados, si tuvieran total libertad, elegirían la injusticia. Esta es la conclusión del experimento mental. Por lo tanto, la afirmación 'Siempre que una persona cuente con la libertad para cometer injusticias lo hará' es la premisa fundamental que sostiene toda la argumentación del texto.",
+    "habilidad_evaluada": "Identificar la premisa o razón principal que soporta la tesis de un texto argumentativo.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Esta es una reformulación de la tesis misma, no una razón que la apoye. Es lo que se quiere probar, no la prueba.",
+      "B": "El texto menciona el 'respeto por la igualdad', pero no lo desarrolla como la razón principal. La razón principal es la naturaleza humana, no un principio legal.",
+      "C": "Esta afirmación es incorrecta según el texto, que dice que la injusticia brinda 'más' ventajas."
+    },
+    "estrategias_resolucion": "1. Identificar la tesis (la conclusión del argumento). 2. Identificar el argumento principal o la evidencia que se usa para probar la tesis (el experimento mental del anillo). 3. Resumir la conclusión de ese experimento mental. 4. Elegir la opción que mejor resuma esa conclusión.",
+    "errores_comunes": "Confundir la tesis (la conclusión) con las razones (las premisas) que la sustentan.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["tesis", "razón", "premisa", "argumentación", "Platón", "Anillo de Giges"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "Nadie es justo por voluntad sino porque no tiene el poder de cometer injusticias. Esto lo percibiremos mejor si nos imaginamos las cosas del siguiente modo: demos tanto al justo como al injusto el poder de hacer lo que cada uno de ellos quiere, y a continuación sigámoslos para observar hasta dónde lo lleva a cada uno el deseo. Entonces sorprenderemos al justo tomando el mismo camino que el injusto, siguiendo sus propios intereses, lo que toda criatura persigue por naturaleza como un bien, pero que la fuerza de la ley obliga a seguir el camino del respeto por la igualdad.",
+    "enunciado": "¿Cuál de las siguientes afirmaciones sintetiza adecuadamente las ideas contenidas en el primer párrafo?",
+    "opciones": {
+      "A": "El que alguien sea justo es un deber que se deriva de la conciencia moral que tienen todos los hombres.",
+      "B": "El que alguien sea justo resulta de una imposición, pues toda persona sin las restricciones y exigencias de la ley buscará satisfacer sus deseos.",
+      "C": "La justicia es una ilusión, ya que lo natural es que una persona busque cumplir sus deseos y alcanzar sus intereses, sin reparar en la igualdad que exige la ley.",
+      "D": "La justicia es un ideal inalcanzable, ya que toda persona, por más justa que aparente ser, tiene intereses propios que pueden llevarla a cometer injusticias."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El párrafo establece una dicotomía: por naturaleza, el hombre busca sus propios intereses (el deseo), pero 'la fuerza de la ley' lo obliga a ser justo. Esto significa que la justicia no es natural ni voluntaria, sino una imposición externa (la ley) que restringe los deseos naturales. La opción B resume esta idea perfectamente.",
+    "explicacion": "La síntesis del párrafo debe incluir las dos fuerzas opuestas que describe: la naturaleza (el deseo, el interés propio) y la ley (la obligación, la justicia). El párrafo argumenta que la segunda se impone sobre la primera. La opción B captura esta dinámica: la justicia es una 'imposición' porque sin las 'restricciones de la ley', la gente seguiría sus 'deseos'.",
+    "habilidad_evaluada": "Sintetizar la idea principal de un párrafo que presenta una argumentación compleja.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Es lo opuesto a lo que dice el texto. La justicia no viene de la conciencia moral, sino de la 'fuerza de la ley'.",
+      "C": "Aunque la idea es similar, el texto no califica la justicia de 'ilusión', sino como el resultado de una 'fuerza'. La opción B es más fiel al lenguaje del texto.",
+      "D": "Es una idea plausible, pero el párrafo se enfoca más en el origen de la justicia (la imposición de la ley) que en su carácter de 'ideal inalcanzable'."
+    },
+    "estrategias_resolucion": "1. Identificar las ideas clave del párrafo: justicia, voluntad, poder, deseo, naturaleza, fuerza de la ley. 2. Entender la relación entre ellas: la naturaleza/deseo se opone a la ley/justicia. 3. Concluir que la justicia es el resultado de la imposición de la ley sobre el deseo natural. 4. Elegir la opción que mejor exprese esta relación de imposición.",
+    "errores_comunes": "Centrarse en una sola de las ideas (la naturaleza, la justicia) sin ver la relación de oposición que el texto establece entre ellas.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["síntesis", "idea principal", "Platón", "justicia", "ley", "naturaleza humana"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión y análisis de la estructura textual.",
+    "contexto": "El texto presenta la tesis de que nadie es justo por voluntad. Para probarlo, introduce un experimento mental: 'demos tanto al justo como al injusto el poder de hacer lo que cada uno de ellos quiere...'. Luego narra la historia del anillo de Giges, un pastor que encuentra un anillo que lo hace invisible. Usando este poder, Giges seduce a la reina, mata al rey y se apodera del reino. El texto concluye que si un hombre justo tuviera un anillo igual, haría exactamente lo mismo.",
+    "enunciado": "Dada la estructura del texto anterior, ¿qué propósito general tiene el autor al introducir el relato sobre el anillo de Giges, y cómo lo alcanza?",
+    "opciones": {
+      "A": "Promover en la audiencia la idea de que es más ventajoso seguir el camino de la injusticia. El caso de Giges muestra cómo obtuvo beneficios gracias al comportamiento injusto que le posibilitó el anillo.",
+      "B": "Convencer a la audiencia de que todo hombre cometerá injusticias cuando tenga la oportunidad. Así lo hizo Giges una vez descubrió el poder que le otorgaba el anillo.",
+      "C": "Reforzar en la audiencia la idea de que todos cometemos injusticias. El caso de Giges ilustra cómo las personas aparentemente justas en realidad cometen grandes injusticias.",
+      "D": "Persuadir a la audiencia de que actuar justamente requiere mucha fuerza de voluntad. En el caso de Giges, la tentación derivada del poder del anillo doblegó su voluntad."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El relato de Giges no es solo una historia, sino la ilustración del experimento mental propuesto al principio. Sirve como el caso de prueba para la hipótesis del autor. El propósito es demostrar (convencer) que cualquier hombre, si se le da la oportunidad (el poder del anillo), se corromperá. Giges es el ejemplo paradigmático de esto.",
+    "explicacion": "El autor (Glaucón) quiere probar que la naturaleza humana tiende a la injusticia si no hay castigo. La historia de Giges es su principal pieza de evidencia. No es un personaje 'aparentemente justo' que se corrompe (como dice C), sino un hombre común que, al obtener un poder extraordinario, actúa según su naturaleza egoísta. El relato busca ser una prueba universal: lo que hizo Giges lo haría cualquiera. Por lo tanto, su propósito es 'convencer' de esta universalidad, usando a Giges como el ejemplo que lo demuestra.",
+    "habilidad_evaluada": "Analizar la función de una narración (un ejemplo largo) dentro de una estructura argumentativa más amplia.",
+    "explicacion_opciones_incorrectas": {
+      "A": "El propósito no es 'promover' la injusticia, sino 'describir' la naturaleza humana como la ve el autor. Es un argumento descriptivo, no prescriptivo.",
+      "C": "Giges no era presentado como un hombre 'aparentemente justo', sino como un pastor común. La tesis es sobre 'todo hombre', no solo sobre los que parecen justos.",
+      "D": "El autor argumentaría que no es cuestión de 'fuerza de voluntad', sino que es imposible resistirse, ya que la injusticia es lo natural. La voluntad no juega un papel; el poder lo determina todo."
+    },
+    "estrategias_resolucion": "1. Entender la tesis general del texto. 2. Ver la historia de Giges no como un texto independiente, sino como una ilustración de la tesis. 3. Preguntarse: ¿Qué demuestra la historia de Giges según el autor? Demuestra que el poder corrompe inevitablemente. 4. Elegir la opción que mejor describa este propósito (convencer) y el mecanismo (el ejemplo de Giges).",
+    "errores_comunes": "Ver la historia de Giges como una simple anécdota y no como la principal evidencia de un argumento filosófico.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["estructura textual", "argumento por ejemplo", "Platón", "Anillo de Giges", "propósito del autor"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "En nuestra sociedad, se tiende a pensar que el matrimonio... se sostiene si hay confianza mutua y buena comunicación... su piedra angular es un amor maduro y sincero. No obstante, la idea de que este deba ser la razón última del enlace es bastante reciente: aparece en el siglo XVIII y se afianza en el XIX, con el movimiento romántico. Hasta entonces, el matrimonio era ante todo una institución económica y política...",
+    "enunciado": "Para el autor, el amor o el enamoramiento son",
+    "opciones": {
+      "A": "las bases fundamentales del matrimonio y de la familia.",
+      "B": "amenazas al respeto y la solidaridad debida a la familia.",
+      "C": "ideas solo recientemente vinculadas al matrimonio y a la familia.",
+      "D": "sentimientos irracionales que contradicen el deber ser del matrimonio."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El texto afirma explícitamente que la idea del amor como base del matrimonio 'es bastante reciente: aparece en el siglo XVIII y se afianza en el XIX'. Esto sitúa al amor como una adición histórica tardía al concepto de matrimonio, no como su base original o fundamental.",
+    "explicacion": "El autor contrasta la visión moderna del matrimonio (basada en el amor) con su visión histórica (como institución económica y política). La frase clave es 'No obstante, la idea... es bastante reciente'. Esto indica que, desde la perspectiva histórica del autor, el amor no es un elemento esencial o eterno del matrimonio, sino uno que se le vinculó en un momento histórico específico. La opción C captura esta idea de vinculación reciente.",
+    "habilidad_evaluada": "Identificar la perspectiva del autor sobre un concepto, distinguiéndola de la perspectiva común que describe.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Esta es la idea común que el autor presenta para luego refutarla desde una perspectiva histórica.",
+      "B": "Esto se menciona más adelante como la visión en la China tradicional, pero no es la opinión general del autor sobre el amor.",
+      "C": "Es la tesis principal del autor sobre la relación histórica entre amor y matrimonio.",
+      "D": "Aunque dice que antes se consideraba 'irracional' basar un matrimonio en el amor, la tesis principal del autor no es que sea irracional, sino que es una idea 'reciente'."
+    },
+    "estrategias_resolucion": "1. Diferenciar entre la opinión común que el autor presenta ('se tiende a pensar que...') y la opinión del autor ('No obstante...'). 2. Centrarse en las afirmaciones que el autor presenta como hechos históricos ('es bastante reciente'). 3. Elegir la opción que resuma esta perspectiva histórica del autor.",
+    "errores_comunes": "Confundir la descripción que hace el autor de la creencia popular con la tesis del propio autor.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["tesis del autor", "historia del matrimonio", "amor romántico", "perspectiva histórica"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión y análisis de la estructura textual.",
+    "contexto": "Que el matrimonio no se basara en el amor no quiere decir que las personas no se enamoraran. Sin embargo, en algunas culturas se trata de algo incompatible con el matrimonio. En la China tradicional, por ejemplo, una atracción excesiva entre los esposos era tenida como una amenaza al respeto y solidaridad debida a la familia.",
+    "enunciado": "La función del conector “sin embargo” del penúltimo párrafo es",
+    "opciones": {
+      "A": "introducir un nuevo tema de reflexión.",
+      "B": "negar información suministrada previamente.",
+      "C": "agregar nuevos detalles acerca de lo dicho anteriormente.",
+      "D": "contrastar la información anterior sin llegar a invalidarla."
+    },
+    "respuesta_correcta": "D",
+    "retroalimentacion": "El conector 'sin embargo' es adversativo. La frase anterior establece que la gente sí se enamoraba. La frase que sigue a 'sin embargo' dice que en algunas culturas ese amor era incompatible con el matrimonio. No niega que la gente se enamorara, pero introduce un contraste: a pesar de que existía el amor, no siempre era aceptado dentro del matrimonio. Contrapone dos ideas que no son mutuamente excluyentes.",
+    "explicacion": "La primera frase dice: la gente se enamoraba (A). La segunda dice: el amor era incompatible con el matrimonio en algunos lugares (B). 'Sin embargo' conecta estas dos ideas. No niega A, pero introduce B como una idea que contrasta con la expectativa que podría generar A. Es un contraste, pero no una negación total. Por ejemplo: 'Estudié mucho, sin embargo, reprobé'. No se niega haber estudiado, se contrasta con un resultado inesperado.",
+    "habilidad_evaluada": "Identificar la función lógico-argumentativa de un conector discursivo.",
+    "explicacion_opciones_incorrectas": {
+      "A": "No introduce un tema nuevo, sino que matiza el tema que ya se está tratando (el amor).",
+      "B": "No niega que la gente se enamorara, de hecho, la primera frase lo afirma explícitamente.",
+      "C": "No agrega detalles en la misma línea, sino que introduce una idea que va en una dirección opuesta o de contraste."
+    },
+    "estrategias_resolucion": "1. Identificar el tipo de conector ('sin embargo' es adversativo). 2. Leer la idea que está antes del conector. 3. Leer la idea que está después del conector. 4. Determinar la relación lógica entre ambas ideas (adición, causa, contraste, etc.).",
+    "errores_comunes": "Pensar que todos los conectores adversativos como 'sin embargo' funcionan como una negación total, en lugar de un contraste o matización.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["conectores lógicos", "estructura textual", "argumentación", "sin embargo"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Identificación y entendimiento de los contenidos locales que conforman un texto.",
+    "contexto": "Para las élites, [el matrimonio] era una manera excelente de consolidar la riqueza, fusionar recursos y forjar uniones políticas. Desde la Edad Media, la dote de boda de la mujer constituía el mayor ingreso de dinero, bienes o tierras que un hombre iba a recibir en toda su vida.",
+    "enunciado": "La palabra “dote” del segundo párrafo puede remplazarse, sin que la frase pierda su significado, por",
+    "opciones": {
+      "A": "ahorros de la futura esposa",
+      "B": "dinero de los familiares",
+      "C": "aporte patrimonial",
+      "D": "ceremonia matrimonial"
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El texto define la dote como un 'ingreso de dinero, bienes o tierras' que la familia de la mujer entregaba al nuevo hogar. Este conjunto de bienes que se aportan a una sociedad o patrimonio es, por definición, un 'aporte patrimonial'.",
+    "explicacion": "La dote era el patrimonio (compuesto de dinero, bienes, propiedades) que la familia de la novia aportaba al matrimonio. El término 'aporte patrimonial' es la descripción técnica y general que mejor engloba todos estos elementos. 'Ahorros de la futura esposa' o 'dinero de los familiares' son demasiado específicos y no capturan la idea de bienes y tierras.",
+    "habilidad_evaluada": "Inferir el significado de una palabra a partir de su definición contextual y encontrar un sinónimo técnico.",
+    "explicacion_opciones_incorrectas": {
+      "A": "La dote no necesariamente provenía de los ahorros personales de la esposa, sino del patrimonio de su familia.",
+      "B": "La dote incluía 'bienes o tierras', no solo 'dinero'.",
+      "D": "La ceremonia es el acto, la dote es el bien material."
+    },
+    "estrategias_resolucion": "1. Leer la definición de 'dote' que proporciona el mismo texto ('ingreso de dinero, bienes o tierras'). 2. Analizar las opciones. 3. Elegir la opción que abarque todos los elementos de la definición (dinero, bienes, tierras). 4. Reconocer que 'aporte patrimonial' es el término más completo.",
+    "errores_comunes": "Elegir una opción que solo cubre una parte de la definición (como 'dinero').",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["vocabulario", "contexto", "sinónimo", "dote", "patrimonio"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión y análisis de la estructura textual.",
+    "contexto": "Que el matrimonio no se basara en el amor no quiere decir que las personas no se enamoraran. Sin embargo, en algunas culturas se trata de algo incompatible con el matrimonio. En la China tradicional, por ejemplo, una atracción excesiva entre los esposos era tenida como una amenaza al respeto y solidaridad debida a la familia. Es más, en tal ambiente, la palabra amor solo se aplicaba para describir las relaciones ilícitas. Fue en la década de 1920 cuando se inventó un término para designar el cariño entre cónyuges. Una idea tan radicalmente nueva exigía un vocabulario especial.",
+    "enunciado": "El tercer párrafo del texto",
+    "opciones": {
+      "A": "presenta un paralelo entre las concepciones del amor y el matrimonio en la China tradicional y en Occidente.",
+      "B": "demuestra que en China el enamoramiento entre esposos era una amenaza al respeto y la solidaridad de la familia.",
+      "C": "sintetiza las razones por las cuales en algunas culturas el enamoramiento y el matrimonio se consideran incompatibles.",
+      "D": "provee un ejemplo de que la asociación entre el amor y el matrimonio no es algo propio de todos los tiempos y culturas."
+    },
+    "respuesta_correcta": "D",
+    "retroalimentacion": "El autor está argumentando que la idea del matrimonio por amor es reciente y no universal. El párrafo sobre la China tradicional funciona como un caso de estudio o ejemplo concreto para probar esa tesis. Muestra una cultura importante donde, históricamente, el amor y el matrimonio no solo no estaban unidos, sino que se consideraban opuestos.",
+    "explicacion": "El párrafo anterior estableció que el matrimonio por amor es una idea reciente (del siglo XVIII en Occidente). Este párrafo refuerza esa idea mostrando un contraejemplo de otra gran civilización. La función del párrafo no es hablar de China por sí misma, sino usar el caso de China para apoyar la afirmación más general de que el matrimonio por amor no es un universal cultural ni histórico. Por lo tanto, 'provee un ejemplo'.",
+    "habilidad_evaluada": "Identificar la función de un párrafo (en este caso, un párrafo de ejemplificación) dentro de la estructura argumentativa de un texto.",
+    "explicacion_opciones_incorrectas": {
+      "A": "No presenta un paralelo, sino un contraste. Y se enfoca en China, sin mencionar mucho a Occidente dentro de este párrafo específico.",
+      "B": "Esta es la idea principal del párrafo, pero la pregunta es por la 'función' del párrafo en el texto completo. La función es ejemplificar, y la idea de la amenaza es el contenido de ese ejemplo.",
+      "C": "No sintetiza las razones en general, sino que desarrolla un único ejemplo en detalle.",
+      "D": "Esta opción describe correctamente la función del párrafo como un ejemplo que apoya la tesis general del autor."
+    },
+    "estrategias_resolucion": "1. Comprender la tesis general del texto (el matrimonio por amor es reciente y no universal). 2. Leer el párrafo en cuestión y entender su contenido (en China, el amor era incompatible con el matrimonio). 3. Preguntarse: ¿Qué relación tiene este párrafo sobre China con la tesis general? 4. Concluir que sirve como un ejemplo para demostrar la tesis.",
+    "errores_comunes": "Confundir el contenido de un párrafo con su función en la estructura global del texto.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["estructura textual", "función del párrafo", "ejemplificación", "argumentación", "historia del matrimonio"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "En nuestra sociedad, se tiende a pensar que el matrimonio... su piedra angular es un amor maduro y sincero. No obstante, la idea de que este deba ser la razón última del enlace es bastante reciente: aparece en el siglo XVIII y se afianza en el XIX, con el movimiento romántico.",
+    "enunciado": "¿Cuál de los siguientes enunciados apoya la idea de que el amor maduro y sincero no siempre ha sido considerado como la base de la familia?",
+    "opciones": {
+      "A": "En los años 50 se produjo una marcada distinción entre los roles masculino y femenino en la familia.",
+      "B": "La idea del amor como la razón que ha de llevar al matrimonio surgió con el movimiento romántico en el siglo XVIII.",
+      "C": "Ambos miembros de la pareja deben poner mucho empeño para que el matrimonio se sostenga.",
+      "D": "El matrimonio se consolidó en el siglo XIX como la principal forma de institucionalización del amor conyugal."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "Si la idea del amor como base del matrimonio 'surgió' en el siglo XVIII, esto implica lógicamente que antes de esa fecha, no existía o no era la norma. Por lo tanto, esta afirmación apoya directamente la idea de que el amor no 'siempre' ha sido la base de la familia.",
+    "explicacion": "La pregunta pide una razón que apoye la tesis de que el matrimonio por amor es históricamente limitado. La opción B proporciona un punto de origen histórico para esta idea ('surgió con el movimiento romántico en el siglo XVIII'). Al darle una fecha de nacimiento, se confirma que no es una idea eterna, y que por lo tanto 'no siempre' ha sido así.",
+    "habilidad_evaluada": "Identificar una afirmación que funcione como evidencia para una tesis dada.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Habla de los roles de género en el siglo XX, un tema diferente.",
+      "C": "Es un consejo sobre cómo mantener un matrimonio, no una afirmación histórica sobre su base.",
+      "D": "Describe la consolidación de la idea en el siglo XIX, lo cual también apoya la tesis, pero la opción B es más fundamental al señalar el 'surgimiento' de la idea."
+    },
+    "estrategias_resolucion": "1. Entender la idea a apoyar: 'el amor no siempre fue la base'. 2. Buscar una opción que ponga un límite temporal a la idea del matrimonio por amor. 3. Identificar que 'surgió en el siglo XVIII' es ese límite temporal.",
+    "errores_comunes": "No ver la implicación lógica de que si algo 'surge' en un momento, entonces 'antes' no existía.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["evidencia", "argumentación", "tesis", "historia del matrimonio", "amor romántico"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Identificación y entendimiento de los contenidos locales que conforman un texto.",
+    "contexto": "Hasta entonces, el matrimonio era ante todo una institución económica y política demasiado trascendente como para dejarla en manos de los dos individuos implicados... Para las élites, era una manera excelente de consolidar la riqueza, fusionar recursos y forjar uniones políticas. Desde la Edad Media, la dote de boda de la mujer constituía el mayor ingreso de dinero, bienes o tierras que un hombre iba a recibir en toda su vida. Para los más pobres, también suponía una transacción económica que debía ser beneficiosa para la familia.",
+    "enunciado": "¿Cuál de los siguientes ejemplos ilustra la idea de la familia como una institución política y económica?",
+    "opciones": {
+      "A": "En la Edad Media la mujer aportaba una dote en el momento de casarse.",
+      "B": "Entre los fulbes africanos es común que las mujeres nieguen amar a sus maridos.",
+      "C": "En los siglos XVIII y XIX cambió la idea sobre cuál es la base que sostiene la familia.",
+      "D": "En la sociedad china solo hasta la década de 1920 se acuñó un término para designar el cariño entre esposos."
+    },
+    "respuesta_correcta": "A",
+    "retroalimentacion": "La idea de la familia como institución económica se refiere a que su propósito principal es la gestión de bienes y patrimonio. La dote, descrita como 'el mayor ingreso de dinero, bienes o tierras', es un ejemplo perfecto de un mecanismo puramente económico que era central en el matrimonio.",
+    "explicacion": "La pregunta pide un ejemplo que ilustre el carácter 'político y económico' del matrimonio. La dote es una transacción explícitamente económica ('dinero, bienes o tierras') que tenía enormes implicaciones en la riqueza y el poder de las familias. Las otras opciones se refieren a la relación del matrimonio con el amor (o la falta de él), que es precisamente el aspecto que el autor contrasta con la visión económica y política.",
+    "habilidad_evaluada": "Identificar un ejemplo que ilustra un concepto específico presentado en el texto.",
+    "explicacion_opciones_incorrectas": {
+      "B": "Ilustra una visión no romántica del matrimonio, pero no directamente su función económica o política.",
+      "C": "Describe un cambio histórico en la concepción del matrimonio, no un ejemplo de su faceta económica.",
+      "D": "Ilustra la desconexión histórica entre matrimonio y amor, no su función económica."
+    },
+    "estrategias_resolucion": "1. Entender el concepto a ilustrar: 'institución política y económica'. 2. Buscar en las opciones una práctica que sea claramente económica. 3. Identificar la 'dote' como esa práctica económica.",
+    "errores_comunes": "Confundir la idea general del matrimonio 'no romántico' con la idea específica del matrimonio 'económico'.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["ejemplo", "economía", "política", "historia del matrimonio", "dote"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "Aún hoy, muchas sociedades desaprueban la idea de que el amor sea el centro del matrimonio. Es el caso de los fulbes africanos, del norte de Camerún. 'Muchas de sus mujeres niegan vehementemente cualquier apego hacia el marido', asegura Helen A. Regis... Otras, en cambio, aprueban el amor entre esposos, pero nunca antes de que el matrimonio haya cumplido su objetivo primordial.",
+    "enunciado": "¿Qué implicación sobre el matrimonio entre los fulbes africanos puede derivarse a partir de lo dicho por el autor?",
+    "opciones": {
+      "A": "Que en esa comunidad no sucede que haya amor entre esposos.",
+      "B": "Que en esa comunidad el amor no es una condición necesaria para el matrimonio.",
+      "C": "Que las mujeres de esa comunidad sienten temor a enamorarse de sus esposos.",
+      "D": "Que las mujeres de esa comunidad no ven su amor correspondido por sus esposos."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El texto dice que los fulbes 'desaprueban la idea de que el amor sea el centro del matrimonio' y que el amor solo se aprueba (si acaso) 'después de que el matrimonio haya cumplido su objetivo primordial'. Esto implica que el matrimonio puede existir y ser válido sin amor. Por lo tanto, el amor no es una condición necesaria.",
+    "explicacion": "La descripción del matrimonio fulbe sirve como ejemplo de una sociedad donde el amor no es el requisito inicial. El 'objetivo primordial' (que puede ser económico, social, reproductivo) tiene prioridad. El amor puede surgir después, o no, pero no es un prerrequisito. Esto se resume perfectamente en la idea de que no es una 'condición necesaria'.",
+    "habilidad_evaluada": "Realizar una inferencia lógica a partir de la información presentada en el texto.",
+    "explicacion_opciones_incorrectas": {
+      "A": "El texto no dice que nunca haya amor, sino que no es el centro ni el requisito. Algunas mujeres 'niegan' el apego, no todas, y otras lo 'aprueban' más tarde.",
+      "C": "El texto habla de desaprobación cultural, no de un 'temor' personal.",
+      "D": "El texto no menciona los sentimientos de los esposos, por lo que no se puede inferir si el amor es correspondido o no."
+    },
+    "estrategias_resolucion": "1. Leer la descripción del matrimonio fulbe. 2. Identificar la relación entre 'amor' y 'matrimonio' en esa cultura: el amor es secundario al 'objetivo primordial'. 3. Inferir lo que esto significa: el matrimonio puede ocurrir sin amor. 4. Traducir 'puede ocurrir sin' a la expresión lógica 'no es una condición necesaria'.",
+    "errores_comunes": "Hacer una generalización extrema (si no es el centro, entonces no existe) o introducir información que no está en el texto (temor, amor no correspondido).",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["inferencia", "lógica", "condición necesaria", "antropología", "matrimonio"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "El texto describe cómo la concepción del matrimonio ha cambiado a lo largo del tiempo y en diferentes culturas. Muestra que la idea del matrimonio basado en el amor es una construcción reciente de la cultura occidental, y que en otras épocas y lugares ha sido principalmente una institución económica y política (como en la Europa medieval con la dote) o una en la que el amor era visto con recelo (como en la China tradicional) o como algo secundario (como en los fulbes africanos).",
+    "enunciado": "De acuerdo con el texto, ¿qué se puede concluir acerca del matrimonio?",
+    "opciones": {
+      "A": "Que es una institución que tiene únicamente propósitos económicos y políticos.",
+      "B": "Que es la base de la familia en culturas tan diversas y complejas como las nuestras.",
+      "C": "Que es una institución que varía dependiendo del contexto histórico y social.",
+      "D": "Que es un pacto entre dos individuos que debe basarse en el amor y la confianza."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El texto demuestra, a través de múltiples ejemplos (Europa medieval, China tradicional, fulbes africanos, Occidente moderno), que la naturaleza, el propósito y las reglas del matrimonio no son fijos, sino que cambian drásticamente según la época y la cultura. Esta es la conclusión principal que se deriva de la totalidad del texto.",
+    "explicacion": "El autor nos lleva en un viaje a través del tiempo y el espacio para mostrarnos diferentes formas de matrimonio. El propósito de este viaje es demostrar que lo que nosotros consideramos 'normal' o 'natural' sobre el matrimonio (que se basa en el amor) es solo una versión entre muchas. La conclusión general es, por lo tanto, el relativismo cultural e histórico de la institución matrimonial: su forma y significado dependen del contexto.",
+    "habilidad_evaluada": "Extraer la conclusión principal de un texto expositivo-argumentativo.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Esto fue cierto en algunos contextos, pero el texto muestra que hoy en día, en nuestra cultura, se basa en el amor. Por lo tanto, no es 'únicamente' económico y político.",
+      "B": "Aunque es la base de la familia, el texto se centra en 'cómo' y 'por qué' es la base, y muestra que estas razones varían enormemente.",
+      "D": "Esta es la visión moderna occidental que el texto presenta precisamente para mostrar que no es la única ni ha sido siempre la norma."
+    },
+    "estrategias_resolucion": "1. Observar la estructura del texto: presenta diferentes casos de diferentes épocas y lugares. 2. Preguntarse: ¿Cuál es el punto de mostrar toda esta variedad? 3. Concluir que el autor quiere demostrar que el matrimonio no es una cosa única y estática, sino variable.",
+    "errores_comunes": "Tomar una de las descripciones parciales (la visión moderna, la visión económica) como si fuera la conclusión general de todo el texto.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["conclusión", "idea principal", "síntesis", "relativismo cultural", "historia del matrimonio"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión y análisis de la estructura textual.",
+    "contexto": "Infografía sobre traumatismos causados por el tránsito. Enunciado: 'los países de ingresos medios solo tienen la mitad de los vehículos existentes en el mundo y, a pesar de eso, sufren el 80% de las muertes por accidente de tránsito'.",
+    "enunciado": "Según la infografía, “los países de ingresos medios solo tienen la mitad de los vehículos existentes en el mundo y, a pesar de eso, sufren el 80 % de las muertes por accidente de tránsito”. En este enunciado, la conjunción 'a pesar de' cumple la función de",
+    "opciones": {
+      "A": "resaltar que el índice de muertes por accidente de tránsito en países de ingresos medios es bastante elevado dadas sus condiciones particulares.",
+      "B": "oponer el alto número de vehículos en países de ingresos medios frente al bajo porcentaje de muertes por accidente de tránsito.",
+      "C": "aclarar que el alto índice de muertes por accidente de tránsito en países de ingresos medios está estrechamente relacionado con el número de autos.",
+      "D": "señalar que el índice de muertes por accidente de tránsito en países de ingresos medios puede ser aún más alto de lo dicen las cifras oficiales."
+    },
+    "respuesta_correcta": "A",
+    "retroalimentacion": "La conjunción 'a pesar de' introduce una idea que se opone a lo que se esperaría de la premisa anterior. La premisa es 'tienen la mitad de los vehículos'. Lo esperado sería que tuvieran también la mitad de las muertes. 'A pesar de eso' introduce el dato sorprendente y contrario a la expectativa: 'sufren el 80% de las muertes'. Esta desproporción sirve para resaltar la gravedad del problema en esos países.",
+    "explicacion": "La estructura es: 'Tienen solo el 50% de los carros (premisa), pero, contrariamente a lo que esto sugeriría, tienen el 80% de las muertes (conclusión sorprendente)'. La función de 'a pesar de' es marcar este contraste para enfatizar lo desproporcionado y elevado que es el número de muertes en relación con el número de vehículos, lo que resalta la severidad del problema en esas regiones.",
+    "habilidad_evaluada": "Identificar la función retórica de una conjunción concesiva ('a pesar de') para enfatizar una idea.",
+    "explicacion_opciones_incorrectas": {
+      "B": "La oposición es al revés: opone un bajo número de vehículos (50%) a un alto porcentaje de muertes (80%).",
+      "C": "Hace lo contrario: muestra que el índice de muertes NO está relacionado proporcionalmente con el número de autos, sino que es mucho mayor.",
+      "D": "La conjunción no sugiere que las cifras sean incorrectas, sino que la relación entre las cifras presentadas es alarmante."
+    },
+    "estrategias_resolucion": "1. Entender el significado de 'a pesar de' (conector concesivo/de contraste). 2. Identificar la idea 1 (pocos carros) y la idea 2 (muchas muertes). 3. Darse cuenta de que la idea 2 es inesperada dada la idea 1. 4. Concluir que el propósito de este contraste es resaltar la gravedad del dato 2.",
+    "errores_comunes": "No entender la relación de desproporción que la conjunción está estableciendo.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["conector lógico", "concesión", "retórica", "infografía", "análisis de datos"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "Infografía con múltiples datos sobre accidentes de tránsito: 1.24 millones de muertes/año; 1ra causa de muerte 15-29 años; 3 de 4 fallecidos son hombres; 50% son peatones, ciclistas y motociclistas; datos de muertes por 100k habitantes por región (África la más alta, Europa la más baja); datos de muertes por nivel de ingreso (países de ingresos medios los más altos).",
+    "enunciado": "Considere la siguiente descripción del contenido de la infografía: «La infografía muestra datos sobre la frecuencia de los accidentes de tránsito en el mundo, y ejemplos relacionados. Además, informa sobre la mortalidad por género, por ingresos, por número de vehículos, por tipo de vehículo y por ubicación regional.» Esta descripción es insatisfactoria porque",
+    "opciones": {
+      "A": "pasa por alto información esencial contenida en la infografía.",
+      "B": "el orden de su contenido no corresponde con el de la infografía.",
+      "C": "menciona información que no está presente en la infografía.",
+      "D": "omite evidencias que sustentan la información de la infografía."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "La descripción menciona que la infografía informa sobre la mortalidad 'por tipo de vehículo'. Sin embargo, la infografía no desglosa las muertes por tipo de vehículo. Lo que dice es que el 50% de los fallecidos son 'peatones, ciclistas y motociclistas' juntos, pero no da el porcentaje para cada uno ni para otros vehículos como los automóviles. Por lo tanto, la descripción menciona información que no está realmente presente.",
+    "explicacion": "Para evaluar la descripción, hay que contrastarla punto por punto con la infografía. ¿Muestra frecuencia de accidentes? Sí (1.24 millones). ¿Mortalidad por género? Sí (3 de 4 son hombres). ¿Por ingresos? Sí (gráfico de barras). ¿Por número de vehículos? Sí (relación 50% vehículos / 80% muertes). ¿Por ubicación regional? Sí (mapamundi). ¿Por tipo de vehículo? No. Solo agrupa a los usuarios vulnerables en una categoría del 50%. Por lo tanto, la descripción es insatisfactoria porque inventa o asume un dato que no está.",
+    "habilidad_evaluada": "Evaluar la precisión de una descripción de un texto multimodal, identificando información ausente o tergiversada.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Al contrario, la descripción es bastante exhaustiva, tanto que incluso añade información que no existe.",
+      "B": "El orden no es relevante para la satisfacción de una descripción, siempre que el contenido sea correcto. Además, el orden es bastante similar.",
+      "D": "La descripción no tiene por qué incluir las evidencias, solo describir el tipo de información que se presenta."
+    },
+    "estrategias_resolucion": "1. Leer la descripción cuidadosamente. 2. Usar la descripción como una lista de verificación ('checklist'). 3. Ir a la infografía y verificar, uno por uno, si cada dato que la descripción menciona está realmente presente. 4. Identificar el dato que no se encuentra en la infografía.",
+    "errores_comunes": "Leer la infografía y la descripción de manera superficial y no hacer la comparación detallada punto por punto.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["evaluación de texto", "precisión", "infografía", "texto multimodal", "análisis de datos"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "Infografía sobre accidentes de tránsito. Un gráfico muestra que 'El 50% de los fallecidos por accidentes de tránsito son peatones, ciclistas y motociclistas'.",
+    "enunciado": "De acuerdo con la información presentada sobre el porcentaje de muertes por tipo de vehículo, se puede afirmar que es más probable que alguien que haya muerto por accidente de tránsito hubiera estado desplazándose",
+    "opciones": {
+      "A": "a pie.",
+      "B": "en moto.",
+      "C": "en bicicleta.",
+      "D": "en otro tipo de vehículo."
+    },
+    "respuesta_correcta": "D",
+    "retroalimentacion": "El gráfico indica que el 50% de las muertes corresponde al grupo de 'peatones, ciclistas y motociclistas'. Esto significa que el 50% restante de las muertes corresponde a todos los demás tipos de vehículo (automóviles, autobuses, camiones, etc.). Dado que el 50% es la porción más grande que se puede inferir para un solo grupo, es más probable pertenecer a este grupo ('otro tipo de vehículo') que a cualquiera de los componentes individuales del primer grupo, cuyos porcentajes desconocemos.",
+    "explicacion": "La información se divide en dos grandes grupos: Grupo 1 (Peatones + Ciclistas + Motociclistas) = 50%. Grupo 2 (Ocupantes de otros vehículos) = 50%. No sabemos cómo se distribuye el 50% dentro del Grupo 1. Es posible que los peatones sean el 40%, los motociclistas el 8% y los ciclistas el 2%. O cualquier otra combinación. Lo único seguro es que ningún subgrupo individual (A, B o C) puede superar el 50%. El grupo 'otro tipo de vehículo' (D) representa un 50% completo. Por lo tanto, es la categoría más probable o, como mínimo, igualmente probable que el conjunto de las otras tres.",
+    "habilidad_evaluada": "Realizar inferencias lógicas y probabilísticas a partir de datos presentados en un gráfico.",
+    "explicacion_opciones_incorrectas": {
+      "A": "No sabemos si es más probable. Podría ser solo un 10% del total, por ejemplo.",
+      "B": "No sabemos si es más probable. Podría ser solo un 20% del total.",
+      "C": "No sabemos si es más probable. Podría ser solo un 5% del total."
+    },
+    "estrategias_resolucion": "1. Leer el dato: 50% = (peatones + ciclistas + motociclistas). 2. Inferir el dato faltante: el otro 50% = (ocupantes de autos, buses, etc.). 3. Comparar las probabilidades. La probabilidad de pertenecer al grupo D es del 50%. La probabilidad de pertenecer a A, B o C es desconocida, pero ciertamente menor o igual al 50%. Por lo tanto, D representa la categoría más grande y definida.",
+    "errores_comunes": "Asumir que el 50% se divide en partes iguales entre peatones, ciclistas y motociclistas (16.6% cada uno), lo cual el gráfico no afirma.",
+    "dificultad": "alta",
+    "tiempo_estimado": 120,
+    "tags": ["inferencia", "probabilidad", "lógica", "análisis de datos", "infografía"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "Infografía sobre accidentes de tránsito. Un mapamundi muestra las 'Muertes por accidentes de tránsito, por 100.000 habitantes' en diferentes regiones: Europa (10.3), Américas (16.1), Mediterráneo Oriental (18.5), Pacífico Occidental (18.5), Asia Sudoriental (21.3), África (24.1).",
+    "enunciado": "De la información del cuadro inferior izquierdo, donde se presentan estadísticas sobre la cantidad relativa de muertes por accidentes de tránsito en función de la región, se puede inferir",
+    "opciones": {
+      "A": "cuáles son los países donde menos se utilizan vehículos motorizados.",
+      "B": "que en el Pacífico y en Asia hay el mismo número de muertes por accidentes de tránsito.",
+      "C": "cuál es el riesgo de morir en un accidente de tránsito según la zona geográfica.",
+      "D": "cuáles son las zonas geográficas en donde se requiere un mejoramiento de las vías."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El mapa presenta la tasa de mortalidad, es decir, el número de muertes por cada 100.000 habitantes. Esta tasa es, por definición, una medida del riesgo o la probabilidad que tiene una persona de morir por esa causa específica en esa región. A mayor tasa, mayor riesgo.",
+    "explicacion": "La pregunta pide inferir qué información nos da el mapa. El mapa no habla del uso de vehículos (A) ni de la calidad de las vías (D); esas serían causas posibles, pero no es el dato que se muestra. Tampoco muestra el número absoluto de muertes (B), sino una tasa relativa a la población. Una tasa de mortalidad (muertes por cada X habitantes) es una forma estandarizada de medir el riesgo al que está expuesta una población. Por lo tanto, el mapa permite comparar el riesgo de morir en un accidente de tránsito entre las diferentes regiones del mundo.",
+    "habilidad_evaluada": "Interpretar el significado de un indicador estadístico (tasa de mortalidad) y lo que permite inferir.",
+    "explicacion_opciones_incorrectas": {
+      "A": "La tasa de mortalidad puede depender de muchos factores (calidad de vías, leyes, tipo de vehículos), no solo de la cantidad de vehículos.",
+      "B": "Muestra la tasa, no el número absoluto. Una región con menos población pero una tasa alta podría tener menos muertes totales que una región muy poblada con una tasa más baja.",
+      "D": "El mejoramiento de las vías es una posible solución o una causa del problema, pero no es la información que el mapa presenta directamente."
+    },
+    "estrategias_resolucion": "1. Entender qué es una 'tasa por 100.000 habitantes': es una medida de riesgo relativo, no un número absoluto. 2. Evaluar qué se puede concluir a partir de una comparación de riesgos. 3. Descartar las opciones que hablan de números absolutos, causas o soluciones.",
+    "errores_comunes": "Confundir una tasa de mortalidad (dato relativo) con el número total de muertes (dato absoluto).",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["inferencia", "estadística", "tasa de mortalidad", "riesgo", "infografía", "análisis de datos"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión e interpretación textual.",
+    "contexto": "Infografía sobre accidentes de tránsito. Un gráfico circular muestra que los países de ingresos medios tienen el 52% de los vehículos del mundo. Otro gráfico circular muestra que esos mismos países sufren el 80% de las muertes por accidentes de tránsito.",
+    "enunciado": "A partir de las gráficas sobre la relación entre el número de vehículos y el número de muertes en accidentes de tránsito se puede inferir que, comparada con la población de los países de ingresos medios, la de los países de ingresos altos",
+    "opciones": {
+      "A": "tiene más vehículos por persona.",
+      "B": "usa menos el vehículo particular.",
+      "C": "es más educada en materia vial.",
+      "D": "está más expuesta a multas de tránsito."
+    },
+    "respuesta_correcta": "A",
+    "retroalimentacion": "Los países de ingresos medios, que representan una porción muy grande de la población mundial, tienen el 52% de los vehículos. Esto implica que los países de ingresos altos y bajos (siendo los altos el grupo más significativo en posesión de vehículos) tienen el 48% restante. Dado que la población de los países de ingresos altos es mucho menor que la de los ingresos medios, para que posean casi la mitad de los vehículos del mundo, su tasa de vehículos por persona debe ser necesariamente mucho más alta.",
+    "explicacion": "Este es un problema de inferencia que requiere conocimiento externo básico (la población de los países de ingresos altos es menor que la de los medios). Datos: Países Medios: 52% vehículos, ~80% población mundial (estimación). Países Altos/Bajos: 48% vehículos, ~20% población mundial. Si un grupo pequeño de gente (países altos) tiene casi la misma cantidad de carros que un grupo enorme de gente (países medios), significa que la concentración de carros por persona es mucho mayor en el grupo pequeño. Por lo tanto, los países de ingresos altos tienen más vehículos por persona.",
+    "habilidad_evaluada": "Realizar inferencias complejas combinando datos de una gráfica con conocimiento del mundo.",
+    "explicacion_opciones_incorrectas": {
+      "B": "La inferencia es la contraria, probablemente lo usan más.",
+      "C": "Podría ser una razón para que tengan menos accidentes, pero la gráfica no da información sobre educación vial. Es una posible explicación, no una inferencia directa de los datos sobre vehículos.",
+      "D": "No hay información sobre multas."
+    },
+    "estrategias_resolucion": "1. Comparar los dos datos: Países Medios tienen ~50% de los carros. 2. Inferir el dato del resto del mundo (principalmente países altos): también ~50% de los carros. 3. Activar conocimiento del mundo: la población de los países altos es mucho menor. 4. Concluir que para que una población pequeña tenga tantos carros, la tasa por habitante debe ser muy alta.",
+    "errores_comunes": "Intentar resolver la pregunta usando solo los datos de la infografía sin aplicar conocimientos básicos de demografía y economía mundial.",
+    "dificultad": "alta",
+    "tiempo_estimado": 120,
+    "tags": ["inferencia compleja", "análisis de datos", "conocimiento previo", "infografía", "estadística"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión y análisis de la estructura textual.",
+    "contexto": "Infografía sobre accidentes de tránsito. Un cuadro indica: '3 de 4 de los fallecidos en accidentes de tránsito son del sexo masculino'. A la derecha de este texto, aparecen cuatro iconos de figuras humanas. Tres de ellas son masculinas y están coloreadas de oscuro, mientras que una es femenina y está coloreada de claro.",
+    "enunciado": "A propósito del cuadro que presenta la información según la cual 3 de 4 de los fallecidos en accidentes de tránsito son del sexo masculino, se puede afirmar que las figuras que acompañan el texto",
+    "opciones": {
+      "A": "ilustran la información presentada.",
+      "B": "profundizan la información dada.",
+      "C": "proporcionan información adicional.",
+      "D": "ejemplifican la información descrita."
+    },
+    "respuesta_correcta": "A",
+    "retroalimentacion": "La información textual es '3 de 4 son hombres'. Las figuras muestran exactamente eso: un conjunto de 4 figuras, de las cuales 3 son masculinas. Las figuras son una representación visual directa y literal del dato numérico. La palabra que mejor describe esta función es 'ilustrar'.",
+    "explicacion": "La relación entre el texto '3 de 4' y las cuatro figuras (3 de un tipo, 1 de otro) es de correspondencia directa. La imagen traduce el dato numérico y conceptual a una representación gráfica simple. 'Ilustrar' o 'ejemplificar' son funciones similares. Sin embargo, 'ilustrar' se ajusta mejor a la representación gráfica de un dato. Las figuras hacen visualmente más claro lo que el texto dice.",
+    "habilidad_evaluada": "Analizar la relación entre texto e imagen en un texto multimodal.",
+    "explicacion_opciones_incorrectas": {
+      "B": "No profundizan, solo repiten la misma información de otra manera.",
+      "C": "No añaden información nueva, solo visualizan la ya existente.",
+      "D": "Ejemplificar es una opción muy cercana y podría ser correcta en otro contexto, pero 'ilustrar' es más preciso para la función de una imagen que acompaña a un dato estadístico para hacerlo más comprensible visualmente."
+    },
+    "estrategias_resolucion": "1. Leer el texto del cuadro. 2. Observar las figuras. 3. Comparar la información de ambos elementos. 4. Darse cuenta de que la imagen es una representación visual del texto. 5. Elegir el verbo que mejor describa esta relación.",
+    "errores_comunes": "Sobreinterpretar la imagen buscando un significado más profundo que no tiene; su función es simplemente representar el dato.",
+    "dificultad": "baja",
+    "tiempo_estimado": 120,
+    "tags": ["texto multimodal", "relación texto-imagen", "infografía", "ilustración", "análisis de datos"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "Infografía con múltiples datos alarmantes sobre accidentes de tránsito: 1.24 millones de muertes al año, primera causa de muerte en jóvenes, alta mortalidad en países de ingresos medios, alto riesgo en África, la mitad de los muertos son usuarios vulnerables (peatones, ciclistas, motociclistas).",
+    "enunciado": "A partir de la información presentada, se puede afirmar que el autor de la infografía tiene como propósito",
+    "opciones": {
+      "A": "sensibilizar al espectador sobre los riesgos de morir en un accidente de tránsito.",
+      "B": "incentivar al espectador a que use formas de movilidad alternas al automóvil.",
+      "C": "conmover al espectador presentando datos sobre el número de accidentes de tránsito.",
+      "D": "sensibilizar al espectador acerca de la necesidad de manejar sobrio y despacio."
+    },
+    "respuesta_correcta": "A",
+    "retroalimentacion": "La infografía presenta una variedad de datos desde diferentes ángulos (edad, género, región, nivel de ingreso), pero todos apuntan a una misma conclusión: los accidentes de tránsito son un problema grave y un riesgo significativo a nivel mundial. El propósito de presentar esta información de manera tan impactante es generar conciencia o 'sensibilizar' al público sobre la magnitud de estos riesgos.",
+    "explicacion": "El propósito general de la infografía no es promover una solución específica como usar la bicicleta (B) o manejar sobrio (D), aunque estas sean consecuencias deseables. La infografía no menciona estas soluciones. Tampoco se limita a 'conmover' con números (C), sino que busca generar una comprensión más amplia del problema. El propósito es informar sobre los 'riesgos' de una manera que provoque una toma de conciencia en el espectador. La palabra 'sensibilizar' captura esta intención de informar para generar un cambio de actitud basado en la percepción del riesgo.",
+    "habilidad_evaluada": "Inferir el propósito comunicativo global de un texto a partir del análisis de su contenido y tono.",
+    "explicacion_opciones_incorrectas": {
+      "B": "Es una posible solución, pero la infografía no la menciona. Se enfoca en el problema, no en la solución.",
+      "C": "Es demasiado limitado. El propósito no es solo 'conmover', sino informar y generar conciencia de manera integral.",
+      "D": "Son causas importantes de accidentes, pero la infografía no las menciona explícitamente. Su enfoque es en las consecuencias (muertes) y los factores de riesgo (ser joven, hombre, vivir en ciertas regiones)."
+    },
+    "estrategias_resolucion": "1. Ver la infografía en su conjunto. 2. Identificar el tema común de todos los datos presentados (la gravedad y magnitud de las muertes por tránsito). 3. Preguntarse: ¿Para qué se presenta esta información? ¿Qué se busca lograr en el lector? 4. Concluir que el objetivo es alertar y crear conciencia sobre el problema.",
+    "errores_comunes": "Confundir el problema que se describe con las posibles soluciones que no se mencionan.",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["propósito del autor", "intención comunicativa", "infografía", "sensibilización", "riesgo"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Reflexión y evaluación del contenido de un texto.",
+    "contexto": "Infografía de la Organización Mundial de la Salud que presenta datos sobre la gravedad de los accidentes de tránsito a nivel mundial, destacando los grupos y regiones de mayor riesgo. Los datos incluyen cifras totales de muertes, la posición como causa de muerte en jóvenes, y desgloses por género, nivel de ingreso y tipo de usuario (peatones, etc.).",
+    "enunciado": "De acuerdo con el contenido de la información presentada, ¿a cuál de los siguientes contextos se adecuaría mejor la infografía?",
+    "opciones": {
+      "A": "Una protesta ecológica en contra del uso de vehículos motorizados.",
+      "B": "Una exposición sobre el transporte público como alternativa de movilidad.",
+      "C": "Una campaña diseñada para promover la adquisición de seguros de vida.",
+      "D": "Un estudio sobre asesinatos según el género y la condición socioeconómica."
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "La infografía se centra en la alta mortalidad ('1.24 millones de muertes') y los 'riesgos' de morir en un accidente de tránsito. Esta información sobre riesgos vitales es el argumento principal que utilizaría una compañía de seguros de vida para convencer a la gente de la necesidad de adquirir sus productos. La infografía sirve como una evidencia contundente de que la muerte puede ser inesperada y de que existen riesgos cuantificables.",
+    "explicacion": "El contexto de uso de un texto debe ser coherente con su propósito y contenido. El contenido de la infografía es sobre el riesgo de muerte. ¿Quién se beneficia de resaltar el riesgo de muerte? Una campaña de seguros de vida, cuyo negocio se basa en la gestión de ese riesgo. Una protesta ecológica (A) se centraría en la contaminación, no en las muertes. Una exposición sobre transporte público (B) se centraría en beneficios como la eficiencia o el medio ambiente. Un estudio sobre asesinatos (D) es un tema completamente diferente.",
+    "habilidad_evaluada": "Determinar el contexto de uso adecuado para un texto en función de su contenido y propósito implícito.",
+    "explicacion_opciones_incorrectas": {
+      "A": "El enfoque de la infografía es la seguridad vial y la salud pública (fuente: OMS), no el impacto ambiental.",
+      "B": "Aunque podría usarse, el enfoque principal de la infografía no es promover el transporte público, sino alertar sobre la mortalidad.",
+      "D": "El tema es incorrecto. Habla de muertes accidentales, no de asesinatos."
+    },
+    "estrategias_resolucion": "1. Identificar el mensaje central de la infografía: 'morir en un accidente de tránsito es un riesgo real y alto'. 2. Evaluar cada uno de los contextos propuestos. 3. Preguntarse: ¿En cuál de estos contextos sería más persuasivo o relevante el mensaje de la infografía? 4. Concluir que el contexto de la venta de un producto que mitiga el riesgo financiero de la muerte (un seguro de vida) es el más adecuado.",
+    "errores_comunes": "No pensar en el uso pragmático y persuasivo del texto y quedarse solo en su contenido descriptivo.",
+    "dificultad": "alta",
+    "tiempo_estimado": 120,
+    "tags": ["contexto de uso", "pragmática", "persuasión", "infografía", "seguros de vida", "riesgo"]
+  }
+]

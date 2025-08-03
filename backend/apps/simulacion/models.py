@@ -1,0 +1,1 @@
+# No models needed - using core models

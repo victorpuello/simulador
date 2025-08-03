@@ -1,0 +1,1 @@
+# No admin needed for simulacion app

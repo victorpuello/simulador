@@ -1,0 +1,59 @@
+[
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Comprensión y análisis de la estructura textual",
+    "contexto": "El primer gran filósofo del siglo diecisiete fue Descartes. En 1621, tomó una embarcación para Friezland oriental, pero al descubrir que su tripulación estaba formada por criminales que planeaban asesinarlo, logró salvarse utilizando su conocimiento del idioma.",
+    "enunciado": "A juzgar por su estilo, tema y estructura, ¿en cuál de los siguientes contextos estaría inscrito más apropiadamente el pasaje anterior?",
+    "opciones": {
+      "A": "En una revista académica, como parte de un artículo sobre los orígenes de la filosofía cartesiana.",
+      "B": "En un discurso ofrecido a un grupo de aficionados al estudio de asesinatos en la historia de la filosofía.",
+      "C": "En una crónica periodística, con motivo de un especial acerca de las muertes más curiosas de la historia.",
+      "D": "En una biografía popular, para ilustrar los peligros que enfrentaban los intelectuales viajeros de la época."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El tono anecdótico y la presentación de la historia como algo curioso y entretenido sugiere que está dirigido a un público interesado en aspectos curiosos de la historia de la filosofía.",
+    "explicacion": "El texto presenta la anécdota de Descartes de manera entretenida, con un tono que busca captar la atención mediante lo curioso del evento.",
+    "habilidad_evaluada": "Identificar el contexto y propósito comunicativo de un texto",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["contexto", "propósito comunicativo", "filosofía", "anécdota"]
+  },
+  {
+    "materia": "Lectura Crítica", 
+    "competencia": "Reflexión y evaluación del contenido de un texto",
+    "contexto": "Cómic: Un discípulo se va de su maestro, Crates. El discípulo dice: 'Me enseñaste a usar la razón como una forma de libertad. Y ahora, Crates, me libero de ti.' Luego explica: 'Todo lo que existe se divide en lo que depende de nosotros y en lo que no. De nosotros dependen el juicio, el deseo y todo lo que hacemos. Por eso depende de mí separarme de ti, Crates.'",
+    "enunciado": "¿Cuál de los siguientes enunciados se contradice con la tesis central del texto?",
+    "opciones": {
+      "A": "No todo se divide entre lo que depende y lo que no depende de nosotros.",
+      "B": "Alejarnos de alguien no depende de nosotros mismos.",
+      "C": "La mente de un filósofo funciona de la misma manera que su cuerpo.",
+      "D": "El juicio y el deseo no dependen de nosotros."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "La tesis central del discípulo es que su decisión de irse es un acto de libertad basado en la razón, porque es algo que 'depende de nosotros'. La afirmación 'Alejarnos de alguien no depende de nosotros mismos' contradice directamente esta conclusión.",
+    "explicacion": "El cómic expone una versión de la filosofía estoica. El discípulo concluye que puede separarse porque esa acción depende de él.",
+    "habilidad_evaluada": "Identificar la tesis de un argumento y reconocer afirmaciones que la contradicen",
+    "dificultad": "alta", 
+    "tiempo_estimado": 150,
+    "tags": ["filosofía", "estoicismo", "argumento", "tesis", "contradicción"]
+  },
+  {
+    "materia": "Matemáticas",
+    "competencia": "Razonamiento y argumentación", 
+    "contexto": "En un problema de aplicación de ecuaciones lineales",
+    "enunciado": "Si 2x + 5 = 13, ¿cuál es el valor de x?",
+    "opciones": {
+      "A": "3",
+      "B": "4", 
+      "C": "5",
+      "D": "6"
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "Para resolver 2x + 5 = 13, restamos 5 de ambos lados: 2x = 8, luego dividimos entre 2: x = 4",
+    "explicacion": "Esta es una ecuación lineal simple que se resuelve despejando la variable x mediante operaciones inversas",
+    "habilidad_evaluada": "Resolución de ecuaciones lineales",
+    "dificultad": "facil",
+    "tiempo_estimado": 60,
+    "tags": ["álgebra", "ecuaciones", "básico"]
+  }
+]

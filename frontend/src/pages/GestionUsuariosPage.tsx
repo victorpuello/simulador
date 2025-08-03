@@ -1,0 +1,161 @@
+import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
+import { useAuth } from '../hooks/useAuth';
+import UsuarioList from '../components/admin/UsuarioList';
+import UsuarioForm from '../components/admin/UsuarioForm';
+import UsuarioStats from '../components/admin/UsuarioStats';
+// Definir tipo localmente para evitar problemas de importación
+type Usuario = {
+  id: number;
+  username: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  rol: 'estudiante' | 'docente' | 'admin';
+  rol_display: string;
+  nombre_completo: string;
+  is_active: boolean;
+  date_joined: string;
+  ultima_actividad: string;
+  estado_display: string;
+  racha_actual: number;
+  puntos_totales: number;
+  avatar?: string;
+  configuracion?: any;
+};
+
+type Vista = 'lista' | 'crear' | 'editar' | 'estadisticas';
+
+const GestionUsuariosPage: React.FC = () => {
+  const { user } = useAuth();
+  const [vista, setVista] = useState<Vista>('lista');
+  const [usuarioSeleccionado, setUsuarioSeleccionado] = useState<Usuario | null>(null);
+  const [usuarioEditando, setUsuarioEditando] = useState<Usuario | null>(null);
+
+  // Verificar permisos
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+
+  // Solo docentes y administradores pueden acceder a la gestión de usuarios
+  if (user.rol !== 'docente' && user.rol !== 'admin' && !user.is_staff) {
+    return <Navigate to="/dashboard" replace />;
+  }
+
+  const handleEdit = (usuario: Usuario) => {
+    setUsuarioEditando(usuario);
+    setVista('editar');
+  };
+
+  const handleView = (usuario: Usuario) => {
+    setUsuarioSeleccionado(usuario);
+    // Aquí podrías implementar una vista de detalles
+    console.log('Ver usuario:', usuario);
+  };
+
+  const handleSave = (usuario: Usuario) => {
+    setUsuarioEditando(null);
+    setVista('lista');
+    // Recargar la lista
+  };
+
+  const handleCancel = () => {
+    setUsuarioEditando(null);
+    setVista('lista');
+  };
+
+  const handleRefresh = () => {
+    // Recargar datos si es necesario
+  };
+
+  const renderContenido = () => {
+    switch (vista) {
+      case 'lista':
+        return (
+          <UsuarioList
+            onEdit={handleEdit}
+            onView={handleView}
+            onRefresh={handleRefresh}
+          />
+        );
+      
+      case 'crear':
+        return (
+          <UsuarioForm
+            mode="create"
+            onSave={handleSave}
+            onCancel={handleCancel}
+          />
+        );
+      
+      case 'editar':
+        return (
+          <UsuarioForm
+            usuario={usuarioEditando || undefined}
+            mode="edit"
+            onSave={handleSave}
+            onCancel={handleCancel}
+          />
+        );
+      
+      case 'estadisticas':
+        return <UsuarioStats />;
+      
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">
+            Gestión de Usuarios
+          </h1>
+          <p className="text-gray-600 mt-2">
+            {user.rol === 'admin' || user.is_staff 
+              ? 'Administra todos los usuarios del sistema: crear, editar, activar/desactivar y ver estadísticas'
+              : 'Gestiona los estudiantes: ver, editar y ver estadísticas'
+            }
+          </p>
+        </div>
+
+        {/* Navegación por pestañas */}
+        <div className="mb-6">
+          <nav className="flex space-x-8">
+            {[
+              { key: 'lista', label: 'Lista de Usuarios', icon: '👥' },
+              // Solo mostrar "Crear Usuario" para administradores
+              ...(user.rol === 'admin' || user.is_staff ? [
+                { key: 'crear', label: 'Crear Usuario', icon: '➕' }
+              ] : []),
+              { key: 'estadisticas', label: 'Estadísticas', icon: '📊' }
+            ].map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setVista(tab.key as Vista)}
+                className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  vista === tab.key
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                <span>{tab.icon}</span>
+                <span>{tab.label}</span>
+              </button>
+            ))}
+          </nav>
+        </div>
+
+        {/* Contenido */}
+        <div className="bg-white rounded-lg shadow">
+          {renderContenido()}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default GestionUsuariosPage; 

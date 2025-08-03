@@ -1,0 +1,102 @@
+[
+  {
+    "materia": "Matemáticas",
+    "competencia": "Interpretación y representación",
+    "contexto": "Observa la siguiente gráfica de una función cuadrática",
+    "imagen_archivo": "funcion_cuadratica_ejemplo.png",
+    "enunciado": "¿Cuáles son las coordenadas del vértice de la parábola mostrada en la gráfica?",
+    "opciones": {
+      "A": "(2, -1)",
+      "B": "(-2, 1)",
+      "C": "(1, -2)",
+      "D": "(-1, 2)"
+    },
+    "respuesta_correcta": "A",
+    "retroalimentacion": "El vértice de la parábola se encuentra en el punto más bajo (o más alto) de la curva. En este caso, observando la gráfica, el punto más bajo está en las coordenadas (2, -1).",
+    "explicacion": "Para una función cuadrática f(x) = a(x-h)² + k, el vértice está en (h, k). También se puede identificar visualmente como el punto de cambio de dirección de la parábola.",
+    "habilidad_evaluada": "Identificación de elementos clave en gráficas de funciones cuadráticas",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": ["funciones", "parábolas", "vértice", "gráficas"]
+  },
+  {
+    "materia": "Ciencias Naturales",
+    "competencia": "Explicación de fenómenos",
+    "contexto": "Analiza el siguiente diagrama del ciclo del agua",
+    "imagen_archivo": "ciclo_agua_diagrama.jpg",
+    "enunciado": "¿Qué proceso está señalado con el número 3 en el diagrama?",
+    "opciones": {
+      "A": "Evaporación",
+      "B": "Condensación",
+      "C": "Precipitación",
+      "D": "Infiltración"
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "El número 3 señala las gotas de lluvia cayendo desde las nubes hacia la superficie terrestre, lo cual corresponde al proceso de precipitación.",
+    "explicacion": "La precipitación es el proceso por el cual el agua condensada en las nubes cae hacia la superficie en forma de lluvia, nieve, granizo u otras formas.",
+    "habilidad_evaluada": "Interpretación de diagramas científicos y comprensión de procesos naturales",
+    "dificultad": "facil",
+    "tiempo_estimado": 90,
+    "tags": ["ciclo del agua", "precipitación", "fenómenos naturales"]
+  },
+  {
+    "materia": "Ciencias Sociales",
+    "competencia": "Pensamiento espacial",
+    "contexto": "Observa el siguiente mapa de Colombia con las regiones naturales",
+    "imagen_archivo": "mapa_regiones_colombia.png",
+    "enunciado": "¿Qué región natural está destacada en color verde en el mapa?",
+    "opciones": {
+      "A": "Región Andina",
+      "B": "Región Pacífica",
+      "C": "Región Amazónica",
+      "D": "Región Caribe"
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "La región destacada en verde corresponde a la Región Amazónica, ubicada al sureste del país y caracterizada por su extensa cobertura vegetal y biodiversidad.",
+    "explicacion": "La Región Amazónica se caracteriza por sus selvas tropicales, alta biodiversidad y es la región natural más extensa de Colombia.",
+    "habilidad_evaluada": "Identificación y localización de regiones geográficas en mapas",
+    "dificultad": "media",
+    "tiempo_estimado": 100,
+    "tags": ["geografía", "regiones", "Colombia", "mapas"]
+  },
+  {
+    "materia": "Lectura Crítica",
+    "competencia": "Interpretación textual",
+    "contexto": "Lee el siguiente fragmento y observa la infografía que lo acompaña",
+    "imagen_archivo": "infografia_cambio_climatico.jpg",
+    "enunciado": "Según la infografía, ¿cuál ha sido el incremento de temperatura global promedio en los últimos 100 años?",
+    "opciones": {
+      "A": "0.5°C",
+      "B": "1.1°C",
+      "C": "1.8°C",
+      "D": "2.3°C"
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "La infografía muestra claramente que el incremento de temperatura global promedio ha sido de 1.1°C en los últimos 100 años, dato que se presenta en la sección principal del gráfico.",
+    "explicacion": "Las infografías combinan texto e imágenes para presentar información de manera visual y comprensible. Es importante leer tanto el texto como interpretar los elementos gráficos.",
+    "habilidad_evaluada": "Interpretación de información visual y textual integrada",
+    "dificultad": "media",
+    "tiempo_estimado": 150,
+    "tags": ["infografías", "cambio climático", "datos", "interpretación"]
+  },
+  {
+    "materia": "Inglés",
+    "competencia": "Reading comprehension",
+    "contexto": "Look at the following advertisement poster",
+    "imagen_archivo": "english_advertisement_poster.jpg",
+    "enunciado": "According to the poster, what is the main benefit of the product advertised?",
+    "opciones": {
+      "A": "It's very cheap",
+      "B": "It saves time",
+      "C": "It's environmentally friendly",
+      "D": "It lasts longer"
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "The poster prominently displays 'ECO-FRIENDLY' and shows green symbols throughout, indicating that the main selling point is its environmental benefits.",
+    "explicacion": "Advertisement analysis requires understanding both visual elements (colors, symbols, layout) and textual information to identify the main message.",
+    "habilidad_evaluada": "Visual and textual comprehension in advertising contexts",
+    "dificultad": "media",
+    "tiempo_estimado": 110,
+    "tags": ["advertising", "reading comprehension", "visual analysis"]
+  }
+]

@@ -26,9 +26,8 @@ export interface HistorialSesion {
   materia_nombre: string;
   fecha_inicio: string;
   fecha_fin: string | null;
-  puntaje_final: number | null;
+  puntuacion: number | null;
   completada: boolean;
-  modo: string;
   duracion_minutos: number;
 }
 
@@ -45,6 +44,28 @@ export interface RankingMateria {
   promedio_puntaje: number;
   color: string;
   simulaciones: number;
+}
+
+export interface ReporteICFES {
+  puntaje_global: number;
+  percentil: number;
+  nivel: string;
+  puntajes_materias: Record<string, number>;
+  detalles_materias: Record<string, {
+    materia_nombre: string;
+    puntaje: number;
+    ponderacion: number;
+    simulaciones: number;
+    mejor_puntaje: number;
+  }>;
+  materias_faltantes: string[];
+  promedio_ponderado: number;
+  suma_ponderada: number;
+  ponderacion_total: number;
+  formula_aplicada: {
+    descripcion: string;
+    ponderaciones: Record<string, number>;
+  };
 }
 
 export const reportesService = {
@@ -79,6 +100,12 @@ export const reportesService = {
   // Obtener ranking de materias
   async getRankingMaterias(): Promise<RankingMateria[]> {
     const response = await api.get('/reportes/ranking_materias/');
+    return response.data;
+  },
+
+  // Obtener reporte ICFES
+  async getReporteICFES(): Promise<ReporteICFES> {
+    const response = await api.get('/reportes/reporte_icfes/');
     return response.data;
   }
 };

@@ -253,7 +253,7 @@ class Pregunta(models.Model):
         return f"{self.materia.nombre} - {self.enunciado[:50]}..."
     
     def clean(self):
-        """Validación personalizada"""
+        """Validación personalizada según la materia"""
         from django.core.exceptions import ValidationError
         
         # Validar que la respuesta correcta esté en las opciones
@@ -262,11 +262,38 @@ class Pregunta(models.Model):
                 'La respuesta correcta debe estar entre las opciones disponibles'
             )
         
-        # Validar que haya al menos 2 opciones
-        if len(self.opciones) < 2:
-            raise ValidationError(
-                'Debe haber al menos 2 opciones de respuesta'
-            )
+        # Validar opciones según materia
+        if hasattr(self, 'materia') and self.materia:
+            if self.materia.nombre.lower() == 'inglés':
+                # Inglés: mínimo 3 opciones (A, B, C), opcional D y más
+                opciones_requeridas = ['A', 'B', 'C']
+                # Para Inglés, permitir opciones adicionales más allá de D
+                opciones_adicionales = ['D', 'E', 'F', 'G', 'H', 'I', 'J']
+            else:
+                # Otras materias: 4 opciones (A, B, C, D)
+                opciones_requeridas = ['A', 'B', 'C', 'D']
+                opciones_adicionales = []
+            
+            # Validar opciones requeridas
+            opciones_faltantes = [opt for opt in opciones_requeridas if opt not in self.opciones]
+            if opciones_faltantes:
+                raise ValidationError(
+                    f'Para {self.materia.nombre} se requieren las opciones: {", ".join(opciones_requeridas)}'
+                )
+            
+            # Validar que no haya opciones no permitidas
+            opciones_permitidas = opciones_requeridas + opciones_adicionales
+            opciones_invalidas = [opt for opt in self.opciones.keys() if opt not in opciones_permitidas]
+            if opciones_invalidas:
+                raise ValidationError(
+                    f'Para {self.materia.nombre} solo se permiten las opciones: {", ".join(opciones_permitidas)}'
+                )
+        else:
+            # Validación básica si no hay materia asignada
+            if len(self.opciones) < 2:
+                raise ValidationError(
+                    'Debe haber al menos 2 opciones de respuesta'
+                )
 
 
 class Sesion(models.Model):

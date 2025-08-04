@@ -104,6 +104,27 @@ class PreguntaSerializer(serializers.ModelSerializer):
                 return request.build_absolute_uri(obj.imagen.url)
             return obj.imagen.url
         return None
+    
+    def validate_opciones(self, value):
+        """Validar formato de opciones (texto o texto+imagen)"""
+        if not isinstance(value, dict):
+            raise serializers.ValidationError('Las opciones deben ser un diccionario')
+        
+        for key, opcion in value.items():
+            if isinstance(opcion, dict):
+                # Formato: {"texto": "...", "imagen": "url"}
+                if 'texto' not in opcion:
+                    raise serializers.ValidationError(f'La opción {key} debe tener campo "texto"')
+                if not opcion['texto'] or not opcion['texto'].strip():
+                    raise serializers.ValidationError(f'La opción {key} no puede estar vacía')
+            elif isinstance(opcion, str):
+                # Formato simple: "texto"
+                if not opcion or not opcion.strip():
+                    raise serializers.ValidationError(f'La opción {key} no puede estar vacía')
+            else:
+                raise serializers.ValidationError(f'Formato inválido para opción {key}')
+        
+        return value
 
 
 class PreguntaDetailSerializer(PreguntaSerializer):

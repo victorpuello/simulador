@@ -3,6 +3,7 @@ import { useAuth } from '../../hooks/useAuth';
 import Button from '../ui/Button';
 import Card from '../ui/Card';
 import { useNotifications } from '../../store';
+import { api } from '../../services/api';
 
 interface ResultadoCarga {
   mensaje: string;
@@ -56,18 +57,11 @@ const CargaMasivaPreguntas: React.FC = () => {
 
   const descargarPlantilla = async () => {
     try {
-      const token = localStorage.getItem('access_token');
-      const response = await fetch('/api/core/preguntas/plantilla_carga/', {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-        },
+      const response = await api.get('/core/preguntas/plantilla_carga/', {
+        responseType: 'blob',
       });
 
-      if (!response.ok) {
-        throw new Error('Error al descargar la plantilla');
-      }
-
-      const blob = await response.blob();
+      const blob = response.data;
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -109,20 +103,9 @@ const CargaMasivaPreguntas: React.FC = () => {
       const formData = new FormData();
       formData.append('archivo', archivo);
 
-      const token = localStorage.getItem('access_token');
-      const response = await fetch('/api/core/preguntas/carga_masiva/', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-        },
-        body: formData,
-      });
+      const response = await api.post('/core/preguntas/carga_masiva/', formData);
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Error en la carga');
-      }
+      const data = response.data;
 
       setResultado(data);
       addNotification({
@@ -135,7 +118,7 @@ const CargaMasivaPreguntas: React.FC = () => {
       addNotification({
         type: 'error',
         title: 'Error en la carga',
-        message: error.message || 'Error desconocido',
+        message: error.response?.data?.detail || error.message || 'Error desconocido',
         duration: 5000,
       });
     } finally {

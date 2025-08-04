@@ -1,0 +1,459 @@
+[
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto descriptivo sobre el lobo etíope y su relación con otras especies.",
+      "enunciado": "En la oración '...studies show that (11)____ close relationship to grey wolves and coyotes is evident.', ¿cuál es la palabra correcta para el espacio (11)?",
+      "opciones": {
+        "A": "its (su - posesivo de 'it')",
+        "B": "his (su - posesivo de 'he')",
+        "C": "your (tu/su - posesivo de 'you')"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "La oración se refiere a la 'relación cercana' del lobo etíope (un animal, que se trata gramaticalmente como 'it'). El adjetivo posesivo correcto para 'it' es 'its'.",
+      "explicacion": "Se necesita un adjetivo posesivo para indicar que la 'relación cercana' pertenece al lobo etíope. Como 'lobo etíope' es un animal (singular), se le asigna el pronombre 'it'. El posesivo de 'it' es 'its'. 'His' se usaría para un sujeto masculino y 'your' para 'tú/usted/ustedes'.",
+      "habilidad_evaluada": "Uso de adjetivos posesivos.",
+      "explicacion_opciones_incorrectas": {
+        "B": "'his' se usa para personas de género masculino.",
+        "C": "'your' se usa para la segunda persona (tú/ustedes)."
+      },
+      "estrategias_resolucion": "1. Identificar de quién es la 'relación' de la que se habla (del lobo etíope). 2. Determinar el pronombre que le corresponde (it). 3. Seleccionar el adjetivo posesivo correcto para ese pronombre (its).",
+      "errores_comunes": "Confundir 'its' (posesivo) con 'it's' (contracción de 'it is'). Aunque no es una opción aquí, es un error frecuente.",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "gramática",
+        "posesivos",
+        "adjetivos",
+        "comprensión lectora"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto sobre las similitudes del lobo etíope con otros caninos.",
+      "enunciado": "En la oración '(12)____ Ethiopian wolves are more similar to grey wolves...', ¿cuál es la palabra correcta para el espacio (12)?",
+      "opciones": {
+        "A": "This (Este/a)",
+        "B": "That (Ese/a)",
+        "C": "These (Estos/as)"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "El sustantivo 'Ethiopian wolves' está en plural. El pronombre demostrativo correcto para referirse a un sustantivo plural que está 'cerca' (en el contexto del discurso) es 'These'.",
+      "explicacion": "La pregunta evalúa el uso de los pronombres/adjetivos demostrativos y la concordancia número (singular/plural). 'Wolves' es un sustantivo plural. 'This' y 'That' se usan con sustantivos singulares. 'These' es la forma plural de 'this' y es la única opción que concuerda con 'wolves'.",
+      "habilidad_evaluada": "Uso de pronombres demostrativos y concordancia de número.",
+      "explicacion_opciones_incorrectas": {
+        "A": "'This' es para sustantivos singulares.",
+        "B": "'That' es para sustantivos singulares."
+      },
+      "estrategias_resolucion": "1. Identificar el sustantivo que sigue al espacio ('wolves'). 2. Determinar si el sustantivo es singular o plural. 3. Elegir el pronombre demostrativo que concuerde en número.",
+      "errores_comunes": "No hacer la concordancia entre el demostrativo y el sustantivo.",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "gramática",
+        "demostrativos",
+        "concordancia",
+        "plural"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto sobre la población de lobos etíopes.",
+      "enunciado": "En la oración 'The (13)____ group of Ethiopian wolves exists...', ¿cuál es la palabra correcta para el espacio (13)?",
+      "opciones": {
+        "A": "larger (más grande)",
+        "B": "largest (el más grande)",
+        "C": "large (grande)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "La presencia del artículo definido 'The' antes del espacio sugiere el uso de un adjetivo en su forma superlativa ('the ...-est' o 'the most...'). La oración se refiere al único o principal grupo que existe, por lo que 'largest' (el más grande) es la forma correcta.",
+      "explicacion": "Se busca describir al grupo de lobos etíopes como el más grande que existe. Esto requiere un superlativo. 'Large' es el adjetivo base. 'Larger' es el comparativo y se usaría para comparar dos grupos. 'Largest' es el superlativo y se usa para señalar a uno dentro de un grupo de tres o más, o como el único en su clase.",
+      "habilidad_evaluada": "Uso de adjetivos comparativos y superlativos.",
+      "explicacion_opciones_incorrectas": {
+        "A": "'larger' es comparativo y no encaja con 'The' en este contexto de unicidad.",
+        "C": "'large' es un adjetivo simple y no transmite la idea de que es el grupo principal."
+      },
+      "estrategias_resolucion": "1. Notar la presencia del artículo 'The'. 2. Comprender que el texto habla del principal grupo existente. 3. Reconocer que esto requiere un adjetivo superlativo.",
+      "errores_comunes": "Confundir las formas comparativa y superlativa de los adjetivos.",
+      "dificultad": "A2",
+      "tiempo_estimado": 85,
+      "tags": [
+        "gramática",
+        "superlativos",
+        "adjetivos",
+        "comprensión lectora"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical / Léxica",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto sobre la ubicación de la población de lobos etíopes.",
+      "enunciado": "En la oración '...group of Ethiopian wolves exists (14)____ the Bale Mountains National Park.', ¿cuál es la palabra correcta para el espacio (14)?",
+      "opciones": {
+        "A": "in (en, dentro de)",
+        "B": "along (a lo largo de)",
+        "C": "on (sobre, encima de)"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "Para indicar que algo existe o se encuentra dentro de un área geográfica definida, como un parque nacional, se utiliza la preposición 'in'.",
+      "explicacion": "La pregunta evalúa el uso correcto de las preposiciones de lugar. Un parque nacional es un área tridimensional o un espacio delimitado. La preposición para indicar ubicación 'dentro de' este tipo de áreas es 'in'. 'On' se usaría para superficies (on the table) y 'along' para indicar un recorrido o línea (along the river).",
+      "habilidad_evaluada": "Uso de preposiciones de lugar.",
+      "explicacion_opciones_incorrectas": {
+        "B": "'along' implica movimiento o extensión a lo largo de una línea, no una ubicación estática dentro de un área.",
+        "C": "'on' implica estar sobre una superficie, lo cual no es apropiado para un área como un parque."
+      },
+      "estrategias_resolucion": "1. Identificar el tipo de lugar ('Bale Mountains National Park'). 2. Determinar que es un área geográfica. 3. Seleccionar la preposición de lugar correcta para áreas ('in').",
+      "errores_comunes": "Confundir el uso de 'in', 'on' y 'at' para diferentes tipos de lugares.",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "gramática",
+        "preposiciones",
+        "lugar",
+        "comprensión lectora"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico",
+      "contexto": "Relato personal de una niña que ve un programa de televisión sobre un pintor.",
+      "enunciado": "Where was the painter from?",
+      "opciones": {
+        "A": "Ireland",
+        "B": "Spain",
+        "C": "France"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "El texto dice que ella encontró 'a Spanish television show with a French man who was painting'. Más adelante, se refiere a él como 'the French painter'. Esto indica claramente que el pintor era de Francia.",
+      "explicacion": "La pregunta requiere localizar información explícita en el texto. Se debe diferenciar la nacionalidad de la narradora (de Irlanda), del programa de TV (español) y del pintor (francés). El texto es claro al llamar al hombre 'a French man' y 'the French painter'.",
+      "habilidad_evaluada": "Localización de información específica (scanning for details).",
+      "explicacion_opciones_incorrectas": {
+        "A": "La narradora es de Irlanda, no el pintor.",
+        "B": "El programa de televisión era español, pero el hombre que pintaba era francés."
+      },
+      "estrategias_resolucion": "1. Buscar las palabras clave 'painter', 'man', y las nacionalidades mencionadas. 2. Leer las frases donde aparecen para atribuir correctamente cada nacionalidad.",
+      "errores_comunes": "Confundir las diferentes nacionalidades mencionadas en el texto.",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "lectura",
+        "narrativa",
+        "información específica"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico",
+      "contexto": "Relato personal de una niña inspirada por un pintor de la televisión.",
+      "enunciado": "She was mostly excited by the...",
+      "opciones": {
+        "A": "painter's ability",
+        "B": "painter's voice",
+        "C": "painter's show"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "La narradora describe cómo el pintor 'quickly made trees and rivers, simply by moving his hand' y 'made it look simple and easy'. Su principal fuente de emoción y fascinación era la habilidad ('ability') y destreza del pintor.",
+      "explicacion": "La pregunta pide identificar la causa principal de la emoción de la narradora. Aunque se menciona su 'voz tranquila' y el 'show' en general, las descripciones más detalladas y la reacción de querer imitarlo se centran en lo que él podía hacer con sus manos, es decir, su habilidad para pintar.",
+      "habilidad_evaluada": "Identificar la causa de una emoción o motivación en un texto narrativo.",
+      "explicacion_opciones_incorrectas": {
+        "B": "Se menciona su 'quiet voice', pero la emoción principal viene de su talento, no de su voz.",
+        "C": "El 'show' es el contexto, pero el elemento específico que la cautiva es la habilidad del pintor."
+      },
+      "estrategias_resolucion": "1. Buscar en el texto las descripciones de las acciones del pintor. 2. Analizar cómo reacciona la narradora a esas acciones. 3. Deducir que la habilidad es la causa principal de su entusiasmo.",
+      "errores_comunes": "Elegir un detalle secundario (la voz) en lugar de la causa principal de la emoción (la habilidad).",
+      "dificultad": "A2",
+      "tiempo_estimado": 85,
+      "tags": [
+        "lectura",
+        "narrativa",
+        "causa-efecto"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico",
+      "contexto": "Relato personal sobre los hábitos de una niña.",
+      "enunciado": "How often did she watch the show?",
+      "opciones": {
+        "A": "three times a week (tres veces por semana)",
+        "B": "once a week (una vez por semana)",
+        "C": "twice a week (dos veces por semana)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "El texto dice explícitamente: 'Every Sunday morning, I would try to paint...'. Ver el programa cada domingo ('Every Sunday') significa que lo veía una vez por semana ('once a week').",
+      "explicacion": "La pregunta requiere localizar información específica sobre la frecuencia de una acción. El texto proporciona un marcador de tiempo ('Every Sunday morning') que debe ser interpretado correctamente como 'una vez a la semana'.",
+      "habilidad_evaluada": "Localización de información específica sobre frecuencia.",
+      "explicacion_opciones_incorrectas": {
+        "A": "No hay información en el texto que apoye esta frecuencia.",
+        "C": "No hay información en el texto que apoye esta frecuencia."
+      },
+      "estrategias_resolucion": "1. Buscar en el texto expresiones de tiempo que indiquen frecuencia (every, once, twice, etc.). 2. Interpretar la expresión 'Every Sunday morning' para determinar la frecuencia semanal.",
+      "errores_comunes": "Pasar por alto la expresión de tiempo o no entender su significado.",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "lectura",
+        "narrativa",
+        "frecuencia"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico",
+      "contexto": "Relato personal de una niña y sus dificultades para pintar.",
+      "enunciado": "She could not get oil paints because she...",
+      "opciones": {
+        "A": "didn't speak Spanish",
+        "B": "was too young",
+        "C": "always watched TV"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "El texto explica la razón claramente: 'I could not buy oil paints; I was only seven, and my parents would not buy them for me.' Su corta edad ('was too young') era el impedimento.",
+      "explicacion": "La pregunta busca la causa de una situación. El texto proporciona una justificación explícita. La narradora no podía comprar las pinturas porque tenía solo siete años y sus padres no se las compraban, siendo la edad la razón fundamental de ambas cosas.",
+      "habilidad_evaluada": "Identificación de una relación de causa y efecto.",
+      "explicacion_opciones_incorrectas": {
+        "A": "El idioma del programa de TV no tiene relación con su capacidad para comprar pinturas.",
+        "C": "Ver la TV fue lo que la inspiró, no lo que le impidió obtener los materiales."
+      },
+      "estrategias_resolucion": "1. Localizar la parte del texto que habla sobre no poder conseguir 'oil paints'. 2. Leer la razón que se da justo después. 3. Seleccionar la opción que mejor parafrasee esa razón.",
+      "errores_comunes": "No conectar la edad ('I was only seven') como la causa principal.",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "lectura",
+        "narrativa",
+        "causa-efecto"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico",
+      "contexto": "Relato personal sobre las consecuencias de que una niña intentara pintar con cosméticos.",
+      "enunciado": "Stopping painting was...",
+      "opciones": {
+        "A": "the painter's idea (la idea del pintor)",
+        "B": "her mother's order (la orden de su madre)",
+        "C": "her own decision (su propia decisión)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "El texto dice: 'After my mum saw what I did with her things, I was told I could not paint again.' (Después de que mi mamá vio lo que hice con sus cosas, me dijeron que no podía volver a pintar). Esto fue una orden o prohibición de su madre.",
+      "explicacion": "La pregunta busca identificar quién o qué causó que la niña dejara de pintar. El texto es claro al indicar que fue una consecuencia directa de la reacción de su madre. Por lo tanto, fue una orden de su madre ('her mother's order').",
+      "habilidad_evaluada": "Identificar el agente o la causa de una acción.",
+      "explicacion_opciones_incorrectas": {
+        "A": "El pintor de la TV no tuvo nada que ver con esta decisión.",
+        "C": "No fue su decisión, fue una imposición. Su propia decisión fue dejar de ver el programa más tarde."
+      },
+      "estrategias_resolucion": "1. Localizar la frase 'could not paint again'. 2. Leer el contexto inmediato para ver quién dio esa instrucción. 3. Identificar que fue la madre ('my mum').",
+      "errores_comunes": "Confundir la orden de dejar de pintar (que vino de su madre) con su decisión posterior de dejar de ver el programa (que fue propia).",
+      "dificultad": "A2",
+      "tiempo_estimado": 85,
+      "tags": [
+        "lectura",
+        "narrativa",
+        "causa-efecto"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura Global",
+      "componente": "Pragmático",
+      "contexto": "Relato de viaje de un turista llamado Jonathan, describiendo una granja de café en Colombia.",
+      "enunciado": "What is the writer trying to do in this article?",
+      "opciones": {
+        "A": "convincing people to buy a Colombian coffee farm",
+        "B": "telling readers to run a coffee business in Colombia",
+        "C": "inviting tourists to write about places they visit in Colombia",
+        "D": "encouraging tourists to visit Colombia"
+      },
+      "respuesta_correcta": "D",
+      "retroalimentacion": "El tono general del artículo es muy positivo y descriptivo, usando palabras como 'splendid country', 'hidden paradise'. La conclusión, 'Some of those reading may be stimulated to do the same', revela la intención de animar a otros a tener una experiencia similar, es decir, a visitar Colombia.",
+      "explicacion": "La pregunta pide determinar el propósito del autor. El texto es una narración de viaje que resalta los aspectos positivos de un lugar. El objetivo de este tipo de escritos es, generalmente, compartir una buena experiencia y, a menudo, inspirar a otros a hacer lo mismo. Por lo tanto, el propósito es fomentar el turismo en Colombia.",
+      "habilidad_evaluada": "Identificar el propósito del autor.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Describe la granja como un lugar para visitar, no para comprar.",
+        "B": "No da consejos sobre cómo iniciar un negocio.",
+        "C": "El autor escribe, pero no invita a otros a que lo hagan."
+      },
+      "estrategias_resolucion": "1. Analizar el tono y el lenguaje del texto (positivo, descriptivo). 2. Prestar especial atención a las frases introductorias y conclusivas para captar la intención. 3. Deducir que el objetivo es promocionar o animar a la visita.",
+      "errores_comunes": "Confundir un ejemplo específico (la granja de café) con el propósito general del texto (promover el turismo en el país).",
+      "dificultad": "B1",
+      "tiempo_estimado": 95,
+      "tags": [
+        "lectura",
+        "propósito del autor",
+        "viajes",
+        "pragmática"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico",
+      "contexto": "Relato de viaje sobre una estancia en una granja de café en Colombia.",
+      "enunciado": "What can a reader find out from this text?",
+      "opciones": {
+        "A": "which activities tourists prefer to do at the farm",
+        "B": "when the best time is to visit the farm",
+        "C": "what the accommodation price includes",
+        "D": "how to grow coffee on the farm"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "El texto proporciona información explícita sobre lo que incluye el precio del alojamiento: '$45.000 a night. This includes three home-cooked meals a day, a swimming pool, and as much coffee as you can drink'.",
+      "explicacion": "Esta pregunta de tipo 'scanning' requiere buscar un dato específico en el texto. Se debe leer cada opción y verificar si esa información está presente. El texto detalla claramente lo que se obtiene por el precio de la noche, haciendo de la opción C la única correcta.",
+      "habilidad_evaluada": "Localización de información detallada (scanning for details).",
+      "explicacion_opciones_incorrectas": {
+        "A": "Menciona actividades disponibles (beber café, nadar), pero no las preferencias de los turistas.",
+        "B": "Menciona que las tormentas dependen de la 'time of the year', pero no especifica cuál es la mejor época.",
+        "D": "Dice que el café crece allí, pero no explica el proceso de cultivo."
+      },
+      "estrategias_resolucion": "1. Leer cada opción cuidadosamente. 2. Escanear el texto buscando palabras clave de cada opción (price, activities, time, grow). 3. Verificar si la información completa que se afirma en la opción está realmente en el texto.",
+      "errores_comunes": "Asumir información que no está explícitamente escrita en el texto.",
+      "dificultad": "B1",
+      "tiempo_estimado": 90,
+      "tags": [
+        "lectura",
+        "información específica",
+        "scanning",
+        "viajes"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Cohesión y Coherencia",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto informativo sobre las tradiciones del Día de San Valentín.",
+      "enunciado": "En la oración 'It's always a lot of fun to get a card or some chocolates, but (22)____ do we do this?', ¿cuál es la palabra correcta para el espacio (22)?",
+      "opciones": {
+        "A": "where (dónde)",
+        "B": "why (por qué)",
+        "C": "when (cuándo)",
+        "D": "what (qué)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "El texto describe la acción (intercambiar regalos) y luego se pregunta por la razón o el motivo detrás de esa acción. La palabra interrogativa para preguntar por una razón es 'why'.",
+      "explicacion": "La conjunción 'but' introduce un contraste o una pregunta que profundiza en el tema. Después de describir la costumbre, el texto se dispone a explicar su origen. Por lo tanto, una pregunta retórica sobre el 'porqué' de la costumbre sirve como una transición perfecta para la explicación que sigue.",
+      "habilidad_evaluada": "Uso de palabras interrogativas (Wh- questions) para mantener la coherencia textual.",
+      "explicacion_opciones_incorrectas": {
+        "A": "'where' preguntaría por un lugar, lo cual es irrelevante.",
+        "C": "'when' preguntaría por el tiempo, pero ya se mencionó la fecha (14 de febrero).",
+        "D": "'what' no encajaría gramaticalmente para formar la pregunta."
+      },
+      "estrategias_resolucion": "1. Comprender que el texto va a pasar de describir una acción a explicar su origen. 2. Reconocer que la pregunta sirve como puente. 3. Seleccionar la palabra interrogativa que pregunta por una razón ('why').",
+      "errores_comunes": "No entender la función retórica de la pregunta dentro del párrafo.",
+      "dificultad": "B1",
+      "tiempo_estimado": 90,
+      "tags": [
+        "gramática",
+        "preguntas",
+        "coherencia",
+        "conectores"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Léxica",
+      "componente": "Léxico-semántico",
+      "contexto": "Texto que narra una de las leyendas sobre el origen del Día de San Valentín.",
+      "enunciado": "En la oración 'One of the (23)____ says that the original Valentine was a priest.', ¿cuál es la palabra correcta para el espacio (23)?",
+      "opciones": {
+        "A": "essays (ensayos)",
+        "B": "stories (historias/relatos)",
+        "C": "reports (informes)",
+        "D": "letters (cartas)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "El texto se refiere a la 'mucho misterio' que rodea el día y procede a contar una leyenda. La palabra más apropiada para referirse a una leyenda o un relato tradicional es 'stories'.",
+      "explicacion": "Se necesita un sustantivo que encaje con el contexto de una narración popular o una leyenda sobre un evento histórico. 'Stories' es el término más adecuado para este tipo de relato. 'Essays' y 'reports' son demasiado formales y factuales, y 'letters' son comunicaciones personales.",
+      "habilidad_evaluada": "Selección de vocabulario apropiado al contexto.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Un 'essay' es un escrito analítico, no una leyenda.",
+        "C": "Un 'report' es un documento informativo y objetivo.",
+        "D": "Una 'letter' es una comunicación escrita a otra persona."
+      },
+      "estrategias_resolucion": "1. Entender por el contexto que se va a contar una leyenda. 2. Evaluar las opciones y elegir el sustantivo que mejor describe este tipo de narración.",
+      "errores_comunes": "Elegir una palabra que es gramaticalmente posible pero que no encaja con el tono legendario del texto.",
+      "dificultad": "B1",
+      "tiempo_estimado": 90,
+      "tags": [
+        "vocabulario",
+        "léxico",
+        "contexto",
+        "lectura"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical / Léxica",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto narrando la historia de San Valentín y el rey Claudio II.",
+      "enunciado": "En la oración 'When the King found (24)____, he ordered soldiers to kill Valentine!', ¿cuál es la palabra correcta para el espacio (24)?",
+      "opciones": {
+        "A": "off",
+        "B": "in",
+        "C": "at",
+        "D": "out"
+      },
+      "respuesta_correcta": "D",
+      "retroalimentacion": "El 'phrasal verb' 'to find out' significa 'descubrir' o 'enterarse de algo'. El texto narra que el rey descubrió lo que Valentín estaba haciendo en secreto. Por lo tanto, 'out' es la partícula correcta.",
+      "explicacion": "La pregunta evalúa el conocimiento de verbos frasales (phrasal verbs). El verbo 'find' solo no significa 'descubrir'. Necesita la partícula 'out' para formar el verbo frasal con ese significado. El rey se enteró de las bodas secretas que Valentín celebraba.",
+      "habilidad_evaluada": "Conocimiento y uso de 'phrasal verbs'.",
+      "explicacion_opciones_incorrectas": {
+        "A": "'find off' no es un verbo frasal común.",
+        "B": "'find in' no tiene sentido en este contexto.",
+        "C": "'find at' tampoco tiene sentido aquí."
+      },
+      "estrategias_resolucion": "1. Reconocer que la oración necesita un verbo con el significado de 'descubrir'. 2. Recordar o deducir que 'find out' es el 'phrasal verb' con ese significado.",
+      "errores_comunes": "No estar familiarizado con los 'phrasal verbs' y tratar de usar una preposición de lugar.",
+      "dificultad": "B1",
+      "tiempo_estimado": 95,
+      "tags": [
+        "gramática",
+        "phrasal verbs",
+        "léxico",
+        "comprensión lectora"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Léxica",
+      "componente": "Léxico-semántico",
+      "contexto": "Texto con datos estadísticos sobre la compra de tarjetas de San Valentín.",
+      "enunciado": "En la oración 'Women buy (25)____ 90% of the cards...', ¿cuál es la palabra correcta para el espacio (25)?",
+      "opciones": {
+        "A": "almost (casi)",
+        "B": "only (solo)",
+        "C": "hardly (apenas)",
+        "D": "just (solo)"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "Para modificar un dato estadístico como '90%', que es una cifra alta pero probablemente no exacta, se utiliza un adverbio de aproximación como 'almost' (casi).",
+      "explicacion": "La oración presenta un dato numérico que probablemente es una aproximación. Los adverbios como 'almost', 'nearly' o 'approximately' son los apropiados en este contexto. 'Only' o 'just' restringirían la cifra, y 'hardly' indicaría una cantidad muy pequeña, lo cual es contrario al 90%.",
+      "habilidad_evaluada": "Uso de adverbios de cantidad/grado.",
+      "explicacion_opciones_incorrectas": {
+        "B": "'only' implicaría que no compran más del 90%, lo que no tiene mucho sentido.",
+        "C": "'hardly' significa 'casi no' y contradice el alto porcentaje.",
+        "D": "'just' funciona de manera similar a 'only' y no encaja."
+      },
+      "estrategias_resolucion": "1. Analizar el contexto (un dato estadístico alto). 2. Evaluar qué adverbio se usa para expresar aproximación a una cifra. 3. Seleccionar 'almost' como la opción más lógica.",
+      "errores_comunes": "Confundir los significados de adverbios de cantidad y grado como 'almost', 'only' y 'hardly'.",
+      "dificultad": "B1",
+      "tiempo_estimado": 90,
+      "tags": [
+        "vocabulario",
+        "adverbios",
+        "léxico",
+        "estadísticas"
+      ]
+    }
+  ]

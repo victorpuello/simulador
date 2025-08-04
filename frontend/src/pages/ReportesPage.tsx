@@ -3,7 +3,8 @@ import Card from '../components/ui/Card';
 import LineChart from '../components/charts/LineChart';
 import BarChart from '../components/charts/BarChart';
 import DoughnutChart from '../components/charts/DoughnutChart';
-import { reportesService, type EstadisticasGenerales, type EstadisticasMateria, type ProgresoDiario, type HistorialSesion } from '../services/reportes';
+import ReporteICFES from '../components/reportes/ReporteICFES';
+import { reportesService, type EstadisticasGenerales, type EstadisticasMateria, type ProgresoDiario, type HistorialSesion, type ReporteICFES as ReporteICFESType } from '../services/reportes';
 
 const ReportesPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -11,6 +12,7 @@ const ReportesPage: React.FC = () => {
   const [estadisticasMaterias, setEstadisticasMaterias] = useState<EstadisticasMateria[]>([]);
   const [progresoDiario, setProgresoDiario] = useState<ProgresoDiario[]>([]);
   const [historial, setHistorial] = useState<HistorialSesion[]>([]);
+  const [reporteICFES, setReporteICFES] = useState<ReporteICFESType | null>(null);
 
   useEffect(() => {
     cargarDatos();
@@ -19,17 +21,19 @@ const ReportesPage: React.FC = () => {
   const cargarDatos = async () => {
     try {
       setLoading(true);
-      const [estadisticas, materias, progreso, hist] = await Promise.all([
+      const [estadisticas, materias, progreso, hist, icfes] = await Promise.all([
         reportesService.getEstadisticasGenerales(),
         reportesService.getEstadisticasPorMateria(),
         reportesService.getProgresoDiario(),
-        reportesService.getHistorial(undefined, 10)
+        reportesService.getHistorial(undefined, 10),
+        reportesService.getReporteICFES()
       ]);
 
       setEstadisticasGenerales(estadisticas);
       setEstadisticasMaterias(materias);
       setProgresoDiario(progreso);
       setHistorial(hist);
+      setReporteICFES(icfes);
     } catch (error) {
       console.error('Error al cargar reportes:', error);
     } finally {
@@ -250,10 +254,10 @@ const ReportesPage: React.FC = () => {
                     <td className="py-2 text-sm">{sesion.materia_nombre}</td>
                     <td className="py-2 text-sm">
                       <span className={`font-medium ${
-                        (sesion.puntaje_final || 0) >= 70 ? 'text-green-600' : 
-                        (sesion.puntaje_final || 0) >= 50 ? 'text-yellow-600' : 'text-red-600'
+                        (sesion.puntuacion || 0) >= 70 ? 'text-green-600' : 
+                        (sesion.puntuacion || 0) >= 50 ? 'text-yellow-600' : 'text-red-600'
                       }`}>
-                        {sesion.puntaje_final || 0}%
+                        {sesion.puntuacion || 0}%
                       </span>
                     </td>
                     <td className="py-2 text-sm">{formatearTiempo(sesion.duracion_minutos)}</td>
@@ -273,6 +277,9 @@ const ReportesPage: React.FC = () => {
           </div>
         </Card>
       )}
+
+      {/* Reporte ICFES */}
+      <ReporteICFES reporte={reporteICFES} loading={loading} />
     </div>
   );
 };

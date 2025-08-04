@@ -13,12 +13,12 @@ import CargaMasivaPreguntas from '../components/admin/CargaMasivaPreguntas';
 
 interface Pregunta {
   id: number;
-  materia: {
+  materia: number | {
     id: number;
     nombre: string;
     nombre_display: string;
   };
-  competencia?: {
+  competencia?: number | {
     id: number;
     nombre: string;
   };
@@ -104,6 +104,13 @@ const GestionPreguntasPage: React.FC = () => {
       }
 
       const data = await response.json();
+      
+      console.log('Preguntas cargadas:', data.results);
+      if (data.results.length > 0) {
+        console.log('Primera pregunta:', data.results[0]);
+        console.log('Materia de primera pregunta:', data.results[0].materia);
+        console.log('Competencia de primera pregunta:', data.results[0].competencia);
+      }
       
       setPreguntas(data.results);
       setTotalPages(Math.ceil(data.count / itemsPerPage));
@@ -225,10 +232,33 @@ const GestionPreguntasPage: React.FC = () => {
               totalPages={totalPages}
               totalItems={totalItems}
               itemsPerPage={itemsPerPage}
-              onEditar={(pregunta) => {
-                setPreguntaEditando(pregunta);
-                setVista('editar');
-              }}
+                             onEditar={async (pregunta) => {
+                 try {
+                   // Obtener la pregunta completa con objetos de materia y competencia
+                   const token = localStorage.getItem('access_token');
+                   const response = await fetch(`/api/core/preguntas/${pregunta.id}/`, {
+                     headers: {
+                       'Authorization': `Bearer ${token}`,
+                     },
+                   });
+
+                   if (response.ok) {
+                     const preguntaCompleta = await response.json();
+                     console.log('Pregunta completa para editar:', preguntaCompleta);
+                     setPreguntaEditando(preguntaCompleta);
+                     setVista('editar');
+                   } else {
+                     throw new Error('Error al cargar la pregunta para editar');
+                   }
+                 } catch (error: any) {
+                   addNotification({
+                     type: 'error',
+                     title: 'Error',
+                     message: error.message || 'Error al cargar la pregunta para editar',
+                     duration: 5000,
+                   });
+                 }
+               }}
               onEliminar={handleEliminarPregunta}
               onDuplicar={handleDuplicarPregunta}
               onPageChange={handlePageChange}

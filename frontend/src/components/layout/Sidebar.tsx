@@ -8,7 +8,8 @@ import {
   BookOpenIcon,
   TrophyIcon,
   CogIcon,
-  DocumentTextIcon
+  DocumentTextIcon,
+  PresentationChartBarIcon
 } from '@heroicons/react/24/outline';
 import { useAuth } from '../../hooks/useAuth';
 
@@ -31,21 +32,19 @@ const Sidebar: React.FC = () => {
     },
   ];
 
-  // Simulación solo para estudiantes
-  if (user?.rol === 'estudiante') {
-    navigation.splice(1, 0, {
-      name: 'Simulación',
-      href: '/simulacion',
-      icon: AcademicCapIcon,
-      current: location.pathname === '/simulacion',
-    });
-    navigation.splice(2, 0, {
-      name: 'Reportes',
-      href: '/reportes',
-      icon: ChartBarIcon,
-      current: location.pathname === '/reportes',
-    });
-  }
+  // Simulación para estudiantes y docentes
+  navigation.splice(1, 0, {
+    name: user?.rol === 'docente' ? 'Crear Simulación' : 'Simulación',
+    href: '/simulacion',
+    icon: AcademicCapIcon,
+    current: location.pathname.startsWith('/simulacion'),
+  });
+  navigation.splice(2, 0, {
+    name: 'Reportes',
+    href: '/reportes',
+    icon: ChartBarIcon,
+    current: location.pathname === '/reportes',
+  });
 
   // Agregar elementos específicos para docentes
   if (user?.rol === 'docente') {
@@ -76,6 +75,16 @@ const Sidebar: React.FC = () => {
       href: '/gestion-usuarios',
       icon: UserIcon,
       current: location.pathname === '/gestion-usuarios',
+    });
+  }
+
+  // Métricas para docentes
+  if (user?.rol === 'docente') {
+    navigation.push({
+      name: 'Métricas',
+      href: '/metricas',
+      icon: PresentationChartBarIcon,
+      current: location.pathname === '/metricas',
     });
   }
 

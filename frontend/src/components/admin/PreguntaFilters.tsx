@@ -127,7 +127,7 @@ const PreguntaFilters: React.FC<Props> = ({ filtros, onChange }) => {
             type="text"
             placeholder="Buscar en enunciado, contexto..."
             value={filtros.busqueda}
-            onChange={(e) => onChange({ busqueda: e.target.value })}
+            onChange={(value) => onChange({ busqueda: value })}
             className="w-full"
           />
         </div>

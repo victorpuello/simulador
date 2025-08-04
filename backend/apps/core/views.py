@@ -313,9 +313,20 @@ class PreguntaViewSet(viewsets.ModelViewSet):
             )
         
         try:
+            # Debug: Imprimir información del request
+            print(f"Request FILES: {request.FILES}")
+            print(f"Request Content-Type: {request.content_type}")
+            print(f"Request Headers: {dict(request.headers)}")
+            # request.data no está disponible en WSGIRequest, usar request.POST si es necesario
+            if hasattr(request, 'data'):
+                print(f"Request DATA: {request.data}")
+            else:
+                print("Request DATA: No disponible en WSGIRequest")
+            
             # Obtener el archivo JSON del request
             archivo = request.FILES.get('archivo')
             if not archivo:
+                print("No se encontró archivo en request.FILES")
                 return Response(
                     {'error': 'No se proporcionó ningún archivo'}, 
                     status=status.HTTP_400_BAD_REQUEST
@@ -329,13 +340,23 @@ class PreguntaViewSet(viewsets.ModelViewSet):
                 )
             
             # Leer y parsear el JSON
+            print(f"Archivo recibido: {archivo.name}, tamaño: {archivo.size}")
             contenido = archivo.read().decode('utf-8')
+            print(f"Contenido leído (primeros 500 chars): {contenido[:500]}")
             datos = json.loads(contenido)
+            print(f"Datos parseados: {len(datos)} preguntas")
             
             # Validar estructura básica
             if not isinstance(datos, list):
                 return Response(
                     {'error': 'El JSON debe contener una lista de preguntas'}, 
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            # Validar que no esté vacío
+            if len(datos) == 0:
+                return Response(
+                    {'error': 'El archivo JSON está vacío'}, 
                     status=status.HTTP_400_BAD_REQUEST
                 )
             
@@ -350,9 +371,9 @@ class PreguntaViewSet(viewsets.ModelViewSet):
                 'detalles': resultados['detalles']
             })
             
-        except json.JSONDecodeError:
+        except json.JSONDecodeError as e:
             return Response(
-                {'error': 'El archivo no contiene un JSON válido'}, 
+                {'error': f'El archivo no contiene un JSON válido: {str(e)}'}, 
                 status=status.HTTP_400_BAD_REQUEST
             )
         except Exception as e:
@@ -381,12 +402,19 @@ class PreguntaViewSet(viewsets.ModelViewSet):
                         'respuesta_correcta', 'retroalimentacion'
                     ]
                     
+                    campos_faltantes = []
                     for campo in campos_requeridos:
                         if campo not in pregunta_data:
-                            raise ValueError(f'Campo requerido faltante: {campo}')
+                            campos_faltantes.append(campo)
+                    
+                    if campos_faltantes:
+                        raise ValueError(f'Campos requeridos faltantes: {", ".join(campos_faltantes)}')
                     
                     # Obtener o crear materia
                     materia_nombre = pregunta_data['materia']
+                    if not materia_nombre or not materia_nombre.strip():
+                        raise ValueError('El nombre de la materia no puede estar vacío')
+                    
                     try:
                         materia = Materia.objects.get(nombre=materia_nombre)
                     except Materia.DoesNotExist:
@@ -411,14 +439,55 @@ class PreguntaViewSet(viewsets.ModelViewSet):
                                 materia=materia
                             )
                     
-                    # Validar opciones
+                    # Validar opciones según materia
                     opciones = pregunta_data['opciones']
                     if not isinstance(opciones, dict):
                         raise ValueError('Las opciones deben ser un diccionario')
                     
+                    # Validar que las opciones no estén vacías
+                    if not opciones:
+                        raise ValueError('Las opciones no pueden estar vacías')
+                    
+                    # Validar opciones según materia
+                    if materia_nombre.lower() == 'inglés':
+                        # Inglés: mínimo 3 opciones (A, B, C), opcional D y más
+                        opciones_requeridas = ['A', 'B', 'C']
+                        # Para Inglés, permitir opciones adicionales más allá de D
+                        opciones_adicionales = ['D', 'E', 'F', 'G', 'H', 'I', 'J']
+                    else:
+                        # Otras materias: 4 opciones (A, B, C, D)
+                        opciones_requeridas = ['A', 'B', 'C', 'D']
+                        opciones_adicionales = []
+                    
+                    # Validar opciones requeridas
+                    opciones_faltantes = [opt for opt in opciones_requeridas if opt not in opciones]
+                    if opciones_faltantes:
+                        raise ValueError(f'Para {materia_nombre} se requieren las opciones: {", ".join(opciones_requeridas)}')
+                    
+                    # Validar que no haya opciones no permitidas
+                    opciones_permitidas = opciones_requeridas + opciones_adicionales
+                    opciones_invalidas = [opt for opt in opciones.keys() if opt not in opciones_permitidas]
+                    if opciones_invalidas:
+                        raise ValueError(f'Para {materia_nombre} solo se permiten las opciones: {", ".join(opciones_permitidas)}')
+                    
                     respuesta_correcta = pregunta_data['respuesta_correcta'].upper()
                     if respuesta_correcta not in opciones:
                         raise ValueError(f'La respuesta correcta "{respuesta_correcta}" no está en las opciones')
+                    
+                    # Validar contenido de las opciones (texto o texto+imagen)
+                    for letra, opcion in opciones.items():
+                        if isinstance(opcion, dict):
+                            # Formato: {"texto": "...", "imagen": "url"}
+                            if 'texto' not in opcion:
+                                raise ValueError(f'La opción {letra} debe tener campo "texto"')
+                            if not opcion['texto'] or not opcion['texto'].strip():
+                                raise ValueError(f'La opción {letra} no puede estar vacía')
+                        elif isinstance(opcion, str):
+                            # Formato simple: "texto"
+                            if not opcion or not opcion.strip():
+                                raise ValueError(f'La opción {letra} no puede estar vacía')
+                        else:
+                            raise ValueError(f'Formato inválido para opción {letra}')
                     
                     # Procesamiento de imagen si existe
                     imagen_procesada = None
@@ -454,15 +523,25 @@ class PreguntaViewSet(viewsets.ModelViewSet):
                                 'mensaje': f'Imagen no encontrada: {imagen_filename}. Pregunta creada sin imagen.'
                             })
                     
+                    # Validar enunciado y retroalimentación
+                    enunciado = pregunta_data['enunciado']
+                    retroalimentacion = pregunta_data['retroalimentacion']
+                    
+                    if not enunciado or not enunciado.strip():
+                        raise ValueError('El enunciado no puede estar vacío')
+                    
+                    if not retroalimentacion or not retroalimentacion.strip():
+                        raise ValueError('La retroalimentación no puede estar vacía')
+                    
                     # Crear la pregunta
                     pregunta = Pregunta.objects.create(
                         materia=materia,
                         competencia=competencia,
                         contexto=pregunta_data.get('contexto', ''),
-                        enunciado=pregunta_data['enunciado'],
+                        enunciado=enunciado,
                         opciones=opciones,
                         respuesta_correcta=respuesta_correcta,
-                        retroalimentacion=pregunta_data['retroalimentacion'],
+                        retroalimentacion=retroalimentacion,
                         explicacion=pregunta_data.get('explicacion', ''),
                         habilidad_evaluada=pregunta_data.get('habilidad_evaluada', ''),
                         explicacion_opciones_incorrectas=pregunta_data.get('explicacion_opciones_incorrectas', {}),
@@ -537,23 +616,23 @@ class PreguntaViewSet(viewsets.ModelViewSet):
                 "tags": ["álgebra", "ecuaciones", "básico"]
             },
             {
-                "materia": "Lenguaje",
-                "competencia": "Comprensión lectora",
-                "contexto": "Fragmento de texto sobre cambio climático",
-                "enunciado": "Según el texto, ¿cuál es la principal causa del calentamiento global?",
+                "materia": "Inglés",
+                "competencia": "Comprensión de lectura",
+                "contexto": "Texto sobre tecnología moderna",
+                "enunciado": "What is the main topic of the text?",
                 "opciones": {
-                    "A": "La deforestación",
-                    "B": "Las emisiones de gases de efecto invernadero",
-                    "C": "Los fenómenos naturales",
-                    "D": "La actividad volcánica"
+                    "A": "Artificial Intelligence",
+                    "B": "Climate Change", 
+                    "C": "Space Exploration"
                 },
-                "respuesta_correcta": "B",
-                "retroalimentacion": "Las emisiones de gases de efecto invernadero son identificadas en el texto como la principal causa antropogénica del calentamiento global",
-                "explicacion": "El texto claramente establece que las actividades humanas que generan gases de efecto invernadero son el factor principal",
-                "habilidad_evaluada": "Identificación de ideas principales en textos expositivos",
+                "respuesta_correcta": "A",
+                "retroalimentacion": "The text primarily discusses artificial intelligence and its applications in modern technology",
+                "explicacion": "The main focus of the text is on AI developments and their impact on society",
+                "habilidad_evaluada": "Main idea identification in English texts",
                 "dificultad": "media",
                 "tiempo_estimado": 120,
-                "tags": ["comprensión", "lectura", "textos expositivos"]
+                "tags": ["reading", "comprehension", "main idea"],
+                "_comentario_ingles": "Para Inglés se requieren mínimo 3 opciones (A, B, C). Se permiten opciones adicionales (D, E, F, G, etc.) según necesidad."
             },
             {
                 "materia": "Ciencias Naturales",
@@ -562,10 +641,20 @@ class PreguntaViewSet(viewsets.ModelViewSet):
                 "imagen_archivo": "grafico_experimento.png",
                 "enunciado": "Observando el gráfico, ¿qué se puede concluir sobre la relación entre la temperatura y la velocidad de reacción?",
                 "opciones": {
-                    "A": "Son inversamente proporcionales",
-                    "B": "Son directamente proporcionales",
-                    "C": "No hay relación entre las variables",
-                    "D": "La relación es exponencial"
+                    "A": {
+                        "texto": "Son inversamente proporcionales",
+                        "imagen": "opcion_a_diagrama.png"
+                    },
+                    "B": {
+                        "texto": "Son directamente proporcionales"
+                    },
+                    "C": {
+                        "texto": "No hay relación entre las variables"
+                    },
+                    "D": {
+                        "texto": "La relación es exponencial",
+                        "imagen": "opcion_d_curva.png"
+                    }
                 },
                 "respuesta_correcta": "B",
                 "retroalimentacion": "El gráfico muestra una tendencia lineal ascendente, indicando que a mayor temperatura, mayor velocidad de reacción",
@@ -574,7 +663,7 @@ class PreguntaViewSet(viewsets.ModelViewSet):
                 "dificultad": "media",
                 "tiempo_estimado": 150,
                 "tags": ["ciencias", "gráficos", "experimentos"],
-                "_comentario_imagen": "Para usar imágenes, coloca los archivos en la carpeta 'temp_images' del servidor y especifica el nombre del archivo en 'imagen_archivo'. Formatos soportados: JPG, PNG, GIF, WEBP (máximo 5MB)"
+                "_comentario_imagen": "Para usar imágenes en opciones, usa formato: {\"texto\": \"...\", \"imagen\": \"url_imagen\"}. Para imágenes de contexto, usa 'imagen_archivo'. Formatos soportados: JPG, PNG, GIF, WEBP (máximo 5MB)"
             }
         ]
         

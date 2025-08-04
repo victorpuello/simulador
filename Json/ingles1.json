@@ -1,0 +1,326 @@
+[
+    {
+      "materia": "Inglés",
+      "competencia": "Léxica",
+      "componente": "Léxico-semántico",
+      "contexto": "La Parte 1 de la prueba evalúa el vocabulario relacionado con una categoría específica. En este caso, el tema es 'Ropa y accesorios' (Clothes and accesories).",
+      "enunciado": "A woman carries her things in one of these. (Una mujer lleva sus cosas en uno de estos).",
+      "opciones": {
+        "A": "glasses (gafas)",
+        "B": "handbags (bolsos)",
+        "C": "pajamas (pijamas)",
+        "D": "scarf (bufanda)",
+        "E": "skirt (falda)",
+        "F": "socks (calcetines)",
+        "G": "watch (reloj)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "La descripción corresponde a un bolso ('handbag'), que es un accesorio diseñado para que una mujer transporte sus pertenencias personales.",
+      "explicacion": "El ejercicio pide identificar un objeto a partir de su función. La función descrita es 'llevar cosas'. Al analizar las opciones, la única que cumple con este propósito es 'handbags' (bolsos). Las otras opciones son prendas de vestir o accesorios con funciones diferentes.",
+      "habilidad_evaluada": "Asociación de una definición con el vocabulario correspondiente.",
+      "explicacion_opciones_incorrectas": {
+        "A": "'glasses' se usan para mejorar la visión.",
+        "C": "'pajamas' son para dormir.",
+        "D": "'scarf' es una prenda para abrigar el cuello.",
+        "E": "'skirt' es una prenda de vestir para la parte inferior del cuerpo.",
+        "F": "'socks' se usan en los pies.",
+        "G": "'watch' se usa para ver la hora."
+      },
+      "estrategias_resolucion": "1. Leer y comprender la descripción de la función del objeto. 2. Revisar la lista de palabras (opciones). 3. Emparejar la descripción con la palabra que define ese objeto.",
+      "errores_comunes": "Confundir el vocabulario de diferentes tipos de prendas de vestir y accesorios.",
+      "dificultad": "Pre A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "vocabulario",
+        "ropa",
+        "accesorios",
+        "léxico"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Léxica",
+      "componente": "Léxico-semántico",
+      "contexto": "Vocabulario sobre 'Ropa y accesorios' (Clothes and accesories).",
+      "enunciado": "Many girls wear this when they don't want to wear trousers. (Muchas chicas usan esto cuando no quieren usar pantalones).",
+      "opciones": {
+        "A": "glasses (gafas)",
+        "B": "handbags (bolsos)",
+        "C": "pajamas (pijamas)",
+        "D": "scarf (bufanda)",
+        "E": "skirt (falda)",
+        "F": "socks (calcetines)",
+        "G": "watch (reloj)"
+      },
+      "respuesta_correcta": "E",
+      "retroalimentacion": "Una falda ('skirt') es una prenda de vestir que comúnmente se usa como alternativa a los pantalones ('trousers').",
+      "explicacion": "La descripción se refiere a una prenda de vestir alternativa a los pantalones, usada principalmente por mujeres o chicas. Dentro de las opciones proporcionadas, la 'skirt' (falda) es la respuesta correcta.",
+      "habilidad_evaluada": "Asociación de una descripción con el vocabulario correspondiente.",
+      "explicacion_opciones_incorrectas": {
+        "A": "'glasses' son un accesorio para la visión.",
+        "B": "'handbags' son para llevar objetos.",
+        "C": "'pajamas' son para dormir.",
+        "D": "'scarf' es para el cuello.",
+        "F": "'socks' son para los pies.",
+        "G": "'watch' es para ver la hora."
+      },
+      "estrategias_resolucion": "1. Entender que se busca una prenda de vestir que reemplace a los pantalones. 2. Analizar las opciones y descartar las que no son prendas de vestir o no cumplen esa función. 3. Seleccionar 'skirt' como la opción lógica.",
+      "errores_comunes": "No conocer el vocabulario específico para las prendas de vestir.",
+      "dificultad": "Pre A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "vocabulario",
+        "ropa",
+        "léxico"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Léxica",
+      "componente": "Léxico-semántico",
+      "contexto": "Vocabulario sobre 'Ropa y accesorios' (Clothes and accesories).",
+      "enunciado": "With this, your neck won't be cold. (Con esto, tu cuello no estará frío).",
+      "opciones": {
+        "A": "glasses (gafas)",
+        "B": "handbags (bolsos)",
+        "C": "pajamas (pijamas)",
+        "D": "scarf (bufanda)",
+        "E": "skirt (falda)",
+        "F": "socks (calcetines)",
+        "G": "watch (reloj)"
+      },
+      "respuesta_correcta": "D",
+      "retroalimentacion": "Una bufanda ('scarf') es el accesorio diseñado específicamente para ser usado alrededor del cuello y protegerlo del frío.",
+      "explicacion": "La función descrita es abrigar el cuello. De todas las opciones, el único objeto que cumple esta función es la 'scarf' (bufanda).",
+      "habilidad_evaluada": "Asociación de una función con el vocabulario correspondiente.",
+      "explicacion_opciones_incorrectas": {
+        "A": "'glasses' son para los ojos.",
+        "E": "'skirt' es para la parte inferior del cuerpo.",
+        "F": "'socks' son para los pies."
+      },
+      "estrategias_resolucion": "1. Identificar la parte del cuerpo ('neck') y la función ('won't be cold'). 2. Buscar en las opciones el accesorio que se usa en el cuello para dar calor.",
+      "errores_comunes": "No conocer la palabra 'scarf' o confundirla con otra prenda.",
+      "dificultad": "A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "vocabulario",
+        "accesorios",
+        "léxico"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Léxica",
+      "componente": "Léxico-semántico",
+      "contexto": "Vocabulario sobre 'Ropa y accesorios' (Clothes and accesories).",
+      "enunciado": "When people can't see well, they need them. (Cuando la gente no puede ver bien, los necesita).",
+      "opciones": {
+        "A": "glasses (gafas)",
+        "B": "handbags (bolsos)",
+        "C": "pajamas (pijamas)",
+        "D": "scarf (bufanda)",
+        "E": "skirt (falda)",
+        "F": "socks (calcetines)",
+        "G": "watch (reloj)"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "Los anteojos o gafas ('glasses') son el objeto que se utiliza para corregir problemas de visión y ayudar a las personas a ver mejor.",
+      "explicacion": "La descripción se refiere a un objeto que soluciona un problema de visión ('can't see well'). La palabra para este objeto en la lista es 'glasses'.",
+      "habilidad_evaluada": "Asociación de una función con el vocabulario correspondiente.",
+      "explicacion_opciones_incorrectas": {
+        "B": "Son para llevar cosas.",
+        "D": "Son para el cuello.",
+        "G": "Son para ver la hora, no para mejorar la vista."
+      },
+      "estrategias_resolucion": "1. Comprender la necesidad descrita (ayuda para ver). 2. Identificar el accesorio correspondiente en la lista de opciones.",
+      "errores_comunes": "Confundir la palabra 'glasses' (gafas) con su otro significado, 'vasos'.",
+      "dificultad": "Pre A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "vocabulario",
+        "accesorios",
+        "léxico"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Léxica",
+      "componente": "Léxico-semántico",
+      "contexto": "Vocabulario sobre 'Ropa y accesorios' (Clothes and accesories).",
+      "enunciado": "These are for your feet. (Estos son para tus pies).",
+      "opciones": {
+        "A": "glasses (gafas)",
+        "B": "handbags (bolsos)",
+        "C": "pajamas (pijamas)",
+        "D": "scarf (bufanda)",
+        "E": "skirt (falda)",
+        "F": "socks (calcetines)",
+        "G": "watch (reloj)"
+      },
+      "respuesta_correcta": "F",
+      "retroalimentacion": "Los calcetines ('socks') son la prenda de vestir que se diseña para ser usada en los pies ('feet').",
+      "explicacion": "La descripción indica claramente la parte del cuerpo para la que está destinada la prenda: los pies. La palabra correcta de la lista es 'socks'.",
+      "habilidad_evaluada": "Asociación de una parte del cuerpo con su prenda correspondiente.",
+      "explicacion_opciones_incorrectas": {
+        "B": "Son para las manos/hombro.",
+        "D": "Son para el cuello.",
+        "E": "Son para la cintura/piernas."
+      },
+      "estrategias_resolucion": "1. Identificar la palabra clave 'feet' (pies). 2. Buscar en las opciones la prenda que se usa en los pies.",
+      "errores_comunes": "No conocer el vocabulario básico de las partes del cuerpo y la ropa.",
+      "dificultad": "A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "vocabulario",
+        "ropa",
+        "léxico"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Pragmática",
+      "componente": "Uso del Lenguaje",
+      "contexto": "La Parte 2 de la prueba pide identificar el lugar o la situación donde se encontraría un aviso o una instrucción específica.",
+      "enunciado": "Considerando el aviso 'Draw a line to complete the snake and color it' (Dibuja una línea para completar la serpiente y coloréala), ¿dónde podría verlo?",
+      "opciones": {
+        "A": "on a rug (en una alfombra)",
+        "B": "on a test (en un examen)",
+        "C": "on a bookcase (en una estantería)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "Una instrucción para dibujar y colorear como la del aviso es típica de una actividad en un examen escolar, una tarea o una hoja de trabajo para niños.",
+      "explicacion": "La frase es una instrucción para una actividad académica o lúdica. El contexto más apropiado para encontrar dicha instrucción es un documento de papel como un examen ('test') o un libro de actividades. Los otros lugares, una alfombra ('rug') o una estantería ('bookcase'), no son superficies donde comúnmente se escriben este tipo de instrucciones.",
+      "habilidad_evaluada": "Comprensión del contexto situacional de un enunciado.",
+      "explicacion_opciones_incorrectas": {
+        "A": "No se escriben instrucciones de este tipo sobre una alfombra.",
+        "C": "Una estantería contiene libros, pero la instrucción no estaría escrita directamente sobre el mueble."
+      },
+      "estrategias_resolucion": "1. Leer la instrucción del aviso. 2. Analizar el tipo de acción que pide (dibujar, colorear). 3. Determinar cuál de los lugares de las opciones es el contexto más lógico para esa acción.",
+      "errores_comunes": "No relacionar la instrucción con un contexto educativo o de evaluación.",
+      "dificultad": "Pre A1",
+      "tiempo_estimado": 70,
+      "tags": [
+        "avisos",
+        "contexto",
+        "pragmática"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comunicativa",
+      "componente": "Pragmático / Interaccional",
+      "contexto": "La Parte 3 de la prueba consiste en completar conversaciones cortas, eligiendo la respuesta más lógica y apropiada.",
+      "enunciado": "Complete la conversación: \n- Persona 1: 'Grandma, shall I hold those bags for you?' (Abuela, ¿te ayudo con esas bolsas?) \n- Persona 2: ?",
+      "opciones": {
+        "A": "I'm not afraid! (¡No tengo miedo!)",
+        "B": "What's the matter? (¿Qué pasa?)",
+        "C": "That's fine. (Está bien / No te preocupes)."
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "La primera persona está ofreciendo ayuda. La respuesta 'That's fine.' es una forma educada y común de manejar la oferta, ya sea para aceptarla o para indicar que la ayuda no es necesaria. Es la única respuesta coherente.",
+      "explicacion": "La pregunta evalúa la función comunicativa de ofrecer ayuda y la respuesta esperada. La frase 'shall I...?' es una forma de ofrecerse a hacer algo. Las opciones A y B no responden a una oferta de ayuda. La opción C es una respuesta idiomática y apropiada en esta situación social.",
+      "habilidad_evaluada": "Selección de la respuesta adecuada en un intercambio social (ofrecer ayuda).",
+      "explicacion_opciones_incorrectas": {
+        "A": "Sería una respuesta a una pregunta sobre el miedo, no sobre una oferta.",
+        "B": "Es una pregunta para averiguar si hay un problema, no una respuesta a una oferta."
+      },
+      "estrategias_resolucion": "1. Identificar la función del primer enunciado (es una oferta de ayuda). 2. Evaluar cada opción para determinar cuál es una reacción lógica y socialmente adecuada a dicha oferta.",
+      "errores_comunes": "No identificar la función comunicativa del enunciado inicial y elegir una opción que no tiene conexión lógica.",
+      "dificultad": "A1",
+      "tiempo_estimado": 70,
+      "tags": [
+        "conversación",
+        "diálogo",
+        "funciones comunicativas"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comunicativa",
+      "componente": "Pragmático / Interaccional",
+      "contexto": "Completar una conversación corta en un contexto de compra.",
+      "enunciado": "Complete la conversación: \n- Persona 1: 'How much is that umbrella?' (¿Cuánto cuesta ese paraguas?) \n- Persona 2: ?",
+      "opciones": {
+        "A": "Anything else? (¿Algo más?)",
+        "B": "50 dollars. (50 dólares.)",
+        "C": "Cash only! (¡Solo efectivo!)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "La pregunta 'How much is...?' pide saber el precio de un objeto. La única opción que proporciona esta información de manera directa es '50 dollars.'.",
+      "explicacion": "Se está realizando una pregunta específica que requiere un dato concreto (el precio). La respuesta correcta debe contener una cantidad de dinero. Las otras opciones son partes de una posible transacción de compra, pero no responden directamente a la pregunta inicial. 'Anything else?' se preguntaría después, y 'Cash only!' es una aclaración sobre el pago.",
+      "habilidad_evaluada": "Responder a una pregunta sobre el precio.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Es una pregunta de seguimiento que hace un vendedor, no la respuesta al precio.",
+        "C": "Informa sobre la forma de pago, pero no da el precio solicitado."
+      },
+      "estrategias_resolucion": "1. Identificar el tipo de pregunta (Wh-question, 'How much...?'). 2. Comprender que se pide información sobre un precio. 3. Buscar la opción que contiene una cantidad monetaria.",
+      "errores_comunes": "Confundir las diferentes etapas o frases comunes en una transacción de compra.",
+      "dificultad": "A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "conversación",
+        "diálogo",
+        "compras"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical",
+      "componente": "Morfosintáctico",
+      "contexto": "La Parte 4 presenta un texto con espacios para ser completados con la opción gramatical correcta. El texto trata sobre el café.",
+      "enunciado": "En la oración 'Its (9)____ important component is caffeine...', ¿cuál es la palabra correcta para el espacio (9)?",
+      "opciones": {
+        "A": "much",
+        "B": "more",
+        "C": "most"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "Para expresar el grado más alto de una cualidad (superlativo) con un adjetivo largo como 'important', se utiliza la palabra 'most'. La frase correcta es 'Its most important component...'.",
+      "explicacion": "La oración busca señalar que la cafeína es el componente de mayor importancia. Esto requiere el uso de un adjetivo en su forma superlativa. 'More' es comparativo ('más importante que') y requeriría una comparación. 'Much' no se usa para formar el superlativo de esta manera. 'Most' es la partícula correcta para formar el superlativo ('el/la más importante').",
+      "habilidad_evaluada": "Uso de adjetivos superlativos.",
+      "explicacion_opciones_incorrectas": {
+        "A": "'much' cuantifica sustantivos incontables, pero no forma el superlativo de 'important'.",
+        "B": "'more' es la forma comparativa, pero la oración no está comparando dos cosas."
+      },
+      "estrategias_resolucion": "1. Leer la oración y entender que se quiere expresar el grado máximo de una cualidad. 2. Recordar las reglas de formación de comparativos y superlativos para adjetivos largos. 3. Seleccionar 'most' como la opción correcta.",
+      "errores_comunes": "Confundir el uso de la forma comparativa ('more') con la superlativa ('most').",
+      "dificultad": "A1",
+      "tiempo_estimado": 80,
+      "tags": [
+        "gramática",
+        "superlativos",
+        "adjetivos",
+        "comprensión lectora"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical",
+      "componente": "Morfosintáctico",
+      "contexto": "Completar un texto sobre el café, enfocándose en el uso correcto de preposiciones y tiempos verbales.",
+      "enunciado": "En la oración 'Coffee has been well-known (10)____ the beginning of the 14th century...', ¿cuál es la palabra correcta para el espacio (10)?",
+      "opciones": {
+        "A": "during (durante)",
+        "B": "until (hasta)",
+        "C": "since (desde)"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "La preposición 'since' (desde) se usa con el tiempo verbal Presente Perfecto ('has been') para indicar el punto en el tiempo en que una acción o estado comenzó.",
+      "explicacion": "La estructura de la oración '...has been...' está en Presente Perfecto. Este tiempo verbal se combina frecuentemente con 'since' para especificar el punto de inicio de algo que continúa hasta el presente. 'Since' introduce ese punto de inicio ('el comienzo del siglo XIV'). 'During' se usaría para un período completo ('durante el siglo XIV'). 'Until' marcaría un punto final, que es lo contrario al sentido de la oración.",
+      "habilidad_evaluada": "Uso de preposiciones de tiempo y su correlación con los tiempos verbales (Presente Perfecto).",
+      "explicacion_opciones_incorrectas": {
+        "A": "'during' se usa para un período de tiempo, no para un punto de inicio.",
+        "B": "'until' indica un punto final, lo que contradice el uso del Presente Perfecto en esta oración, que implica continuidad."
+      },
+      "estrategias_resolucion": "1. Identificar el tiempo verbal de la oración ('has been' - Presente Perfecto). 2. Reconocer que este tiempo verbal se usa comúnmente con 'since' para indicar un punto de partida. 3. Confirmar que 'since' encaja lógica y gramaticalmente.",
+      "errores_comunes": "No reconocer la conexión gramatical entre el tiempo verbal Presente Perfecto y el uso de la preposición 'since'.",
+      "dificultad": "A2",
+      "tiempo_estimado": 85,
+      "tags": [
+        "gramática",
+        "preposiciones",
+        "presente perfecto",
+        "comprensión lectora"
+      ]
+    }
+  ]

@@ -1,0 +1,1533 @@
+[
+    {
+      "materia": "Sociales y Ciudadanas",
+      "competencia": "Interpretación y análisis de perspectivas",
+      "contexto": "Como argumento a favor del vegetarianismo, una persona afirma que consumir carne es nocivo para los humanos porque el animal sufre en el proceso, y esto produce 'energías negativas' que se transmiten al consumidor y perjudican su salud. Otra persona, también a favor del vegetarianismo, sostiene que el consumo de productos de origen animal es un acto amoral, resultado del abuso e insensibilidad del ser humano ante los demás seres vivos.",
+      "enunciado": "¿Cuál de las siguientes afirmaciones sobre la relación entre las opiniones presentadas NO es correcta?",
+      "opciones": {
+        "A": "Son similares, porque ambas van en contra del consumo de carne.",
+        "B": "Son complementarias, porque ambas promueven el vegetarianismo cuando argumentan la obligación de proteger a los animales.",
+        "C": "Son diferentes, porque la primera aboga por la salud del ser humano y la segunda, por el bienestar de los animales.",
+        "D": "Son disímiles, porque la primera se centra en cómo el animal afecta al ser humano y la segunda, en cómo el ser humano afecta al animal."
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "La afirmación B no es correcta porque, si bien ambas opiniones promueven el vegetarianismo, la primera se basa en un argumento egoísta (la salud del ser humano), no en la obligación de proteger a los animales por su propio valor. Solo la segunda opinión se centra en el bienestar animal como principio ético. Por lo tanto, no son complementarias en ese fundamento.",
+      "explicacion": "Se deben analizar las dos perspectivas. La primera es antropocéntrica y utilitaria: no comer carne para evitar 'energías negativas' y cuidar la propia salud. La segunda es biocéntrica o basada en la ética animal: no comer carne por respeto a los otros seres vivos. La afirmación A es correcta, ambas se oponen al consumo. Las afirmaciones C y D son correctas, pues describen con precisión la diferencia en el enfoque (salud humana vs. bienestar animal). La afirmación B es incorrecta porque la primera perspectiva no argumenta desde la 'obligación de proteger a los animales', sino desde el beneficio propio.",
+      "habilidad_evaluada": "Análisis y comparación de argumentos y perspectivas.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Esta afirmación es correcta; ambas opiniones comparten el mismo objetivo final.",
+        "C": "Esta afirmación es correcta; describe la diferencia fundamental entre los dos argumentos.",
+        "D": "Esta afirmación es correcta; es una forma distinta de expresar la misma diferencia que en C."
+      },
+      "estrategias_resolucion": "1. Identificar el argumento central de cada persona. 2. Determinar la motivación de cada argumento (centrado en el humano vs. centrado en el animal). 3. Evaluar cada opción para ver si describe correctamente la relación entre los argumentos. 4. Identificar la opción que presenta una descripción falsa de dicha relación.",
+      "errores_comunes": "Asumir que, por llegar a la misma conclusión (ser vegetariano), los argumentos que la sustentan son necesariamente complementarios o se basan en los mismos principios.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "ética",
+        "argumentación",
+        "vegetarianismo",
+        "perspectivas"
+      ]
+    },
+    {
+      "materia": "Sociales y Ciudadanas",
+      "competencia": "Pensamiento reflexivo y sistémico",
+      "contexto": "Los habitantes de un barrio de clase media se oponen a la construcción de viviendas de interés social. Afirman que las personas de escasos recursos representarían un peligro para la seguridad, argumentando que las zonas más pobres de la ciudad son las más inseguras, lo cual 'prueba' que una persona pobre tiene mayor probabilidad de ser delincuente.",
+      "enunciado": "De los siguientes enunciados, ¿cuál contiene un argumento válido en contra de las afirmaciones de los habitantes del barrio de clase media?",
+      "opciones": {
+        "A": "Quienes ejercen la delincuencia en una zona pobre de la ciudad pueden no ser habitantes de esa zona.",
+        "B": "Entre los delincuentes nunca hay personas de escasos recursos, pues todos son adinerados precisamente gracias a sus actividades delictivas.",
+        "C": "Los delincuentes que habitan en las zonas más pobres de la ciudad dejarían de violar la ley, si contaran con mejores condiciones de vida.",
+        "D": "Hay casos en que la pobreza y la falta de oportunidades llevan a una persona, en un momento de desesperación, a cometer un delito."
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "El argumento de los habitantes comete una falacia ecológica al atribuir las características de un lugar (inseguridad) a todos sus habitantes. La opción A presenta un contraargumento válido porque rompe esa conexión: la delincuencia en una zona no es necesariamente cometida por sus residentes, pueden ser personas de otras áreas que operan allí.",
+      "explicacion": "El argumento a rebatir es la correlación simplista entre vivir en una zona pobre y ser delincuente. La opción A ataca directamente esta correlación al señalar que la presencia de delincuencia en un área no permite concluir quiénes son los delincuentes. Esto debilita la premisa de los habitantes de que los nuevos vecinos (de bajos recursos) serían la causa de la inseguridad. Las otras opciones son menos efectivas: B es una generalización falsa, C es una hipótesis a futuro, y D, de hecho, refuerza el vínculo entre pobreza y delincuencia que los habitantes temen.",
+      "habilidad_evaluada": "Identificación de falacias (generalización, correlación-causalidad) y formulación de contraargumentos.",
+      "explicacion_opciones_incorrectas": {
+        "B": "Es una generalización apresurada e incorrecta; la delincuencia existe en todos los estratos sociales.",
+        "C": "Es una hipótesis sobre lo que podría pasar, no un argumento que invalide la lógica de los habitantes.",
+        "D": "Refuerza el estereotipo que vincula pobreza y delito, en lugar de contradecir el argumento de los residentes."
+      },
+      "estrategias_resolucion": "1. Identificar la lógica del argumento de los habitantes (Zona Pobre = Zona Insegura, por lo tanto, Habitante Pobre = Delincuente). 2. Buscar la falacia en esta lógica (generalización, falacia ecológica). 3. Evaluar cuál de las opciones ataca la conexión lógica del argumento original. 4. Reconocer que la opción A cuestiona la premisa de que los delincuentes y los residentes son el mismo grupo.",
+      "errores_comunes": "Confundir un argumento que explica el delito (como la opción D) con uno que lo refuta.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "argumentación",
+        "falacias",
+        "estereotipos",
+        "discriminación",
+        "prejuicio"
+      ]
+    },
+    {
+      "materia": "Sociales y Ciudadanas",
+      "competencia": "Interpretación y análisis de perspectivas",
+      "contexto": "Un padre de familia se opone a que profesores homosexuales eduquen a sus hijos. El rector del colegio le responde: “Las personas con inclinaciones homosexuales... merecen ser amadas... Yo creo que los homosexuales pueden enseñar, siempre y cuando controlen su comportamiento en clase y no afecten la orientación sexual de los estudiantes”.",
+      "enunciado": "¿Cuál de los siguientes enunciados del rector contiene un prejuicio cuestionable?",
+      "opciones": {
+        "A": "En todos los países hay población homosexual.",
+        "B": "Las personas con inclinaciones homosexuales, como todas las personas, merecen ser amadas.",
+        "C": "Las preferencias sexuales son el resultado de una compleja interacción de la biología con el medio ambiente.",
+        "D": "Los homosexuales pueden enseñar, siempre y cuando controlen su comportamiento en clase y no afecte la orientación sexual de los estudiantes."
+      },
+      "respuesta_correcta": "D",
+      "retroalimentacion": "La opción D contiene un prejuicio porque impone una condición especial y discriminatoria a los profesores homosexuales ('siempre y cuando controlen su comportamiento'). Esto sugiere que son inherentemente más propensos a comportarse de manera inapropiada o a 'influir' en la orientación sexual de los demás, un estereotipo sin fundamento que no se aplica a los profesores heterosexuales.",
+      "explicacion": "Las opciones A, B y C son afirmaciones fácticas o de valores que promueven la tolerancia y la comprensión. En contraste, la opción D, aunque parece dar un permiso, lo hace bajo una condición que revela un prejuicio. La necesidad de 'controlar su comportamiento' de una manera especial implica una desconfianza y la creencia de que su orientación sexual es algo que podría 'manifestarse' de forma inadecuada en el aula, lo cual es una visión discriminatoria y estereotipada.",
+      "habilidad_evaluada": "Identificación de prejuicios y estereotipos implícitos en un discurso.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Es una afirmación demográfica generalmente aceptada.",
+        "B": "Es una declaración de valor basada en la empatía y la igualdad.",
+        "C": "Es una afirmación que refleja el consenso científico actual sobre la orientación sexual."
+      },
+      "estrategias_resolucion": "1. Leer cada una de las afirmaciones del rector. 2. Analizar si alguna de ellas impone una condición o juicio sobre un grupo de personas que no se aplicaría a otros. 3. Identificar la frase 'siempre y cuando...' como un indicador de una condición especial. 4. Reconocer que esta condición se basa en un estereotipo negativo sobre las personas homosexuales.",
+      "errores_comunes": "No detectar el prejuicio implícito en la condición y ver la afirmación D como una declaración razonable o de 'sentido común'.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "prejuicio",
+        "estereotipo",
+        "discriminación",
+        "derechos humanos",
+        "orientación sexual"
+      ]
+    },
+    {
+      "materia": "Sociales y Ciudadanas",
+      "competencia": "Pensamiento Social",
+      "contexto": "Se presenta una lista de cuatro magnicidios que tuvieron incidencia en la historia política de Colombia durante el siglo XX: 1. Asesinato de Luis Carlos Galán. 2. Asesinato de Jorge Eliécer Gaitán. 3. Asesinato de Rafael Uribe Uribe. 4. Asesinato de Álvaro Gómez Hurtado.",
+      "enunciado": "¿Cuál es el orden cronológico de estos hechos?",
+      "opciones": {
+        "A": "2, 3, 1 y 4.",
+        "B": "3, 2, 1 y 4.",
+        "C": "3, 1, 2 y 4.",
+        "D": "4, 3, 2 y 1."
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "El orden cronológico correcto de los asesinatos, del más antiguo al más reciente, es: Rafael Uribe Uribe (1914), Jorge Eliécer Gaitán (1948), Luis Carlos Galán (1989) y Álvaro Gómez Hurtado (1995). Esta secuencia corresponde a la opción B (3, 2, 1, 4).",
+      "explicacion": "Esta pregunta evalúa el conocimiento de hitos clave de la historia política de Colombia en el siglo XX. \n- **Rafael Uribe Uribe (3):** Fue asesinado en 1914. Es el más antiguo de la lista. \n- **Jorge Eliécer Gaitán (2):** Su asesinato en 1948 desencadenó el 'Bogotazo' y el recrudecimiento de La Violencia. \n- **Luis Carlos Galán (1):** Candidato presidencial asesinado en 1989 en el contexto de la guerra contra el narcotráfico. \n- **Álvaro Gómez Hurtado (4):** Líder conservador asesinado en 1995. \nEl orden correcto es 3 - 2 - 1 - 4.",
+      "habilidad_evaluada": "Ubicación de eventos históricos en una línea de tiempo (conocimiento cronológico).",
+      "explicacion_opciones_incorrectas": {
+        "A": "Orden cronológico incorrecto.",
+        "C": "Orden cronológico incorrecto.",
+        "D": "Orden cronológico inverso."
+      },
+      "estrategias_resolucion": "1. Recordar o deducir las fechas aproximadas o el periodo histórico de cada magnicidio. 2. Ordenar los eventos del más antiguo al más reciente. 3. Asociar cada evento con su número en la lista. 4. Seleccionar la opción que coincida con la secuencia numérica obtenida.",
+      "errores_comunes": "Confundir las fechas o los periodos históricos de los personajes.",
+      "dificultad": "facil",
+      "tiempo_estimado": 90,
+      "tags": [
+        "historia de Colombia",
+        "siglo XX",
+        "cronología",
+        "conflicto armado",
+        "política"
+      ]
+    },
+    {
+      "materia": "Sociales y Ciudadanas",
+      "competencia": "Interpretación y análisis de perspectivas",
+      "contexto": "En Colombia se debate la legalización de drogas. En contra de la legalización, surgen dos propuestas: una plantea fortalecer la sensibilización sobre riesgos de salud (prevención), y la otra propone endurecer las penas para productores, expendedores y consumidores (represión).",
+      "enunciado": "¿Son similares las dos posiciones frente a la legalización de las drogas?",
+      "opciones": {
+        "A": "No, porque una está a favor de la legalización y la otra a favor del endurecimiento de las sanciones legales.",
+        "B": "Sí, porque ambas consideran que la regulación legal del consumo tiene un efecto directo sobre el narcotráfico.",
+        "C": "No, porque una plantea que la lucha contra el narcotráfico debe ser por la vía de la represión y la otra por la vía de la prevención del consumo.",
+        "D": "Sí, porque ambas están en contra de la legalización y se enfocan en la protección de los consumidores de drogas."
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "Las dos posiciones son similares en que se oponen a la legalización, pero son diferentes en el método que proponen para abordar el problema. Una se enfoca en la prevención a través de la educación sanitaria, mientras que la otra se enfoca en la represión a través del sistema penal. La opción C describe correctamente esta diferencia fundamental en sus enfoques.",
+      "explicacion": "El enunciado presenta dos posturas que son alternativas a la legalización. Por lo tanto, ambas se oponen a ella. Sin embargo, la pregunta se centra en la naturaleza de sus propuestas. La primera propuesta es de carácter preventivo y de salud pública. La segunda es de carácter punitivo y represivo. Son dos estrategias muy diferentes para enfrentar el mismo problema. La opción C captura esta distinción de manera precisa, señalando que una vía es la represión y la otra la prevención.",
+      "habilidad_evaluada": "Análisis y comparación de diferentes posturas frente a un problema social, identificando sus similitudes y diferencias.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Es incorrecto, ninguna de las dos posiciones está a favor de la legalización.",
+        "B": "Es una afirmación demasiado general y no describe la esencia de las propuestas.",
+        "D": "Aunque ambas están en contra de la legalización, es cuestionable que la segunda postura (endurecer penas a consumidores) se enfoque en su 'protección'."
+      },
+      "estrategias_resolucion": "1. Identificar el punto en común de ambas posturas (ambas son alternativas a la legalización). 2. Identificar la diferencia clave en sus propuestas (una es educativa/preventiva, la otra es punitiva/represiva). 3. Evaluar las opciones para ver cuál describe mejor esta relación de similitud en el objetivo y diferencia en el método. 4. Reconocer que C describe la diferencia de método.",
+      "errores_comunes": "Confundir el objetivo común (oposición a la legalización) con los métodos propuestos, que son distintos.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "políticas de drogas",
+        "legalización",
+        "prevención",
+        "represión",
+        "análisis de posturas"
+      ]
+    },
+    {
+      "materia": "Sociales y Ciudadanas",
+      "competencia": "Pensamiento reflexivo y sistémico",
+      "contexto": "En una asamblea de propietarios de un edificio se debate ampliar el horario del salón comunal. Los de los pisos altos quieren hasta la 1:00 a.m., pero los del primer piso (afectados por el ruido) se oponen. Tras una votación, se aprueba una solución intermedia: se ampliará el horario solo hasta la medianoche.",
+      "enunciado": "¿Esta solución se ajusta a los intereses de todos los vecinos?",
+      "opciones": {
+        "A": "No, porque los habitantes de los pisos más altos no pueden aprovechar las fiestas que se hagan en el salón comunal.",
+        "B": "Sí, porque debido a que la propuesta se aprobó todos los vecinos están llamados a tener los mismos intereses.",
+        "C": "No, porque el ruido de las fiestas afecta más a los propietarios del primer piso cercanos al salón comunal.",
+        "D": "Sí, porque todos los propietarios tuvieron derecho a exponer sus ideas y a votar según sus intereses."
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "La solución es un compromiso, pero no satisface completamente los intereses de todos. Específicamente, el interés de los vecinos del primer piso (tener tranquilidad) sigue siendo afectado, aunque en menor medida que con la propuesta original. El ruido hasta la medianoche sigue siendo una molestia significativa para ellos, por lo que sus intereses no están plenamente ajustados.",
+      "explicacion": "Una solución que se ajusta a los intereses de todos sería aquella en la que nadie sale perjudicado. En este caso, la solución de compromiso (medianoche) todavía impone una externalidad negativa (ruido) sobre los residentes del primer piso. Su interés principal es el silencio y el descanso, el cual se ve afectado. Por otro lado, los de los pisos altos tampoco obtienen lo que querían (1:00 a.m.). La solución no alinea los intereses, sino que busca un punto medio en un conflicto de intereses que persiste.",
+      "habilidad_evaluada": "Análisis de un conflicto de intereses y evaluación de la equidad de una solución de compromiso.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Es una exageración; sí pueden aprovechar las fiestas, solo que por menos tiempo del que deseaban.",
+        "B": "Es una falacia democrática; que una decisión se tome por mayoría no significa que los intereses de la minoría desaparezcan o se satisfagan.",
+        "D": "Confunde la justicia procedimental (el proceso fue justo, todos votaron) con la justicia distributiva (el resultado es equitativo para todos)."
+      },
+      "estrategias_resolucion": "1. Identificar los intereses en conflicto: diversión/socialización (pisos altos) vs. tranquilidad/descanso (primer piso). 2. Analizar la solución de compromiso (medianoche). 3. Evaluar cómo afecta esta solución a cada uno de los intereses. 4. Concluir que, si bien es un punto medio, el interés de los vecinos del primer piso sigue siendo vulnerado.",
+      "errores_comunes": "Creer que un procedimiento democrático (votación) o una solución de compromiso automáticamente hacen que el resultado sea justo o que satisfaga los intereses de todos.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "conflicto de intereses",
+        "solución de conflictos",
+        "democracia",
+        "equidad",
+        "propiedad horizontal"
+      ]
+    },
+    {
+      "materia": "Sociales y Ciudadanas",
+      "competencia": "Pensamiento reflexivo y sistémico",
+      "contexto": "Existe un conflicto entre una empresa constructora y organizaciones ambientalistas por un proyecto de apartamentos sobre un humedal. Los ambientalistas afirman que cualquier construcción pone en riesgo el ecosistema. La constructora argumenta que el proyecto busca integrar el medio ambiente. Se plantea como solución que la constructora modifique sus planos para reducir el impacto sobre el humedal.",
+      "enunciado": "¿Cómo se ajusta esta solución a los intereses de la constructora y de los ambientalistas?",
+      "opciones": {
+        "A": "La solución beneficia a ambas partes, pues busca reducir gradualmente el daño ambiental y garantizar el negocio de la constructora.",
+        "B": "La solución beneficia solamente a una de las partes en detrimento del medio ambiente y del ecosistema de humedal.",
+        "C": "La solución beneficia a los ambientalistas, pues defiende sus intereses, y perjudica el negocio de la constructora.",
+        "D": "La solución no beneficia a ninguna de las partes, porque el humedal será destruido y la constructora no podrá realizar su proyecto de construcción de apartamentos."
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "Desde una perspectiva crítica, la solución propuesta permite que la construcción se realice, aunque con modificaciones. Esto garantiza el interés principal de la constructora (el negocio). Sin embargo, para los ambientalistas, cuyo interés es la protección total del ecosistema ('cualquier construcción pone en riesgo'), la solución implica un daño inevitable al humedal. Por lo tanto, la solución beneficia fundamentalmente a la constructora, mientras que el medio ambiente (el interés de los ambientalistas) sufre un detrimento.",
+      "explicacion": "El análisis de la solución depende de la perspectiva. Una visión conciliadora podría verla como un beneficio para ambos (opción A). Sin embargo, una visión más estricta de los intereses en juego lleva a otra conclusión. El interés de la constructora es económico (construir y vender). El interés de los ambientalistas es ecológico (preservar el humedal intacto). La solución de 'reducir el impacto' permite a la constructora cumplir su objetivo principal, aunque con mayores costos o menor alcance. Pero para los ambientalistas, 'reducir el impacto' no es lo mismo que 'preservar'; el humedal de todas formas será alterado y dañado. Por tanto, el interés económico prevalece sobre el ecológico. La solución beneficia principalmente a la constructora a expensas del medio ambiente.",
+      "habilidad_evaluada": "Análisis crítico de una solución a un conflicto socioambiental, evaluando qué intereses prevalecen.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Describe un escenario ideal de 'ganar-ganar' que es cuestionable, ya que el medio ambiente de todas formas sufre un daño irreversible.",
+        "C": "Es incorrecto; la constructora sí se beneficia al poder realizar el proyecto, aunque sea modificado.",
+        "D": "Es incorrecto; la solución precisamente permite que el proyecto se realice."
+      },
+      "estrategias_resolucion": "1. Identificar los intereses fundamentales de cada parte (constructora: lucro; ambientalistas: preservación). 2. Analizar la solución propuesta ('reducir impacto'). 3. Evaluar en qué medida la solución satisface el interés fundamental de cada parte. 4. Concluir que el interés de la constructora se cumple en gran medida, mientras que el de los ambientalistas se ve sacrificado.",
+      "errores_comunes": "Aceptar la solución de compromiso como inherentemente justa y beneficiosa para todos, sin analizar críticamente qué parte cede más en sus intereses fundamentales.",
+      "dificultad": "dificil",
+      "tiempo_estimado": 150,
+      "tags": [
+        "conflicto socioambiental",
+        "desarrollo sostenible",
+        "intereses en conflicto",
+        "evaluación de soluciones"
+      ]
+    },
+    {
+      "materia": "Sociales y Ciudadanas",
+      "competencia": "Pensamiento Social",
+      "contexto": "La pregunta se refiere a los mecanismos de participación ciudadana en Colombia, específicamente aquellos que permiten realizar cambios en la Constitución.",
+      "enunciado": "¿Cuál de los siguientes mecanismos puede ser usado para modificar la Constitución Política de Colombia?",
+      "opciones": {
+        "A": "Una consulta popular.",
+        "B": "Un plebiscito.",
+        "C": "Un referendo.",
+        "D": "Un cabildo abierto."
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "Según el Título XIII de la Constitución Política de Colombia, existen tres mecanismos para su reforma: el Acto Legislativo (tramitado en el Congreso), la Asamblea Nacional Constituyente y el Referendo. De los mecanismos de participación ciudadana listados, el referendo es el único que permite a los ciudadanos aprobar o derogar directamente una reforma a la Constitución.",
+      "explicacion": "Es una pregunta de conocimiento específico sobre la Constitución de Colombia. \n- **Consulta popular (A):** Es un mecanismo para que el presidente, gobernador o alcalde consulte al pueblo sobre una decisión de trascendencia, pero su resultado no modifica la Constitución. \n- **Plebiscito (B):** Es convocado por el presidente para que el pueblo apoye o rechace una decisión del Ejecutivo, pero no se utiliza para reformas constitucionales. \n- **Cabildo abierto (D):** Es un mecanismo de participación a nivel municipal o distrital para que los habitantes discutan asuntos de interés para la comunidad, sin poder reformador. \n- **Referendo (C):** Es la convocatoria que se hace al pueblo para que apruebe o rechace un proyecto de norma jurídica o derogue o no una norma ya vigente. Puede ser utilizado para reformar la Constitución.",
+      "habilidad_evaluada": "Conocimiento de los mecanismos de participación ciudadana y de reforma constitucional en Colombia.",
+      "explicacion_opciones_incorrectas": {
+        "A": "No tiene carácter reformador de la Constitución.",
+        "B": "No se utiliza para reformar la Constitución.",
+        "D": "Es un mecanismo de participación local, no de reforma constitucional."
+      },
+      "estrategias_resolucion": "1. Recordar los diferentes mecanismos de participación ciudadana en Colombia. 2. Recordar cuáles de ellos tienen la facultad específica de reformar la Constitución. 3. Diferenciar las funciones de la consulta popular, el plebiscito, el cabildo abierto y el referendo.",
+      "errores_comunes": "Confundir los diferentes mecanismos de participación ciudadana, ya que sus nombres y funciones pueden parecer similares.",
+      "dificultad": "facil",
+      "tiempo_estimado": 90,
+      "tags": [
+        "Constitución de Colombia",
+        "mecanismos de participación",
+        "referendo",
+        "reforma constitucional",
+        "educación cívica"
+      ]
+    },
+    {
+      "materia": "Sociales y Ciudadanas",
+      "competencia": "Pensamiento reflexivo y sistémico",
+      "contexto": "Un estudio de la ONU sobre la urbanización en América Latina señala que la expansión urbana descontrolada tiene altos costos sociales y económicos. Propone tres soluciones: 1) Densificar las ciudades (construcción vertical); 2) Acelerar reformas para legalizar barrios de invasión y darles servicios; 3) Aumentar la oferta de transporte público desde la periferia.",
+      "enunciado": "¿Qué tipo de relación se puede establecer entre las propuestas de solución al problema de la urbanización en América Latina?",
+      "opciones": {
+        "A": "Complementariedad, pues todas las soluciones priorizan el desarrollo económico de los centros urbanos.",
+        "B": "Compatibilidad, pues todas las soluciones se enfocan hacia la recuperación de las zonas de producción rural.",
+        "C": "Complementariedad, pues todas las soluciones se enfocan hacia la mitigación de los costos sociales y económicos de la expansión urbana.",
+        "D": "Compatibilidad, pues todas las soluciones priorizan el mejoramiento de la calidad de vida de los habitantes provenientes de zonas rurales."
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "Las tres propuestas atacan el mismo problema (los costos de la expansión urbana descontrolada) desde diferentes ángulos: la primera busca frenar la expansión, la segunda busca mejorar las condiciones de la expansión ya existente, y la tercera busca conectar la periferia con el centro. Como todas contribuyen a un objetivo común (mitigar los costos del problema), son complementarias.",
+      "explicacion": "El problema central identificado es el alto 'costo económico, social y ambiental' de la expansión urbana. Cada una de las soluciones aborda este problema: \n- **Densificar:** Mitiga los costos al frenar la expansión física sobre suelo rural. \n- **Legalizar barrios:** Mitiga los costos sociales y económicos de los habitantes de la periferia, integrándolos a la ciudad formal. \n- **Transporte público:** Mitiga los costos económicos y de tiempo para quienes viven en la periferia. \nDado que todas las medidas apuntan a reducir las consecuencias negativas de un mismo fenómeno, se complementan entre sí para lograr una solución más integral. La opción C describe correctamente tanto la relación ('Complementariedad') como el objetivo común ('mitigación de los costos... de la expansión urbana').",
+      "habilidad_evaluada": "Análisis de la relación entre diferentes soluciones propuestas para un problema social complejo.",
+      "explicacion_opciones_incorrectas": {
+        "A": "El enfoque no es solo el desarrollo económico, sino la mitigación de costos sociales y la mejora de la calidad de vida.",
+        "B": "Solo la primera solución tiene un efecto directo en la recuperación de zonas rurales; las otras dos se centran en la periferia urbana.",
+        "D": "El foco es en los habitantes de la periferia urbana, no necesariamente provenientes de zonas rurales."
+      },
+      "estrategias_resolucion": "1. Identificar el problema principal que las soluciones buscan resolver. 2. Analizar el objetivo específico de cada una de las tres propuestas. 3. Determinar si las propuestas son excluyentes, compatibles o complementarias. 4. Concluir que, al abordar diferentes facetas del mismo problema, son complementarias.",
+      "errores_comunes": "Centrarse en una sola de las soluciones y no ver el objetivo común que las une.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "urbanismo",
+        "políticas públicas",
+        "solución de problemas",
+        "América Latina",
+        "desigualdad"
+      ]
+    },
+    {
+      "materia": "Sociales y Ciudadanas",
+      "competencia": "Pensamiento Social",
+      "contexto": "Un presidente de Colombia con alta popularidad, finalizando su periodo, decide proponer la inclusión de la reelección presidencial indefinida dentro de la Constitución. Para tal fin, quiere convocar un referendo.",
+      "enunciado": "¿El presidente puede hacer esto?",
+      "opciones": {
+        "A": "Sí, porque los referendos permiten reformar la Constitución.",
+        "B": "No, porque la Constitución no puede reformarla el Ejecutivo; solo a través de una Asamblea Constituyente.",
+        "C": "Sí, porque el presidente puede modificar la Constitución por su cuenta, sin acudir al poder legislativo.",
+        "D": "No, porque los referendos no permiten reformar la Constitución."
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "El referendo es uno de los mecanismos explícitamente establecidos en la Constitución Política de Colombia (Título XIII) para realizar reformas a la misma. La iniciativa para un referendo puede provenir del Gobierno, de un grupo de congresistas o de los ciudadanos. Por lo tanto, el presidente sí puede iniciar el proceso para convocar un referendo con el fin de reformar la Constitución.",
+      "explicacion": "La pregunta evalúa el conocimiento sobre los mecanismos de reforma constitucional en Colombia. La Constitución prevé tres vías para su modificación: \n1. **Acto Legislativo:** Aprobado por el Congreso en ocho debates. \n2. **Asamblea Nacional Constituyente:** Convocada por el pueblo para reformar total o parcialmente la Constitución. \n3. **Referendo:** Somete a votación popular un proyecto de reforma. \nDado que el referendo es una vía válida, la afirmación A es correcta. Las otras opciones presentan información incorrecta sobre el sistema constitucional colombiano.",
+      "habilidad_evaluada": "Conocimiento de los mecanismos de reforma constitucional establecidos en la Constitución Política de Colombia.",
+      "explicacion_opciones_incorrectas": {
+        "B": "Es falso; el referendo y el Acto Legislativo son otras formas de reforma, además de la Asamblea Constituyente.",
+        "C": "Es falso; el presidente no puede reformar la Constitución por su cuenta, la iniciativa debe pasar por el Congreso o ser aprobada por la ciudadanía.",
+        "D": "Es falso; los referendos son un mecanismo específico para, entre otras cosas, reformar la Constitución."
+      },
+      "estrategias_resolucion": "1. Recordar los mecanismos de reforma constitucional en Colombia. 2. Identificar el referendo como uno de ellos. 3. Evaluar la veracidad de cada una de las opciones a la luz de este conocimiento.",
+      "errores_comunes": "Confundir las funciones de los diferentes mecanismos de participación ciudadana o pensar que solo una Asamblea Constituyente puede modificar la Constitución.",
+      "dificultad": "facil",
+      "tiempo_estimado": 90,
+      "tags": [
+        "Constitución de Colombia",
+        "reforma constitucional",
+        "referendo",
+        "poder ejecutivo",
+        "educación cívica"
+      ]
+    },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Pensamiento Social",
+          "contexto": "Un ciudadano inconforme con el sistema de salud en Colombia quiere promover una reforma a la Ley 100 de 1993. Para ello, presenta una propuesta ante el Congreso de la República a través de una 'iniciativa popular' para modificar varios artículos de dicha ley.",
+          "enunciado": "¿Es legalmente viable el procedimiento realizado por el ciudadano?",
+          "opciones": {
+            "A": "No, porque la Constitución Política de Colombia establece que un ciudadano no tiene la facultad por sí solo para introducir propuestas de reforma a las leyes colombianas.",
+            "B": "Sí, porque la Constitución Política de Colombia establece que se requiere un ciudadano para proponer una iniciativa popular que reforme una ley.",
+            "C": "No, porque la Constitución Política de Colombia establece que se requiere el 5 % del censo electoral para presentar una iniciativa popular que reforme una ley.",
+            "D": "Sí, porque la Constitución Política de Colombia establece que se requiere el 5 % del apoyo de los congresistas para que la iniciativa popular se apruebe."
+          },
+          "respuesta_correcta": "C",
+          "retroalimentacion": "El mecanismo de iniciativa popular legislativa está contemplado en la Constitución de Colombia (Artículo 155), pero no puede ser ejercido por un solo ciudadano. La ley que lo regula (Ley 134 de 1994) establece que para presentar una iniciativa de este tipo se requiere el respaldo de un número de ciudadanos igual o superior al 5% del censo electoral vigente. Por lo tanto, el procedimiento de un solo ciudadano no es viable.",
+          "explicacion": "La pregunta evalúa el conocimiento sobre los requisitos de un mecanismo de participación ciudadana específico: la iniciativa popular legislativa. \n- **¿Puede un ciudadano proponer una ley?** Sí, la Constitución lo permite. \n- **¿Puede hacerlo solo?** No. La Constitución y la ley establecen requisitos de apoyo ciudadano masivo. \n- **¿Cuál es el requisito?** Se necesita el respaldo de firmas de un número de ciudadanos equivalente al 5% del censo electoral. \nLa opción C describe correctamente este requisito, explicando por qué la acción del ciudadano (actuando solo) no es viable.",
+          "habilidad_evaluada": "Conocimiento de los requisitos y limitaciones de los mecanismos de participación ciudadana en Colombia.",
+          "explicacion_opciones_incorrectas": {
+            "A": "Es incorrecta porque los ciudadanos sí tienen la facultad, pero de forma colectiva, no individual.",
+            "B": "Es incorrecta porque, si bien un ciudadano participa, no es suficiente con uno solo.",
+            "D": "Es incorrecta porque el apoyo requerido es de la ciudadanía (censo electoral), no de los congresistas."
+          },
+          "estrategias_resolucion": "1. Recordar o identificar el mecanismo de 'iniciativa popular'. 2. Recordar que los mecanismos de participación masiva suelen requerir un número significativo de apoyos. 3. Identificar el requisito específico de la iniciativa popular en Colombia (5% del censo).",
+          "errores_comunes": "Confundir los requisitos de los diferentes mecanismos de participación. Pensar que el apoyo debe venir del Congreso y no de la ciudadanía.",
+          "dificultad": "media",
+          "tiempo_estimado": 120,
+          "tags": [
+            "Constitución de Colombia",
+            "mecanismos de participación",
+            "iniciativa popular",
+            "derecho legislativo",
+            "educación cívica"
+          ]
+        },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Interpretación y análisis de perspectivas",
+          "contexto": "Un alcalde, junto con su abogado y el mayor contratista de la región, compraron tierras rurales por $244 millones. Posteriormente, el alcalde destinó $4.700 millones de recursos públicos a obras de infraestructura (vías, iluminación) que valorizaron específicamente esos predios, cuyo valor ahora puede superar los $12.000 millones. Estas obras se incluyeron en el Plan Básico de Ordenamiento Territorial (PBOT) después de que los predios fueran comprados y no estaban en el plan de desarrollo original. El alcalde se defiende diciendo que los beneficios no son solo para él, sino para toda la comunidad.",
+          "enunciado": "De acuerdo con el texto anterior, ¿cuál de las siguientes afirmaciones explica las denuncias contra el alcalde?",
+          "opciones": {
+            "A": "Los denunciantes no obtuvieron beneficio de las obras desarrolladas en el PBOT.",
+            "B": "Los denunciantes creen que el alcalde no ha hecho obras que beneficien al municipio.",
+            "C": "Los denunciantes tienen evidencias para afirmar que el alcalde abusó de su poder.",
+            "D": "Los denunciantes no quieren que el alcalde invierta en las zonas rurales del municipio."
+          },
+          "respuesta_correcta": "C",
+          "retroalimentacion": "La denuncia se basa en que el alcalde usó su poder y la información privilegiada para su beneficio personal y el de sus allegados. Al comprar tierras baratas y luego usar recursos públicos para valorizarlas de manera desproporcionada, está incurriendo en un claro conflicto de intereses y un posible acto de corrupción. Esto constituye un abuso de su poder como funcionario público.",
+          "explicacion": "La esencia de la denuncia no es si las obras benefician o no a la comunidad en general (la defensa del alcalde), sino el proceso y la intención detrás de ellas. Los hechos descritos (compra de tierras, modificación del PBOT para beneficiar esas tierras, valorización exorbitante) sugieren que el alcalde utilizó su cargo para enriquecerse ilícitamente. Esta manipulación de los planes de desarrollo y la inversión pública para beneficio privado es una forma de abuso de poder.",
+          "habilidad_evaluada": "Análisis de una situación para identificar un posible caso de corrupción y abuso de poder.",
+          "explicacion_opciones_incorrectas": {
+            "A": "El motivo de la denuncia no es la falta de beneficio propio de los denunciantes, sino la conducta indebida del alcalde.",
+            "B": "No se niega que se hayan hecho obras; se cuestiona la motivación y a quiénes beneficiaron principalmente.",
+            "D": "La denuncia no es contra la inversión rural, sino contra la inversión selectiva y con fines de lucro personal."
+          },
+          "estrategias_resolucion": "1. Identificar la secuencia de eventos: compra de tierras -> modificación de planes -> inversión pública -> valorización. 2. Reconocer que esta secuencia sugiere un uso de información privilegiada y de recursos públicos para beneficio privado. 3. Calificar esta conducta como un 'abuso de poder'.",
+          "errores_comunes": "Aceptar la defensa del alcalde ('beneficia a toda la comunidad') sin analizar el evidente conflicto de intereses y el beneficio desproporcionado que él y sus socios obtuvieron.",
+          "dificultad": "media",
+          "tiempo_estimado": 120,
+          "tags": [
+            "corrupción",
+            "abuso de poder",
+            "ética pública",
+            "conflicto de intereses",
+            "ordenamiento territorial"
+          ]
+        },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Pensamiento reflexivo y sistémico",
+          "contexto": "El estado de excepción es una medida temporal en la Constitución de Colombia a la que puede acudir el presidente ante una grave perturbación del orden público. Durante este estado, el presidente adquiere facultades especiales, como restringir reuniones, ordenar aprehensiones, modificar el presupuesto y decretar leyes.",
+          "enunciado": "A partir de la anterior definición, ¿es posible que durante el estado de excepción se altere la distribución del poder público?",
+          "opciones": {
+            "A": "Sí, porque es imposible modificar el presupuesto del país, ya que los recursos públicos se adjudican previamente.",
+            "B": "No, porque la Rama Ejecutiva debe ser la única encargada de restringir las manifestaciones públicas y los desórdenes causados por estas.",
+            "C": "Sí, porque la Rama Judicial debe ser la única encargada de ordenar el arresto de personas por medio de una orden judicial.",
+            "D": "Sí, porque el presidente podría proponer leyes cuando, de manera ordinaria, la Rama Legislativa es la única que puede hacer esto."
+          },
+          "respuesta_correcta": "D",
+          "retroalimentacion": "Normalmente, en Colombia, la función de crear leyes recae exclusivamente en la Rama Legislativa (Congreso). El texto afirma que durante un estado de excepción, el presidente (cabeza de la Rama Ejecutiva) adquiere la facultad de 'decretar leyes'. Esto significa que el Ejecutivo asume temporalmente una función que es propia del Legislativo, alterando así la distribución normal del poder público.",
+          "explicacion": "La pregunta se refiere al principio de separación de poderes. El poder público en Colombia se divide en las ramas Legislativa, Ejecutiva y Judicial, cada una con funciones específicas. La función de legislar (hacer leyes) corresponde al Congreso. El texto indica que bajo un estado de excepción, el presidente puede 'decretar leyes'. Al hacer esto, la Rama Ejecutiva está ejerciendo una función legislativa, lo que representa una alteración temporal pero significativa de la distribución habitual de poderes.",
+          "habilidad_evaluada": "Comprensión del principio de separación de poderes y cómo se ve afectado por figuras constitucionales como el estado de excepción.",
+          "explicacion_opciones_incorrectas": {
+            "A": "La justificación es contradictoria. El texto dice que sí se puede modificar el presupuesto.",
+            "B": "La afirmación 'No' es incorrecta. Además, en condiciones normales, la Rama Ejecutiva ya se encarga de mantener el orden público.",
+            "C": "La justificación es incorrecta. Si bien normalmente el arresto requiere orden judicial, el texto dice que el presidente puede 'ordenar la aprehensión preventiva', alterando también esta distribución de poder. Sin embargo, la opción D se refiere a una función más fundamental (crear leyes)."
+          },
+          "estrategias_resolucion": "1. Recordar la división de poderes (Legislativo hace leyes, Ejecutivo gobierna, Judicial juzga). 2. Leer las facultades que adquiere el presidente en estado de excepción. 3. Identificar cuál de esas facultades corresponde normalmente a otra rama del poder. 4. Reconocer que 'decretar leyes' es una función de la Rama Legislativa.",
+          "errores_comunes": "No tener claro el principio de separación de poderes y las funciones de cada rama.",
+          "dificultad": "media",
+          "tiempo_estimado": 120,
+          "tags": [
+            "Constitución de Colombia",
+            "estado de excepción",
+            "separación de poderes",
+            "ramas del poder público"
+          ]
+        },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Pensamiento Social",
+          "contexto": "En Colombia, las ramas del poder público se ejercen control político entre sí. Una de las ramas utiliza dos mecanismos: la citación a un debate de control político para indagar sobre la gestión de funcionarios, y la moción de censura, para reprochar y separar del cargo a ministros.",
+          "enunciado": "De acuerdo con la Constitución Política de Colombia, ¿cuál de las ramas del poder puede ejercer control político a través de citaciones y mociones de censura?",
+          "opciones": {
+            "A": "La Rama Electoral.",
+            "B": "La Rama Ejecutiva.",
+            "C": "La Rama Judicial.",
+            "D": "La Rama Legislativa."
+          },
+          "respuesta_correcta": "D",
+          "retroalimentacion": "En el sistema presidencialista colombiano, la función de ejercer control político sobre el Gobierno (Rama Ejecutiva) es una de las principales responsabilidades de la Rama Legislativa, es decir, el Congreso de la República. La citación a debates y la moción de censura son las herramientas constitucionales por excelencia que tiene el Congreso para fiscalizar a los ministros y otros altos funcionarios del Estado.",
+          "explicacion": "Esta es una pregunta de conocimiento específico sobre la estructura del Estado colombiano. La Constitución asigna a cada rama del poder funciones distintas y mecanismos de control mutuo ('frenos y contrapesos'). El control político sobre el Ejecutivo es una función central del Congreso (Senado y Cámara de Representantes), que conforma la Rama Legislativa. Por lo tanto, es esta rama la que realiza citaciones a ministros para que rindan cuentas y puede votar una moción de censura para destituirlos.",
+          "habilidad_evaluada": "Conocimiento de la estructura del Estado colombiano y la función de control político del Congreso.",
+          "explicacion_opciones_incorrectas": {
+            "A": "La Rama Electoral organiza las elecciones, no ejerce control político de este tipo.",
+            "B": "La Rama Ejecutiva es el objeto del control político, no quien lo ejerce a través de estos mecanismos.",
+            "C": "La Rama Judicial ejerce control judicial (revisando la legalidad de los actos), no control político."
+          },
+          "estrategias_resolucion": "1. Recordar la composición de las ramas del poder en Colombia. 2. Recordar el concepto de 'control político'. 3. Asociar el control político sobre el gobierno con la función del parlamento o congreso. 4. Identificar que el Congreso pertenece a la Rama Legislativa.",
+          "errores_comunes": "Confundir el control político, que es ejercido por el Congreso, con el control judicial o disciplinario, que ejercen otras entidades.",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "Constitución de Colombia",
+            "ramas del poder público",
+            "Rama Legislativa",
+            "Congreso",
+            "control político",
+            "moción de censura"
+          ]
+        },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Pensamiento Social",
+          "contexto": "La Constitución de Colombia establece que los derechos de los menores de edad prevalecen. Por ello, un menor de 14 años que comete un delito es juzgado por un código penal especial. Un presidente considera que esto ha incrementado la delincuencia juvenil y decide convocar a la ciudadanía para conocer si apoyarían anular la norma constitucional que da prevalencia a los derechos de los menores.",
+          "enunciado": "De acuerdo con los mecanismos de participación directa que contempla la Constitución, ¿cuál de los siguientes es el adecuado para que el presidente pueda adelantar su iniciativa?",
+          "opciones": {
+            "A": "El plebiscito.",
+            "B": "El referendo.",
+            "C": "La consulta popular.",
+            "D": "El cabildo abierto."
+          },
+          "respuesta_correcta": "B",
+          "retroalimentacion": "La iniciativa del presidente busca 'anular una norma constitucional'. El único mecanismo de participación ciudadana directa que permite aprobar, modificar o derogar una norma jurídica, incluyendo una reforma a la Constitución, es el referendo. Por lo tanto, este es el mecanismo adecuado para su propósito.",
+          "explicacion": "Se debe diferenciar la finalidad de cada mecanismo de participación: \n- **Plebiscito (A):** Sirve para que el pueblo apoye o rechace una política del Ejecutivo, pero no puede usarse para modificar la Constitución. \n- **Consulta Popular (C):** Es para preguntar al pueblo sobre una decisión de trascendencia, pero no es vinculante para reformar la Constitución. \n- **Cabildo Abierto (D):** Es un mecanismo de participación a nivel local y no tiene alcance constitucional. \n- **Referendo (B):** Es el mecanismo diseñado específicamente para que la ciudadanía decida directamente sobre la aprobación o derogación de una ley o un acto de reforma constitucional. Como el objetivo es anular una norma constitucional, el referendo es la vía correcta.",
+          "habilidad_evaluada": "Conocimiento de la finalidad y el alcance de los diferentes mecanismos de participación ciudadana en Colombia.",
+          "explicacion_opciones_incorrectas": {
+            "A": "No puede modificar la Constitución.",
+            "C": "No puede modificar la Constitución.",
+            "D": "Es de ámbito local y no modifica la Constitución."
+          },
+          "estrategias_resolucion": "1. Identificar el objetivo de la iniciativa del presidente: anular una norma constitucional. 2. Analizar las opciones y recordar la función específica de cada mecanismo de participación. 3. Determinar cuál de ellos está diseñado para que la ciudadanía apruebe o derogue normas constitucionales.",
+          "errores_comunes": "Confundir el plebiscito, la consulta popular y el referendo, que son los mecanismos de participación a nivel nacional.",
+          "dificultad": "media",
+          "tiempo_estimado": 120,
+          "tags": [
+            "Constitución de Colombia",
+            "mecanismos de participación",
+            "referendo",
+            "derechos de los menores"
+          ]
+        },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Pensamiento Social",
+          "contexto": "Fragmento histórico: 'Con los jefes liberales..., el presidente Ospina improvisó nuevamente un gobierno de Unidad Nacional, mientras Laureano Gómez... se iba indignado del país... En la Bogotá medio quemada restablecieron el orden las tropas del ejército venidas de Boyacá, pero en provincia los que fueron llamados “nueveabrileños” empezaron a levantar la autodefensa liberal vaticinada por Gaitán'.",
+          "enunciado": "¿Qué periodo de la historia política colombiana se representa en este fragmento?",
+          "opciones": {
+            "A": "La Violencia entre 1948 y 1953.",
+            "B": "El Frente Nacional entre 1958 y 1974.",
+            "C": "La Patria Boba entre 1810 y 1815.",
+            "D": "El gobierno de Rojas Pinilla entre 1954 y 1958."
+          },
+          "respuesta_correcta": "A",
+          "retroalimentacion": "El fragmento menciona explícitamente a 'Gaitán', 'Ospina' (Mariano Ospina Pérez, presidente en 1948), Laureano Gómez, la 'sublevación y el caos', 'Bogotá medio quemada' y los 'nueveabrileños'. Todas estas son referencias directas al asesinato de Jorge Eliécer Gaitán el 9 de abril de 1948 y sus consecuencias inmediatas, como el Bogotazo y el inicio del periodo de La Violencia bipartidista.",
+          "explicacion": "El texto contiene varias claves históricas que lo ubican en un periodo específico: \n- **'Gaitán':** Figura central cuyo asesinato es un hito. \n- **'Presidente Ospina':** Mariano Ospina Pérez era el presidente de Colombia en 1948. \n- **'Laureano Gómez':** Líder conservador y figura clave de la época. \n- **'Sublevación y el caos', 'Bogotá medio quemada'**: Referencias claras al Bogotazo. \n- **'Nueveabrileños'**: Término usado para los que participaron en la revuelta del 9 de abril. \nTodos estos elementos sitúan inequívocamente el fragmento en el inicio del periodo conocido como La Violencia, que se desencadena tras el 9 de abril de 1948.",
+          "habilidad_evaluada": "Identificación de un periodo histórico a partir de personajes, eventos y términos clave en un texto.",
+          "explicacion_opciones_incorrectas": {
+            "B": "El Frente Nacional es un acuerdo posterior para terminar La Violencia.",
+            "C": "La Patria Boba es el periodo de la independencia, en el siglo XIX.",
+            "D": "El gobierno de Rojas Pinilla fue un régimen militar posterior a La Violencia."
+          },
+          "estrategias_resolucion": "1. Leer el fragmento y subrayar los nombres propios, eventos y términos específicos. 2. Asociar estos elementos con un periodo de la historia de Colombia. 3. La mención de Gaitán y el 'nueveabrileños' es la clave más directa para identificar el año 1948 y el inicio de La Violencia.",
+          "errores_comunes": "Tener un conocimiento vago de la cronología del siglo XX en Colombia y confundir La Violencia con el Frente Nacional o el gobierno de Rojas Pinilla.",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "historia de Colombia",
+            "La Violencia",
+            "Bogotazo",
+            "Jorge Eliécer Gaitán",
+            "1948"
+          ]
+        },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Pensamiento reflexivo y sistémico",
+          "contexto": "Fragmento de un texto: 'Es posible y conveniente para la nación y para el conservatismo buscar un entendimiento claro y firme con el Partido Liberal... para que se regrese a la normalidad institucional mediante un acuerdo de los dos partidos tradicionales... por el cual se haga imposible que el gobierno civil y nacional que haya de suceder al de las Fuerzas Armadas se convierta en una hegemonía de partido, y recaiga la nación en los peligros y las tragedias anteriores'.",
+          "enunciado": "De acuerdo con el texto anterior, ¿cuál de las siguientes razones explicaría que este fragmento pertenece al periodo del Frente Nacional?",
+          "opciones": {
+            "A": "El autor propone un acuerdo entre los partidos tradicionales como alternativa política ante la amenaza del fascismo, la dictadura militar y los totalitarismos.",
+            "B": "Da cuenta de la voluntad de paz y conciliación de los colombianos en el periodo de la dictadura de las Fuerzas Armadas encabezadas por el general Rojas Pinilla.",
+            "C": "Da cuenta del acuerdo realizado por los partidos tradicionales como salida a la crisis social producida por la violencia y los sectarismos bipartidistas de la década de los años 1950.",
+            "D": "El autor advierte de los peligros inherentes a un modelo democrático electoral polarizado por dos partidos políticos tradicionales, antagónicos y excluyentes."
+          },
+          "respuesta_correcta": "C",
+          "retroalimentacion": "El texto describe la lógica exacta del Frente Nacional: un 'acuerdo de los dos partidos tradicionales' para 'suceder al de las Fuerzas Armadas' (el de Rojas Pinilla) y evitar la 'hegemonía de partido' que había causado las 'tragedias anteriores' (La Violencia bipartidista de los años 50). La opción C resume perfectamente este contexto.",
+          "explicacion": "El fragmento contiene todos los elementos que definen el pacto del Frente Nacional: \n- **'Acuerdo de los dos partidos tradicionales'**: Es la base del Frente Nacional (alternancia y paridad). \n- **'Suceder al de las Fuerzas Armadas'**: El Frente Nacional se pactó para suceder a la dictadura de Rojas Pinilla. \n- **'Evitar la hegemonía de partido' y las 'tragedias anteriores'**: El objetivo era acabar con la violencia sectarista entre liberales y conservadores que caracterizó la década de 1950. \nLa opción C es la única que conecta todos estos elementos y explica el acuerdo como una salida a la crisis de violencia previa.",
+          "habilidad_evaluada": "Contextualización histórica de un documento a partir de su contenido y argumentación.",
+          "explicacion_opciones_incorrectas": {
+            "A": "No se mencionan el fascismo ni el totalitarismo como amenazas directas.",
+            "B": "Aunque menciona la sucesión a la dictadura, la opción C explica mejor el 'porqué' del acuerdo (salir de la violencia anterior).",
+            "D": "Describe una situación general, pero no el acuerdo específico que se está gestando en el texto."
+          },
+          "estrategias_resolucion": "1. Leer el fragmento e identificar sus ideas clave: acuerdo bipartidista, fin de un gobierno militar, evitar tragedias pasadas. 2. Recordar el contexto y la definición del Frente Nacional. 3. Darse cuenta de que las ideas del texto coinciden exactamente con la lógica y el propósito del pacto del Frente Nacional. 4. Elegir la opción que mejor describa esta conexión histórica.",
+          "errores_comunes": "No reconocer las referencias implícitas a La Violencia y a la dictadura de Rojas Pinilla.",
+          "dificultad": "media",
+          "tiempo_estimado": 120,
+          "tags": [
+            "historia de Colombia",
+            "Frente Nacional",
+            "bipartidismo",
+            "La Violencia",
+            "Rojas Pinilla"
+          ]
+        },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Pensamiento Social",
+          "contexto": "Se mencionan cuatro revoluciones sociales destacadas: la Revolución mexicana, la Revolución cubana, la Revolución nicaragüense (sandinista) y la Revolución rusa.",
+          "enunciado": "¿Cuál es el orden cronológico (del más antiguo al más reciente) de las revoluciones mencionadas?",
+          "opciones": {
+            "A": "Revolución nicaragüense, Revolución rusa, Revolución mexicana, Revolución cubana.",
+            "B": "Revolución mexicana, Revolución rusa, Revolución cubana, Revolución nicaragüense.",
+            "C": "Revolución rusa, Revolución cubana, Revolución mexicana, Revolución nicaragüense.",
+            "D": "Revolución cubana, Revolución rusa, Revolución mexicana, Revolución nicaragüense."
+          },
+          "respuesta_correcta": "B",
+          "retroalimentacion": "El orden cronológico correcto de estas revoluciones, basado en sus fechas de inicio o consolidación, es: Revolución mexicana (inicia en 1910), Revolución rusa (1917), Revolución cubana (triunfa en 1959) y Revolución nicaragüense (triunfa en 1979). Esta secuencia corresponde a la opción B.",
+          "explicacion": "Esta pregunta evalúa el conocimiento de eventos clave de la historia mundial del siglo XX. \n- **Revolución mexicana:** Inicia en 1910. Es la más antigua de la lista. \n- **Revolución rusa:** Ocurre en 1917, en el contexto de la Primera Guerra Mundial. \n- **Revolución cubana:** Liderada por Fidel Castro, triunfa el 1 de enero de 1959. \n- **Revolución nicaragüense:** El Frente Sandinista de Liberación Nacional toma el poder en 1979. \nEl orden cronológico, de la más antigua a la más reciente, es: Mexicana → Rusa → Cubana → Nicaragüense.",
+          "habilidad_evaluada": "Ubicación de eventos de la historia mundial en una línea de tiempo (conocimiento cronológico).",
+          "explicacion_opciones_incorrectas": {
+            "A": "Orden cronológico incorrecto.",
+            "C": "Orden cronológico incorrecto.",
+            "D": "Orden cronológico incorrecto."
+          },
+          "estrategias_resolucion": "1. Recordar o deducir las fechas o décadas aproximadas de cada una de las revoluciones. 2. Ordenar los eventos del más antiguo al más reciente. 3. Seleccionar la opción que coincida con la secuencia obtenida.",
+          "errores_comunes": "Confundir las fechas de las revoluciones latinoamericanas o el orden entre la mexicana y la rusa.",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "historia mundial",
+            "siglo XX",
+            "cronología",
+            "revoluciones",
+            "historia de América Latina"
+          ]
+        },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Pensamiento reflexivo y sistémico",
+          "contexto": "A finales de la década de 1990, el gobierno colombiano, en un contexto de crisis económica y acuerdos con el Fondo Monetario Internacional (FMI), implementó una serie de medidas: reforma estructural del sector público, reducción del gasto, protección al libre comercio, flexibilización laboral y privatización de empresas públicas.",
+          "enunciado": "¿Por qué estas medidas pueden catalogarse como “neoliberales”?",
+          "opciones": {
+            "A": "Porque implican un manejo arbitrario de la dinámica económica del país por el gobierno nacional.",
+            "B": "Porque plantean una mayor presencia del Estado en el sector productivo como agente administrador.",
+            "C": "Porque implican la injerencia de instituciones financieras extranjeras en la política económica interna.",
+            "D": "Porque plantean reducir el tamaño del Estado y su participación en la regulación de actividades económicas."
+          },
+          "respuesta_correcta": "D",
+          "retroalimentacion": "El neoliberalismo es una corriente de pensamiento económico que aboga por la mínima intervención del Estado en la economía. Las medidas descritas (reducción del gasto público, privatización de empresas estatales, flexibilización laboral, libre comercio) son características de este modelo, ya que buscan reducir el tamaño y el rol del Estado, dejando que el mercado se regule a sí mismo.",
+          "explicacion": "La pregunta pide identificar la característica esencial del neoliberalismo que se refleja en las medidas descritas. \n- **Reducir el gasto del gobierno:** Menos Estado. \n- **Privatización de bancos y empresas públicas:** El Estado se retira de sectores económicos. \n- **Protección al libre comercio:** Menos regulación estatal en el comercio internacional. \n- **Flexibilización laboral:** Menos regulación estatal en el mercado de trabajo. \nTodas estas políticas apuntan a un objetivo común: disminuir la intervención y el tamaño del Estado en la economía, lo cual es el postulado central del neoliberalismo, como se describe en la opción D.",
+          "habilidad_evaluada": "Comprensión de los principios de un modelo económico (neoliberalismo) y su aplicación en políticas públicas.",
+          "explicacion_opciones_incorrectas": {
+            "A": "Aunque pueda ser visto como arbitrario por algunos, no es la definición técnica de neoliberalismo.",
+            "B": "Es lo opuesto al neoliberalismo, que busca una menor presencia del Estado.",
+            "C": "Si bien los acuerdos con el FMI implican injerencia, la razón por la que las medidas son 'neoliberales' es por su contenido intrínseco, no por quién las promueve."
+          },
+          "estrategias_resolucion": "1. Recordar la definición básica de neoliberalismo (mínima intervención del Estado, primacía del libre mercado). 2. Analizar la lista de medidas implementadas. 3. Darse cuenta de que todas las medidas tienen en común la reducción del rol del Estado en la economía. 4. Elegir la opción que mejor defina este principio.",
+          "errores_comunes": "Confundir el neoliberalismo con otras políticas o no conocer sus principios básicos.",
+          "dificultad": "media",
+          "tiempo_estimado": 120,
+          "tags": [
+            "neoliberalismo",
+            "modelo económico",
+            "Estado",
+            "mercado",
+            "políticas públicas"
+          ]
+        },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Pensamiento reflexivo y sistémico",
+          "contexto": "Fragmento de un Plan Nacional de Desarrollo de México: '...esta estrategia plantea que la Administración Pública Federal busque el incremento de la productividad mediante la eliminación de trabas que impiden el funcionamiento adecuado de la economía, promoviendo la creación de empleos, mejorando la regulación y, de manera especial, simplificando la normatividad y trámites gubernamentales'.",
+          "enunciado": "¿Con cuál de los siguientes modelos es afín esta propuesta para mejorar la productividad económica?",
+          "opciones": {
+            "A": "Con el socialismo, porque busca que el Estado tenga un control total de la economía.",
+            "B": "Con la monarquía, porque centraliza las decisiones económicas en el jefe de Estado.",
+            "C": "Con el neoliberalismo, porque restringe el rol del Estado a la protección del mercado.",
+            "D": "Con la democracia, porque invita a todos a tomar parte en las decisiones económicas."
+          },
+          "respuesta_correcta": "C",
+          "retroalimentacion": "La propuesta se centra en 'eliminar trabas', 'mejorar la regulación' y 'simplificar la normatividad'. Todas estas son acciones encaminadas a reducir la intervención y el control del Estado en la economía para facilitar la actividad del sector privado. Este enfoque, que busca restringir el rol del Estado para que el mercado funcione más libremente, es un pilar del modelo neoliberal.",
+          "explicacion": "El texto describe una política de desregulación económica. El Estado, en lugar de ser un actor principal, se convierte en un facilitador, eliminando obstáculos para que la economía de mercado opere de manera más eficiente. Este principio de reducir la intervención estatal y favorecer al mercado es la característica central del neoliberalismo. La opción C describe correctamente este modelo y su afinidad con la propuesta.",
+          "habilidad_evaluada": "Identificación del modelo económico subyacente en una propuesta de política pública.",
+          "explicacion_opciones_incorrectas": {
+            "A": "El socialismo propone lo contrario: un mayor control estatal, no su restricción.",
+            "B": "La monarquía es una forma de gobierno, no un modelo económico. Aunque puede ser absolutista, no se define por la desregulación.",
+            "D": "La democracia es un sistema político, no económico. Aunque puede coexistir con el neoliberalismo, no es el modelo económico en sí."
+          },
+          "estrategias_resolucion": "1. Analizar las acciones propuestas en el texto (eliminar trabas, simplificar normas). 2. Identificar el objetivo común de estas acciones (reducir la intervención estatal). 3. Recordar las características de los modelos económicos listados. 4. Asociar la reducción del rol del Estado con el neoliberalismo.",
+          "errores_comunes": "Confundir sistemas políticos (democracia, monarquía) con modelos económicos (socialismo, neoliberalismo).",
+          "dificultad": "media",
+          "tiempo_estimado": 120,
+          "tags": [
+            "neoliberalismo",
+            "modelo económico",
+            "desregulación",
+            "Estado",
+            "mercado"
+          ]
+        },
+        {
+          "materia": "Sociales y Ciudadanas",
+          "competencia": "Interpretación y análisis de perspectivas",
+          "contexto": "En el Plan Nacional de Desarrollo de Colombia de los años 1990, se afirma: “La eficiencia no puede ser antagónica con la equidad. Por tanto, en las determinaciones públicas primarán siempre consideraciones para que el juego del mercado no comprometa la equidad ni restrinja el acceso y la participación equitativa de los más pobres”.",
+          "enunciado": "¿Cuál de los siguientes enunciados explica la postura crítica de este fragmento, frente al modelo neoliberal?",
+          "opciones": {
+            "A": "Se reconoce el papel central del Estado en la buena gestión y administración de los recursos públicos.",
+            "B": "Se define el mercado como el principal mecanismo para distribuir eficientemente los beneficios del crecimiento económico.",
+            "C": "Se afirma que, sin la intervención del Estado, no es posible garantizarle buenas condiciones de vida a toda la población.",
+            "D": "Se señala implícitamente que la privatización de las empresas del Estado es un mecanismo eficiente para garantizar la equidad."
+          },
+          "respuesta_correcta": "C",
+          "retroalimentacion": "El modelo neoliberal puro postula que el 'juego del mercado' por sí solo es el mecanismo más eficiente para la sociedad. Este fragmento adopta una postura crítica al afirmar que el mercado, si se deja actuar sin control, puede 'comprometer la equidad'. Por lo tanto, el texto sostiene que se necesita la intervención del Estado ('determinaciones públicas') para corregir las fallas del mercado y garantizar la equidad. La opción C resume esta idea: el Estado debe intervenir porque el mercado por sí solo no garantiza el bienestar de todos.",
+          "explicacion": "La postura crítica del fragmento reside en su corrección al neoliberalismo ortodoxo. Mientras que el neoliberalismo confía en el mercado, este texto introduce un 'pero': el mercado debe ser regulado por 'determinaciones públicas' (el Estado) para que no genere inequidad. La idea subyacente es que el mercado dejado a su suerte puede ser eficiente, pero no necesariamente justo. Por lo tanto, la intervención del Estado es indispensable para asegurar que los más pobres no queden excluidos, es decir, para garantizarles buenas condiciones de vida.",
+          "habilidad_evaluada": "Identificación de una postura crítica o una matización a un modelo teórico (neoliberalismo).",
+          "explicacion_opciones_incorrectas": {
+            "A": "Si bien reconoce un papel al Estado, no lo describe como 'central', sino como un corrector de los excesos del mercado.",
+            "B": "Esta es la postura neoliberal que el fragmento está precisamente criticando o matizando.",
+            "D": "El fragmento no habla de privatización; de hecho, aboga por la intervención pública, que es lo contrario."
+          },
+          "estrategias_resolucion": "1. Entender la tesis del neoliberalismo puro (el mercado es suficiente). 2. Identificar cómo el fragmento se desvía de esta tesis (introduce la necesidad de intervención estatal para garantizar la equidad). 3. Concluir que la postura del texto es que el Estado es necesario para corregir las injusticias del mercado. 4. Elegir la opción que mejor exprese esta conclusión.",
+          "errores_comunes": "Confundir la postura del texto con la postura neoliberal que está criticando.",
+          "dificultad": "dificil",
+          "tiempo_estimado": 150,
+          "tags": [
+            "neoliberalismo",
+            "equidad",
+            "eficiencia",
+            "Estado",
+            "mercado",
+            "crítica"
+          ]
+        },
+         {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Pensamiento reflexivo y sistémico",
+              "contexto": "Se presenta una definición de proteccionismo económico: 'el uso de varios mecanismos con el objetivo principal de proteger a las empresas nacionales de la competencia extranjera', principalmente mediante aranceles (impuestos a la importación) que aumentan el precio de los productos extranjeros y dificultan su venta.",
+              "enunciado": "Teniendo en cuenta el fragmento anterior, ¿en cuál de las siguientes condiciones se justificaría el uso del modelo proteccionista en un país?",
+              "opciones": {
+                "A": "Cuando se fabrica tecnología de punta para optimizar la producción de alimentos.",
+                "B": "Cuando tiene suelos desérticos que impiden la producción de alimentos.",
+                "C": "Cuando importa un buen número de alimentos que se producen en su territorio.",
+                "D": "Cuando exporta más alimentos de los que compra en los mercados extranjeros."
+              },
+              "respuesta_correcta": "C",
+              "retroalimentacion": "El proteccionismo busca proteger a las empresas nacionales de la competencia extranjera. Esta medida se justifica cuando un sector productivo nacional (en este caso, el de alimentos) se ve amenazado por la importación de productos similares. Si un país importa muchos alimentos que también produce internamente, aplicar aranceles a esos alimentos importados haría que sus precios subieran, beneficiando a los productores locales y haciéndolos más competitivos en el mercado interno.",
+              "explicacion": "El objetivo del proteccionismo es defender la producción local. Por lo tanto, su aplicación tiene sentido en un escenario donde la producción local está siendo desplazada o compite en desventaja con productos importados. La opción C describe exactamente esta situación: el país produce alimentos, pero aun así importa una cantidad significativa de los mismos. El proteccionismo (aranceles) buscaría reducir esas importaciones para favorecer a los productores nacionales.",
+              "habilidad_evaluada": "Aplicación de un concepto económico (proteccionismo) para identificar una situación que justifique su uso.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Si se fabrica tecnología de punta, el país sería competitivo y probablemente buscaría exportar, no protegerse.",
+                "B": "Si no puede producir alimentos, el proteccionismo sería contraproducente, ya que encarecería las importaciones necesarias para alimentar a su población.",
+                "D": "Si exporta más de lo que importa (superávit comercial), significa que su sector alimentario es competitivo y no necesita protección."
+              },
+              "estrategias_resolucion": "1. Entender el propósito del proteccionismo: proteger la industria nacional. 2. Analizar cada escenario. 3. Determinar en qué escenario la industria nacional se beneficiaría de ser protegida de la competencia externa. 4. Concluir que esto ocurre cuando hay una fuerte competencia de productos importados que podrían ser producidos localmente.",
+              "errores_comunes": "No entender el objetivo del proteccionismo y pensar que se aplica para cualquier situación de comercio internacional.",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "economía",
+                "proteccionismo",
+                "aranceles",
+                "comercio internacional",
+                "políticas económicas"
+              ]
+            },
+            {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Interpretación y análisis de perspectivas",
+              "contexto": "El Centro Nacional de Memoria Histórica de Colombia define el desplazamiento forzado como un fenómeno masivo, sistemático, de larga duración y vinculado a disputas entre actores armados por el control de territorios estratégicos.",
+              "enunciado": "Según esta definición, ¿por qué el desplazamiento forzado permite comprender características propias del conflicto armado en Colombia?",
+              "opciones": {
+                "A": "Porque el desplazamiento forzado es un fenómeno social de larga duración que solo se presenta en Colombia.",
+                "B": "Porque el desplazamiento forzado pone en evidencia, indirectamente, los intereses económicos de los actores en conflicto.",
+                "C": "Porque el desplazamiento forzado permite determinar el efecto directo del conflicto armado sobre la población urbana.",
+                "D": "Porque el desplazamiento forzado permite identificar zonas históricamente controladas por un único actor armado."
+              },
+              "respuesta_correcta": "B",
+              "retroalimentacion": "La definición vincula el desplazamiento a 'disputas por el control de territorios estratégicos'. Un territorio es estratégico no solo por su valor militar, sino también por sus recursos (tierra para cultivos ilícitos, corredores para el narcotráfico, zonas mineras, etc.). Por lo tanto, al estudiar el desplazamiento, se revelan los intereses económicos subyacentes que motivan la lucha por esos territorios por parte de los actores armados.",
+              "explicacion": "El núcleo de la definición es la conexión entre desplazamiento y 'territorios estratégicos'. La pregunta es qué se puede comprender a partir de esto. La lucha por un territorio estratégico implica que dicho territorio tiene un valor para los grupos armados. Este valor puede ser militar, político o, muy frecuentemente, económico (rutas de narcotráfico, recursos naturales, tierras fértiles). Por consiguiente, el fenómeno del desplazamiento forzado sirve como un indicador que pone en evidencia las motivaciones económicas que impulsan el conflicto armado.",
+              "habilidad_evaluada": "Análisis de un concepto (desplazamiento forzado) para inferir sus implicaciones en la comprensión de un fenómeno social (conflicto armado).",
+              "explicacion_opciones_incorrectas": {
+                "A": "Es falso; el desplazamiento forzado ocurre en muchos conflictos alrededor del mundo.",
+                "C": "El desplazamiento afecta principalmente a la población rural que migra hacia las ciudades, no es un efecto 'sobre' la población urbana original.",
+                "D": "La definición habla de 'disputas entre actores armados', lo que sugiere la presencia de múltiples actores, no de un 'único actor'."
+              },
+              "estrategias_resolucion": "1. Analizar la definición proporcionada, enfocándose en la frase clave 'control de territorios estratégicos'. 2. Preguntarse por qué un territorio puede ser considerado 'estratégico' en el contexto del conflicto colombiano. 3. Relacionar la idea de 'territorio estratégico' con intereses económicos (rutas, recursos, etc.). 4. Concluir que el desplazamiento, al estar ligado a estos territorios, revela dichos intereses.",
+              "errores_comunes": "Interpretar 'estratégico' solo en un sentido militar, sin considerar su dimensión económica.",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "conflicto armado en Colombia",
+                "desplazamiento forzado",
+                "memoria histórica",
+                "intereses económicos"
+              ]
+            },
+            {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Interpretación y análisis de perspectivas",
+              "contexto": "Se presenta el siguiente planteamiento: “El actual conflicto armado... afecta de manera directa o indirecta a toda la nación... La guerra que desató la subversión y que nos ha obligado a responder, no es una guerra de posiciones... Es una guerra irregular, en la cual la guerrilla se camufla dentro de la población civil”.",
+              "enunciado": "Probablemente, ¿quién elaboró este planteamiento?",
+              "opciones": {
+                "A": "Un empresario, porque señala las consecuencias indirectas del conflicto sobre la economía del país.",
+                "B": "Un congresista, porque señala las consecuencias del conflicto armado y la necesidad de crear un marco jurídico para la paz.",
+                "C": "Un investigador, porque se muestra externo al conflicto y califica la confrontación como de carácter irregular y poco convencional.",
+                "D": "Un paramilitar, porque afirma que fueron las acciones de la guerrilla las que obligaron a su organización a involucrarse en el conflicto."
+              },
+              "respuesta_correcta": "D",
+              "retroalimentacion": "El discurso está narrado desde una perspectiva de actor combatiente. La frase clave es 'La guerra que desató la subversión y que nos ha obligado a responder'. El hablante se posiciona como una fuerza reactiva ('obligado a responder') frente a un enemigo inicial ('la subversión', término usado para referirse a la guerrilla). Esta lógica de justificar la propia existencia como una respuesta a la guerrilla es el pilar del discurso paramilitar en Colombia.",
+              "explicacion": "El análisis del discurso permite identificar la perspectiva del autor. \n- El uso de 'nos ha obligado a responder' sitúa al hablante como un actor armado involucrado directamente. \n- La atribución de la causa del conflicto a 'la subversión' (la guerrilla) es un elemento central de la narrativa de autodefensa y paramilitar. \n- La descripción de la guerrilla como un enemigo que 'se camufla en la población civil' justifica las tácticas de guerra sucia. \nEstos tres elementos combinados apuntan fuertemente a que el autor es un miembro o líder de un grupo paramilitar, como lo fue Carlos Castaño, de quien se adaptó el texto.",
+              "habilidad_evaluada": "Identificación de la perspectiva de un actor en un texto a través del análisis de su discurso y léxico.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Un empresario se centraría más en los costos económicos específicos, no en la justificación de la respuesta armada.",
+                "B": "Un congresista usaría un lenguaje más institucional y probablemente hablaría de soluciones políticas.",
+                "C": "Un investigador usaría un tono más neutral y objetivo, y no se incluiría a sí mismo con el 'nos ha obligado'."
+              },
+              "estrategias_resolucion": "1. Analizar el lenguaje y el punto de vista del hablante. 2. Prestar atención a los pronombres ('nos') que indican la posición del autor. 3. Identificar a quién se culpa por el inicio del conflicto ('la subversión'). 4. Reconocer esta estructura argumentativa como propia del discurso de los grupos paramilitares.",
+              "errores_comunes": "No prestar atención al punto de vista desde el que se narra el texto (el 'nosotros' implícito).",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "análisis del discurso",
+                "conflicto armado en Colombia",
+                "paramilitarismo",
+                "perspectivas de actores"
+              ]
+            },
+            {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Pensamiento Social",
+              "contexto": "Se presenta una lista de problemas sociales y económicos en Colombia: 1. Escasez de recursos naturales no renovables. 2. Pertenencia a partidos políticos contrarios. 3. Crecimiento demográfico de la población rural. 4. Distribución desigual de la propiedad de la tierra.",
+              "enunciado": "¿Cuáles de esos problemas son causas del conflicto agrario en Colombia?",
+              "opciones": {
+                "A": "1 y 3.",
+                "B": "1 y 4.",
+                "C": "2 y 4.",
+                "D": "1 y 2."
+              },
+              "respuesta_correcta": "C",
+              "retroalimentacion": "El conflicto agrario en Colombia ha estado históricamente ligado a dos factores principales: la lucha por la tierra y la violencia política. La 'distribución desigual de la propiedad de la tierra' (4) es reconocida como la causa estructural más profunda del conflicto rural. Adicionalmente, la 'pertenencia a partidos políticos contrarios' (2) fue el detonante del periodo de La Violencia bipartidista, que tuvo un fuerte componente agrario.",
+              "explicacion": "Esta pregunta requiere conocimiento sobre las causas históricas del conflicto en Colombia. \n- **Distribución desigual de la tierra (4):** Es un problema estructural y persistente, reconocido por historiadores y analistas como una de las principales raíces del conflicto armado y social en el campo. \n- **Pertenencia a partidos políticos contrarios (2):** La afiliación a los partidos Liberal y Conservador fue la causa directa de la violencia generalizada en las zonas rurales durante el periodo de La Violencia (mediados del siglo XX). \n- **Escasez de recursos no renovables (1) y Crecimiento demográfico rural (3):** Si bien pueden ser factores que contribuyen a tensiones sociales, no son considerados como las causas históricas y centrales del conflicto agrario específico de Colombia, que se define más por la tierra y la política.",
+              "habilidad_evaluada": "Identificación de las causas estructurales del conflicto agrario en Colombia.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Estas son causas menos directas que la tierra y la política.",
+                "B": "La escasez de recursos no renovables (como el petróleo) está más ligada a conflictos recientes, pero la desigualdad de la tierra es más fundamental.",
+                "D": "Estas son causas de diferentes tipos de conflictos, pero no las centrales del problema agrario histórico."
+              },
+              "estrategias_resolucion": "1. Recordar los temas centrales de la historia del conflicto colombiano. 2. Identificar la 'tierra' como el eje principal de las disputas rurales. 3. Recordar el papel del bipartidismo en la historia de la violencia en el país. 4. Conectar estos dos factores con las opciones presentadas.",
+              "errores_comunes": "Confundir causas generales de conflictos con las causas específicas y estructurales del conflicto agrario colombiano.",
+              "dificultad": "facil",
+              "tiempo_estimado": 90,
+              "tags": [
+                "conflicto armado en Colombia",
+                "conflicto agrario",
+                "historia de Colombia",
+                "La Violencia",
+                "tenencia de la tierra"
+              ]
+            },
+            {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Pensamiento Social",
+              "contexto": "La acción de tutela es un mecanismo que busca la protección inmediata de los derechos fundamentales de los ciudadanos.",
+              "enunciado": "¿En cuál de las siguientes situaciones, se puede presentar una acción de tutela?",
+              "opciones": {
+                "A": "Cuando se vulnera el derecho a la salud, porque está en riesgo la vida de la persona.",
+                "B": "Cuando alguien es expulsado de una agremiación, a pesar de estar al día en sus pagos.",
+                "C": "Cuando se busca proteger un derecho colectivo de constituir juntas de acción comunal.",
+                "D": "Cuando se legisla sobre el derecho a la vida y el acceso a un trabajo digno para las personas."
+              },
+              "respuesta_correcta": "A",
+              "retroalimentacion": "La acción de tutela procede para la protección de derechos fundamentales. Aunque la salud no fue inicialmente catalogada como fundamental, la jurisprudencia de la Corte Constitucional ha establecido que, cuando su vulneración pone en riesgo un derecho que sí es fundamental (como la vida), es protegible vía tutela. Esta doctrina se conoce como 'conexidad'. Por lo tanto, la situación A es un caso clásico de procedencia de la tutela.",
+              "explicacion": "La clave para responder es entender qué es un 'derecho fundamental' y en qué casos procede la tutela. \n- **Opción A:** El derecho a la vida es el derecho fundamental por excelencia. Cuando la falta de atención en salud amenaza la vida, la tutela es el mecanismo idóneo para su protección inmediata. \n- **Opción B:** La expulsión de una agremiación podría vulnerar el derecho de asociación, que es fundamental, pero existen otros mecanismos de defensa antes de la tutela. Sin embargo, la opción A es un caso mucho más claro e inmediato. \n- **Opción C:** La tutela, por regla general, no protege derechos colectivos. Para eso existen las acciones populares. \n- **Opción D:** La tutela es una acción judicial para proteger derechos vulnerados, no un mecanismo para controlar la actividad legislativa.",
+              "habilidad_evaluada": "Conocimiento de las características y el ámbito de aplicación de la acción de tutela en Colombia.",
+              "explicacion_opciones_incorrectas": {
+                "C": "Los derechos colectivos se protegen mediante acciones populares, no de tutela.",
+                "D": "La tutela no se usa para demandar leyes; para eso existe la acción de inconstitucionalidad.",
+                "B": "Aunque podría proceder si se vulnera el debido proceso, la opción A es el caso paradigmático y más directo de aplicación de la tutela."
+              },
+              "estrategias_resolucion": "1. Recordar que la tutela protege derechos 'fundamentales'. 2. Recordar que la vida es un derecho fundamental. 3. Reconocer que la tutela procede para la salud por conexidad con la vida. 4. Diferenciar la tutela de otros mecanismos como las acciones populares.",
+              "errores_comunes": "No diferenciar entre derechos fundamentales, sociales y colectivos, y confundir la acción de tutela con otros mecanismos de defensa judicial.",
+              "dificultad": "facil",
+              "tiempo_estimado": 90,
+              "tags": [
+                "Constitución de Colombia",
+                "acción de tutela",
+                "derechos fundamentales",
+                "derecho a la salud",
+                "derecho a la vida"
+              ]
+            },
+            {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Pensamiento reflexivo y sistémico",
+              "contexto": "En las principales ciudades del mundo moderno se está produciendo un abandono de las zonas residenciales del centro urbano, mientras que las zonas periféricas se pueblan más. Estas migraciones son realizadas por personas o familias de ingresos medios y altos.",
+              "enunciado": "¿Cuál es probablemente la principal causa de este fenómeno?",
+              "opciones": {
+                "A": "El creciente desarrollo de la industria en el centro de las ciudades.",
+                "B": "La búsqueda de mejor calidad de vida en barrios tranquilos.",
+                "C": "La escasa oferta de servicios en los barrios del centro de la ciudad.",
+                "D": "La creciente oferta de vivienda barata en las afueras de la ciudad."
+              },
+              "respuesta_correcta": "B",
+              "retroalimentacion": "El fenómeno descrito se conoce como suburbanización. Las familias con ingresos medios y altos, que tienen la capacidad económica para elegir dónde vivir y costear el transporte diario, a menudo se trasladan a las afueras en busca de beneficios asociados con la calidad de vida: viviendas más grandes con jardín, menos ruido y contaminación, y entornos percibidos como más seguros y tranquilos para criar a los hijos.",
+              "explicacion": "Se debe analizar las causas del traslado de la población de ingresos medios y altos del centro a la periferia. \n- **Opción B:** Es la explicación clásica de la suburbanización. Las personas con recursos buscan escapar de las desventajas del centro urbano (congestión, ruido, inseguridad, costo del suelo) y acceder a las ventajas de la periferia (espacio, tranquilidad, zonas verdes). \n- **Opción A:** La industria pesada tiende a localizarse en las afueras, no en el centro. El centro se especializa más en servicios y comercio. \n- **Opción C:** Los centros urbanos suelen tener la mayor concentración de servicios, no una escasa oferta. \n- **Opción D:** La vivienda barata atraería a poblaciones de bajos ingresos, pero el enunciado especifica que la migración es de ingresos medios y altos.",
+              "habilidad_evaluada": "Identificación de las causas de un fenómeno socio-espacial (suburbanización).",
+              "explicacion_opciones_incorrectas": {
+                "A": "La industria suele ubicarse en la periferia, no en el centro.",
+                "C": "Los centros urbanos concentran los servicios.",
+                "D": "La vivienda barata atraería a otro grupo poblacional, no al mencionado en el texto."
+              },
+              "estrategias_resolucion": "1. Identificar el fenómeno: migración de clases medias/altas del centro a la periferia. 2. Evaluar las opciones como posibles 'factores de empuje' (que expulsan del centro) y 'factores de atracción' (que atraen a la periferia). 3. Reconocer que la 'calidad de vida' (tranquilidad, espacio) es el principal factor de atracción para este grupo socioeconómico.",
+              "errores_comunes": "No diferenciar las motivaciones de los distintos grupos socioeconómicos para elegir su lugar de residencia.",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "urbanismo",
+                "sociología urbana",
+                "suburbanización",
+                "migración intraurbana",
+                "calidad de vida"
+              ]
+            },
+            {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Pensamiento reflexivo y sistémico",
+              "contexto": "En Colombia, la discriminación de personas con orientación sexual diversa (lesbianas, homosexuales, bisexuales, transgénero) ha llevado a procesos de movilización y acciones afirmativas por parte de estas comunidades para defender sus derechos.",
+              "enunciado": "¿Por qué estas movilizaciones y acciones que visibilizan a personas con orientación sexual diferente, son fundamentales en el desarrollo de la igualdad y del respeto por la diferencia?",
+              "opciones": {
+                "A": "Porque exigen al gobierno proyectos pedagógicos para la salud sexual.",
+                "B": "Porque denuncian la explotación laboral y las condiciones de marginación espacial de estas personas.",
+                "C": "Porque promulgan y reivindican los derechos y se denuncia la exclusión.",
+                "D": "Porque sensibilizan a la gente sobre la importancia de reconocer la diversidad de creencias religiosas."
+              },
+              "respuesta_correcta": "C",
+              "retroalimentacion": "Las movilizaciones de grupos históricamente discriminados son fundamentales porque cumplen una doble función: por un lado, exigen el reconocimiento y la garantía de sus derechos (reivindicación) y, por otro, hacen visible y denuncian las formas de exclusión y discriminación que sufren. Este proceso es esencial para avanzar hacia una sociedad más igualitaria.",
+              "explicacion": "La pregunta busca la razón fundamental por la cual las movilizaciones LGTBI+ promueven la igualdad. La opción C es la más completa y precisa. El término 'reivindican los derechos' se refiere a la lucha por el reconocimiento legal y social de derechos como el matrimonio igualitario, la no discriminación, etc. El término 'denuncia la exclusión' se refiere a hacer visibles las violencias y barreras que enfrenta esta población. Ambas acciones son cruciales para lograr la igualdad.",
+              "habilidad_evaluada": "Comprensión del papel de los movimientos sociales en la reivindicación de derechos y la lucha contra la discriminación.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Es una acción específica, pero no abarca la razón fundamental de la movilización.",
+                "B": "La explotación laboral y la marginación espacial son formas de exclusión, pero la opción C es más general y abarca todos los tipos de derechos y exclusiones.",
+                "D": "El tema principal es la diversidad sexual, no la diversidad de creencias religiosas."
+              },
+              "estrategias_resolucion": "1. Entender el propósito de los movimientos sociales de minorías. 2. Reconocer que su lucha se centra en la obtención de derechos y la denuncia de la discriminación. 3. Buscar la opción que mejor resuma esta doble función. 4. Descartar las opciones que son demasiado específicas o que confunden el tema.",
+              "errores_comunes": "Elegir una de las manifestaciones específicas del problema (como la explotación laboral) en lugar de la razón estructural y más general.",
+              "dificultad": "facil",
+              "tiempo_estimado": 90,
+              "tags": [
+                "movimientos sociales",
+                "derechos humanos",
+                "LGTBI+",
+                "igualdad",
+                "discriminación",
+                "ciudadanía"
+              ]
+            },
+            {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Pensamiento Social",
+              "contexto": "La Revolución Industrial se debió, entre otras causas, a la invención de la máquina de vapor y la concentración del capital. Esta revolución produjo cambios en la población: se pasó de la explotación de la tierra a la producción de bienes, del telar familiar a la gran fábrica y de la manufactura a la producción tecnificada.",
+              "enunciado": "De acuerdo con lo anterior, ¿cuál de las siguientes afirmaciones es una consecuencia de la revolución industrial?",
+              "opciones": {
+                "A": "El traslado del campo a la ciudad y el surgimiento del proletariado urbano.",
+                "B": "El crecimiento de la población rural sobre la urbana.",
+                "C": "El nacimiento de una élite propietaria de la tierra.",
+                "D": "El desarrollo de un modelo económico para la protección del proletariado."
+              },
+              "respuesta_correcta": "A",
+              "retroalimentacion": "El paso 'del telar familiar a la gran fábrica' y 'de la explotación de la tierra a la producción de bienes' describe un cambio fundamental en el modo de producción. Las fábricas se concentraron en las ciudades, atrayendo a la población campesina en busca de trabajo. Este masivo éxodo rural (traslado del campo a la ciudad) y la conformación de una nueva clase social de obreros industriales (el proletariado urbano) son dos de las consecuencias sociales más importantes de la Revolución Industrial.",
+              "explicacion": "El enunciado describe la transición de una economía agraria y artesanal a una industrial. \n- **Consecuencia A:** El nuevo sistema de fábricas requería una gran cantidad de mano de obra concentrada en un solo lugar. Esto provocó que millones de personas migraran del campo a las ciudades (éxodo rural). Estos trabajadores, que solo poseían su fuerza de trabajo para venderla a cambio de un salario, constituyeron una nueva clase social: el proletariado urbano. \n- **Opción B:** Ocurrió lo contrario, la población urbana creció exponencialmente a expensas de la rural. \n- **Opción C:** La élite propietaria de la tierra (aristocracia terrateniente) ya existía. La Revolución Industrial dio origen a una nueva élite: la burguesía industrial. \n- **Opción D:** El modelo económico inicial del capitalismo industrial no protegía al proletariado, sino que a menudo lo explotaba. Los movimientos de protección surgieron después, como una reacción a estas condiciones.",
+              "habilidad_evaluada": "Identificación de las consecuencias sociales de un proceso histórico (Revolución Industrial).",
+              "explicacion_opciones_incorrectas": {
+                "B": "Es lo opuesto a lo que sucedió.",
+                "C": "La élite terrateniente es preindustrial; la nueva élite fue la burguesía industrial.",
+                "D": "Los modelos de protección social son una consecuencia posterior y reactiva, no una característica del modelo original."
+              },
+              "estrategias_resolucion": "1. Entender el cambio central de la Revolución Industrial: del campo a la fábrica. 2. Deducir las consecuencias lógicas de este cambio en términos de dónde vive la gente y qué tipo de trabajo hace. 3. Conectar la concentración de fábricas con la migración a las ciudades y la creación de la clase obrera.",
+              "errores_comunes": "Confundir las características de la sociedad preindustrial con las de la sociedad industrial.",
+              "dificultad": "facil",
+              "tiempo_estimado": 90,
+              "tags": [
+                "Revolución Industrial",
+                "historia mundial",
+                "urbanización",
+                "proletariado",
+                "consecuencias sociales"
+              ]
+            },
+            {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Pensamiento Social",
+              "contexto": "Se afirma que una Constitución es la 'ley de leyes', la fuente de toda la jurisprudencia en un Estado de derecho, y que todas las demás normas deben ajustarse a sus principios y mandatos.",
+              "enunciado": "De acuerdo con lo anterior, ¿cuál es la principal utilidad de una Constitución?",
+              "opciones": {
+                "A": "Impartir justicia y orientar las acciones del Poder Ejecutivo en un Estado social de derecho como el colombiano.",
+                "B": "Facilitar la labor de los jueces, al asumir la tarea de impartir justicia, de manera imparcial y oportuna.",
+                "C": "Garantizar la paz y la prosperidad de las naciones, al expresar los acuerdos y los compromisos de cada ciudadano con la sociedad.",
+                "D": "Establecer un orden jurídico y un marco normativo que delimita el poder del Estado y establece qué es legal."
+              },
+              "respuesta_correcta": "D",
+              "retroalimentacion": "La descripción de la Constitución como 'ley de leyes' y fuente de toda la jurisprudencia apunta a su función como norma fundamental que estructura todo el sistema legal de un país. Establece las reglas del juego: crea las instituciones del Estado, les asigna sus poderes, y fundamentalmente, delimita esos poderes para proteger a los ciudadanos. Define lo que es legal y lo que no, creando un orden jurídico.",
+              "explicacion": "La pregunta busca la función esencial de una Constitución. \n- **Opción D:** Describe perfectamente esta función. Una Constitución crea el 'orden jurídico' (las reglas básicas del derecho) y el 'marco normativo' (la norma suprema). Su propósito es doble: organizar el poder del Estado y, crucialmente, 'delimitar' ese poder para evitar el absolutismo. \n- **Opción A y B:** Impartir justicia es una función de la Rama Judicial, que es creada por la Constitución, pero no es la función de la Constitución misma. \n- **Opción C:** Garantizar la paz y la prosperidad son objetivos o aspiraciones de una Constitución, pero su utilidad práctica y directa es establecer el marco legal para intentar alcanzar esos objetivos.",
+              "habilidad_evaluada": "Comprensión del concepto y la función de una Constitución en un Estado de derecho.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Describe funciones de otras ramas del poder, no de la Constitución en sí.",
+                "B": "Describe la función de los jueces, no de la Constitución.",
+                "C": "Describe los fines últimos, pero no el medio o la utilidad principal."
+              },
+              "estrategias_resolucion": "1. Entender el concepto de 'ley de leyes' o 'norma fundamental'. 2. Darse cuenta de que su función es ser el cimiento de todo el sistema legal y político. 3. Buscar la opción que describa esta función de crear un marco, un orden y límites al poder.",
+              "errores_comunes": "Confundir la función de la Constitución (crear el marco) con las funciones de los poderes que ella crea (gobernar, legislar, juzgar).",
+              "dificultad": "facil",
+              "tiempo_estimado": 90,
+              "tags": [
+                "Constitución",
+                "Estado de derecho",
+                "ordenamiento jurídico",
+                "separación de poderes",
+                "educación cívica"
+              ]
+            },
+            {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Pensamiento reflexivo y sistémico",
+              "contexto": "Un estudio revela que el 30% de las mujeres en Colombia son víctimas de violencia física. Organizaciones feministas solicitan endurecer las penas. Un funcionario de gobierno responde que, aunque los datos son confiables, el estudio no considera los 'contextos' y que 'algunos hechos violentos podrían estar justificados'.",
+              "enunciado": "Según la información presentada, ¿cuál de los siguientes hechos podría ser un efecto de la posición del funcionario?",
+              "opciones": {
+                "A": "Que se cuestione la idoneidad de los investigadores que realizaron el estudio.",
+                "B": "Que se generen estrategias más efectivas de prevención de la violencia contra las mujeres.",
+                "C": "Que algunas personas no reconozcan la gravedad de los actos de violencia en contra de las mujeres.",
+                "D": "Que las organizaciones feministas retiren sus peticiones."
+              },
+              "respuesta_correcta": "C",
+              "retroalimentacion": "Al afirmar que ciertos actos de violencia 'podrían estar justificados', el funcionario está minimizando la gravedad del problema y abriendo la puerta a la relativización de la violencia. Este tipo de discurso, proveniente de una figura de autoridad, puede tener como efecto que una parte de la sociedad adopte esta misma postura y, por lo tanto, no reconozca la gravedad inherente a todos los actos de violencia contra las mujeres.",
+              "explicacion": "La posición del funcionario introduce una justificación para la violencia, lo que debilita el mensaje de que la violencia es inaceptable en cualquier circunstancia. Este tipo de declaraciones desde el poder puede influir en la percepción pública. \n- **Opción C:** Es el efecto más directo y probable. Si una autoridad justifica la violencia, legitima socialmente a quienes la ejercen y normaliza la agresión, haciendo que la gente no reconozca su gravedad. \n- **Opción A:** El funcionario dijo que los datos eran 'confiables', por lo que no está cuestionando a los investigadores. \n- **Opción B:** La posición del funcionario va en contra de la prevención efectiva, ya que la justifica. \n- **Opción D:** Es improbable; lo más probable es que las organizaciones feministas redoblen sus críticas ante tal declaración.",
+              "habilidad_evaluada": "Análisis de las consecuencias sociales y culturales de un discurso público.",
+              "explicacion_opciones_incorrectas": {
+                "A": "El funcionario explícitamente valida la confiabilidad del estudio.",
+                "B": "Su postura dificulta, en lugar de facilitar, la creación de estrategias efectivas.",
+                "D": "La declaración del funcionario probablemente intensificaría las peticiones, no las detendría."
+              },
+              "estrategias_resolucion": "1. Analizar la declaración del funcionario: ¿qué mensaje está enviando? (mensaje de justificación de la violencia). 2. Pensar en las posibles consecuencias de que una figura de autoridad envíe este mensaje a la sociedad. 3. Concluir que este mensaje puede llevar a la normalización o minimización de la violencia. 4. Elegir la opción que mejor describa este efecto.",
+              "errores_comunes": "No analizar el impacto simbólico del discurso y tomar la declaración del funcionario de manera literal o superficial.",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "violencia de género",
+                "discurso público",
+                "normalización de la violencia",
+                "consecuencias sociales"
+              ]
+            },
+            {
+              "materia": "Sociales y Ciudadanas",
+              "competencia": "Interpretación y análisis de perspectivas",
+              "contexto": "En una región de Colombia, una organización estatal promueve proyectos de agricultura para campesinos desplazados en terrenos que forman parte de un humedal. Una organización ambientalista se opone porque afectará el ecosistema.",
+              "enunciado": "¿Son semejantes las posiciones de la organización estatal y la organización ambientalista?",
+              "opciones": {
+                "A": "Son semejantes, porque las dos buscan el aprovechamiento económico del humedal para el bienestar de los campesinos.",
+                "B": "Son semejantes, porque las dos buscan defender a toda costa las riquezas naturales de la región.",
+                "C": "Son diferentes, porque una defiende al ecosistema aunque esto signifique no poder dar tierras a los campesinos y la otra quiere ayudarlos, aunque se dañe el ecosistema.",
+                "D": "Son diferentes, porque una busca que los campesinos se asienten y trabajen en otra región y la otra busca que se preserve el ecosistema del humedal."
+              },
+              "respuesta_correcta": "C",
+              "retroalimentacion": "Las posiciones son claramente diferentes y representan un conflicto clásico entre el desarrollo social/económico y la conservación ambiental. La organización estatal prioriza el bienestar de los campesinos desplazados (un fin social), incluso si esto implica dañar el humedal. La organización ambientalista prioriza la integridad del ecosistema, incluso si esto significa que los campesinos no puedan usar esas tierras. La opción C describe esta oposición de prioridades de forma precisa.",
+              "explicacion": "El problema describe un conflicto con dos posturas opuestas. \n- **Posición Estatal:** Prioridad en lo social (reintegración de desplazados). El medio ambiente es un recurso a utilizar para este fin. \n- **Posición Ambientalista:** Prioridad en lo ecológico (conservación del humedal). El desarrollo social debe respetar los límites del ecosistema. \nLas posiciones son diferentes. La opción C capta perfectamente la esencia de este dilema: la organización ambientalista defiende el ecosistema (aunque perjudique el proyecto social), mientras que la estatal defiende a los campesinos (aunque perjudique al ecosistema).",
+              "habilidad_evaluada": "Identificación de los intereses y prioridades en un conflicto socioambiental.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Es incorrecto; la organización ambientalista no busca el aprovechamiento económico del humedal.",
+                "B": "Es incorrecto; la organización estatal está dispuesta a afectar las riquezas naturales.",
+                "D": "La primera parte es incorrecta; el texto no dice que la organización ambientalista busque que los campesinos se asienten en otra región, solo que no lo hagan en el humedal."
+              },
+              "estrategias_resolucion": "1. Identificar el objetivo principal de cada actor. 2. Reconocer que estos objetivos están en conflicto directo (usar el humedal vs. proteger el humedal). 3. Buscar la opción que describa esta oposición de manera clara y precisa.",
+              "errores_comunes": "Intentar encontrar un punto en común inexistente entre las dos posturas o no identificar correctamente la prioridad de cada actor.",
+              "dificultad": "facil",
+              "tiempo_estimado": 90,
+              "tags": [
+                "conflicto socioambiental",
+                "desarrollo sostenible",
+                "conservación",
+                "desplazamiento",
+                "intereses en conflicto"
+              ]
+            },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento Social",
+                  "contexto": "La crisis económica de 1929 en Estados Unidos afectó a los países latinoamericanos al reducir drásticamente sus exportaciones e importaciones. Para contrarrestar el efecto de esta crisis, los estados latinoamericanos adoptaron medidas como la sustitución de importaciones.",
+                  "enunciado": "¿En qué consiste esta medida?",
+                  "opciones": {
+                    "A": "En prohibir el ingreso de toda clase de productos extranjeros.",
+                    "B": "En otorgar total libertad de producción, de cambio y de consumo.",
+                    "C": "En producir internamente los bienes que tradicionalmente se traían del exterior.",
+                    "D": "En dejar actuar libremente las leyes de la oferta y la demanda."
+                  },
+                  "respuesta_correcta": "C",
+                  "retroalimentacion": "El modelo de 'sustitución de importaciones' (ISI) es una estrategia económica en la cual un país busca reducir su dependencia del exterior, fomentando la producción local de bienes que antes eran importados. El nombre mismo lo describe: se 'sustituye' la 'importación' por producción nacional. Por lo tanto, consiste en producir internamente lo que antes se compraba afuera.",
+                  "explicacion": "La pregunta pide definir el modelo económico de sustitución de importaciones. Este modelo, muy popular en América Latina a mediados del siglo XX, se basa en la industrialización interna. Ante la dificultad para importar bienes manufacturados (por crisis externas o falta de divisas), el Estado promueve y protege la industria nacional para que fabrique esos mismos bienes. La opción C es la definición precisa de este modelo.",
+                  "habilidad_evaluada": "Conocimiento de conceptos clave de la historia económica de América Latina (Modelo ISI).",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Es una medida más extrema (autarquía). La sustitución de importaciones es más selectiva, a menudo mediante aranceles, no una prohibición total.",
+                    "B": "Esto describe el liberalismo económico o libre mercado, que es lo opuesto a la sustitución de importaciones.",
+                    "D": "Esto también describe el liberalismo económico, mientras que la sustitución de importaciones requiere una fuerte intervención estatal."
+                  },
+                  "estrategias_resolucion": "1. Analizar el término 'sustitución de importaciones'. 2. Deducir su significado literal: reemplazar las compras del exterior con algo más. 3. Concluir que ese 'algo más' debe ser la producción local. 4. Elegir la opción que describe este proceso.",
+                  "errores_comunes": "Confundir el modelo de sustitución de importaciones (que es intervencionista y proteccionista) con el modelo de libre mercado.",
+                  "dificultad": "facil",
+                  "tiempo_estimado": 90,
+                  "tags": [
+                    "historia económica",
+                    "América Latina",
+                    "modelo ISI",
+                    "sustitución de importaciones",
+                    "crisis de 1929"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento reflexivo y sistémico",
+                  "contexto": "Algunas tendencias del liberalismo promueven una política fiscal progresiva: cobrar más impuestos a la parte de la población que posee más recursos, y menos impuestos a aquellas personas que posean menos.",
+                  "enunciado": "¿Cuál de las siguientes situaciones está de acuerdo con lo anterior?",
+                  "opciones": {
+                    "A": "En el país A, la tasa promedio de impuestos es el 33 % del salario de los habitantes.",
+                    "B": "En el país B, el gobierno autoriza aumentar el impuesto del IVA.",
+                    "C": "En el país C, el gobierno quita los subsidios para los servicios públicos.",
+                    "D": "En el país D, el gobierno aumenta los impuestos de patrimonio y renta."
+                  },
+                  "respuesta_correcta": "D",
+                  "retroalimentacion": "El principio descrito es el de la progresividad tributaria. Se busca que quienes tienen mayor capacidad económica contribuyan en mayor proporción. Los impuestos de patrimonio (que gravan la riqueza acumulada) y de renta (que gravan los ingresos, usualmente con tarifas más altas para ingresos mayores) son los ejemplos clásicos de impuestos directos y progresivos. Aumentarlos es una medida acorde con el principio.",
+                  "explicacion": "Se debe identificar la política fiscal que mejor refleja el principio de 'cobrar más a los que más tienen'. \n- **Opción D (Impuestos de patrimonio y renta):** Estos son impuestos directos que gravan la riqueza y los altos ingresos. Aumentarlos afecta principalmente a la población con más recursos, lo cual es coherente con el principio de progresividad. \n- **Opción B (IVA):** El Impuesto al Valor Agregado es un impuesto al consumo. Es regresivo, porque afecta en mayor proporción a las personas de menores ingresos (ya que destinan un porcentaje mayor de su renta al consumo). Aumentarlo va en contra del principio. \n- **Opción C (Quitar subsidios):** Los subsidios son ayudas para las personas de menos recursos. Quitarlos los perjudica directamente, lo cual es contrario al principio. \n- **Opción A (Tasa promedio):** Una tasa promedio no dice nada sobre la distribución de la carga fiscal; podría ser un impuesto plano que afecte a todos por igual.",
+                  "habilidad_evaluada": "Aplicación de un principio de justicia fiscal (progresividad) a ejemplos de políticas tributarias.",
+                  "explicacion_opciones_incorrectas": {
+                    "B": "El IVA es un impuesto regresivo, va en contra del principio.",
+                    "C": "Quitar subsidios perjudica a los de menos recursos, va en contra del principio.",
+                    "A": "Una tasa promedio no garantiza la progresividad; puede ser un impuesto plano."
+                  },
+                  "estrategias_resolucion": "1. Entender el principio de impuestos progresivos. 2. Analizar cada una de las políticas fiscales descritas. 3. Diferenciar entre impuestos directos (renta, patrimonio) e indirectos (IVA). 4. Reconocer que los impuestos directos suelen ser progresivos, mientras que los indirectos suelen ser regresivos.",
+                  "errores_comunes": "No conocer la diferencia entre impuestos progresivos y regresivos, o pensar que cualquier aumento de impuestos es una medida progresiva.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "política fiscal",
+                    "impuestos",
+                    "progresividad tributaria",
+                    "liberalismo",
+                    "equidad"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento Social",
+                  "contexto": "El socialismo busca la igualdad social, política y económica.",
+                  "enunciado": "¿Qué propone el socialismo para alcanzar este propósito?",
+                  "opciones": {
+                    "A": "Privatizar los medios de producción y lograr desmontar los sindicatos de las empresas transnacionales y multinacionales.",
+                    "B": "Impulsar el consumo y la capacidad de endeudamiento de los trabajadores como factores fundamentales para dinamizar la economía.",
+                    "C": "Ofrecer bienes y servicios según el esquema de los tratados de libre comercio y la apertura económica de las fronteras nacionales.",
+                    "D": "Lograr la tenencia colectiva de los medios de producción y la consolidación del poder político en las clases trabajadoras."
+                  },
+                  "respuesta_correcta": "D",
+                  "retroalimentacion": "Un principio fundamental del socialismo, particularmente en su vertiente marxista, es la abolición de la propiedad privada de los medios de producción (fábricas, tierras, etc.) y su reemplazo por la propiedad colectiva o estatal. El objetivo es que la riqueza generada por el trabajo no sea apropiada por una clase capitalista, sino que se distribuya en la sociedad. Esto se complementa con la idea de que el poder político debe estar en manos de la clase trabajadora (proletariado).",
+                  "explicacion": "La pregunta pide identificar los postulados centrales del socialismo. \n- **Opción D:** Describe dos pilares del socialismo clásico: la propiedad social o colectiva de los medios de producción (en contraposición a la propiedad privada capitalista) y el traspaso del poder político a la clase obrera. \n- **Opciones A y C:** Describen principios del capitalismo o neoliberalismo (privatización, libre comercio), que son los modelos que el socialismo busca superar. \n- **Opción B:** Describe una economía basada en el consumo y el crédito, característica del capitalismo contemporáneo, no del socialismo.",
+                  "habilidad_evaluada": "Conocimiento de los principios fundamentales de la teoría política y económica del socialismo.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Esto es lo opuesto al socialismo.",
+                    "B": "Esto describe el capitalismo de consumo.",
+                    "C": "Esto describe el modelo de globalización neoliberal."
+                  },
+                  "estrategias_resolucion": "1. Recordar la definición y los principios básicos del socialismo. 2. Identificar la oposición fundamental entre socialismo y capitalismo (propiedad colectiva vs. propiedad privada de los medios de producción). 3. Evaluar cada opción y determinar cuál se alinea con los principios socialistas.",
+                  "errores_comunes": "Confundir el socialismo con la socialdemocracia o el estado de bienestar, o no conocer sus postulados económicos fundamentales.",
+                  "dificultad": "facil",
+                  "tiempo_estimado": 90,
+                  "tags": [
+                    "socialismo",
+                    "modelo económico",
+                    "teoría política",
+                    "medios de producción",
+                    "clases sociales"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento reflexivo y sistémico",
+                  "contexto": "Un exitoso programa de emprendimiento para jóvenes de estratos bajos en Bogotá (con buen manejo de inglés) ha generado negocios como restaurantes de comida internacional, salones de belleza y tiendas de ropa formal. Los organizadores deciden replicar el mismo modelo, con las mismas tipologías de negocio y porcentajes, en ciudades como Riohacha, Leticia, Arauca y Florencia. Expertos señalan que el modelo podría no funcionar allí.",
+                  "enunciado": "¿Por qué podría fallar la implementación de este modelo en las otras ciudades?",
+                  "opciones": {
+                    "A": "Porque los jóvenes no están interesados en hacer negocios sino en estudiar.",
+                    "B": "Porque no es viable mantener un programa por tan largo tiempo.",
+                    "C": "Porque las necesidades de la población, lo que se demanda, pueden ser muy distintas.",
+                    "D": "Porque los jóvenes no tienen buen dominio del inglés."
+                  },
+                  "respuesta_correcta": "C",
+                  "retroalimentacion": "El éxito de un negocio depende en gran medida de que responda a las demandas y características del mercado local. Riohacha, Leticia, Arauca y Florencia son ciudades con contextos culturales, sociales y económicos muy diferentes a Bogotá. Es muy probable que las necesidades y gustos de sus poblaciones sean distintos. Replicar un modelo de negocio exitoso en un contexto sin adaptarlo a las particularidades del nuevo contexto es una causa común de fracaso.",
+                  "explicacion": "El error en la propuesta de expansión es asumir que un modelo de negocio es universalmente aplicable, ignorando las diferencias contextuales. La demanda de restaurantes de comida internacional o tiendas de ropa formal puede ser alta en una gran metrópoli como Bogotá, pero podría ser muy baja en ciudades más pequeñas y con diferentes culturas y niveles de ingreso como Leticia o Arauca. El fallo principal de replicar el modelo sin cambios es no tener en cuenta las diferencias en la demanda del mercado local.",
+                  "habilidad_evaluada": "Análisis de la viabilidad de un proyecto social, considerando la importancia del contexto local.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Es una generalización sin fundamento sobre los jóvenes de esas ciudades.",
+                    "B": "La viabilidad a largo plazo es un problema, pero no explica por qué podría fallar la implementación inicial.",
+                    "D": "Aunque el dominio del inglés podría ser un factor, el éxito de un salón de belleza o una tienda de ropa no depende principalmente de este. La opción C es una razón más fundamental y aplicable a todos los negocios propuestos."
+                  },
+                  "estrategias_resolucion": "1. Comparar los contextos: una gran capital (Bogotá) vs. ciudades intermedias en regiones periféricas. 2. Deducir que los mercados (demandas, gustos, poder adquisitivo) son probablemente diferentes. 3. Concluir que un modelo de negocio debe adaptarse al contexto local para tener éxito. 4. Elegir la opción que mejor describa esta necesidad de adaptación al mercado.",
+                  "errores_comunes": "Centrarse en factores secundarios (como el inglés) en lugar del factor principal (la demanda del mercado).",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "contexto local",
+                    "emprendimiento",
+                    "estudio de mercado",
+                    "políticas públicas",
+                    "viabilidad de proyectos"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento Social",
+                  "contexto": "El Consejo Académico de un colegio decide nombrar como representantes al Consejo Estudiantil a los estudiantes con mejor desempeño académico y de convivencia, en lugar de realizar las elecciones ordinarias.",
+                  "enunciado": "¿Qué situación genera esta decisión?",
+                  "opciones": {
+                    "A": "Que se estimule a los estudiantes a estudiar y ser mejores compañeros.",
+                    "B": "Que se dificulte la disponibilidad de tiempo para el desarrollo normal de las actividades académicas.",
+                    "C": "Que se vulnere el derecho de los estudiantes a tener y utilizar mecanismos de participación.",
+                    "D": "Que se promueva en los estudiantes la comprensión de la importancia del Consejo Estudiantil."
+                  },
+                  "respuesta_correcta": "C",
+                  "retroalimentacion": "La elección del Consejo Estudiantil es un mecanismo democrático de participación que permite a los estudiantes elegir a sus propios representantes. Al reemplazar la elección por una designación ('a dedo') por parte de las directivas, se está eliminando este mecanismo y, por lo tanto, se vulnera el derecho de los estudiantes a la participación democrática en los asuntos que les conciernen.",
+                  "explicacion": "La decisión del Consejo Académico sustituye un proceso democrático (elecciones) por uno autoritario (nombramiento). El derecho a elegir y ser elegido es un pilar de la participación ciudadana, y los gobiernos estudiantiles son un espacio para su aprendizaje y ejercicio. Al anular la elección, se niega a los estudiantes la oportunidad de participar activamente en la elección de sus líderes, lo cual es una vulneración de sus derechos de participación.",
+                  "habilidad_evaluada": "Comprensión del derecho a la participación y los principios de la democracia escolar.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Aunque podría ser un efecto secundario, el efecto principal es sobre los derechos democráticos, no sobre el incentivo académico.",
+                    "B": "Este es un problema logístico, no una consecuencia fundamental de la decisión.",
+                    "D": "Al contrario, al eliminar la elección, se podría enviar el mensaje de que el Consejo no es tan importante como para ser elegido democráticamente."
+                  },
+                  "estrategias_resolucion": "1. Identificar la naturaleza del cambio: se reemplaza una elección por un nombramiento. 2. Reconocer que las elecciones son un mecanismo de participación. 3. Concluir que eliminar un mecanismo de participación vulnera el derecho a participar. 4. Elegir la opción que describa esta vulneración de derechos.",
+                  "errores_comunes": "Centrarse en los posibles beneficios prácticos de la decisión (tener buenos estudiantes como líderes) y no en la vulneración del principio democrático.",
+                  "dificultad": "facil",
+                  "tiempo_estimado": 90,
+                  "tags": [
+                    "democracia escolar",
+                    "derechos estudiantiles",
+                    "participación ciudadana",
+                    "gobierno escolar"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento reflexivo y sistémico",
+                  "contexto": "El gobierno decidió construir una represa indispensable para generar electricidad para todo el país. El único sitio viable es un asentamiento indígena. Tras un largo proceso de conciliación, la comunidad indígena aceptó la construcción y su reasentamiento en otro territorio.",
+                  "enunciado": "Según la Constitución Política de Colombia, ¿cómo procedió el gobierno en esta situación?",
+                  "opciones": {
+                    "A": "Actuó en contra de los derechos de las comunidades indígenas.",
+                    "B": "Favoreció a la comunidad indígena en contra del interés general.",
+                    "C": "Mostró respeto por la comunidad indígena en función del bien común.",
+                    "D": "Debió hacer una consulta popular para resolver este problema."
+                  },
+                  "respuesta_correcta": "C",
+                  "retroalimentacion": "La Constitución de Colombia reconoce la diversidad étnica y cultural y establece la consulta previa como un derecho de las comunidades indígenas cuando un proyecto afecta sus territorios. El texto describe un 'largo proceso de conciliación' que culminó en un 'acuerdo'. Esto indica que el gobierno no impuso la decisión, sino que dialogó y negoció con la comunidad (respeto). Al mismo tiempo, logró llevar a cabo un proyecto considerado de 'interés general' o 'bien común' (electricidad para el país). Por lo tanto, el gobierno ponderó ambos intereses, respetando el procedimiento debido con la comunidad para lograr un objetivo nacional.",
+                  "explicacion": "El procedimiento del gobierno se describe como un 'largo proceso de conciliación' que llevó a un 'acuerdo'. Esto implica que se respetó el derecho de la comunidad a ser consultada y a participar en la decisión. Aunque la comunidad tuvo que ceder su territorio, lo hizo a través de un acuerdo negociado, no de una imposición. El gobierno buscó equilibrar el derecho de la comunidad indígena con la necesidad del país (el bien común), y lo hizo a través del diálogo y el respeto por los mecanismos de participación de la comunidad.",
+                  "habilidad_evaluada": "Análisis de la ponderación de derechos y principios constitucionales (interés general vs. derechos de minorías étnicas).",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "No actuó en contra de sus derechos, ya que hubo un proceso de conciliación y un acuerdo, lo que sugiere que se respetó (al menos formalmente) el derecho a la consulta previa.",
+                    "B": "No favoreció a la comunidad en contra del interés general; al contrario, la comunidad tuvo que reasentarse para permitir el proyecto de interés general.",
+                    "D": "La consulta popular es un mecanismo diferente. El mecanismo específico para estos casos es la 'consulta previa' con la comunidad afectada, que parece haberse realizado a través de la 'conciliación'."
+                  },
+                  "estrategias_resolucion": "1. Identificar los dos intereses en conflicto: el derecho de la comunidad indígena a su territorio y el interés general del país en tener electricidad. 2. Analizar el procedimiento descrito: 'conciliación' y 'acuerdo'. 3. Interpretar este procedimiento como una forma de respeto a los derechos de la comunidad. 4. Concluir que el gobierno buscó un equilibrio entre ambos intereses.",
+                  "errores_comunes": "Pensar que cualquier afectación a una comunidad indígena es automáticamente una violación de sus derechos, sin considerar si se siguieron los procedimientos de consulta y concertación.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "Constitución de Colombia",
+                    "derechos de las comunidades indígenas",
+                    "consulta previa",
+                    "interés general",
+                    "ponderación de derechos"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento Social",
+                  "contexto": "Un profesor universitario sostiene que sus estudiantes mujeres se extienden demasiado en sus respuestas. Por esta razón, cuando estudiantes de ambos sexos levantan la mano para responder, él solo les da la palabra a los hombres.",
+                  "enunciado": "De acuerdo con la Constitución, ¿el profesor está vulnerando algún derecho?",
+                  "opciones": {
+                    "A": "No, pues el profesor puede hacer esto porque tiene más experiencia que sus estudiantes.",
+                    "B": "Sí, ya que con su actuación el profesor está vulnerando el derecho a la igualdad.",
+                    "C": "No, pues a pesar de que la actitud del profesor puede ser chocante para algunos, no es discriminatoria.",
+                    "D": "Sí, porque el profesor puede justificar lo que hace si puede probar que las mujeres hablan demasiado."
+                  },
+                  "respuesta_correcta": "B",
+                  "retroalimentacion": "El Artículo 13 de la Constitución de Colombia establece el derecho a la igualdad y prohíbe la discriminación por razón de sexo. Al negarle sistemáticamente la palabra a las mujeres basándose en un estereotipo de género ('hablan demasiado'), el profesor está dando un trato desigual a sus estudiantes por el solo hecho de ser mujeres. Esto constituye una clara vulneración del derecho a la igualdad y a la no discriminación.",
+                  "explicacion": "La actuación del profesor se basa en una generalización sobre un grupo (las mujeres) y aplica una norma que afecta a todas las integrantes de ese grupo sin consideración individual. Esto es la definición de discriminación por razón de sexo. El derecho a la igualdad, consagrado en la Constitución, implica que todas las personas deben recibir el mismo trato y tener las mismas oportunidades, sin distinciones basadas en características como el sexo. Al privilegiar a los hombres en la participación en clase, el profesor viola este derecho fundamental.",
+                  "habilidad_evaluada": "Aplicación del principio constitucional de igualdad y no discriminación a un caso concreto.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "La experiencia de un profesor no le da derecho a vulnerar derechos constitucionales.",
+                    "C": "La actitud sí es discriminatoria, ya que establece un trato diferenciado e injustificado basado en el sexo.",
+                    "D": "Incluso si pudiera 'probar' su estereotipo, la acción seguiría siendo una vulneración del derecho a la igualdad, ya que no se puede castigar a un individuo por las supuestas características de su grupo."
+                  },
+                  "estrategias_resolucion": "1. Recordar el principio constitucional del derecho a la igualdad. 2. Analizar la acción del profesor: ¿da un trato diferente a las personas por su pertenencia a un grupo? Sí. 3. Determinar si esta diferencia de trato está justificada. No, se basa en un estereotipo. 4. Concluir que se está vulnerando el derecho a la igualdad.",
+                  "errores_comunes": "Intentar justificar la acción del profesor basándose en la posible veracidad de su prejuicio, en lugar de analizarla desde la perspectiva de los derechos fundamentales.",
+                  "dificultad": "facil",
+                  "tiempo_estimado": 90,
+                  "tags": [
+                    "derecho a la igualdad",
+                    "discriminación de género",
+                    "Constitución de Colombia",
+                    "derechos fundamentales",
+                    "estereotipos"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento Social",
+                  "contexto": "Una compañía petrolera identificó un yacimiento en una zona habitada por una comunidad indígena. Para la comunidad, extraer el petróleo significa 'robarle la sangre a la madre tierra', por lo que se oponen. Tras un diálogo infructuoso, y después de un análisis detenido, el Estado le negó a la empresa el permiso de explotación.",
+                  "enunciado": "De acuerdo con la Constitución, ¿cuál es la razón que mejor sustenta la decisión del Estado?",
+                  "opciones": {
+                    "A": "Garantizar el derecho a la igualdad.",
+                    "B": "Garantizar el derecho a la libre asociación.",
+                    "C": "Proteger la diversidad étnica y cultural.",
+                    "D": "Proteger el medio ambiente."
+                  },
+                  "respuesta_correcta": "C",
+                  "retroalimentacion": "La Constitución Política de Colombia (Artículo 7) reconoce y protege la diversidad étnica y cultural de la Nación. La oposición de la comunidad indígena a la explotación petrolera no se basa en argumentos económicos o técnicos, sino en su cosmovisión ('robarle la sangre a la madre tierra'), que es un elemento central de su cultura. Al negar el permiso, el Estado está priorizando la protección de esta cultura y su forma de vida, que se verían gravemente amenazadas por el proyecto, cumpliendo así con su deber constitucional.",
+                  "explicacion": "El conflicto se da entre un interés económico (explotación petrolera) y la cosmovisión de una comunidad indígena. La Constitución de Colombia establece que el Estado tiene el deber de proteger la diversidad cultural. La decisión del Estado de negar el permiso, a pesar de los posibles beneficios económicos del petróleo, se fundamenta en la prevalencia de este deber constitucional. Se está protegiendo la integridad cultural de la comunidad, sus creencias y su relación con el territorio, que son componentes esenciales de su identidad.",
+                  "habilidad_evaluada": "Aplicación de principios constitucionales (protección de la diversidad étnica y cultural) en la resolución de un conflicto.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "El derecho a la igualdad podría aplicarse, pero la protección de la diversidad cultural es la razón más específica y directa en este caso.",
+                    "B": "El derecho a la libre asociación no es el que está principalmente en juego aquí.",
+                    "D": "Aunque proteger el medio ambiente también es un deber del Estado y una consecuencia de la decisión, la razón explícita de la oposición de la comunidad es cultural/espiritual, por lo que la protección de la cultura es el sustento más directo de la decisión."
+                  },
+                  "estrategias_resolucion": "1. Identificar la naturaleza del conflicto: económico vs. cultural. 2. Recordar los principios de la Constitución de Colombia relacionados con las comunidades indígenas. 3. Reconocer que la Constitución protege explícitamente la diversidad étnica y cultural. 4. Conectar la decisión del Estado con este deber constitucional específico.",
+                  "errores_comunes": "Confundir la razón principal (cultural) con una consecuencia secundaria (ambiental).",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "Constitución de Colombia",
+                    "diversidad étnica y cultural",
+                    "derechos de las comunidades indígenas",
+                    "cosmovisión",
+                    "conflicto socioambiental"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento reflexivo y sistémico",
+                  "contexto": "En un periódico de la ciudad han aparecido continuamente titulares como: “El alcalde no es capaz de solucionar el problema de criminalidad en la ciudad”, “Al alcalde le queda grande erradicar el crimen de la ciudad” y “La ciudad y la Alcaldía están sometidas a los criminales”.",
+                  "enunciado": "Antes de creer que el alcalde está haciendo mal su trabajo en materia de seguridad, ¿qué deberían revisar los ciudadanos principalmente?",
+                  "opciones": {
+                    "A": "El plan de gobierno para ver si había propuestas en el tema de seguridad.",
+                    "B": "Los índices de criminalidad en otras ciudades del país y de los países vecinos.",
+                    "C": "Los cambios en los índices de criminalidad desde que el alcalde se posesionó.",
+                    "D": "Las declaraciones oficiales del alcalde sobre si lo está haciendo bien o no."
+                  },
+                  "respuesta_correcta": "C",
+                  "retroalimentacion": "Para evaluar objetivamente la gestión de un alcalde en materia de seguridad, no basta con la percepción o los titulares de prensa. Se debe recurrir a datos objetivos. La medida más relevante para evaluar si la situación ha mejorado o empeorado durante su mandato es comparar los índices de criminalidad (homicidios, hurtos, etc.) antes de su posesión con los índices actuales. Un análisis de la tendencia de estos indicadores es la forma más directa de medir el impacto de su gestión.",
+                  "explicacion": "La pregunta pide una forma de evaluar críticamente la afirmación de que el alcalde está haciendo un mal trabajo. Para ello, se necesita evidencia empírica y relevante. \n- **Opción C:** Comparar los índices 'antes' y 'después' de su gestión permite medir el cambio y, por tanto, evaluar la efectividad de sus políticas. Es la medida más objetiva y directa. \n- **Opción A:** El plan de gobierno muestra las promesas, no los resultados. \n- **Opción B:** Comparar con otras ciudades puede ser útil para contextualizar, pero no evalúa la gestión específica del alcalde en su propia ciudad. \n- **Opción D:** Las declaraciones del alcalde son una fuente sesgada (es parte interesada), no una evidencia objetiva.",
+                  "habilidad_evaluada": "Pensamiento crítico, evaluación de la gestión pública y uso de evidencia objetiva.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Evalúa las promesas, no el desempeño real.",
+                    "B": "Proporciona contexto, pero no mide directamente la gestión del alcalde local.",
+                    "D": "Es una fuente subjetiva y no confiable para una evaluación objetiva."
+                  },
+                  "estrategias_resolucion": "1. Entender la pregunta: se busca una forma objetiva de evaluar la gestión. 2. Descartar las opciones basadas en promesas, opiniones subjetivas o comparaciones no directas. 3. Identificar que la mejor evidencia del desempeño es la evolución de los indicadores relevantes (índices de criminalidad) durante el periodo de gestión.",
+                  "errores_comunes": "Confundir la evaluación de la gestión con la revisión de las promesas de campaña o con la opinión del propio funcionario.",
+                  "dificultad": "facil",
+                  "tiempo_estimado": 90,
+                  "tags": [
+                    "pensamiento crítico",
+                    "evaluación de políticas",
+                    "seguridad ciudadana",
+                    "indicadores de gestión",
+                    "ciudadanía"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Interpretación y análisis de perspectivas",
+                  "contexto": "El problema del tráfico de drogas ilícitas ha generado debates en países productores. Algunos proponen que, para defender el bien común, se debe legalizar las drogas.",
+                  "enunciado": "¿Cuál de los siguientes es el argumento más afín con la propuesta de legalización?",
+                  "opciones": {
+                    "A": "Cada persona debe tener la libertad de decidir si consume o no drogas y, por tanto, su comercialización no debería estar bajo ningún control.",
+                    "B": "Los países productores no tienen ninguna responsabilidad en el tráfico de drogas; la responsabilidad recae sobre los países consumidores.",
+                    "C": "Quienes consumen drogas no deben ser tratados como delincuentes, sino como adictos que necesitan tratamientos médicos.",
+                    "D": "En los países productores la prohibición ha generado problemas sociales más graves que aquellos que se querían evitar con esta medida."
+                  },
+                  "respuesta_correcta": "D",
+                  "retroalimentacion": "El argumento central a favor de la legalización, desde la perspectiva de los países productores, es de tipo pragmático y consecuencialista. Sostiene que la política actual de prohibición ha fracasado y ha generado externalidades negativas inmensas (violencia, corrupción, fortalecimiento de mafias, crisis social) que son peores que el problema original del consumo. La legalización se propone entonces como una alternativa para mitigar estos daños colaterales.",
+                  "explicacion": "Se busca el argumento que mejor sustente la legalización desde una perspectiva de 'bien común' en un país productor. \n- **Opción D:** Este es el argumento principal. Afirma que el remedio (la prohibición) ha resultado peor que la enfermedad. La violencia y la corrupción asociadas al narcotráfico (consecuencias de la prohibición) son problemas sociales tan graves que justifican un cambio de política hacia la legalización, que permitiría arrebatar el negocio al crimen organizado y regularlo. \n- **Opción A:** Este es un argumento libertario, enfocado en la libertad individual, no necesariamente en el 'bien común'. \n- **Opción C:** Este es un argumento a favor de la despenalización del consumo y de tratarlo como un problema de salud pública, lo cual es afín a la legalización, pero la opción D explica mejor por qué la legalización beneficiaría al 'bien común' del país productor en su conjunto. \n- **Opción B:** Es un argumento que busca desviar la responsabilidad, no uno a favor de la legalización.",
+                  "habilidad_evaluada": "Identificación de argumentos que sustentan una política pública compleja (legalización de drogas).",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Es un argumento de corte libertario extremo, no centrado en el bien común.",
+                    "B": "Es una postura sobre la responsabilidad, no un argumento a favor de la legalización.",
+                    "C": "Es un argumento importante (enfoque de salud pública), pero D captura mejor la dimensión de los problemas sociales a gran escala (violencia, corrupción) que la legalización busca resolver en los países productores."
+                  },
+                  "estrategias_resolucion": "1. Entender la propuesta: legalizar las drogas para defender el 'bien común'. 2. Analizar por qué la prohibición podría estar afectando el bien común en un país productor (violencia, mafias, etc.). 3. Buscar el argumento que plantee que la legalización resolvería o mitigaría estos problemas. 4. Reconocer que la opción D describe este cálculo costo-beneficio de la prohibición.",
+                  "errores_comunes": "Confundir la legalización con la promoción del consumo, o no diferenciar entre los argumentos basados en la libertad individual y los basados en las consecuencias sociales.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "políticas de drogas",
+                    "legalización",
+                    "prohibicionismo",
+                    "argumentación",
+                    "bien común"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Interpretación y análisis de perspectivas",
+                  "contexto": "El jefe de policía de una ciudad importante declaró: “Para evitar estas situaciones [de violencia sexual], lo mejor sería que las mujeres dejaran de salir con minifaldas o escotes provocadores a la calle. Así evitarían ser víctimas de acoso o violencia sexual”.",
+                  "enunciado": "¿Qué intereses está favoreciendo esta declaración?",
+                  "opciones": {
+                    "A": "Los de las mujeres, porque está aconsejándoles cómo vestir para no ser víctimas.",
+                    "B": "Los de los policías, porque su función no es la de manejar casos de acoso.",
+                    "C": "Los de los agresores, porque está dándoles una justificación a lo que hacen.",
+                    "D": "Los de la ciudad, porque el acoso sexual afecta la percepción de seguridad."
+                  },
+                  "respuesta_correcta": "C",
+                  "retroalimentacion": "La declaración del jefe de policía incurre en la 'culpabilización de la víctima' (victim blaming). Al sugerir que la vestimenta de las mujeres es la causa de la agresión, está desviando la responsabilidad del agresor hacia la víctima. Este tipo de discurso legitima y justifica el comportamiento de los agresores, dándoles un pretexto para sus acciones y perpetuando la idea de que la agresión es una respuesta 'natural' a una 'provocación'.",
+                  "explicacion": "El análisis de la declaración revela que la responsabilidad del acto violento se está desplazando. En lugar de centrarse en el delincuente que comete el acoso, se enfoca en la conducta de la víctima potencial. Al hacer esto, el discurso del policía implícitamente valida la perspectiva del agresor, sugiriendo que la agresión es una consecuencia comprensible del atuendo de la mujer. Por lo tanto, esta declaración favorece a los agresores al proporcionarles una justificación social y cultural para su comportamiento.",
+                  "habilidad_evaluada": "Análisis crítico de un discurso para identificar a qué actor social beneficia o legitima (culpabilización de la víctima).",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "No favorece a las mujeres; restringe su libertad y las responsabiliza por la violencia que sufren.",
+                    "B": "Es falso; manejar estos casos sí es función de la policía.",
+                    "D": "Aunque el acoso afecta la seguridad, esta declaración no protege a la ciudad, sino que perpetúa un problema al justificar a los agresores."
+                  },
+                  "estrategias_resolucion": "1. Identificar la lógica de la declaración: la causa de la agresión es la víctima. 2. Reconocer este tipo de argumento como 'culpabilización de la víctima'. 3. Preguntarse quién se beneficia cuando la culpa se desvía del perpetrador. 4. Concluir que el agresor es el principal beneficiado, ya que su acción queda justificada o atenuada.",
+                  "errores_comunes": "Aceptar el argumento del policía como una medida de prevención válida, sin reconocer que culpabiliza a la víctima y restringe sus libertades.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "violencia de género",
+                    "culpabilización de la víctima",
+                    "análisis del discurso",
+                    "estereotipos de género",
+                    "derechos de las mujeres"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento reflexivo y sistémico",
+                  "contexto": "Ante el aumento de robos, un alcalde considera autorizar el cerramiento de grandes sectores residenciales de estratos altos para que sean vigilados por seguridad privada, permitiendo la entrada solo a residentes y personas autorizadas.",
+                  "enunciado": "A la hora de evaluar la propuesta, ¿qué intereses en conflicto deben ser tenidos en cuenta?",
+                  "opciones": {
+                    "A": "Los de las empresas de seguridad privada que buscan expandir su negocio, y los de las bandas de ladrones que buscan seguir realizando sus actividades sin obstáculos.",
+                    "B": "Los de los residentes que buscan su seguridad, y los de los demás habitantes de la ciudad que dejarían de tener acceso a las vías y otros espacios públicos de los sectores encerrados.",
+                    "C": "Los de los residentes que buscan su beneficio particular y los intereses del gobierno local que debe encargarse del bienestar de la comunidad.",
+                    "D": "Los de las empresas de seguridad privada que serían contratadas para cuidar los sectores encerrados, y los de la Policía encargada de la seguridad en la ciudad."
+                  },
+                  "respuesta_correcta": "B",
+                  "retroalimentacion": "La propuesta genera un conflicto directo entre dos grupos de ciudadanos. Por un lado, los residentes de los sectores a cerrar, cuyo interés es aumentar su seguridad privada. Por otro lado, el resto de los ciudadanos, cuyo interés y derecho es poder transitar libremente por las vías públicas y acceder a los espacios públicos (parques, andenes) que quedarían dentro de los cerramientos. La opción B describe este conflicto de intereses fundamental entre los residentes beneficiados y el resto de la población afectada.",
+                  "explicacion": "El problema pide identificar el conflicto de intereses central que genera la propuesta. La medida de cerrar barrios implica la privatización de facto del espacio público. Esto crea un choque de derechos: \n- **Interés 1 (Residentes):** El derecho a la seguridad y a la propiedad privada. \n- **Interés 2 (Demás habitantes):** El derecho a la libre circulación y al disfrute del espacio público. \nLa opción B es la que mejor plantea esta tensión entre los derechos e intereses de los dos principales grupos de ciudadanos afectados.",
+                  "habilidad_evaluada": "Identificación de los intereses en conflicto en un dilema de política pública urbana.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Los intereses de los ladrones no son un interés legítimo a ser tenido en cuenta en una evaluación de política pública.",
+                    "C": "Presenta el interés de los residentes como 'beneficio particular' y lo opone al 'bienestar de la comunidad', lo cual es una forma de plantear el conflicto, pero B es más específico al identificar quiénes son los afectados y qué derechos están en juego (acceso al espacio público).",
+                    "D": "Describe un conflicto entre proveedores de seguridad (privada vs. pública), pero el conflicto principal es entre los ciudadanos."
+                  },
+                  "estrategias_resolucion": "1. Identificar a los principales actores afectados por la decisión. 2. Determinar cuál es el interés o derecho de cada actor. 3. Reconocer que los intereses de los residentes (seguridad) chocan con los intereses del resto de la ciudadanía (libre circulación). 4. Elegir la opción que mejor describa este conflicto.",
+                  "errores_comunes": "Considerar a los actores ilegales (ladrones) como una parte legítima del conflicto de intereses. Confundir el conflicto principal (entre ciudadanos) con uno secundario (entre proveedores de seguridad).",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "conflicto de intereses",
+                    "política pública",
+                    "espacio público",
+                    "seguridad ciudadana",
+                    "derecho a la libre circulación"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento reflexivo y sistémico",
+                  "contexto": "La Corte Constitucional falló a favor de un soldado que, por objeción de conciencia basada en su religión que le prohíbe el uso de armas, interpuso una tutela. El fallo se fundamenta en la defensa de la libertad de conciencia del soldado.",
+                  "enunciado": "¿Cuál de las siguientes acciones es coherente con este fallo?",
+                  "opciones": {
+                    "A": "Ordenarle al Ejército la entrega de la libreta militar al soldado y su inmediata desvinculación de la institución.",
+                    "B": "Ordenarle al soldado cumplir su servicio militar obligatorio con todas las responsabilidades asignadas.",
+                    "C": "Ordenarle al Ejército que el soldado participe de los entrenamientos y haga solo tareas de oficina.",
+                    "D": "Ordenarle al soldado participar únicamente en paradas militares, portando con orgullo la dotación militar."
+                  },
+                  "respuesta_correcta": "A",
+                  "retroalimentacion": "El fallo protege la objeción de conciencia contra el 'uso de armas y las prácticas militares'. Si la base del servicio militar es la preparación para el combate, y el soldado no puede participar en ello, la solución más coherente y que respeta plenamente su derecho es eximirlo completamente del servicio. La entrega de la libreta militar y su desvinculación materializan esta exención.",
+                  "explicacion": "El fallo reconoce que la obligación de prestar servicio militar choca con un derecho fundamental del soldado (libertad de conciencia). La solución debe resolver este choque de la manera que mejor proteja el derecho vulnerado. \n- **Opción A:** Desvincularlo y darle la libreta es la única opción que respeta totalmente su objeción, ya que lo saca del ambiente militar que entra en conflicto con sus creencias. \n- **Opción B:** Es incoherente, sería ignorar el fallo. \n- **Opción C y D:** Son soluciones intermedias que no resuelven el problema de fondo. Los entrenamientos, las paradas y el ambiente militar en general siguen siendo 'prácticas militares' que pueden ir en contra de su conciencia, incluso si no usa un arma directamente.",
+                  "habilidad_evaluada": "Análisis de las implicaciones de una decisión judicial y evaluación de la coherencia de las posibles acciones a seguir.",
+                  "explicacion_opciones_incorrectas": {
+                    "B": "Ignora completamente el fallo de la Corte.",
+                    "C": "No respeta completamente la objeción, ya que lo mantiene en un entorno y prácticas militares.",
+                    "D": "No respeta la objeción, ya que las paradas militares son una práctica militar por excelencia."
+                  },
+                  "estrategias_resolucion": "1. Entender el núcleo del fallo: se protege la objeción de conciencia contra las prácticas militares. 2. Evaluar cada opción y preguntarse si elimina el conflicto entre el deber del soldado y su derecho. 3. Concluir que solo la desvinculación total elimina dicho conflicto de manera definitiva.",
+                  "errores_comunes": "Buscar una solución de compromiso (como las opciones C y D) sin darse cuenta de que no resuelven la vulneración del derecho fundamental en el que se basa el fallo.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "derechos fundamentales",
+                    "libertad de conciencia",
+                    "objeción de conciencia",
+                    "Corte Constitucional",
+                    "servicio militar"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento reflexivo y sistémico",
+                  "contexto": "Durante las épocas de lluvias, en muchas zonas rurales de Colombia se inundan escuelas y se interrumpen los caminos para llegar a estas. Se proponen varias soluciones.",
+                  "enunciado": "De las siguientes soluciones propuestas por la comunidad, ¿cuál podría evidenciar una vulneración al derecho a la educación?",
+                  "opciones": {
+                    "A": "Organizar esquemas de transporte para que los estudiantes vayan a clases en escuelas no afectadas por las inundaciones.",
+                    "B": "Ajustar el calendario escolar para que no haya clases en las épocas de inundación.",
+                    "C": "Dar una parte de las clases a través de la emisora de radio local, para reducir los días en los que tienen que asistir al colegio.",
+                    "D": "Asignar a los estudiantes a escuelas no inundadas y reiniciar las clases con los niños que puedan asistir."
+                  },
+                  "respuesta_correcta": "D",
+                  "retroalimentacion": "La solución D propone 'reiniciar las clases con los niños que puedan asistir'. Esta frase implica que los niños que no puedan llegar a la nueva escuela (por distancia, costo, etc.) simplemente perderán las clases. Esto vulnera el principio de igualdad y el derecho a la educación de aquellos estudiantes que no puedan asistir, creando una exclusión.",
+                  "explicacion": "El derecho a la educación debe ser garantizado para todos en condiciones de igualdad. Se debe analizar cuál de las soluciones podría dejar a algunos estudiantes por fuera. \n- **Opción D:** La condición 'con los niños que puedan asistir' es la clave. Sugiere que el sistema educativo no se hará cargo de garantizar que todos los estudiantes reubicados efectivamente puedan llegar a la nueva escuela. Los que no puedan, quedarán excluidos, lo que es una clara vulneración de su derecho. \n- **Opciones A, B y C:** Son soluciones que, aunque pueden tener sus propios problemas, intentan garantizar la continuidad del servicio educativo para todos los estudiantes (transporte, ajuste de calendario, clases a distancia). No generan una exclusión explícita como la opción D.",
+                  "habilidad_evaluada": "Análisis crítico de soluciones a un problema social para identificar posibles vulneraciones de derechos.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Esta solución busca activamente garantizar el acceso, no vulnerarlo.",
+                    "B": "Aunque reduce el tiempo total de clases, se aplica a todos por igual y busca evitar la interrupción.",
+                    "C": "Es una estrategia de educación a distancia para garantizar la continuidad."
+                  },
+                  "estrategias_resolucion": "1. Recordar que el derecho a la educación es universal y debe ser garantizado en igualdad. 2. Analizar cada solución propuesta y preguntarse: ¿Esta solución asegura que todos los estudiantes continúen su proceso educativo? 3. Identificar la frase 'con los que puedan asistir' en la opción D como una condición que introduce la posibilidad de exclusión.",
+                  "errores_comunes": "No leer con suficiente atención la parte final de la opción D, que es donde se evidencia la vulneración del derecho.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "derecho a la educación",
+                    "vulneración de derechos",
+                    "equidad",
+                    "políticas públicas",
+                    "educación rural"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento reflexivo y sistémico",
+                  "contexto": "Pekín y otras partes de China sufren de elevados niveles de contaminación. Para combatirla, las autoridades a veces cancelan actividades deportivas en colegios y han cerrado fábricas. Los expertos consideran que la única solución es que China reduzca su dependencia de las industrias pesadas (que aportaron el 46% del PIB en 2012) y apueste por un modelo de energía mixta. Un experto señala que China debería rebajar la contribución de la industria pesada en 9 puntos porcentuales para 2030.",
+                  "enunciado": "En esta situación, ¿cuáles dimensiones están en conflicto?",
+                  "opciones": {
+                    "A": "La educativa y la ambiental.",
+                    "B": "La cultural y la educativa.",
+                    "C": "La económica y la ambiental.",
+                    "D": "La cultural y la económica."
+                  },
+                  "respuesta_correcta": "C",
+                  "retroalimentacion": "La situación describe un conflicto clásico entre el desarrollo económico y la protección del medio ambiente. Por un lado, las 'industrias pesadas' son un pilar de la economía china (aportan el 46% del PIB), generando riqueza y empleo (dimensión económica). Por otro lado, estas mismas industrias son la principal causa de los 'elevados niveles de contaminación' (dimensión ambiental). La solución propuesta implica un sacrificio económico (reducir la participación de la industria) para obtener un beneficio ambiental.",
+                  "explicacion": "El problema central es la contaminación, que es una dimensión ambiental. La causa de esta contaminación son las industrias pesadas, que son a su vez un motor fundamental de la economía del país (dimensión económica). Las medidas para solucionar el problema ambiental (cerrar fábricas, reducir la dependencia industrial) tienen un impacto directo y negativo en la economía. Por lo tanto, las dos dimensiones que están en clara tensión o conflicto son la económica y la ambiental.",
+                  "habilidad_evaluada": "Identificación de las dimensiones (económica, social, ambiental, cultural) en conflicto en un problema complejo.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "La dimensión educativa (cancelación de clases) es una consecuencia, no una de las causas centrales del conflicto.",
+                    "B": "La dimensión cultural no es el eje central del problema descrito.",
+                    "D": "La dimensión ambiental es la clave del conflicto, y esta opción la omite."
+                  },
+                  "estrategias_resolucion": "1. Identificar el problema principal (contaminación). Esto corresponde a la dimensión ambiental. 2. Identificar la causa principal del problema (industria pesada). 3. Reconocer que la industria pesada es un componente clave de la dimensión económica. 4. Concluir que la necesidad de mantener la economía choca con la necesidad de proteger el medio ambiente.",
+                  "errores_comunes": "Confundir las consecuencias del problema (como la cancelación de actividades educativas) con las dimensiones estructurales que están en conflicto.",
+                  "dificultad": "facil",
+                  "tiempo_estimado": 90,
+                  "tags": [
+                    "conflicto socioambiental",
+                    "desarrollo sostenible",
+                    "economía",
+                    "medio ambiente",
+                    "contaminación"
+                  ]
+                },
+                {
+                  "materia": "Sociales y Ciudadanas",
+                  "competencia": "Pensamiento reflexivo y sistémico",
+                  "contexto": "Un estudiante se intoxicó con comida comprada a un vendedor ambulante a la salida del colegio. Como respuesta, el Consejo Directivo del colegio, con ayuda de la Policía, logró la expulsión de todos los vendedores ambulantes del sector.",
+                  "enunciado": "De los siguientes, ¿cuál sería un efecto de la expulsión de los vendedores?",
+                  "opciones": {
+                    "A": "El aumento de la inseguridad en las inmediaciones del colegio.",
+                    "B": "El aumento de las intoxicaciones alimentarias de los estudiantes en el colegio.",
+                    "C": "La disminución del apoyo de la comunidad al Consejo Directivo y a la Policía.",
+                    "D": "La disminución de los ingresos de las familias que dependían de esas ventas."
+                  },
+                  "respuesta_correcta": "D",
+                  "retroalimentacion": "La expulsión de los vendedores ambulantes elimina su fuente de trabajo. Dado que las ventas ambulantes son a menudo la única o principal fuente de sustento para las personas que las ejercen y sus familias, un efecto directo y predecible de su expulsión es la disminución o pérdida total de los ingresos de estas familias, lo que agrava su situación económica.",
+                  "explicacion": "La pregunta pide identificar una consecuencia directa de la acción tomada. La acción es expulsar a los vendedores. La consecuencia más inmediata de que a alguien se le impida trabajar es que dejará de percibir los ingresos que ese trabajo le generaba. Esto afecta directamente la economía de su hogar. Las otras opciones son menos directas o incluso contradictorias.",
+                  "habilidad_evaluada": "Análisis de las consecuencias económicas y sociales de una decisión de política local.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "No hay una relación directa y necesaria entre la presencia de vendedores y la seguridad. Algunos argumentan que la presencia de vendedores aumenta la vigilancia informal.",
+                    "B": "Es lo contrario. Al eliminar la fuente de la intoxicación, es de esperar que las intoxicaciones disminuyan, no que aumenten.",
+                    "C": "Es posible, pero no es el efecto más directo y seguro. Algunos en la comunidad podrían apoyar la medida, mientras que otros (como los propios vendedores y sus familias) se opondrían."
+                  },
+                  "estrategias_resolucion": "1. Identificar la acción: expulsión de vendedores. 2. Identificar el rol de los vendedores: personas que obtienen sus ingresos de esa actividad. 3. Deducir la consecuencia directa de impedirles trabajar: pierden sus ingresos. 4. Elegir la opción que describe esta consecuencia económica directa.",
+                  "errores_comunes": "Especular sobre consecuencias indirectas y complejas (como la seguridad o el apoyo comunitario) en lugar de identificar el efecto económico más inmediato y obvio.",
+                  "dificultad": "facil",
+                  "tiempo_estimado": 90,
+                  "tags": [
+                    "consecuencias sociales",
+                    "economía informal",
+                    "vendedores ambulantes",
+                    "política local"
+                  ]
+                }
+              
+            ]

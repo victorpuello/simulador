@@ -4,6 +4,7 @@ import Input from '../ui/Input';
 import Card from '../ui/Card';
 import ImageUpload from '../ui/ImageUpload';
 import { useNotifications } from '../../store';
+import { api } from '../../services/api';
 
 interface Materia {
   id: number;
@@ -18,12 +19,12 @@ interface Competencia {
 
 interface Pregunta {
   id: number;
-  materia: number | {
+  materia: {
     id: number;
     nombre: string;
     nombre_display: string;
   };
-  competencia?: number | {
+  competencia?: {
     id: number;
     nombre: string;
   };
@@ -94,35 +95,18 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
     cargarMaterias();
   }, []);
 
-  // Cargar competencias cuando cambie la materia
-  useEffect(() => {
-    if (formData.materia) {
-      cargarCompetencias(formData.materia);
-    } else {
-      setCompetencias([]);
-      setFormData(prev => ({ ...prev, competencia: '' }));
-    }
-  }, [formData.materia]);
-
   // Actualizar formulario cuando cambie la pregunta (para edición)
   useEffect(() => {
     if (pregunta) {
-      console.log('Cargando datos de pregunta:', pregunta);
+      const materiaId = pregunta.materia?.id?.toString() || '';
+      const competenciaId = (pregunta.competencia as any)?.id?.toString() || '';
       
-      // Manejar diferentes estructuras de datos del backend
-      const materiaId = typeof pregunta.materia === 'object' 
-        ? pregunta.materia?.id?.toString() 
-        : pregunta.materia?.toString() || '';
-      
-      const competenciaId = typeof pregunta.competencia === 'object' 
-        ? pregunta.competencia?.id?.toString() 
-        : pregunta.competencia?.toString() || '';
-      
-      console.log('Materia ID:', materiaId);
-      console.log('Competencia ID:', competenciaId);
-      console.log('Retroalimentación:', pregunta.retroalimentacion);
-      console.log('Explicación:', pregunta.explicacion);
-      console.log('Tags:', pregunta.tags);
+      console.log('Actualizando formulario con pregunta:', {
+        materiaId,
+        competenciaId,
+        materia: pregunta.materia,
+        competencia: pregunta.competencia
+      });
       
       setFormData({
         materia: materiaId,
@@ -147,17 +131,34 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
         },
         estrategias_resolucion: pregunta.estrategias_resolucion || '',
         errores_comunes: pregunta.errores_comunes || '',
-        dificultad: pregunta.dificultad || 'media',
+        dificultad: normalizarDificultad(pregunta.dificultad || 'media'),
         tiempo_estimado: pregunta.tiempo_estimado || 90,
         tags: pregunta.tags?.join(', ') || ''
       });
-
-      // Cargar competencias si hay materia
-      if (materiaId) {
-        cargarCompetencias(materiaId);
-      }
     }
   }, [pregunta]);
+
+  // Cargar competencias cuando cambie la materia o cuando se carguen las materias
+  useEffect(() => {
+    console.log('useEffect competencias - formData.materia:', formData.materia, 'materias.length:', materias.length);
+    if (formData.materia) {
+      cargarCompetencias(formData.materia);
+    } else {
+      setCompetencias([]);
+      setFormData(prev => ({ ...prev, competencia: '' }));
+    }
+  }, [formData.materia, materias.length]);
+
+  // Establecer competencia cuando se carguen las competencias y haya una competencia guardada
+  useEffect(() => {
+    if (competencias.length > 0 && pregunta && pregunta.competencia) {
+      const competenciaId = (pregunta.competencia as any)?.id?.toString() || '';
+      if (competenciaId && formData.competencia !== competenciaId) {
+        console.log('Estableciendo competencia:', competenciaId, 'de competencias disponibles:', competencias);
+        setFormData(prev => ({ ...prev, competencia: competenciaId }));
+      }
+    }
+  }, [competencias, pregunta]);
 
   const cargarMaterias = async () => {
     try {
@@ -172,6 +173,7 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
         const data = await response.json();
         // Manejar respuesta paginada o array directo
         const materiasArray = Array.isArray(data) ? data : (data.results || []);
+        console.log('Materias cargadas:', materiasArray);
         setMaterias(materiasArray);
       } else {
         console.error('Error en respuesta de materias:', response.status);
@@ -186,6 +188,7 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
   const cargarCompetencias = async (materiaId: string) => {
     try {
       const token = localStorage.getItem('access_token');
+      console.log('Cargando competencias para materia:', materiaId);
       const response = await fetch(`/api/core/competencias/?materia=${materiaId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -196,6 +199,7 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
         const data = await response.json();
         // Manejar respuesta paginada o array directo
         const competenciasArray = Array.isArray(data) ? data : (data.results || []);
+        console.log('Competencias cargadas:', competenciasArray);
         setCompetencias(competenciasArray);
       } else {
         console.error('Error en respuesta de competencias:', response.status);
@@ -221,10 +225,10 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
       }
     });
 
-    // Validar que la respuesta correcta tenga contenido
-    if (!formData.opciones[formData.respuesta_correcta as keyof typeof formData.opciones].trim()) {
-      nuevosErrores.respuesta_correcta = 'La opción marcada como correcta debe tener contenido';
-    }
+      // Validar que la respuesta correcta tenga contenido
+  if (!formData.opciones[formData.respuesta_correcta as keyof typeof formData.opciones].trim()) {
+    nuevosErrores.respuesta_correcta = 'La opción marcada como correcta debe tener contenido';
+  }
 
     // Validar tiempo estimado
     if (formData.tiempo_estimado < 30 || formData.tiempo_estimado > 300) {
@@ -251,17 +255,12 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
     setLoading(true);
 
     try {
-      const token = localStorage.getItem('access_token');
-      const url = pregunta 
-        ? `/api/core/preguntas/${pregunta.id}/`
-        : '/api/core/preguntas/';
-      
-      const method = pregunta ? 'PUT' : 'POST';
 
-      // Usar FormData para soportar archivos
+
+      // Siempre usar FormData para mantener consistencia
       const formDataToSend = new FormData();
       
-      // Agregar campos básicos
+      // Agregar todos los campos individualmente
       formDataToSend.append('materia', formData.materia);
       if (formData.competencia) {
         formDataToSend.append('competencia', formData.competencia);
@@ -276,38 +275,37 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
       formDataToSend.append('explicacion_opciones_incorrectas', JSON.stringify(formData.explicacion_opciones_incorrectas));
       formDataToSend.append('estrategias_resolucion', formData.estrategias_resolucion);
       formDataToSend.append('errores_comunes', formData.errores_comunes);
+      // Asegurar que dificultad sea uno de los valores permitidos
       formDataToSend.append('dificultad', formData.dificultad);
       formDataToSend.append('tiempo_estimado', formData.tiempo_estimado.toString());
       formDataToSend.append('tags', JSON.stringify(formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag)));
       formDataToSend.append('activa', 'true');
-      
-      // Agregar imagen si se seleccionó una
+
+      // Agregar imagen si existe
       if (selectedImage) {
         formDataToSend.append('imagen', selectedImage);
       }
 
-      const response = await fetch(url, {
-        method,
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          // No especificar Content-Type, let FormData set it
-        },
-        body: formDataToSend,
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Error al guardar la pregunta');
+      // Log de los datos que se enviarán
+      const formDataEntries: Record<string, any> = {};
+      for (const [key, value] of formDataToSend.entries()) {
+        formDataEntries[key] = value instanceof File ? `File: ${value.name}` : value;
       }
+      console.log('FormData a enviar:', formDataEntries);
+      
+      const response = pregunta
+        ? await api.put(`/core/preguntas/${pregunta.id}/`, formDataToSend)
+        : await api.post('/core/preguntas/', formDataToSend);
+      
+      onSave(response.data);
 
-      const preguntaGuardada = await response.json();
-      onSave(preguntaGuardada);
+
 
     } catch (error: any) {
       addNotification({
         type: 'error',
         title: 'Error',
-        message: error.message || 'Error al guardar la pregunta',
+        message: error.response?.data?.detail || error.message || 'Error al guardar la pregunta',
         duration: 5000,
       });
     } finally {
@@ -316,11 +314,34 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
   };
 
   const handleInputChange = (field: string, value: any) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    // Normalizar dificultad si es necesario
+    const normalizedValue = field === 'dificultad' ? normalizarDificultad(value) : value;
+    
+    setFormData(prev => ({ ...prev, [field]: normalizedValue }));
     
     // Limpiar error si existe
     if (errores[field]) {
       setErrores(prev => ({ ...prev, [field]: '' }));
+    }
+  };
+
+  // Normalizar dificultad a uno de los valores permitidos
+  const normalizarDificultad = (dificultad: string): 'facil' | 'media' | 'dificil' => {
+    switch (dificultad.toLowerCase()) {
+      case 'fácil':
+      case 'facil':
+      case 'baja':
+        return 'facil';
+      case 'media':
+      case 'medio':
+      case 'normal':
+        return 'media';
+      case 'difícil':
+      case 'dificil':
+      case 'alta':
+        return 'dificil';
+      default:
+        return 'media';
     }
   };
 
@@ -375,6 +396,8 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
                 onChange={(e) => handleInputChange('competencia', e.target.value)}
                 disabled={!formData.materia}
                 className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:bg-gray-100"
+                onFocus={() => console.log('Select competencia - valor actual:', formData.competencia, 'competencias disponibles:', competencias)}
+                onMouseEnter={() => console.log('Mouse enter competencia - formData.competencia:', formData.competencia, 'competencias count:', competencias.length)}
               >
                 <option value="">Seleccionar competencia</option>
                 {Array.isArray(competencias) && competencias.map((competencia) => (
@@ -458,15 +481,15 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
                     </label>
                   </div>
                   <div className="flex-1">
-                    <Input
-                      type="text"
-                      name={`opcion_${letra}`}
-                      value={formData.opciones[letra]}
-                      onChange={(value) => handleOpcionChange(letra, value)}
-                      placeholder={`Opción ${letra}`}
-                      className={errores[`opcion_${letra}`] ? 'border-red-300' : ''}
-                      required
-                    />
+                                         <Input
+                       type="text" 
+                       name={`opcion_${letra}`}
+                       value={formData.opciones[letra as keyof typeof formData.opciones]}
+                       onChange={(value) => handleOpcionChange(letra, value)}
+                       placeholder={`Opción ${letra}`}
+                       className={`w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 ${errores[`opcion_${letra}`] ? 'border-red-300' : ''}`}
+                       required
+                     />
                     {errores[`opcion_${letra}`] && (
                       <p className="mt-1 text-sm text-red-600">{errores[`opcion_${letra}`]}</p>
                     )}
@@ -534,15 +557,15 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Tiempo estimado (segundos)
               </label>
-              <Input
-                type="number"
-                name="tiempo_estimado"
-                min="30"
-                max="300"
-                value={formData.tiempo_estimado}
-                onChange={(value) => handleInputChange('tiempo_estimado', parseInt(value))}
-                className={errores.tiempo_estimado ? 'border-red-300' : ''}
-              />
+                             <input
+                 type="number"
+                 name="tiempo_estimado"
+                 min="30"
+                 max="300"
+                 value={formData.tiempo_estimado}
+                 onChange={(e) => handleInputChange('tiempo_estimado', parseInt(e.target.value))}
+                 className={`w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 ${errores.tiempo_estimado ? 'border-red-300' : ''}`}
+               />
               {errores.tiempo_estimado && (
                 <p className="mt-1 text-sm text-red-600">{errores.tiempo_estimado}</p>
               )}
@@ -552,13 +575,13 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Tags (separados por coma)
               </label>
-              <Input
-                type="text"
-                name="tags"
-                value={formData.tags}
-                onChange={(value) => handleInputChange('tags', value)}
-                placeholder="álgebra, ecuaciones, básico"
-              />
+                             <Input
+                 type="text"
+                 name="tags"
+                 value={formData.tags}
+                 onChange={(value) => handleInputChange('tags', value)}
+                 placeholder="álgebra, ecuaciones, básico"
+               />
             </div>
           </div>
 
@@ -567,13 +590,13 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Habilidad evaluada
             </label>
-            <Input
-              type="text"
-              name="habilidad_evaluada"
-              value={formData.habilidad_evaluada}
-              onChange={(value) => handleInputChange('habilidad_evaluada', value)}
-              placeholder="Descripción de la competencia específica que evalúa"
-            />
+                         <Input
+               type="text"
+               name="habilidad_evaluada"
+               value={formData.habilidad_evaluada}
+               onChange={(value) => handleInputChange('habilidad_evaluada', value)}
+               placeholder="Descripción de la competencia específica que evalúa"
+             />
           </div>
 
           {/* Explicaciones de opciones incorrectas */}
@@ -590,16 +613,16 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
                     </label>
                   </div>
                   <div className="flex-1">
-                    <Input
-                      type="text"
-                      name={`explicacion_${letra}`}
-                      value={formData.explicacion_opciones_incorrectas[letra as keyof typeof formData.explicacion_opciones_incorrectas]}
-                      onChange={(value) => handleInputChange('explicacion_opciones_incorrectas', {
-                        ...formData.explicacion_opciones_incorrectas,
-                        [letra]: value
-                      })}
-                      placeholder={`Explicación de por qué la opción ${letra} es incorrecta`}
-                    />
+                                         <Input
+                       type="text"
+                       name={`explicacion_${letra}`}
+                       value={formData.explicacion_opciones_incorrectas[letra as keyof typeof formData.explicacion_opciones_incorrectas]}
+                       onChange={(value) => handleInputChange('explicacion_opciones_incorrectas', {
+                         ...formData.explicacion_opciones_incorrectas,
+                         [letra]: value
+                       })}
+                       placeholder={`Explicación de por qué la opción ${letra} es incorrecta`}
+                     />
                   </div>
                 </div>
               ))}

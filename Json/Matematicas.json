@@ -1,0 +1,1566 @@
+[
+    {
+      "materia": "Matemáticas",
+      "competencia": "Argumentación",
+      "contexto": "Un sistema de transporte masivo tiene estaciones (E1, E2,...). El tiempo de viaje entre estaciones consecutivas es de 4 minutos y cada parada dura 30 segundos. Un usuario quiere ir de E1 a E10 en la ruta R2, que tiene una sola parada en E6. El usuario calculó el tiempo con un procedimiento de 3 pasos: I. Contó 10 tramos entre estaciones. II. Multiplicó 10 tramos por 4 minutos. III. Sumó 30 segundos por la parada.",
+      "enunciado": "Este procedimiento es incorrecto en el(los) paso(s)",
+      "opciones": {
+        "A": "I solamente.",
+        "B": "I y II solamente.",
+        "C": "II solamente.",
+        "D": "II y III solamente."
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "El procedimiento es incorrecto en el Paso I porque entre la estación E1 y la estación E10 hay 9 tramos de viaje (E1 a E2, E2 a E3, ..., E9 a E10), no 10. Este error de conteo inicial hace que los cálculos posteriores sean incorrectos.",
+      "explicacion": "Para ir de la estación N a la estación M, el número de tramos es M - N. En este caso, de E1 a E10, hay 10 - 1 = 9 tramos. El Paso I del procedimiento afirma incorrectamente que hay 10 tramos. El cálculo correcto del tiempo sería: (9 tramos * 4 minutos/tramo) + (1 parada * 0.5 minutos/parada) = 36 + 0.5 = 36.5 minutos. El error fundamental se encuentra en el conteo inicial del Paso I.",
+      "habilidad_evaluada": "Análisis de un procedimiento algorítmico y detección de errores de lógica.",
+      "explicacion_opciones_incorrectas": {
+        "B": "El paso II es una operación matemática correcta (10 * 4 = 40), pero se basa en el dato erróneo del paso I. El error conceptual está en I.",
+        "C": "Aunque el cálculo del paso II se basa en un dato incorrecto, el error original que invalida el proceso es el del paso I.",
+        "D": "El paso III (sumar 30 segundos) es una acción correcta según el plan, pero el resultado al que se le suma ya es incorrecto debido al error del paso I."
+      },
+      "estrategias_resolucion": "1. Analizar cada paso del procedimiento. 2. Verificar el conteo en el Paso I: para ir de un punto N a un punto M, hay M-N intervalos. 3. Identificar que el conteo de 10 tramos para 10 estaciones es incorrecto. 4. Concluir que el error original está en el paso I.",
+      "errores_comunes": "Asumir que si hay 10 estaciones, debe haber 10 tramos, sin contar cuidadosamente los intervalos entre ellas.",
+      "dificultad": "facil",
+      "tiempo_estimado": 90,
+      "tags": [
+        "lógica",
+        "procedimientos",
+        "conteo",
+        "análisis de errores"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Argumentación",
+      "contexto": "Una persona en Colombia tiene una inversión en dólares en Estados Unidos. Se sabe que la tasa de cambio se mantendrá constante este mes en 1 dólar = 2.000 pesos colombianos. La inversión en dólares le dará una ganancia del 3%. Un amigo le asegura que, en pesos, sus ganancias también serán del 3%.",
+      "enunciado": "La afirmación de su amigo es",
+      "opciones": {
+        "A": "correcta, pues, sin importar las variaciones en la tasa de cambio, la proporción en que aumenta la inversión en dólares es la misma que en pesos.",
+        "B": "incorrecta, pues debería conocerse el valor exacto de la inversión para poder calcular la cantidad de dinero que ganará.",
+        "C": "correcta, pues el 3 % representa una proporción fija en cualquiera de las dos monedas, puesto que la tasa de cambio permanecerá constante.",
+        "D": "incorrecta, pues el 3 % representa un incremento, que será mayor en pesos colombianos, pues en esta moneda cada dólar representa un valor 2.000 veces mayor."
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "Un porcentaje es una medida de proporción. Como la tasa de cambio es constante, la relación entre las dos monedas es lineal. Por lo tanto, un aumento proporcional (como el 3%) en la cantidad en dólares se traduce en exactamente el mismo aumento proporcional en la cantidad equivalente en pesos.",
+      "explicacion": "Sea D la cantidad inicial en dólares y P la cantidad en pesos. La relación es P = 2000 * D. Una ganancia del 3% en dólares significa que la nueva cantidad es D' = D * 1.03. Al convertir esta nueva cantidad a pesos, obtenemos P' = 2000 * D' = 2000 * (D * 1.03) = (2000 * D) * 1.03 = P * 1.03. Esto demuestra que la nueva cantidad en pesos es también un 3% mayor que la original. La clave es que la tasa de cambio es un factor constante.",
+      "habilidad_evaluada": "Comprensión del concepto de porcentaje como una proporción y su comportamiento en conversiones lineales.",
+      "explicacion_opciones_incorrectas": {
+        "A": "La justificación es incorrecta, pues la constancia de la tasa de cambio es fundamental para que la afirmación sea cierta.",
+        "B": "El valor exacto de la inversión no es necesario para analizar la ganancia en términos porcentuales.",
+        "D": "El valor absoluto del incremento en pesos es mayor, pero la ganancia como proporción (porcentaje) es idéntica."
+      },
+      "estrategias_resolucion": "1. Entender que una ganancia del 3% equivale a multiplicar el capital por 1.03. 2. Plantear la ecuación de conversión P = k * D. 3. Aplicar el factor de ganancia a D y observar algebraicamente cómo se propaga a P.",
+      "errores_comunes": "Confundir el valor absoluto de la ganancia (que es 2000 veces mayor en pesos) con el valor porcentual (que es el mismo).",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "porcentajes",
+        "proporcionalidad",
+        "tasa de cambio",
+        "finanzas"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Formulación y ejecución",
+      "contexto": "Un colegio organiza un viaje para 140 estudiantes, que deben dividirse en 3 grupos para 3 franjas horarias distintas. Una tabla muestra 4 franjas disponibles con su capacidad máxima y precio por estudiante: Franja 1 (50, $35.000), Franja 2 (40, $40.000), Franja 3 (30, $50.000), Franja 4 (60, $45.000). Las directivas eligieron las franjas 1, 3 y 4.",
+      "enunciado": "¿Esta elección garantiza que asistan todos los estudiantes al menor precio posible?",
+      "opciones": {
+        "A": "Sí, porque esas franjas suman exactamente 140 estudiantes.",
+        "B": "No, porque es posible obtener un precio menor eligiendo la franja 2 en lugar de la franja 3.",
+        "C": "Sí, porque se incluyó la franja 1 que es la de menor precio por estudiante.",
+        "D": "No, porque los estudiantes que van en la franja 3 pagan más."
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "Para minimizar el costo, se deben elegir las franjas más baratas posibles que cumplan la condición de llevar a 140 estudiantes. La elección de las directivas (1, 3, 4) incluye la franja 3, que es la más cara ($50.000). Existe una combinación alternativa (1, 2, 4) que tiene capacidad suficiente (50+40+60=150) y sustituye la franja 3 por la franja 2 ($40.000), que es más barata. Por lo tanto, la elección original no era la de menor costo posible.",
+      "explicacion": "Este es un problema de optimización. Se busca minimizar el costo total. La elección (1, 3, 4) tiene una capacidad total de 50 + 30 + 60 = 140 estudiantes. El costo total de esta opción es (50 * 35.000) + (30 * 50.000) + (60 * 45.000) = $5.950.000. Consideremos la alternativa de usar las franjas (1, 2, 4). Su capacidad es 50 + 40 + 60 = 150 estudiantes, lo cual es suficiente. Como la franja 2 ($40.000) es más barata que la franja 3 ($50.000), el costo total de esta alternativa será menor. Por lo tanto, la elección inicial no garantiza el menor precio.",
+      "habilidad_evaluada": "Resolución de problemas de optimización con restricciones.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Cumplir la capacidad exacta no garantiza que sea la opción más económica.",
+        "C": "Incluir la franja individual más barata no es suficiente para asegurar que la combinación total sea la más económica.",
+        "D": "Si bien es cierto que en la franja 3 se paga más, la razón fundamental es que existía una alternativa viable y más barata, como lo describe la opción B."
+      },
+      "estrategias_resolucion": "1. Analizar la elección propuesta y su costo. 2. Buscar combinaciones alternativas de 3 franjas cuya capacidad sea igual o mayor a 140. 3. Comparar los precios de las franjas. 4. Darse cuenta de que se puede sustituir una franja cara por una más barata sin incumplir las condiciones.",
+      "errores_comunes": "Centrarse únicamente en la restricción de capacidad (140 estudiantes) sin comparar los costos totales de las diferentes opciones viables.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "optimización",
+        "restricciones",
+        "análisis de costos",
+        "tablas"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Formulación y ejecución",
+      "contexto": "Una empresa contrata capacitación en informática. La tabla indica que para el Módulo I (Fundamentación), la intensidad es de 40 horas y el valor por hora es de $35.000. La capacitación se realiza en cursos con un mínimo de 20 y un máximo de 30 personas.",
+      "enunciado": "La empresa pagará $4.200.000 por capacitar a los trabajadores de la dependencia 'Insumos' en el módulo I; esto quiere decir que la dependencia tiene entre",
+      "opciones": {
+        "A": "20 y 30 trabajadores.",
+        "B": "41 y 60 trabajadores.",
+        "C": "61 y 90 trabajadores.",
+        "D": "80 y 120 trabajadores."
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "El supuesto clave es que el 'valor por hora' se refiere al costo del instructor por el curso, no por persona. El costo total de impartir un curso del Módulo I es 40 horas * $35.000/hora = $1.400.000. Si la empresa pagó un total de $4.200.000, entonces contrató $4.200.000 / $1.400.000 = 3 cursos. Como cada curso tiene entre 20 y 30 personas, el número total de trabajadores capacitados está entre (3 * 20 = 60) y (3 * 30 = 90).",
+      "explicacion": "1. Primero se calcula el costo total de dictar un curso del Módulo I. Esto se obtiene multiplicando la intensidad horaria por el valor de la hora: 40 h * $35.000/h = $1.400.000 por curso. 2. Luego, se determina cuántos cursos se contrataron dividiendo el pago total de la empresa entre el costo por curso: $4.200.000 / $1.400.000 = 3 cursos. 3. Finalmente, se calcula el rango del número total de trabajadores. Como cada curso tiene entre 20 y 30 personas, con 3 cursos el número mínimo de trabajadores es 3 * 20 = 60 y el máximo es 3 * 30 = 90. El rango [60, 90] se ajusta a la opción C.",
+      "habilidad_evaluada": "Resolución de problemas de varios pasos que involucran interpretación de tablas, proporcionalidad y aplicación de restricciones.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Este rango correspondería a la contratación de un solo curso.",
+        "B": "Este rango correspondería a la contratación de dos cursos.",
+        "D": "Este rango correspondería a la contratación de cuatro o más cursos."
+      },
+      "estrategias_resolucion": "1. Interpretar que el costo por hora es por curso. 2. Calcular el costo total por curso. 3. Dividir el pago total por el costo por curso para hallar el número de cursos. 4. Multiplicar el número de cursos por los límites de personas (mínimo y máximo) para encontrar el rango total de trabajadores.",
+      "errores_comunes": "Asumir que el costo por hora es por trabajador. Esto llevaría a un cálculo del costo por trabajador de $1.400.000, y al dividir el pago total por este valor, daría un resultado ilógico de solo 3 trabajadores.",
+      "dificultad": "dificil",
+      "tiempo_estimado": 150,
+      "tags": [
+        "análisis de costos",
+        "tablas",
+        "razonamiento lógico",
+        "problemas de varios pasos"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Formulación y ejecución",
+      "contexto": "Se va a capacitar a 50 trabajadores de 'Recursos Humanos' en el módulo II. Según la tabla, el Módulo II (Procesador de texto) tiene una intensidad de 30 horas y un valor de $30.000 por hora. Los cursos son para grupos de 20 a 30 personas. El costo se reparte equitativamente entre todos.",
+      "enunciado": "Si se les cobrara a los 50 trabajadores..., y todos pagaran el mismo valor, ¿cuánto debería pagar cada uno por esa capacitación?",
+      "opciones": {
+        "A": "$18.000",
+        "B": "$36.000",
+        "C": "$450.000",
+        "D": "$900.000"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "Para capacitar a 50 trabajadores, se necesitan 2 cursos, ya que el tamaño máximo por curso es 30. El costo de cada curso es 30 horas * $30.000/hora = $900.000. El costo total de los dos cursos es 2 * $900.000 = $1.800.000. Este costo total se divide entre los 50 trabajadores: $1.800.000 / 50 = $36.000 por trabajador.",
+      "explicacion": "1. **Determinar el número de cursos:** Hay 50 trabajadores y el máximo por curso es 30. No se pueden capacitar en un solo curso. Por lo tanto, se deben formar 2 cursos (por ejemplo, uno de 25 y otro de 25). 2. **Calcular el costo total de la instrucción:** El costo por curso es 30 horas * $30.000/hora = $900.000. Como son 2 cursos, el costo total es 2 * $900.000 = $1.800.000. 3. **Prorratear el costo:** Se divide el costo total entre el número de trabajadores para saber cuánto paga cada uno: $1.800.000 / 50 trabajadores = $36.000 por trabajador.",
+      "habilidad_evaluada": "Cálculo de costos y prorrateo en un problema con restricciones de agrupamiento.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Resultado de un error de cálculo.",
+        "C": "$450.000 es la mitad del costo de un solo curso.",
+        "D": "$900.000 es el costo total de un curso, no lo que paga cada uno de los 50 trabajadores."
+      },
+      "estrategias_resolucion": "1. Calcular cuántos grupos o cursos se deben formar según las restricciones. 2. Calcular el costo de un curso. 3. Calcular el costo total para todos los cursos. 4. Dividir el costo total entre el número total de participantes.",
+      "errores_comunes": "Calcular el costo para un solo curso y no para los dos necesarios. Dividir el costo de un solo curso entre los 50 trabajadores.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "análisis de costos",
+        "prorrateo",
+        "restricciones",
+        "problemas de varios pasos"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Interpretación y representación",
+      "contexto": "La empresa paga un total de $900.000 por la capacitación de los 40 funcionarios de la dependencia 'Importaciones'. La tabla muestra 4 módulos con su intensidad horaria y valor por hora. Los cursos tienen un cupo de 20 a 30 personas.",
+      "enunciado": "De acuerdo con el valor pagado, la capacitación corresponde al módulo",
+      "opciones": {
+        "A": "I",
+        "B": "II",
+        "C": "III",
+        "D": "IV"
+      },
+      "respuesta_correcta": "D",
+      "retroalimentacion": "Para capacitar a 40 funcionarios, se deben formar 2 cursos (la única combinación posible es 2 cursos de 20). Si el pago total fue de $900.000, el costo por curso fue de $900.000 / 2 = $450.000. Se debe buscar en la tabla el módulo cuyo costo total sea $450.000. Para el Módulo IV: 10 horas * $45.000/hora = $450.000. Coincide.",
+      "explicacion": "1. **Determinar el número de cursos:** Hay 40 trabajadores. Dado que el cupo por curso es de 20 a 30, la única manera de agruparlos es formando 2 cursos de 20 personas cada uno. 2. **Calcular el costo por curso:** El pago total de $900.000 se divide entre los 2 cursos, lo que da un costo de $450.000 por curso. 3. **Verificar el costo de instrucción de cada módulo:** Módulo I: 40h * $35.000 = $1.400.000. Módulo II: 30h * $30.000 = $900.000. Módulo III: 40h * $40.000 = $1.600.000. Módulo IV: 10h * $45.000 = $450.000. 4. El costo calculado ($450.000) coincide con el costo del Módulo IV.",
+      "habilidad_evaluada": "Resolución de problemas de tipo inverso, utilizando datos de una tabla y aplicando restricciones.",
+      "explicacion_opciones_incorrectas": {
+        "A": "El costo por curso sería de $1.400.000.",
+        "B": "El costo por curso sería de $900.000.",
+        "C": "El costo por curso sería de $1.600.000."
+      },
+      "estrategias_resolucion": "1. Determinar el número de cursos necesarios para el total de personas, cumpliendo las restricciones de cupo. 2. Calcular el costo por curso dividiendo el pago total entre el número de cursos. 3. Calcular el costo total de instrucción para cada módulo de la tabla. 4. Comparar y encontrar el módulo que coincide.",
+      "errores_comunes": "No tener en cuenta las restricciones de cupo y asumir que los 40 funcionarios forman un solo grupo. Calcular el pago por persona en lugar del costo por curso.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "problema inverso",
+        "análisis de costos",
+        "tablas",
+        "restricciones"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Argumentación",
+      "contexto": "Un portalápices tiene base y boca cuadradas. El perímetro de la base es 18 cm y el de la boca es 24 cm. Eliécer afirma: 'Como la razón de los perímetros es 18/24 = 3/4, la razón de las áreas también debe ser 3/4'.",
+      "enunciado": "¿Es verdadera esta afirmación?",
+      "opciones": {
+        "A": "No, porque la medición se realiza con el mismo caucho y, por tanto, las áreas de la base y la boca deben ser iguales.",
+        "B": "Sí, porque el caucho se estira dependiendo del área que encierre, por lo que las relaciones de las áreas y los perímetros son iguales.",
+        "C": "No, porque la relación obtenida se cumple para las longitudes de los lados, pero al calcular las áreas, la razón obtenida se eleva al cuadrado.",
+        "D": "Sí, porque como las figuras son semejantes, todas sus medidas deben tener la misma razón que los perímetros."
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "La razón de semejanza entre las longitudes (lados, perímetros) es k. La razón entre las áreas de figuras semejantes es k². En este caso, la razón de los perímetros es k = 18/24 = 3/4. Por lo tanto, la razón de las áreas es k² = (3/4)² = 9/16. La afirmación de que la razón de las áreas es 3/4 es incorrecta.",
+      "explicacion": "La relación entre medidas lineales (como el perímetro o la longitud de un lado) y medidas de superficie (como el área) en figuras semejantes no es la misma. Si la razón entre las longitudes correspondientes es 'k', la razón entre sus áreas será 'k²'. La razón de los perímetros es 18/24 = 3/4. Por lo tanto, la razón de las áreas no es 3/4, sino (3/4)² = 9/16. La opción C explica correctamente este principio geométrico.",
+      "habilidad_evaluada": "Comprensión de la relación entre las medidas de longitud y área en figuras semejantes (teorema de semejanza).",
+      "explicacion_opciones_incorrectas": {
+        "A": "Las áreas no son iguales, ya que los perímetros son diferentes.",
+        "B": "Este razonamiento es incorrecto; las relaciones de áreas y perímetros no son iguales.",
+        "D": "Es incorrecto afirmar que 'todas sus medidas' tienen la misma razón. Las medidas de área tienen una razón diferente (al cuadrado)."
+      },
+      "estrategias_resolucion": "1. Identificar la razón de semejanza lineal (k) a partir de los perímetros. 2. Recordar el principio de escalado de áreas: si las longitudes se escalan por un factor k, las áreas se escalan por un factor k². 3. Calcular la razón de las áreas elevando al cuadrado la razón de los perímetros. 4. Evaluar la afirmación del enunciado a la luz de este principio.",
+      "errores_comunes": "Asumir que la razón de las áreas es la misma que la razón de las longitudes (perímetros o lados).",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "semejanza",
+        "escala",
+        "perímetro",
+        "área",
+        "geometría"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Formulación y ejecución",
+      "contexto": "Un grupo de montañistas sabe que cada vez que la altitud aumenta en 100 m, la temperatura disminuye en 1 °C. Actualmente, el grupo se encuentra a una altitud de 1.000 m y la temperatura es de 20 °C.",
+      "enunciado": "¿Cuál de las siguientes expresiones les permite determinar la temperatura que habrá cuando se encuentren a una altitud de 4.000 m?",
+      "opciones": {
+        "A": "Temperatura = -(Altitud / 100) + 10",
+        "B": "Temperatura = -Altitud × 100 + 30",
+        "C": "Temperatura = -(Altitud / 100) + 30",
+        "D": "Temperatura = Altitud × 100 + 10"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "La relación es lineal. La temperatura (T) es una función de la altitud (A). La pendiente (tasa de cambio) es m = -1°C / 100m = -0.01. La ecuación es T = -A/100 + b. Usamos el punto conocido (A=1000, T=20) para hallar el intercepto b: 20 = -1000/100 + b, lo que da 20 = -10 + b, y por tanto b = 30. La fórmula completa es T = -A/100 + 30.",
+      "explicacion": "Este problema describe una relación lineal. La variable dependiente es la Temperatura (T) y la independiente es la Altitud (A). La tasa de cambio es que T disminuye 1 cuando A aumenta 100, lo que nos da la pendiente m = -1/100. La ecuación de una recta es T = m*A + b, así que T = (-1/100)A + b. Para encontrar el valor de 'b' (el intercepto), usamos el punto que conocemos: (1000, 20). Sustituimos en la ecuación: 20 = (-1/100)*1000 + b. Resolvemos: 20 = -10 + b, lo que implica que b = 30. Por lo tanto, la expresión correcta es T = -A/100 + 30.",
+      "habilidad_evaluada": "Modelado de situaciones mediante funciones lineales.",
+      "explicacion_opciones_incorrectas": {
+        "A": "El intercepto es incorrecto. Si A=1000, T = -10 + 10 = 0, lo cual no es 20.",
+        "B": "La estructura de la fórmula y la pendiente son incorrectas.",
+        "D": "La pendiente es positiva, lo que indicaría que la temperatura aumenta con la altitud."
+      },
+      "estrategias_resolucion": "1. Identificar que la relación entre temperatura y altitud es lineal. 2. Determinar la pendiente (tasa de cambio). 3. Escribir la ecuación de la recta en la forma T = m*A + b. 4. Utilizar el punto de referencia dado (1000 m, 20 °C) para resolver y encontrar el intercepto 'b'. 5. Escribir la ecuación completa.",
+      "errores_comunes": "Calcular incorrectamente la pendiente (por ejemplo, el signo) o cometer un error al despejar el intercepto 'b'.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "función lineal",
+        "modelado matemático",
+        "pendiente",
+        "tasa de cambio",
+        "álgebra"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Argumentación",
+      "contexto": "Un comerciante vende mango en dos ciudades, W y Z. La tabla muestra los precios de venta y los costos de transporte y trabajadores para cada ciudad. Para vender 6 toneladas de mango, se necesitan 2 camiones (capacidad 5 ton c/u). Venta Mango Z: $1.350.000/ton, W: $1.300.000/ton. Transporte Z: $180.000/camión, W: $150.000/camión. Trabajador Z: $200.000/viaje, W: $180.000/viaje (2 trab/camión).",
+      "enunciado": "Una persona afirma que para el comerciante es más rentable vender 6 toneladas de mango en la ciudad Z que en la ciudad W. La afirmación de esta persona es correcta, porque",
+      "opciones": {
+        "A": "el dinero recibido en la venta del producto en la ciudad Z es mayor que el recibido en la ciudad W.",
+        "B": "la diferencia entre el precio de venta por tonelada es mayor que la diferencia entre el costo de transporte por camión.",
+        "C": "la diferencia entre las ventas totales en cada ciudad es mayor que la diferencia entre los gastos totales.",
+        "D": "el dinero total gastado en empleados y transporte es mayor en la ciudad W que en la ciudad Z."
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "La rentabilidad se mide por la ganancia (Ingresos - Costos). Para que Z sea más rentable que W, el ingreso adicional obtenido en Z debe ser mayor que el costo adicional incurrido en Z. El ingreso extra en Z es (1.35M - 1.3M) * 6 ton = $300.000. El costo extra en Z es: [Transporte: (180k-150k)*2 camiones = $60.000] + [Trabajadores: (200k-180k)*4 trabajadores = $80.000] = $140.000. Como el ingreso extra ($300k) es mayor que el costo extra ($140k), Z es más rentable.",
+      "explicacion": "Para determinar cuál ciudad es más rentable, se debe comparar la ganancia neta en cada una. Una forma eficiente es analizar el cambio en ingresos y costos al pasar de W a Z. \n1. **Diferencia en Ingresos Totales:** La venta en Z es $50.000 más cara por tonelada. Para 6 toneladas, el ingreso adicional en Z es 6 * $50.000 = $300.000. \n2. **Diferencia en Gastos Totales:** Para 6 toneladas se necesitan 2 camiones. El transporte es $30.000 más caro por camión en Z (total $60.000 más). Los trabajadores son $20.000 más caros por viaje en Z y se necesitan 4 (2 por camión) (total $80.000 más). El gasto total adicional en Z es $60.000 + $80.000 = $140.000. \n3. **Conclusión:** La diferencia de ventas ($300.000) es mayor que la diferencia de gastos ($140.000), por lo que la ganancia es mayor en Z. La opción C describe este principio general.",
+      "habilidad_evaluada": "Análisis de rentabilidad, comparando ingresos y costos marginales para la toma de decisiones.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Tener mayores ingresos no es suficiente; los costos también son mayores y deben ser considerados.",
+        "B": "Esta es una comparación parcial que ignora otros costos importantes como los trabajadores.",
+        "D": "Es falso, el dinero total gastado es mayor en Z, no en W."
+      },
+      "estrategias_resolucion": "1. Entender que 'rentable' significa mayor ganancia (Ingresos - Costos). 2. Calcular la diferencia en los ingresos totales entre Z y W. 3. Calcular la diferencia en los gastos operativos totales entre Z y W. 4. Comparar ambas diferencias para determinar dónde es mayor la ganancia.",
+      "errores_comunes": "Tomar la decisión basándose solo en los precios de venta (ingresos) sin considerar los costos, o considerando solo una parte de los costos.",
+      "dificultad": "dificil",
+      "tiempo_estimado": 150,
+      "tags": [
+        "rentabilidad",
+        "análisis de costos",
+        "toma de decisiones",
+        "argumentación económica"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Formulación y ejecución",
+      "contexto": "Se venden 3 camiones cargados con 5 toneladas de banano cada uno en la ciudad W. Datos: Venta de banano en W: $1.000.000/ton. Compra de banano: $400.000/ton. Costo de transporte: $150.000/camión. Se contratan 2 trabajadores por camión, con un pago de $180.000 por trabajador por viaje.",
+      "enunciado": "¿Cuál es la ganancia que obtiene el comerciante?",
+      "opciones": {
+        "A": "$5.670.000",
+        "B": "$5.970.000",
+        "C": "$7.470.000",
+        "D": "$8.010.000"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "La ganancia se calcula como Ingresos Totales - Costos Totales. Ingresos: (3 camiones * 5 ton/camión) * $1.000.000/ton = $15.000.000. Costos: [Costo mercancía: 15 ton * $400.000/ton = $6.000.000] + [Costo transporte: 3 camiones * $150.000/camión = $450.000] + [Costo trabajadores: 3 camiones * 2 trab/camión * $180.000/trab = $1.080.000]. Costo Total = $7.530.000. Ganancia = $15.000.000 - $7.530.000 = $7.470.000.",
+      "explicacion": "El cálculo de la ganancia requiere sumar todos los ingresos y restar todos los costos. \n1. **Ingresos Totales:** Se venden un total de 3 * 5 = 15 toneladas. Ingresos = 15 ton * $1.000.000/ton = $15.000.000. \n2. **Costos Totales:** \n   - Costo de compra del banano: 15 ton * $400.000/ton = $6.000.000. \n   - Costo de transporte: 3 camiones * $150.000/camión = $450.000. \n   - Costo de personal: Se contratan 3 * 2 = 6 trabajadores. Costo = 6 trab * $180.000/trab = $1.080.000. \n   - Suma de todos los costos: $6.000.000 + $450.000 + $1.080.000 = $7.530.000. \n3. **Ganancia Neta:** Ingresos - Costos = $15.000.000 - $7.530.000 = $7.470.000.",
+      "habilidad_evaluada": "Ejecución de un algoritmo de varios pasos para resolver un problema de cálculo de ganancias.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Resultado de un error de cálculo.",
+        "B": "Resultado de un error de cálculo, probablemente olvidando un costo.",
+        "D": "Resultado de un error de cálculo."
+      },
+      "estrategias_resolucion": "1. Calcular la cantidad total de mercancía vendida. 2. Calcular los ingresos totales multiplicando la cantidad por el precio de venta. 3. Listar y calcular cada uno de los costos: mercancía, transporte y personal. 4. Sumar todos los costos. 5. Restar los costos totales de los ingresos totales.",
+      "errores_comunes": "Olvidar incluir el costo de compra de la mercancía, que es el costo más grande. Errores al calcular el número total de trabajadores o el costo total de personal.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "ganancia",
+        "análisis de costos",
+        "algoritmo",
+        "problemas financieros"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Formulación y ejecución",
+      "contexto": "Un comerciante da un bono a dos empleados por la venta de mango en la ciudad W. El bono se otorga por cada 5 toneladas completas vendidas y corresponde al 0,3% del dinero recibido por la venta de esas 5 toneladas para cada empleado. En un mes, los dos empleados vendieron 47 toneladas de mango en la ciudad W, donde el precio de venta es de $1.300.000 por tonelada.",
+      "enunciado": "Para hallar el bono recibido por cada uno de ellos, se ejecutó el siguiente procedimiento: Paso 1. Se dividió el número de toneladas vendidas entre 5 y se halló su residuo. Paso 2. Se restó del número de toneladas vendidas, el valor obtenido en el paso 1. Paso 3. Se multiplicó el valor obtenido en el paso 2 por el valor de venta de la tonelada del producto. Paso 4. Al valor obtenido en el paso 3, se le sacó el 0,3 %. El bono recibido por cada empleado fue, aproximadamente, de",
+      "opciones": {
+        "A": "526.000 pesos.",
+        "B": "175.000 pesos.",
+        "C": "148.000 pesos.",
+        "D": "87.000 pesos."
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "Las toneladas que generan bono son los múltiplos de 5 dentro de 47, es decir, 45 toneladas (9 bloques de 5 toneladas). El valor de venta de un bloque de 5 toneladas es 5 * $1.300.000 = $6.500.000. El bono por bloque para cada empleado es 0.3% de ese valor: $6.500.000 * 0.003 = $19.500. Como hay 9 bloques, el bono total por empleado es 9 * $19.500 = $175.500.",
+      "explicacion": "El problema se resuelve calculando el bono por cada bloque de 5 toneladas y luego multiplicándolo por el número de bloques. 1. Número de bloques de 5 toneladas en 47 toneladas: 47 / 5 = 9.4, por lo que hay 9 bloques completos. 2. Valor de venta de un bloque: 5 toneladas * $1.300.000/tonelada = $6.500.000. 3. Bono por bloque para cada empleado: 0.3% de $6.500.000 = $6.500.000 * 0.003 = $19.500. 4. Bono total para cada empleado: 9 bloques * $19.500/bloque = $175.500. El valor más cercano es $175.000.",
+      "habilidad_evaluada": "Ejecución y seguimiento de un algoritmo matemático que involucra porcentajes y proporcionalidad.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Error de cálculo.",
+        "C": "Error de cálculo.",
+        "D": "Este sería el resultado si el bono total ($175.500 * 2) se dividiera entre 4, o si el bono individual se dividiera entre 2, lo cual es incorrecto."
+      },
+      "estrategias_resolucion": "1. Determinar el número de unidades completas que califican para el bono (bloques de 5 toneladas). 2. Calcular el valor de venta por unidad. 3. Aplicar el porcentaje para encontrar el bono por unidad. 4. Multiplicar el bono por unidad por el número total de unidades.",
+      "errores_comunes": "Calcular el 0.3% del valor total de las 47 toneladas en lugar de las 45 que califican. Dividir incorrectamente el bono total entre los empleados.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "algoritmo",
+        "porcentajes",
+        "cálculo",
+        "procedimientos"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Interpretación y representación",
+      "contexto": "Se van a transportar 7 toneladas de fruta a la ciudad W y 10 toneladas a la ciudad Z. Se debe seleccionar la gráfica que represente los costos de transporte y de trabajadores para cada ciudad. Datos del contexto anterior: Capacidad del camión = 5 toneladas. 2 trabajadores por camión. Costos en W: transporte $150.000/camión, trabajador $180.000/viaje. Costos en Z: transporte $180.000/camión, trabajador $200.000/viaje.",
+      "enunciado": "Si se transportan 7 toneladas de fruta a la ciudad W y 10 toneladas de fruta a la ciudad Z, la gráfica que muestra la relación de costos por ciudad es",
+      "opciones": {
+        "A": "Gráfica A",
+        "B": "Gráfica B",
+        "C": "Gráfica C",
+        "D": "Gráfica D"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "Costos en W (7 ton): se necesitan 2 camiones. Costo transporte = 2 * 150.000 = 300.000. Costo trabajadores = 2 camiones * 2 trab/camión * 180.000/trab = 720.000. Costos en Z (10 ton): se necesitan 2 camiones. Costo transporte = 2 * 180.000 = 360.000. Costo trabajadores = 2 camiones * 2 trab/camión * 200.000/trab = 800.000. La gráfica B muestra correctamente estas barras: W(Transporte=300k, Trabajadores=720k) y Z(Transporte=360k, Trabajadores=800k).",
+      "explicacion": "1. **Cálculos para Ciudad W (7 toneladas):** \n   - Número de camiones: 7 ton / 5 ton/camión = 1.4. Se debe redondear hacia arriba, por lo que se necesitan 2 camiones. \n   - Costo de transporte: 2 camiones * $150.000 = $300.000. \n   - Costo de trabajadores: 2 camiones * 2 trab/camión * $180.000 = $720.000. \n2. **Cálculos para Ciudad Z (10 toneladas):** \n   - Número de camiones: 10 ton / 5 ton/camión = 2 camiones. \n   - Costo de transporte: 2 camiones * $180.000 = $360.000. \n   - Costo de trabajadores: 2 camiones * 2 trab/camión * $200.000 = $800.000. \n3. **Identificar la gráfica correcta:** Se busca una gráfica de barras que represente estos cuatro valores. La Gráfica B tiene la escala adecuada (hasta 900.000) y las alturas de las barras corresponden a los valores calculados.",
+      "habilidad_evaluada": "Representación gráfica de datos calculados a partir de información tabular y restricciones.",
+      "explicacion_opciones_incorrectas": {
+        "A": "La escala del eje Y es demasiado pequeña, no representa los costos reales.",
+        "C": "La escala del eje Y es demasiado pequeña.",
+        "D": "Las barras de costo de transporte y trabajadores están representadas con valores que no corresponden al cálculo."
+      },
+      "estrategias_resolucion": "1. Calcular el número de camiones necesarios para cada ciudad, redondeando hacia arriba. 2. Calcular el costo de transporte para cada ciudad. 3. Calcular el costo total de trabajadores para cada ciudad. 4. Buscar la gráfica de barras que represente visualmente los 4 valores calculados.",
+      "errores_comunes": "No redondear correctamente el número de camiones necesarios. Cometer errores al calcular el número total de trabajadores.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "gráficos de barras",
+        "interpretación de datos",
+        "representación gráfica",
+        "cálculo de costos"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Interpretación y representación",
+      "contexto": "Durante enero, un comerciante vendió un total de 100 toneladas de mango y 50 toneladas de banano, y contrató a 10 trabajadores en total. La capacidad de cada camión es de 5 toneladas.",
+      "enunciado": "Con esta información es posible conocer",
+      "opciones": {
+        "A": "la ganancia de los productores.",
+        "B": "el pago que recibirá cada trabajador en enero.",
+        "C": "los costos totales del comerciante.",
+        "D": "el número mínimo de viajes que se realizaron desde el pueblo."
+      },
+      "respuesta_correcta": "D",
+      "retroalimentacion": "Se puede calcular el total de toneladas transportadas, que es 100 + 50 = 150 toneladas. Sabiendo que cada camión (que representa un viaje) transporta un máximo de 5 toneladas, se puede calcular el número mínimo de viajes necesarios para transportar toda la mercancía: 150 toneladas / 5 toneladas/viaje = 30 viajes.",
+      "explicacion": "Se debe analizar qué información se puede deducir de los datos proporcionados. \n- **A (ganancia de productores):** No es posible, ya que no se conocen los costos de producción. \n- **B (pago por trabajador):** No es posible, ya que el pago es por viaje y no se sabe cuántos viajes realizó cada uno de los 10 trabajadores. \n- **C (costos totales del comerciante):** No es posible, ya que no se sabe a qué ciudades (W o Z) se transportó la fruta, y los costos de transporte y personal varían según el destino. \n- **D (número mínimo de viajes):** Es posible. El total de mercancía es 150 toneladas. Si cada viaje transporta 5 toneladas, el número de viajes es 150 / 5 = 30.",
+      "habilidad_evaluada": "Evaluación de la suficiencia de datos para resolver un problema.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Falta información sobre los costos de los productores (quienes le venden al comerciante).",
+        "B": "Falta información sobre la distribución de los viajes entre los 10 trabajadores.",
+        "C": "Falta información sobre el destino de los viajes, que es crucial para determinar los costos."
+      },
+      "estrategias_resolucion": "1. Listar la información conocida y desconocida. 2. Evaluar cada opción y determinar si todos los datos necesarios para su cálculo están presentes en el enunciado. 3. Reconocer que para calcular el número de viajes solo se necesita el total de toneladas y la capacidad del camión, ambos datos conocidos.",
+      "errores_comunes": "Asumir información que no está en el problema, como que los viajes o los destinos se distribuyeron de una manera específica.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "suficiencia de datos",
+        "análisis de información",
+        "problemas logísticos"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Formulación y ejecución",
+      "contexto": "Un rectángulo tiene un área inicial A = L * W, donde L es el largo y W es el ancho.",
+      "enunciado": "Si en un rectángulo se aumenta la longitud de uno de sus lados en 100 %, su área",
+      "opciones": {
+        "A": "aumenta en un 50 %.",
+        "B": "se duplica.",
+        "C": "no cambia.",
+        "D": "aumenta en 100 unidades."
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "Aumentar una cantidad en un 100% es equivalente a duplicarla. Si el lado 'L' se aumenta en 100%, su nueva longitud es L + (100/100)*L = L + L = 2L. La nueva área será A' = (2L) * W = 2 * (L * W) = 2A. El área original (A) se multiplica por 2, es decir, se duplica.",
+      "explicacion": "Sea el área original A = Largo × Ancho. Si aumentamos el Largo en 100%, el nuevo largo (L') será el largo original más el 100% de sí mismo: L' = L + 1.00*L = 2L. La nueva área (A') se calcula con el nuevo largo: A' = L' × Ancho = (2L) × Ancho = 2 × (L × Ancho) = 2A. La nueva área es el doble del área original.",
+      "habilidad_evaluada": "Cálculo de áreas y comprensión de incrementos porcentuales.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Un aumento del 50% significaría que el área final es 1.5 veces la original.",
+        "C": "El área debe cambiar, ya que una de sus dimensiones cambió.",
+        "D": "El aumento es proporcional (un factor de 2), no un valor aditivo fijo de 100 unidades."
+      },
+      "estrategias_resolucion": "1. Definir el área inicial A = l*w. 2. Calcular la nueva longitud de un lado al aumentarlo en 100% (es decir, multiplicarlo por 2). 3. Calcular la nueva área con la nueva longitud. 4. Comparar la nueva área con la original para determinar el factor de cambio.",
+      "errores_comunes": "Pensar que un aumento del 100% en una dimensión lineal se traduce en un aumento del 100% en el área. Un aumento DEL 100% significa que el valor se duplica (nuevo valor = valor original + 100% del valor original).",
+      "dificultad": "facil",
+      "tiempo_estimado": 90,
+      "tags": [
+        "porcentajes",
+        "área",
+        "rectángulo",
+        "geometría"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Interpretación y representación",
+      "contexto": "La trayectoria de un asteroide es descrita por una parábola con la ecuación general y = ax² + bx + c. Un astrónomo conoce las coordenadas de dos puntos, M y N, por los cuales pasó el asteroide.",
+      "enunciado": "Si se necesita hallar los valores a, b y c que describen la ecuación de la parábola, ¿qué información adicional se debe conocer?",
+      "opciones": {
+        "A": "La coordenada x del vértice de la parábola.",
+        "B": "Un tercer punto de la parábola que se describe.",
+        "C": "Si la parábola abre hacia arriba o hacia abajo.",
+        "D": "Las distancias entre el planeta y los puntos M y N."
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "La ecuación de la parábola y = ax² + bx + c tiene tres coeficientes desconocidos (a, b, c). Para encontrar el valor de tres incógnitas se necesita un sistema de tres ecuaciones. Cada punto (x, y) que pertenece a la parábola proporciona una ecuación. Como ya se conocen dos puntos (M y N), se tienen dos ecuaciones. Por lo tanto, se necesita un tercer punto para generar la tercera ecuación necesaria para resolver el sistema y hallar a, b y c.",
+      "explicacion": "Para determinar de manera única una parábola con eje vertical, se necesitan tres condiciones independientes. Conocer dos puntos proporciona dos de estas condiciones. Un tercer punto no colineal con los dos primeros proporcionará la tercera condición necesaria, permitiendo establecer un sistema de 3 ecuaciones con 3 incógnitas (a, b, c) y resolverlo.",
+      "habilidad_evaluada": "Comprensión de las condiciones necesarias para definir una función cuadrática.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Conocer solo la coordenada x del vértice (-b/2a) proporciona una ecuación que relaciona a y b, pero no es suficiente para hallar los tres valores.",
+        "C": "Saber la concavidad solo determina el signo de 'a' (positivo o negativo), no su valor numérico.",
+        "D": "Estas distancias no se relacionan directamente con los coeficientes de la parábola en el sistema de coordenadas dado."
+      },
+      "estrategias_resolucion": "1. Identificar el número de incógnitas en la ecuación general de la parábola (a, b, c). 2. Recordar el principio de álgebra que establece que se necesitan 'n' ecuaciones independientes para resolver 'n' incógnitas. 3. Darse cuenta de que cada punto conocido proporciona una ecuación. 4. Concluir que si se tienen 2 puntos, se necesita una tercera pieza de información, como un tercer punto.",
+      "errores_comunes": "No recordar que se necesitan tres puntos para definir una parábola o sobreestimar la información que proporciona el vértice (conocer solo la coordenada x no es suficiente, se necesita el punto completo).",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "parábola",
+        "función cuadrática",
+        "sistemas de ecuaciones",
+        "geometría analítica"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Argumentación",
+      "contexto": "En una escuela de natación con 16 estudiantes, aquellos con estatura inferior a 1,80 m van a la piscina menos profunda y los demás a la más profunda. El director se entera de que el promedio de estatura del grupo es de 1,70 m e insiste en aceptar más alumnos hasta que el promedio sea 1,80 m, afirmando que de esta manera se logrará igualar la cantidad de personas en las dos piscinas.",
+      "enunciado": "¿Por qué es errónea la afirmación del director?",
+      "opciones": {
+        "A": "Porque las 16 personas se encuentran actualmente en la piscina menos profunda. El director de la escuela debe aceptar otros 16 alumnos con una estatura superior a 1,80 m.",
+        "B": "Porque con el promedio es imposible determinar la cantidad de personas en las piscinas. Es necesario utilizar otras medidas, como la estatura máxima o mínima de las personas, en lugar de esta.",
+        "C": "Porque incrementar el promedio a 1,80 m es insuficiente. El director de la escuela debe aceptar más estudiantes con una altura de 1,80 m hasta que la cantidad de alumnos sea igual en ambas piscinas.",
+        "D": "Porque aunque el promedio de estatura de las 16 personas sea inferior a 1,80 m, no significa que la cantidad de personas en las piscinas sea diferente."
+      },
+      "respuesta_correcta": "D",
+      "retroalimentacion": "El promedio es una medida de tendencia central y no informa sobre la distribución de los datos. Es posible que, a pesar de que el promedio sea 1,70 m, ya haya un número igual de estudiantes en ambas piscinas (por ejemplo, 8 estudiantes con 1,60 m y 8 con 1,80 m, cuyo promedio es 1,70 m). El director comete el error de asumir una distribución a partir del promedio.",
+      "explicacion": "El error del director es una falacia estadística. El promedio de 1,70 m no implica que la mayoría o todos los estudiantes midan menos de 1,80 m. La distribución de las estaturas puede ser variada. Por ejemplo, si 8 estudiantes miden 1.60 m (irían a la piscina poco profunda) y 8 estudiantes miden 1.80 m (irían a la piscina profunda), el promedio del grupo es exactamente 1.70 m, y la cantidad de personas en las piscinas ya es igual. Por lo tanto, la premisa del director (que los grupos están desiguales) no se puede deducir del promedio.",
+      "habilidad_evaluada": "Comprensión de las limitaciones del promedio como medida estadística y el razonamiento sobre la distribución de datos.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Es una afirmación que no podemos verificar; no sabemos si todos están en la piscina menos profunda.",
+        "B": "Si bien es cierto que el promedio es insuficiente, la opción D es más precisa porque ataca directamente la premisa falsa del director sobre la situación actual.",
+        "C": "Esto es una sugerencia de acción, no una explicación del error en el razonamiento del director."
+      },
+      "estrategias_resolucion": "1. Entender qué es el promedio y qué información no proporciona (distribución). 2. Crear un contraejemplo: construir un conjunto de datos cuyo promedio sea 1.70 m pero donde la distribución en las piscinas sea igual. 3. Concluir que la inferencia del director (que los grupos son desiguales) es inválida.",
+      "errores_comunes": "Creer que si el promedio de un grupo está por debajo de un valor de corte, entonces la mayoría de los individuos del grupo también lo están.",
+      "dificultad": "dificil",
+      "tiempo_estimado": 150,
+      "tags": [
+        "estadística",
+        "promedio",
+        "media",
+        "distribución",
+        "falacia"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Formulación y ejecución",
+      "contexto": "En un juego se eligen tres números positivos, X, Z y W. Un animador da como pistas los valores de los productos R = XZ, S = XW y T = ZW.",
+      "enunciado": "Una de las jugadoras quiere hallar X primero; la forma de hallarlo es resolviendo",
+      "opciones": {
+        "A": "R + S",
+        "B": "sqrt(RST)",
+        "C": "(R + S - T) / 2",
+        "D": "sqrt(RS / T)"
+      },
+      "respuesta_correcta": "D",
+      "retroalimentacion": "Para despejar X, se pueden combinar algebraicamente las ecuaciones. Si se multiplican las dos ecuaciones que contienen X (R y S), se obtiene: R * S = (XZ) * (XW) = X²ZW. Luego, se observa que T = ZW. Sustituyendo T en la expresión anterior, se tiene RS = X²T. Para aislar X, se divide por T y se saca la raíz cuadrada: X = sqrt(RS / T).",
+      "explicacion": "El problema requiere manipulación algebraica para aislar la variable X a partir del sistema de ecuaciones dado: \n1) R = XZ \n2) S = XW \n3) T = ZW \n- Paso 1: Multiplicar la ecuación 1 y 2: R * S = (XZ) * (XW) = X² * Z * W. \n- Paso 2: Sustituir la ecuación 3 en el resultado del paso 1: RS = X² * T. \n- Paso 3: Despejar X²: X² = RS / T. \n- Paso 4: Sacar la raíz cuadrada en ambos lados para hallar X: X = √(RS / T).",
+      "habilidad_evaluada": "Manipulación de expresiones algebraicas para resolver un sistema de ecuaciones no lineales.",
+      "explicacion_opciones_incorrectas": {
+        "A": "R + S = XZ + XW = X(Z+W), de donde no se puede despejar X.",
+        "B": "sqrt(RST) = sqrt((XZ)(XW)(ZW)) = sqrt(X²Z²W²) = XZW. El resultado no es X.",
+        "C": "Esta expresión no se simplifica para obtener X."
+      },
+      "estrategias_resolucion": "1. Escribir las tres ecuaciones. 2. Identificar la variable a despejar (X). 3. Probar operaciones (multiplicación, división) con las ecuaciones para eliminar las otras variables (Z y W). 4. Multiplicar las dos primeras ecuaciones y luego dividir por la tercera es la estrategia más directa.",
+      "errores_comunes": "Intentar resolver el sistema sumando o restando las ecuaciones, lo cual no es efectivo para este tipo de relaciones multiplicativas.",
+      "dificultad": "dificil",
+      "tiempo_estimado": 150,
+      "tags": [
+        "álgebra",
+        "sistemas de ecuaciones",
+        "manipulación algebraica",
+        "despeje de variables"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Interpretación y representación",
+      "contexto": "Un barco navega entre faros. La figura muestra un triángulo complejo con varios ángulos y longitudes marcadas como '1' y '2'. Se pregunta por la distancia 'x' entre el faro superior y el barco. El ángulo en el faro superior es de 45°.",
+      "enunciado": "En el instante en que el ángulo formado entre el barco, el faro superior y cualquiera de los otros faros es de 45°, ¿cuál es la distancia x entre el faro superior y el barco?",
+      "opciones": {
+        "A": "x = (2 sen(30°)) / sen(45°)",
+        "B": "x = (2 sen(60°)) / sen(45°)",
+        "C": "x = sen(60°) / sen(75°)",
+        "D": "x = sen(30°) / sen(60°)"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "La solución se encuentra aplicando la Ley de Senos en el triángulo formado por el Barco (B), el Faro Superior (S) y el Faro Inferior Derecho (Fd). Se interpreta del diagrama que la longitud del lado SFd es 1. Los ángulos de este triángulo son: ∠S = 45°, ∠Fd = 60°, y por lo tanto ∠B = 180°-45°-60° = 75°. La distancia buscada es x = BS, opuesta al ángulo de 60°. Aplicando la Ley de Senos: x/sen(60°) = 1/sen(75°). Despejando x, se obtiene x = sen(60°)/sen(75°).",
+      "explicacion": "1. **Identificar el triángulo de trabajo:** El triángulo relevante es el formado por los vértices Barco (B), Faro Superior (S) y Faro Inferior Derecho (Fd). \n2. **Determinar sus ángulos:** Del diagrama y el enunciado, se tiene que el ángulo en S es 45° y el ángulo en Fd es 60°. El tercer ángulo, en B, se calcula como 180° - 45° - 60° = 75°. \n3. **Identificar lados y ángulos opuestos:** La distancia buscada es x = BS, y su ángulo opuesto es 60°. La longitud conocida es la del lado SFd, que se interpreta del diagrama como 1, y su ángulo opuesto es 75°. \n4. **Aplicar la Ley de Senos:** (lado / seno del ángulo opuesto) es una constante para el triángulo. \n   x / sen(60°) = 1 / sen(75°) \n5. **Despejar x:** \n   x = sen(60°) / sen(75°).",
+      "habilidad_evaluada": "Aplicación de la Ley de Senos en un problema de trigonometría y la interpretación de un diagrama geométrico complejo.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Resultado de una aplicación incorrecta de la Ley de Senos o de usar los datos del lado de longitud 2.",
+        "B": "Resultado de una aplicación incorrecta de la Ley de Senos.",
+        "D": "No corresponde a una aplicación válida de la Ley de Senos en este problema."
+      },
+      "estrategias_resolucion": "1. Identificar el triángulo más adecuado para resolver el problema (aquel del que se conocen más datos). 2. Interpretar todas las etiquetas del diagrama (ángulos y longitudes). 3. Calcular los ángulos faltantes del triángulo seleccionado. 4. Aplicar la Ley de Senos para relacionar el lado conocido con el lado desconocido. 5. Despejar la incógnita.",
+      "errores_comunes": "Interpretar erróneamente el diagrama, por ejemplo, usando la longitud '2' en el triángulo incorrecto o confundiendo qué ángulo es opuesto a qué lado.",
+      "dificultad": "dificil",
+      "tiempo_estimado": 150,
+      "tags": [
+        "trigonometría",
+        "ley de senos",
+        "geometría",
+        "interpretación de diagramas"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Formulación y ejecución",
+      "contexto": "En un juego de tenis de mesa entre dos robots, P y Q, el marcador inicial es de 7 a 2 a favor de P. A partir de ese momento, por cada 2 puntos que anota el robot P, el robot Q anota 3.",
+      "enunciado": "¿Cuál de las siguientes ecuaciones permite determinar cuándo igualará en puntos el robot Q al robot P?",
+      "opciones": {
+        "A": "3/2 x = 0. Donde x es la cantidad de puntos que anotará P.",
+        "B": "7 + x = 3/2 x + 2. Donde x es la cantidad de puntos que anotará P.",
+        "C": "7 + 3x = 2 + 2y. Donde x es la cantidad de puntos que anotará P, y y es la cantidad de puntos que anotará Q.",
+        "D": "x + y = 7 + 2. Donde x es la cantidad de puntos que anotará P, y y es la cantidad de puntos que anotará Q."
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "Sea 'x' el número de puntos adicionales que anota P. Dado que Q anota 3 puntos por cada 2 de P, los puntos adicionales de Q serán (3/2)x. El puntaje final de P será su puntaje inicial más los puntos adicionales: 7 + x. El puntaje final de Q será: 2 + (3/2)x. Para que los puntajes sean iguales, se igualan ambas expresiones: 7 + x = 2 + (3/2)x.",
+      "explicacion": "1. **Establecer los puntajes iniciales:** P_inicial = 7; Q_inicial = 2. \n2. **Definir una variable para los puntos futuros:** Sea 'x' el número de puntos que P anota desde ahora. \n3. **Establecer la relación proporcional:** Por cada 2 de P, Q anota 3. Esto significa que los puntos que anota Q son (3/2) veces los que anota P. Puntos futuros de Q = (3/2)x. \n4. **Escribir las expresiones para los puntajes finales:** \n   - Puntaje_Final_P = 7 + x \n   - Puntaje_Final_Q = 2 + (3/2)x \n5. **Plantear la ecuación de igualdad:** Para encontrar el momento del empate, se igualan los puntajes finales: 7 + x = 2 + (3/2)x.",
+      "habilidad_evaluada": "Modelado de una situación de cambio proporcional mediante una ecuación lineal.",
+      "explicacion_opciones_incorrectas": {
+        "A": "No representa la condición de igualdad de los marcadores.",
+        "C": "Utiliza dos variables para los puntos futuros (x, y) pero no establece la relación entre ellas (y = 3/2 x), por lo que es un sistema incompleto.",
+        "D": "Esta ecuación no modela la situación de cambio proporcional ni los puntajes iniciales correctamente."
+      },
+      "estrategias_resolucion": "1. Identificar los valores iniciales de cada marcador. 2. Definir una variable para el cambio en uno de los marcadores. 3. Expresar el cambio en el otro marcador en términos de esa misma variable usando la proporción dada. 4. Escribir una expresión para el valor final de cada marcador. 5. Igualar las dos expresiones finales.",
+      "errores_comunes": "Establecer incorrectamente la relación proporcional, por ejemplo, como (2/3)x en lugar de (3/2)x. Olvidar sumar los puntajes iniciales.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "álgebra",
+        "ecuaciones lineales",
+        "modelado matemático",
+        "proporcionalidad"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Interpretación y representación",
+      "contexto": "Una tabla presenta la información sobre el gasto en publicidad (p) y las ganancias (G) de una empresa, en millones de pesos, para tres años consecutivos. Los datos son: (p=200, G=8.000), (p=280, G=10.400), (p=250, G=9.500).",
+      "enunciado": "¿Cuál es la función que representa la ganancia obtenida G, en millones de pesos, en función del gasto en publicidad p?",
+      "opciones": {
+        "A": "G(p) = 30p + 2.000",
+        "B": "G(p) = 10p",
+        "C": "G(p) = 40p",
+        "D": "G(p) = 40p - 800"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "Se debe probar cada función con los datos de la tabla para ver cuál se cumple para todos los puntos. Para la opción A: G(p) = 30p + 2.000. \n- Para p=200: G(200) = 30(200) + 2.000 = 6.000 + 2.000 = 8.000. (Correcto). \n- Para p=280: G(280) = 30(280) + 2.000 = 8.400 + 2.000 = 10.400. (Correcto). \n- Para p=250: G(250) = 30(250) + 2.000 = 7.500 + 2.000 = 9.500. (Correcto). \nLa función de la opción A es la única que satisface los tres puntos.",
+      "explicacion": "El problema pide encontrar el modelo de función lineal que se ajusta a los tres pares de datos (p, G) proporcionados. El método más directo y rápido es la verificación: sustituir los valores de 'p' de la tabla en cada una de las funciones propuestas y comprobar si el resultado coincide con el valor de 'G' correspondiente. Solo la función G(p) = 30p + 2.000 satisface esta condición para los tres pares de datos.",
+      "habilidad_evaluada": "Identificación de una función lineal a partir de datos tabulados.",
+      "explicacion_opciones_incorrectas": {
+        "B": "Para p=200, G(200) = 2.000, lo cual es diferente de 8.000.",
+        "C": "Para p=200, G(200) = 8.000 (funciona), pero para p=280, G(280) = 11.200, que es diferente de 10.400.",
+        "D": "Para p=200, G(200) = 8.000 - 800 = 7.200, lo cual es diferente de 8.000."
+      },
+      "estrategias_resolucion": "1. Tomar el primer par de datos de la tabla (p=200, G=8.000). 2. Sustituir p=200 en cada una de las cuatro funciones candidatas. 3. Descartar las funciones que no den como resultado G=8.000. 4. Si queda más de una opción, usar el segundo par de datos para desempatar.",
+      "errores_comunes": "Probar la función con un solo punto y asumir que es correcta sin verificar con los demás. Cometer errores de cálculo al hacer la sustitución.",
+      "dificultad": "facil",
+      "tiempo_estimado": 90,
+      "tags": [
+        "función lineal",
+        "interpretación de tablas",
+        "modelado matemático",
+        "verificación"
+      ]
+    },
+    {
+      "materia": "Matemáticas",
+      "competencia": "Argumentación",
+      "contexto": "En una tienda, las mesas (M) se venden a $40.000 y las sillas (S) a $20.000. El ingreso total del mes fue de $1.400.000. Se sabe que 'se vendieron 3 veces más sillas que mesas'. Para modelar la situación, se proponen dos ecuaciones: Ecuación 1: 40.000M + 20.000S = 1.400.000. Ecuación 2: M = 3S.",
+      "enunciado": "¿Las ecuaciones representan correctamente la situación?",
+      "opciones": {
+        "A": "No, porque aunque la ecuación 1 relaciona cada precio con la variable adecuada de forma correcta, la ecuación 2 significa que se venden 3 veces más mesas que sillas.",
+        "B": "Sí, porque la ecuación 1 relaciona cada precio con la variable adecuada y la ecuación 2 tiene en cuenta que la cantidad de sillas es 3 veces mayor que la de mesas.",
+        "C": "No, porque aunque la ecuación 2 tiene en cuenta que la cantidad de sillas es 3 veces mayor que la de mesas, en la ecuación 1 los precios deberían estar dividiendo y no multiplicando.",
+        "D": "Sí, porque al solucionar las dos ecuaciones se obtiene un número entero, lo cual es consistente con las condiciones iniciales del problema."
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "La Ecuación 1, que modela el ingreso total, es correcta. Sin embargo, la Ecuación 2 es incorrecta. La frase 'se vendieron 3 veces más sillas que mesas' significa que el número de sillas (S) es el triple que el número de mesas (M). Esto se traduce algebraicamente como S = 3M. La ecuación propuesta, M = 3S, significa lo contrario: 'se vendieron 3 veces más mesas que sillas'.",
+      "explicacion": "Se debe evaluar la correcta traducción del lenguaje verbal al lenguaje algebraico para cada parte del problema. \n- **Ecuación 1:** (precio de una mesa × número de mesas) + (precio de una silla × número de sillas) = Ingreso total. La ecuación 40.000M + 20.000S = 1.400.000 es una representación correcta de esta relación. \n- **Ecuación 2:** La frase clave es '3 veces más sillas (S) que mesas (M)'. Esto implica que la cantidad de sillas es mayor. Para que la igualdad se cumpla, se debe multiplicar la cantidad menor (M) por 3 para igualarla a la mayor (S). La ecuación correcta es S = 3M. La ecuación propuesta M = 3S es incorrecta.",
+      "habilidad_evaluada": "Traducción de lenguaje verbal a lenguaje algebraico y evaluación de la validez de un modelo matemático.",
+      "explicacion_opciones_incorrectas": {
+        "B": "Es incorrecto porque la Ecuación 2 está mal planteada.",
+        "C": "Es incorrecto porque la Ecuación 1 es correcta (los precios multiplican, no dividen) y la Ecuación 2 está mal planteada.",
+        "D": "La validez de un modelo no depende de si su solución es entera. Un modelo puede estar mal planteado y casualmente dar una solución entera."
+      },
+      "estrategias_resolucion": "1. Analizar la Ecuación 1 para verificar si representa correctamente los ingresos. 2. Analizar la Ecuación 2. 3. Traducir cuidadosamente la frase que relaciona las cantidades de sillas y mesas a una ecuación. 4. Comparar la traducción propia con la Ecuación 2 para detectar la discrepancia.",
+      "errores_comunes": "Cometer el error clásico de traducción y escribir M = 3S en lugar de S = 3M para la frase '3 veces más sillas que mesas'.",
+      "dificultad": "media",
+      "tiempo_estimado": 120,
+      "tags": [
+        "sistemas de ecuaciones",
+        "modelado matemático",
+        "lenguaje algebraico",
+        "argumentación"
+      ]
+    },
+
+        {
+          "materia": "Matemáticas",
+          "competencia": "Formulación y ejecución",
+          "contexto": "Se muestra un triángulo isósceles con un lado de 120 cm y un ángulo adyacente a la base de 45°. Se realiza un corte paralelo a la base, a la mitad de la altura 'h'. Para encontrar la altura, se utiliza la fórmula sen(45°) = h/120. Se proporciona la aproximación sen(45°) ≈ 0.71.",
+          "enunciado": "Realizando este procedimiento, y teniendo en cuenta la aproximación, la distancia a la que se cortó la altura del triángulo fue, aproximadamente,",
+          "opciones": {
+            "A": "85 cm.",
+            "B": "60 cm.",
+            "C": "42 cm.",
+            "D": "30 cm."
+          },
+          "respuesta_correcta": "C",
+          "retroalimentacion": "El procedimiento es: 1. Calcular la altura total 'h' usando la fórmula h = 120 * sen(45°). 2. Calcular la distancia del corte, que es la mitad de la altura (h/2). Usando la aproximación: h ≈ 120 * 0.71 = 85.2 cm. La distancia del corte es d ≈ 85.2 / 2 = 42.6 cm. El valor más cercano es 42 cm.",
+          "explicacion": "El problema pide ejecutar un procedimiento de cálculo en dos pasos: \n1. **Calcular la altura total (h):** A partir de la fórmula trigonométrica dada, se despeja h: h = 120 * sen(45°). Se utiliza la aproximación proporcionada: h ≈ 120 * 0.71 = 85.2 cm. \n2. **Calcular la distancia del corte:** El enunciado indica que el corte se realiza 'por la mitad a la altura'. Por lo tanto, la distancia buscada es h/2. Distancia ≈ 85.2 cm / 2 = 42.6 cm. \nEl valor más cercano en las opciones es 42 cm.",
+          "habilidad_evaluada": "Aplicación de razones trigonométricas y ejecución de un procedimiento de cálculo.",
+          "explicacion_opciones_incorrectas": {
+            "A": "85 cm es una aproximación de la altura total del triángulo, no de la mitad de la altura.",
+            "B": "60 cm es la mitad de la hipotenusa (120 cm), no de la altura.",
+            "D": "Resultado de un error de cálculo."
+          },
+          "estrategias_resolucion": "1. Plantear la ecuación para la altura h a partir de los datos y la fórmula dada. 2. Resolver para h usando la aproximación. 3. Dividir el resultado de h entre 2 para encontrar la distancia del corte.",
+          "errores_comunes": "Olvidar dividir la altura por 2 y dar como respuesta la altura total.",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "trigonometría",
+            "seno",
+            "triángulo rectángulo",
+            "cálculo"
+          ]
+        },
+        {
+          "materia": "Matemáticas",
+          "competencia": "Formulación y ejecución",
+          "contexto": "Un cartabón es una plantilla con forma de triángulo rectángulo escaleno, donde la hipotenusa mide el doble del cateto menor. Esto corresponde a un triángulo con ángulos de 30°, 60° y 90°. Se muestra un cartabón donde el cateto más largo mide 32 centímetros. Se proporciona una tabla con los valores de seno, coseno y tangente para 30° y 60°.",
+          "enunciado": "Si el cateto más largo de un cartabón mide 32 centímetros, como muestra la figura, ¿cuál de las siguientes medidas corresponde a su cateto menor?",
+          "opciones": {
+            "A": "16 cm.",
+            "B": "32 / sqrt(3) cm.",
+            "C": "27 cm.",
+            "D": "64 / sqrt(3) cm."
+          },
+          "respuesta_correcta": "B",
+          "retroalimentacion": "En un triángulo 30-60-90, el cateto largo (opuesto al ángulo de 60°) es √3 veces el cateto menor (opuesto al de 30°). Si el cateto largo es 32, entonces 32 = cateto_menor * √3. Despejando, cateto_menor = 32 / √3. Alternativamente, usando la tabla: tan(60°) = cateto_largo / cateto_menor => √3 = 32 / cateto_menor.",
+          "explicacion": "1. **Identificar el tipo de triángulo:** Un cartabón es un triángulo rectángulo 30-60-90. \n2. **Relacionar lados y ángulos:** El cateto más largo (32 cm) es el que se opone al ángulo más grande (60°). El cateto menor (que buscamos, llamémoslo 'a') es el que se opone al ángulo más pequeño (30°). \n3. **Usar una razón trigonométrica:** Podemos relacionar los dos catetos mediante la tangente del ángulo de 60°. \n   tan(60°) = cateto opuesto / cateto adyacente = 32 / a. \n4. **Resolver para 'a':** De la tabla, sabemos que tan(60°) = √3. Entonces, √3 = 32 / a. Despejando 'a', obtenemos a = 32 / √3 cm.",
+          "habilidad_evaluada": "Resolución de problemas de trigonometría en triángulos rectángulos notables (30-60-90).",
+          "explicacion_opciones_incorrectas": {
+            "A": "16 cm sería el cateto menor si 32 cm fuera la medida de la hipotenusa.",
+            "C": "Resultado de un error de cálculo.",
+            "D": "Resultado de un error en el despeje algebraico."
+          },
+          "estrategias_resolucion": "1. Reconocer el triángulo como un 30-60-90. 2. Identificar qué lado corresponde al cateto largo y cuál al cateto menor. 3. Utilizar una razón trigonométrica (como la tangente) que relacione los dos catetos. 4. Despejar el lado desconocido.",
+          "errores_comunes": "Confundir el cateto largo con la hipotenusa. Aplicar incorrectamente las razones trigonométricas o las proporciones del triángulo 30-60-90.",
+          "dificultad": "media",
+          "tiempo_estimado": 120,
+          "tags": [
+            "trigonometría",
+            "triángulo 30-60-90",
+            "cartabón",
+            "catetos",
+            "tangente"
+          ]
+        },
+        {
+          "materia": "Matemáticas",
+          "competencia": "Interpretación y representación",
+          "contexto": "Un conjunto de números S tiene un promedio de 9 y una desviación estándar de 3. Se crea un nuevo conjunto T tomando cada elemento de S y sumándole una constante de 4 unidades.",
+          "enunciado": "Es correcto afirmar, entonces, que para los elementos del conjunto T su promedio y su desviación estándar son, respectivamente,",
+          "opciones": {
+            "A": "9 y 3.",
+            "B": "9 y 7.",
+            "C": "13 y 3.",
+            "D": "13 y 7."
+          },
+          "respuesta_correcta": "C",
+          "retroalimentacion": "Al sumar una constante 'k' a cada dato de un conjunto, el promedio del nuevo conjunto aumenta en 'k'. La desviación estándar, que mide la dispersión de los datos, no cambia, porque todos los datos se desplazan juntos manteniendo la misma separación entre ellos. Nuevo promedio = 9 + 4 = 13. Nueva desviación estándar = 3.",
+          "explicacion": "El problema evalúa el conocimiento de las propiedades de las medidas estadísticas ante transformaciones lineales de los datos. \n- **Promedio (Medida de posición):** Es sensible a la suma de una constante. Si cada dato aumenta en 4, la media también aumenta en 4. Promedio(T) = Promedio(S) + 4 = 9 + 4 = 13. \n- **Desviación Estándar (Medida de dispersión):** Es insensible a la suma de una constante. Al desplazar todo el conjunto de datos por igual, la 'amplitud' o 'dispersión' del conjunto no se altera. Desviación(T) = Desviación(S) = 3.",
+          "habilidad_evaluada": "Comprensión de las propiedades de las medidas estadísticas (promedio y desviación estándar) ante transformaciones de datos.",
+          "explicacion_opciones_incorrectas": {
+            "A": "El promedio sí cambia.",
+            "B": "El promedio cambia, pero la desviación estándar no.",
+            "D": "La desviación estándar no cambia."
+          },
+          "estrategias_resolucion": "1. Recordar la propiedad del promedio cuando se suma una constante a los datos. 2. Recordar la propiedad de la desviación estándar cuando se suma una constante a los datos. 3. Aplicar estas propiedades a los valores numéricos dados.",
+          "errores_comunes": "Creer que la desviación estándar también aumenta al sumar una constante a los datos.",
+          "dificultad": "media",
+          "tiempo_estimado": 120,
+          "tags": [
+            "estadística",
+            "promedio",
+            "desviación estándar",
+            "medidas de dispersión",
+            "medidas de tendencia central"
+          ]
+        },
+        {
+          "materia": "Matemáticas",
+          "competencia": "Formulación y ejecución",
+          "contexto": "Un hotel asigna extensiones telefónicas de 4 dígitos. Para ello, utiliza únicamente los dígitos 2, 3, 4 y 5, y todos los dígitos de la extensión deben ser diferentes.",
+          "enunciado": "¿Cuántas habitaciones del hotel pueden tener extensión telefónica?",
+          "opciones": {
+            "A": "24",
+            "B": "56",
+            "C": "120",
+            "D": "256"
+          },
+          "respuesta_correcta": "A",
+          "retroalimentacion": "El problema pide calcular el número de permutaciones de 4 elementos. Se tienen 4 dígitos distintos para 4 posiciones. Para la primera posición hay 4 opciones; para la segunda, 3 (ya que no se puede repetir); para la tercera, 2; y para la última, 1. El total de extensiones posibles es 4 × 3 × 2 × 1 = 4! = 24.",
+          "explicacion": "Este es un problema de conteo que se resuelve con el concepto de permutaciones sin repetición. Se quiere ordenar 4 elementos distintos en 4 posiciones. El número de maneras de hacer esto es el factorial de 4. \n- Opciones para el primer dígito: 4. \n- Opciones para el segundo dígito (debe ser diferente): 3. \n- Opciones para el tercer dígito: 2. \n- Opciones para el cuarto dígito: 1. \nPor el principio de multiplicación, el total de extensiones es 4 × 3 × 2 × 1 = 24.",
+          "habilidad_evaluada": "Aplicación de técnicas de conteo (permutaciones).",
+          "explicacion_opciones_incorrectas": {
+            "B": "Resultado de un error de cálculo.",
+            "C": "Sería 5!, si se dispusiera de 5 dígitos distintos.",
+            "D": "Sería 4⁴, si los dígitos pudieran repetirse."
+          },
+          "estrategias_resolucion": "1. Identificar que es un problema de ordenamiento (el orden de los dígitos importa) y que es sin repetición ('dígitos diferentes'). 2. Reconocer que esto corresponde a una permutación. 3. Aplicar la fórmula del factorial (n!) o el principio de multiplicación.",
+          "errores_comunes": "Confundir permutación con combinación, o no considerar la restricción de 'dígitos diferentes' y calcular 4×4×4×4.",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "conteo",
+            "permutaciones",
+            "factorial",
+            "combinatoria"
+          ]
+        },
+        {
+          "materia": "Matemáticas",
+          "competencia": "Interpretación y representación",
+          "contexto": "Una gráfica circular muestra la distribución del parque automotor del transporte intermunicipal en Colombia. Los porcentajes son: Buseta 23%, Automóvil 18%, Camioneta 18%, Campero 9%, Bus escalera 1%, Bus 24%, Microbús 7%.",
+          "enunciado": "Según la información anterior, ¿cuál de las siguientes afirmaciones es verdadera?",
+          "opciones": {
+            "A": "La mayor parte del parque automotor son automóviles, camionetas y camperos.",
+            "B": "La mitad del parque automotor corresponde a automóviles, camionetas y camperos.",
+            "C": "La mayor parte del parque automotor son buses, microbuses y busetas.",
+            "D": "La mitad del parque automotor corresponde a buses, microbuses y busetas."
+          },
+          "respuesta_correcta": "C",
+          "retroalimentacion": "Para verificar las afirmaciones, se deben sumar los porcentajes de cada grupo. \nGrupo de 'autos, camionetas y camperos': 18% (Automóvil) + 18% (Camioneta) + 9% (Campero) = 45%. \nGrupo de 'buses, microbuses y busetas': 24% (Bus) + 7% (Microbús) + 23% (Buseta) = 54%. \nComo 54% es más que 50%, este grupo constituye 'la mayor parte' del parque automotor. La afirmación C es verdadera.",
+          "explicacion": "El problema requiere la interpretación de un gráfico circular y la suma de porcentajes para validar las afirmaciones. \n- **Análisis de A y B:** Se suma el porcentaje de automóviles (18%), camionetas (18%) y camperos (9%). El total es 45%. Este valor no es 'la mayor parte' (que implica >50%) ni 'la mitad' (50%). \n- **Análisis de C y D:** Se suma el porcentaje de buses (24%), microbuses (7%) y busetas (23%). El total es 54%. Este valor es mayor que 50%, por lo que sí representa 'la mayor parte' del total.",
+          "habilidad_evaluada": "Interpretación de datos de un gráfico circular y cálculo de porcentajes.",
+          "explicacion_opciones_incorrectas": {
+            "A": "La suma da 45%, que no es la mayor parte.",
+            "B": "La suma da 45%, que no es el 50%.",
+            "D": "La suma da 54%, que no es el 50%."
+          },
+          "estrategias_resolucion": "1. Identificar los grupos de vehículos mencionados en cada opción. 2. Sumar los porcentajes correspondientes a cada grupo, tomándolos de la gráfica. 3. Comparar la suma obtenida con los cuantificadores 'la mayor parte' (>50%) o 'la mitad' (50%).",
+          "errores_comunes": "Cometer errores en la suma de los porcentajes. Interpretar incorrectamente el término 'la mayor parte'.",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "gráficos circulares",
+            "porcentajes",
+            "interpretación de datos",
+            "estadística"
+          ]
+        },
+        {
+          "materia": "Matemáticas",
+          "competencia": "Argumentación",
+          "contexto": "En una prueba de atletismo, el récord mundial es de 10,49 segundos y el récord olímpico es de 10,50 segundos.",
+          "enunciado": "¿Es posible que un atleta registre un tiempo, en el mismo tipo de prueba, que rompa el récord olímpico pero no el mundial?",
+          "opciones": {
+            "A": "Sí, porque puede registrar, por ejemplo, un tiempo de 10,497 segundos, que está entre los dos tiempos récord.",
+            "B": "Sí, porque puede registrar un tiempo menor que 10,4 y marcaría un nuevo récord.",
+            "C": "No, porque no existe un registro posible entre los dos tiempos récord.",
+            "D": "No, porque cualquier registro menor que el récord olímpico va a ser menor que el récord mundial."
+          },
+          "respuesta_correcta": "A",
+          "retroalimentacion": "Romper el récord olímpico significa hacer un tiempo menor a 10,50 s. No romper el récord mundial significa hacer un tiempo mayor o igual a 10,49 s. Se busca un tiempo 't' tal que 10,49 ≤ t < 10,50. Debido a la propiedad de densidad de los números reales, existen infinitos números en este intervalo (por ejemplo, 10.491, 10.495, 10.499). Por lo tanto, sí es posible.",
+          "explicacion": "El problema se basa en la comprensión de la ordenación y densidad de los números reales. \n- Para romper el récord olímpico (10,50 s), el tiempo 't' debe ser t < 10,50. \n- Para NO romper el récord mundial (10,49 s), el tiempo 't' debe ser t ≥ 10,49. \nLa pregunta es si existe algún número 't' que satisfaga ambas condiciones a la vez. Sí, cualquier número en el intervalo semiabierto [10,49, 10,50) es una solución válida. La opción A proporciona un ejemplo concreto (10,497) que demuestra esta posibilidad.",
+          "habilidad_evaluada": "Comprensión de la ordenación y densidad de los números reales y aplicación a un contexto de comparación.",
+          "explicacion_opciones_incorrectas": {
+            "B": "Un tiempo menor que 10,4 s rompería ambos récords, no solo el olímpico.",
+            "C": "Esta afirmación es falsa, entre dos números reales distintos siempre hay infinitos otros números reales.",
+            "D": "Esta afirmación es incorrecta porque el récord mundial es un tiempo más rápido (menor) que el olímpico, lo que crea un intervalo entre ambos."
+          },
+          "estrategias_resolucion": "1. Traducir las condiciones del problema a desigualdades matemáticas. 2. Combinar las desigualdades para definir un intervalo de solución. 3. Determinar si existen números en ese intervalo.",
+          "errores_comunes": "Pensar en los números de tiempo como si fueran enteros o tuvieran solo dos decimales, ignorando la infinidad de decimales posibles entre dos números.",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "números reales",
+            "desigualdades",
+            "orden",
+            "lógica"
+          ]
+        },
+        {
+          "materia": "Matemáticas",
+          "competencia": "Interpretación y representación",
+          "contexto": "En una institución educativa hay dos cursos de grado undécimo. Una tabla muestra la distribución de hombres y mujeres: Curso 11A (22 mujeres, 18 hombres), Curso 11B (23 mujeres, 12 hombres). Total: 45 mujeres, 30 hombres, 75 estudiantes.",
+          "enunciado": "La probabilidad de escoger un estudiante de grado undécimo, de esta institución, que sea mujer es de 3/5. Este valor corresponde a la razón entre el número total de mujeres y",
+          "opciones": {
+            "A": "el número total de estudiantes de grado undécimo.",
+            "B": "el número total de hombres de grado undécimo.",
+            "C": "el número total de mujeres del curso 11 B.",
+            "D": "el número total de hombres del curso 11 A."
+          },
+          "respuesta_correcta": "A",
+          "retroalimentacion": "La probabilidad de un evento se define como (Número de casos favorables) / (Número total de casos posibles). En este contexto, el evento es 'escoger una mujer'. Los casos favorables son el número total de mujeres (45). Los casos posibles (el espacio muestral) son el número total de estudiantes (75). La probabilidad es 45/75. Al simplificar esta fracción dividiendo el numerador y el denominador por 15, se obtiene 3/5.",
+          "explicacion": "El problema pide identificar los componentes de la fracción de probabilidad dada. \n- **Casos favorables:** Escoger una mujer. El número total de mujeres en grado undécimo es 22 (11A) + 23 (11B) = 45. \n- **Casos posibles:** Escoger cualquier estudiante de grado undécimo. El número total de estudiantes es 40 (11A) + 35 (11B) = 75. \n- **Probabilidad:** P(Mujer) = (Total Mujeres) / (Total Estudiantes) = 45 / 75. \n- **Simplificación:** 45 y 75 son divisibles por 15. 45/15 = 3; 75/15 = 5. La fracción simplificada es 3/5. \nPor lo tanto, el valor 3/5 representa la razón entre el número total de mujeres y el número total de estudiantes.",
+          "habilidad_evaluada": "Comprensión del concepto de probabilidad clásica y la interpretación de sus componentes a partir de datos tabulados.",
+          "explicacion_opciones_incorrectas": {
+            "B": "La razón sería 45/30, que no es 3/5.",
+            "C": "La razón sería 45/23, que no es 3/5.",
+            "D": "La razón sería 45/18, que no es 3/5."
+          },
+          "estrategias_resolucion": "1. Recordar la fórmula fundamental de la probabilidad. 2. Identificar los casos favorables y los casos totales a partir de los datos de la tabla. 3. Formar la razón y simplificarla para verificar que coincide con el valor dado. 4. Identificar qué representa el denominador de la razón.",
+          "errores_comunes": "No simplificar la fracción 45/75 o confundir el espacio muestral (usando, por ejemplo, el total de hombres como denominador).",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "probabilidad",
+            "razón",
+            "fracciones",
+            "interpretación de tablas"
+          ]
+        },
+        {
+          "materia": "Matemáticas",
+          "competencia": "Formulación y ejecución",
+          "contexto": "Se coloca una escalera sobre un muro para fijar un aviso. Se forma un triángulo rectángulo con las siguientes medidas: la altura alcanzada en el muro es de 12 metros, la distancia desde la base del muro hasta el pie de la escalera es de 5 metros, y la longitud de la escalera es de 13 metros. El ángulo que forman el suelo y la escalera se denomina θ.",
+          "enunciado": "¿Cuál es el coseno del ángulo que forman el suelo y la escalera?",
+          "opciones": {
+            "A": "12/13",
+            "B": "12/5",
+            "C": "5/13",
+            "D": "13/5"
+          },
+          "respuesta_correcta": "C",
+          "retroalimentacion": "En el triángulo rectángulo formado, el ángulo θ se encuentra entre el suelo y la escalera. El cateto adyacente a este ángulo es la distancia en el suelo (5 m). La hipotenusa es la longitud de la escalera (13 m). Por definición, el coseno de un ángulo es la razón entre el cateto adyacente y la hipotenusa. Por lo tanto, cos(θ) = 5 / 13.",
+          "explicacion": "El problema requiere aplicar la definición de las razones trigonométricas en un triángulo rectángulo. Se utiliza la mnemotecnia SOH-CAH-TOA. \n- **SOH**: Seno = Opuesto / Hipotenusa \n- **CAH**: Coseno = Adyacente / Hipotenusa \n- **TOA**: Tangente = Opuesto / Adyacente \nPara el ángulo θ: \n- Cateto Adyacente (el lado que toca al ángulo y no es la hipotenusa) = 5 m. \n- Cateto Opuesto (el lado frente al ángulo) = 12 m. \n- Hipotenusa (el lado más largo, opuesto al ángulo recto) = 13 m. \nAplicando la definición de coseno (CAH): cos(θ) = Adyacente / Hipotenusa = 5/13.",
+          "habilidad_evaluada": "Aplicación de la definición de razones trigonométricas (coseno) en un triángulo rectángulo.",
+          "explicacion_opciones_incorrectas": {
+            "A": "12/13 es el seno de θ (Opuesto/Hipotenusa).",
+            "B": "12/5 es la tangente de θ (Opuesto/Adyacente).",
+            "D": "13/5 es la secante de θ (Hipotenusa/Adyacente)."
+          },
+          "estrategias_resolucion": "1. Dibujar o identificar el triángulo rectángulo en la situación. 2. Identificar el ángulo de referencia (θ). 3. Clasificar los tres lados del triángulo (cateto opuesto, cateto adyacente, hipotenusa) con respecto a ese ángulo. 4. Aplicar la definición correcta de la razón trigonométrica solicitada (coseno).",
+          "errores_comunes": "Confundir el cateto adyacente con el cateto opuesto, o utilizar la definición de una razón trigonométrica diferente (seno o tangente).",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "trigonometría",
+            "coseno",
+            "triángulo rectángulo",
+            "SOHCAHTOA"
+          ]
+        },
+        {
+          "materia": "Matemáticas",
+          "competencia": "Argumentación",
+          "contexto": "La tabla muestra la composición de una baraja de póquer estándar de 52 cartas, dividida en pintas negras (Picas, Tréboles) y rojas (Corazones, Diamantes), y números (del 2 al 10, más A, J, Q, K).",
+          "enunciado": "Si la probabilidad de escoger una carta que cumpla dos características determinadas es cero, ¿cuáles características podrían ser?",
+          "opciones": {
+            "A": "Ser una carta negra y ser un número par.",
+            "B": "Ser una carta roja y ser de picas.",
+            "C": "Ser una carta de corazones y ser un número impar.",
+            "D": "Ser una carta roja K y ser de diamantes."
+          },
+          "respuesta_correcta": "B",
+          "retroalimentacion": "Una probabilidad de cero corresponde a un evento imposible. Un evento es imposible si las características que lo definen son mutuamente excluyentes, es decir, no puede existir un elemento que las cumpla a la vez. Las Picas son una pinta de color negro. Por lo tanto, es imposible que una carta sea simultáneamente 'roja' y 'de picas'. La intersección de estos dos conjuntos de cartas es vacía.",
+          "explicacion": "Se debe analizar cada par de características para determinar si son mutuamente excluyentes. \n- **A. Negra y Par:** Sí existen. Por ejemplo, el 2 de Picas es negro y par. La probabilidad es mayor que cero. \n- **B. Roja y de Picas:** No existen. Las Picas son negras. Estas características son incompatibles. La probabilidad es cero. \n- **C. de Corazones e Impar:** Sí existen. Por ejemplo, el 3 de Corazones cumple ambas condiciones. La probabilidad es mayor que cero. \n- **D. Roja K y de Diamantes:** Sí existe. La K de Diamantes es una carta que es roja, es una K y es de la pinta de diamantes. La probabilidad es mayor que cero.",
+          "habilidad_evaluada": "Comprensión de la probabilidad nula y la identificación de eventos mutuamente excluyentes en un espacio muestral conocido.",
+          "explicacion_opciones_incorrectas": {
+            "A": "El evento es posible, existen cartas negras y pares.",
+            "C": "El evento es posible, existen cartas de corazones impares.",
+            "D": "El evento es posible, la K de diamantes cumple las tres condiciones."
+          },
+          "estrategias_resolucion": "1. Entender que 'probabilidad cero' significa que no hay ningún resultado en el espacio muestral que cumpla las condiciones. 2. Para cada opción, buscar mentalmente un ejemplo de una carta que cumpla ambas características. 3. Identificar la opción para la cual es imposible encontrar tal ejemplo.",
+          "errores_comunes": "No conocer la composición básica de una baraja de póquer. Confundir la baja probabilidad con la probabilidad nula.",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "probabilidad",
+            "eventos imposibles",
+            "eventos mutuamente excluyentes",
+            "baraja de póker",
+            "conjuntos"
+          ]
+        },
+        {
+          "materia": "Matemáticas",
+          "competencia": "Interpretación y representación",
+          "contexto": "La figura muestra un octágono regular (8 lados y ángulos iguales) inscrito en una circunferencia de radio 2. Se muestra un triángulo formado por el centro O y dos vértices consecutivos P y Q.",
+          "enunciado": "Con la expresión x = (2 sen 45°) / sen 67,5° se puede calcular en el octágono de la figura, la medida del",
+          "opciones": {
+            "A": "ángulo OPQ.",
+            "B": "segmento PQ.",
+            "C": "ángulo QOP.",
+            "D": "segmento OQ."
+          },
+          "respuesta_correcta": "B",
+          "retroalimentacion": "La expresión dada tiene la forma de la Ley de Senos. Analizando el triángulo OPQ: los lados OP y OQ son radios, por lo que miden 2. El ángulo central ∠QOP es 360°/8 = 45°. El triángulo OPQ es isósceles, por lo que los ángulos de la base ∠OPQ y ∠OQP son iguales a (180°-45°)/2 = 67,5°. Aplicando la Ley de Senos para hallar el lado PQ (el lado del octágono), que llamamos 'x': x/sen(45°) = 2/sen(67,5°). Al despejar x, obtenemos x = (2 * sen(45°)) / sen(67,5°), que es la expresión dada.",
+          "explicacion": "1. **Analizar la expresión:** La forma a/sin(A) = b/sin(B) sugiere el uso de la Ley de Senos. \n2. **Analizar el triángulo OPQ:** \n   - O es el centro, P y Q son vértices del octágono. \n   - Los lados OP y OQ son radios, por lo que miden 2. \n   - El ángulo central subtendido por un lado del octágono es ∠QOP = 360°/8 = 45°. \n   - Al ser un triángulo isósceles (OP=OQ), los ángulos de la base son iguales: ∠OPQ = ∠OQP = (180° - 45°)/2 = 67,5°. \n3. **Aplicar Ley de Senos al triángulo OPQ:** Se busca relacionar el lado PQ (el lado del octágono) con los datos conocidos. \n   (PQ) / sen(∠QOP) = (OQ) / sen(∠OPQ) \n   PQ / sen(45°) = 2 / sen(67,5°) \n4. **Despejar y comparar:** Al despejar PQ, se obtiene la expresión dada para 'x'. Por lo tanto, 'x' es la medida del segmento PQ.",
+          "habilidad_evaluada": "Interpretación de una expresión trigonométrica (Ley de Senos) en el contexto de las propiedades geométricas de un polígono regular.",
+          "explicacion_opciones_incorrectas": {
+            "A": "El ángulo OPQ es un valor fijo de 67,5°.",
+            "C": "El ángulo QOP es un valor fijo de 45°.",
+            "D": "El segmento OQ es un radio y mide 2."
+          },
+          "estrategias_resolucion": "1. Reconocer la Ley de Senos en la fórmula. 2. Deducir las propiedades del triángulo isósceles formado por el centro y dos vértices consecutivos de un polígono regular (lados, ángulos). 3. Aplicar la Ley de Senos a este triángulo. 4. Comparar la expresión resultante con la dada en el enunciado para identificar 'x'.",
+          "errores_comunes": "No calcular correctamente los ángulos del triángulo isósceles. Confundir los lados con sus ángulos opuestos al aplicar la Ley de Senos.",
+          "dificultad": "dificil",
+          "tiempo_estimado": 150,
+          "tags": [
+            "ley de senos",
+            "trigonometría",
+            "geometría",
+            "polígonos regulares",
+            "octágono"
+          ]
+        },
+        {
+          "materia": "Matemáticas",
+          "competencia": "Formulación y ejecución",
+          "contexto": "Se dibuja un trapecio isósceles en un plano cartesiano de tal manera que el eje 'y' actúa como un eje de simetría, dividiéndolo en dos figuras iguales.",
+          "enunciado": "Si las coordenadas de dos de los vértices del trapecio son (–4, 2) y (–2, 8), ¿cuáles son las coordenadas de los otros dos vértices?",
+          "opciones": {
+            "A": "(8, 2) y (2, 4).",
+            "B": "(2, 8) y (4, 2).",
+            "C": "(-2, -4) y (–8, −2).",
+            "D": "(-4, -2) y (–2, −8)."
+          },
+          "respuesta_correcta": "B",
+          "retroalimentacion": "La simetría con respecto al eje 'y' implica que para cada punto (x, y) de la figura, su punto simétrico (-x, y) también pertenece a la figura. Los vértices dados están en el lado izquierdo del eje y. Sus contrapartes simétricas estarán en el lado derecho. El simétrico de (–4, 2) es (4, 2). El simétrico de (–2, 8) es (2, 8).",
+          "explicacion": "Un eje de simetría vertical (el eje 'y') funciona como un espejo. Un punto (x, y) se refleja en el punto (-x, y). Se nos dan dos puntos en el segundo cuadrante (x negativa). Para encontrar los otros dos vértices, simplemente aplicamos esta regla de reflexión: \n- El punto simétrico de V1 = (–4, 2) es V3 = ( -(-4), 2 ) = (4, 2). \n- El punto simétrico de V2 = (–2, 8) es V4 = ( -(-2), 8 ) = (2, 8). \nLos otros dos vértices son (2, 8) y (4, 2).",
+          "habilidad_evaluada": "Aplicación del concepto de simetría axial con respecto al eje y en coordenadas cartesianas.",
+          "explicacion_opciones_incorrectas": {
+            "A": "Combina incorrectamente las coordenadas de los puntos simétricos.",
+            "C": "Corresponde a una reflexión incorrecta.",
+            "D": "Corresponde a una reflexión respecto al eje x, no al eje y."
+          },
+          "estrategias_resolucion": "1. Entender el concepto de simetría respecto al eje y. 2. Recordar la regla de transformación de coordenadas para esta simetría: (x, y) -> (-x, y). 3. Aplicar la regla a cada uno de los puntos dados para encontrar sus puntos simétricos.",
+          "errores_comunes": "Confundir la simetría respecto al eje y con la simetría respecto al eje x (que transforma (x, y) en (x, -y)) o respecto al origen (que transforma (x, y) en (-x, -y)).",
+          "dificultad": "facil",
+          "tiempo_estimado": 90,
+          "tags": [
+            "geometría analítica",
+            "plano cartesiano",
+            "simetría",
+            "transformaciones"
+          ]
+        },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Interpretación y representación",
+              "contexto": "En una fábrica se realiza una encuesta a un grupo de 100 empleados que viven cerca y se desplazan únicamente en bus o a pie. Los resultados son: El 60% del grupo son mujeres. El 20% de las mujeres se desplazan en bus. El 40% de los hombres se desplazan caminando.",
+              "enunciado": "¿Cuál de las siguientes tablas representa correctamente la información obtenida de ese grupo?",
+              "opciones": {
+                "A": "Tabla A",
+                "B": "Tabla B",
+                "C": "Tabla C",
+                "D": "Tabla D"
+              },
+              "respuesta_correcta": "D",
+              "retroalimentacion": "Se deben calcular los valores absolutos a partir de los porcentajes. Total = 100. Mujeres = 60% de 100 = 60. Hombres = 100 - 60 = 40. Mujeres en bus = 20% de 60 = 12. Hombres caminando = 40% de 40 = 16. Por diferencia, Hombres en bus = 40 - 16 = 24, y Mujeres caminando = 60 - 12 = 48. La tabla D muestra: Hombres(Bus:24, Caminando:16), Mujeres(Bus:12, Caminando:48).",
+              "explicacion": "El problema requiere construir una tabla de contingencia de 2x2 (Género vs. Transporte) a partir de datos porcentuales. \n1. **Calcular totales de género:** De 100 empleados, 60 son mujeres y, por lo tanto, 40 son hombres. \n2. **Calcular celdas específicas:** \n   - Mujeres en Bus: El 20% de las 60 mujeres, es decir, 0.20 * 60 = 12. \n   - Hombres Caminando: El 40% de los 40 hombres, es decir, 0.40 * 40 = 16. \n3. **Calcular celdas restantes por sustracción:** \n   - Hombres en Bus: Total Hombres - Hombres Caminando = 40 - 16 = 24. \n   - Mujeres Caminando: Total Mujeres - Mujeres en Bus = 60 - 12 = 48. \n4. **Verificar la tabla:** La tabla D es la única que coincide con todos estos valores calculados.",
+              "habilidad_evaluada": "Interpretación de porcentajes de subgrupos y construcción de una tabla de doble entrada (contingencia).",
+              "explicacion_opciones_incorrectas": {
+                "A": "Contiene valores incorrectos.",
+                "B": "Contiene valores incorrectos.",
+                "C": "Contiene valores incorrectos."
+              },
+              "estrategias_resolucion": "1. Determinar los totales de cada categoría principal (hombres y mujeres). 2. Calcular los valores absolutos de las celdas para los cuales se da un porcentaje de un subgrupo. 3. Completar la tabla calculando los valores restantes por diferencia con los totales. 4. Comparar la tabla resultante con las opciones.",
+              "errores_comunes": "Calcular los porcentajes sobre el total de 100 en lugar del total del subgrupo correspondiente (por ejemplo, calcular el 20% de 100 para las mujeres en bus, en lugar del 20% de 60).",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "porcentajes",
+                "tablas de contingencia",
+                "estadística",
+                "interpretación de datos"
+              ]
+            },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Argumentación",
+              "contexto": "Una regla en física establece que para aumentar el nivel de intensidad del sonido en 10 decibelios (dB), es necesario multiplicar la intensidad medida por 10. Ramiro necesita aumentar en 20 dB el nivel de intensidad y, según su interpretación, multiplica la intensidad actual por 20.",
+              "enunciado": "¿Es correcta su interpretación?",
+              "opciones": {
+                "A": "No, porque la regla no considera aumentos de 20 dB, solamente de 10 dB; no hay consideraciones para aumentos mayores.",
+                "B": "Sí, porque la regla presentada indica que para aumentar en x unidades el nivel de la medida de intensidad se agrega x a la intensidad.",
+                "C": "No, porque aumentar 20 dB equivale a aumentar 10 dB dos veces, es decir, multiplicar por 10 la intensidad dos veces; en total, multiplicar por 100.",
+                "D": "Sí, porque el resultado de multiplicar dos veces por 10 la intensidad es multiplicarla por 20; así, se ahorra un paso y obtiene el resultado correcto."
+              },
+              "respuesta_correcta": "C",
+              "retroalimentacion": "La escala de decibelios es logarítmica, no lineal. Aumentar en 10 dB corresponde a un factor multiplicativo de 10 en la intensidad. Un aumento de 20 dB es un aumento de 10 dB seguido de otro aumento de 10 dB. Esto se traduce en multiplicar la intensidad por 10 y luego volver a multiplicar por 10. El factor total es 10 × 10 = 100. Ramiro se equivoca al asumir una relación lineal (multiplicar por 20).",
+              "explicacion": "El problema describe una relación exponencial entre el nivel en decibelios y la intensidad. \n- Aumento de +10 dB ⇒ Intensidad_final = Intensidad_inicial × 10. \n- Un aumento de +20 dB se puede ver como dos aumentos sucesivos de +10 dB. \n- Primer aumento de 10 dB: Intensidad_intermedia = Intensidad_inicial × 10. \n- Segundo aumento de 10 dB: Intensidad_final = Intensidad_intermedia × 10 = (Intensidad_inicial × 10) × 10 = Intensidad_inicial × 100. \nPor lo tanto, para aumentar 20 dB, se debe multiplicar la intensidad por 100. La interpretación de Ramiro es incorrecta.",
+              "habilidad_evaluada": "Comprensión de relaciones no lineales (logarítmicas/exponenciales) y argumentación sobre la aplicación de una regla.",
+              "explicacion_opciones_incorrectas": {
+                "A": "La regla se puede extender a aumentos mayores; no está limitada a 10 dB.",
+                "B": "La regla no indica una relación aditiva, sino multiplicativa.",
+                "D": "La justificación es matemáticamente incorrecta: multiplicar dos veces por 10 es 10², no 2*10."
+              },
+              "estrategias_resolucion": "1. Comprender la regla base: un cambio aditivo en dB (+10) corresponde a un cambio multiplicativo en intensidad (x10). 2. Descomponer el aumento deseado (+20 dB) en pasos de la regla base (+10 dB + 10 dB). 3. Aplicar el cambio multiplicativo de forma sucesiva (x10 y luego x10 de nuevo). 4. Calcular el factor multiplicativo total.",
+              "errores_comunes": "Asumir que la relación es lineal y pensar que si +10 dB corresponde a x10, entonces +20 dB debe corresponder a x20.",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "escala logarítmica",
+                "decibelios",
+                "función exponencial",
+                "relaciones no lineales"
+              ]
+            },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Argumentación",
+              "contexto": "Una librería ofrece un 10% de descuento en todos los libros. Juan tiene un cupón adicional del 10% de descuento sobre el precio ya rebajado. Para un libro de $50, Juan efectúa este procedimiento: 1. Multiplica 50*9. 2. Divide el resultado/10. 3. Multiplica el resultado*10. 4. Divide el resultado/100.",
+              "enunciado": "¿En cuál paso del procedimiento hay un error?",
+              "opciones": {
+                "A": "En el paso 1, porque el precio de venta es el 90 % del precio original, por tanto, debe multiplicarse por 90 y no por 9.",
+                "B": "En el paso 3, porque el precio final es el 90% del precio de venta, por tanto, debe multiplicarse por 90 y no por 10.",
+                "C": "En el paso 2, porque para calcular el precio al aplicar un porcentaje de descuento es necesario dividir entre 100 y no entre 10.",
+                "D": "En el paso 4, porque solo es necesario dividir una vez para calcular el precio final; es suficiente con la división del paso 2."
+              },
+              "respuesta_correcta": "B",
+              "retroalimentacion": "El procedimiento para el primer descuento (pasos 1 y 2) es correcto: (50 * 9) / 10 = 45, que es el 90% de 50. Ahora se debe aplicar el segundo descuento sobre $45. El procedimiento de Juan en los pasos 3 y 4 calcula (45 * 10) / 100 = 4.5. Esto es el 10% de 45 (el descuento), no el 90% (el precio final). El error está en el Paso 3, donde multiplica por 10; debería haber multiplicado por 9 (y luego dividido por 10) o por 90 (y dividido por 100) para calcular el 90% del precio rebajado.",
+              "explicacion": "Vamos a analizar el procedimiento de Juan: \n- **Primer descuento:** Los pasos 1 y 2 calculan (Precio_Original * 9) / 10, lo que es equivalente a Precio_Original * 0.9. Esta es una forma correcta de calcular el precio con un 10% de descuento. Para $50, el resultado es $45. \n- **Segundo descuento:** Ahora se debe calcular el 90% de $45. El procedimiento de Juan en los pasos 3 y 4 calcula (45 * 10) / 100, lo que equivale a 45 * 0.1. Esto calcula el 10% del valor, no el 90%. El error está en el Paso 3. Para calcular el 90% del nuevo precio, debería haber multiplicado por 90 (y dividido entre 100), no por 10.",
+              "habilidad_evaluada": "Análisis y depuración de un algoritmo de cálculo de porcentajes sucesivos.",
+              "explicacion_opciones_incorrectas": {
+                "A": "El paso 1 (multiplicar por 9) junto con el paso 2 (dividir por 10) es una forma válida de calcular el 90%.",
+                "C": "Dividir por 10 en el paso 2 es correcto si se multiplicó por 9 en el paso 1.",
+                "D": "El paso 4 es necesario, pero el paso 3 es el que contiene el error conceptual, lo que hace que el resultado del 4 sea incorrecto."
+              },
+              "estrategias_resolucion": "1. Calcular el resultado correcto de forma independiente: Precio1 = 50 * 0.90 = 45. Precio2 = 45 * 0.90 = 40.5. 2. Seguir el procedimiento de Juan paso a paso y comparar los resultados. 3. Identificar en qué paso el cálculo se desvía del procedimiento correcto.",
+              "errores_comunes": "Sumar los descuentos (10% + 10% = 20%) en lugar de aplicarlos de forma sucesiva. Confundir el cálculo del descuento con el cálculo del precio final.",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "porcentajes",
+                "descuentos sucesivos",
+                "algoritmo",
+                "análisis de errores"
+              ]
+            },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Argumentación",
+              "contexto": "A un estudiante se le pide construir un triángulo isósceles dentro de una circunferencia. La construcción muestra una figura donde el punto P es el centro de la circunferencia, y los puntos R y Q están sobre la circunferencia, formando el triángulo PQR.",
+              "enunciado": "Con base en la construcción, ¿qué condición es necesaria para que el triángulo sea isósceles?",
+              "opciones": {
+                "A": "Que el lado RQ mida diferente que los otros lados.",
+                "B": "Que el ∠ QPR sea un ángulo recto.",
+                "C": "Que el ∠ PQR sea un ángulo recto.",
+                "D": "Que los lados PQ y PR sean radios de la circunferencia."
+              },
+              "respuesta_correcta": "D",
+              "retroalimentacion": "Un triángulo es isósceles si tiene al menos dos lados de igual longitud. En la construcción descrita, P es el centro y Q y R son puntos en la circunferencia. Por definición, los segmentos PQ y PR son radios. Todos los radios de una misma circunferencia son iguales. Por lo tanto, PQ = PR, lo que garantiza que el triángulo PQR es siempre isósceles.",
+              "explicacion": "La definición de un triángulo isósceles es que dos de sus lados son congruentes. En el contexto de la construcción: \n- P es el centro del círculo. \n- Q y R son puntos en el borde del círculo. \n- El segmento PQ conecta el centro con un punto en el borde, por lo que es un radio. \n- El segmento PR también conecta el centro con un punto en el borde, por lo que también es un radio. \n- Una propiedad fundamental de la circunferencia es que todos sus radios tienen la misma longitud. \n- Por lo tanto, PQ = PR, y el triángulo PQR, al tener dos lados iguales, es isósceles.",
+              "habilidad_evaluada": "Aplicación de las propiedades de la circunferencia para argumentar sobre las propiedades de una figura geométrica.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Esta es una característica de muchos triángulos isósceles, pero no la condición que lo define.",
+                "B": "Si el ángulo central es recto, el triángulo es un tipo especial de isósceles (rectángulo isósceles), pero no es una condición necesaria para ser isósceles en general.",
+                "C": "Es geométricamente imposible que un ángulo con vértice en la circunferencia sea recto si uno de sus lados pasa por el centro, a menos que el tercer vértice esté también en la circunferencia y forme un diámetro."
+              },
+              "estrategias_resolucion": "1. Recordar la definición de triángulo isósceles. 2. Recordar la definición de radio de una circunferencia. 3. Aplicar estas definiciones a la figura construida. 4. Deducir que dos de los lados son necesariamente radios y, por tanto, iguales.",
+              "errores_comunes": "No recordar las definiciones geométricas básicas de círculo y triángulo isósceles.",
+              "dificultad": "facil",
+              "tiempo_estimado": 90,
+              "tags": [
+                "geometría",
+                "circunferencia",
+                "radio",
+                "triángulo isósceles",
+                "argumentación"
+              ]
+            },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Interpretación y representación",
+              "contexto": "Sobre una circunferencia de centro O se localizan dos puntos distintos, P y P'. Se unen los tres puntos O, P y P'.",
+              "enunciado": "De las siguientes, ¿cuál figura NO puede resultar al unir entre sí los tres puntos P, P' y O?",
+              "opciones": {
+                "A": "Un triángulo isósceles.",
+                "B": "Un radio de la circunferencia.",
+                "C": "Un triángulo equilátero.",
+                "D": "Un diámetro de la circunferencia."
+              },
+              "respuesta_correcta": "B",
+              "retroalimentacion": "Un radio es un segmento de línea que une dos puntos (el centro O y un punto en la circunferencia P). Es imposible que la figura formada al unir tres puntos distintos (O, P, y P') sea un radio. Al unir tres puntos, se forma un triángulo (si no son colineales) o un segmento de línea que pasa por los tres (si son colineales).",
+              "explicacion": "Se analizan las posibilidades al unir los tres puntos: \n- **A (Triángulo isósceles):** Es la figura más común. Los lados OP y OP' son radios, por lo tanto son iguales. El triángulo OPP' es siempre isósceles. \n- **C (Triángulo equilátero):** Es un caso especial del isósceles que ocurre si la distancia PP' también es igual al radio. Sí es posible. \n- **D (Diámetro):** Si los tres puntos están alineados (son colineales), la figura formada es el segmento PP', que es un diámetro. En este caso, el 'triángulo' degenera en una línea. Sí es posible. \n- **B (Radio):** Un radio es el segmento OP o el segmento OP'. Es una figura de dos puntos. La figura formada por O, P y P' involucra tres puntos y no puede ser un simple radio.",
+              "habilidad_evaluada": "Análisis de las posibles figuras geométricas formadas por puntos en una circunferencia.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Es la figura que casi siempre se forma.",
+                "C": "Es un caso especial posible.",
+                "D": "Es el resultado si los tres puntos son colineales."
+              },
+              "estrategias_resolucion": "1. Visualizar el centro O y dos puntos P y P' en una circunferencia. 2. Considerar el caso general en que los tres puntos no están alineados (forman un triángulo). 3. Considerar el caso especial en que los tres puntos están alineados. 4. Evaluar cada una de las opciones y determinar cuál es geométricamente imposible de formar con tres puntos.",
+              "errores_comunes": "No considerar el caso especial en que los tres puntos son colineales, lo que permite formar un diámetro.",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "geometría",
+                "circunferencia",
+                "triángulo isósceles",
+                "radio",
+                "diámetro"
+              ]
+            },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Interpretación y representación",
+              "contexto": "Carlina registró la información de pedidos de 110 clientes en su pizzería. La tabla muestra: Total de clientes que eligieron bebida caliente: 20. Total de clientes que eligieron bebida fría: 40. Total de clientes que eligieron pizza: 100. Total de clientes que eligieron bebida caliente y bebida fría: 0.",
+              "enunciado": "Con la información de la tabla, ¿cuáles de los siguientes datos se pueden calcular?",
+              "opciones": {
+                "A": "El total de clientes que eligieron pizza y también bebida caliente.",
+                "B": "El total de clientes que eligieron pizza o bebida caliente.",
+                "C": "El total de clientes que solo eligieron pizza.",
+                "D": "El total de clientes que solo eligieron bebida fría."
+              },
+              "respuesta_correcta": "C",
+              "retroalimentacion": "Se puede deducir el número de clientes que no tomaron ninguna bebida. El total de clientes que tomaron bebida es 20 (caliente) + 40 (fría) = 60. Como el total de clientes es 110, los que NO tomaron bebida son 110 - 60 = 50. Sabemos que 100 clientes comieron pizza. Los 50 clientes que no tomaron bebida deben estar dentro de los 100 que comieron pizza, ya que la alternativa es no haber comido pizza ni tomado bebida (lo cual no se considera). Por tanto, se puede calcular que 50 clientes 'solo eligieron pizza' (pizza sin bebida).",
+              "explicacion": "Usando teoría de conjuntos: Universo |U|=110. |Pizza|=100. |Bebida Caliente|=20. |Bebida Fría|=40. Como nadie pidió ambas, el total que pidió alguna bebida es |Bebida| = 20+40=60. \n- Clientes que NO pidieron bebida: |No Bebida| = |U| - |Bebida| = 110 - 60 = 50. \n- Clientes que NO pidieron pizza: |No Pizza| = |U| - |Pizza| = 110 - 100 = 10. \nEl dato 'solo eligieron pizza' corresponde a los clientes que están en el conjunto 'Pizza' y también en el conjunto 'No Bebida'. Como sabemos que |No Bebida|=50, y todos ellos debieron comer algo para ser clientes, se asume que comieron pizza. Por lo tanto, el número de clientes que solo comieron pizza es 50.",
+              "habilidad_evaluada": "Resolución de problemas con teoría de conjuntos y análisis de suficiencia de datos en una tabla.",
+              "explicacion_opciones_incorrectas": {
+                "A": "No se puede saber la intersección de 'Pizza' y 'Bebida Caliente'. Podrían ser desde 0 hasta 20 clientes.",
+                "B": "Para calcular la unión 'Pizza o Bebida Caliente' se necesita la intersección, que es desconocida.",
+                "D": "No se puede saber cuántos de los que pidieron bebida fría no pidieron pizza."
+              },
+              "estrategias_resolucion": "1. Organizar los datos en términos de conjuntos y sus tamaños. 2. Calcular los tamaños de los conjuntos complementarios (ej. 'No Bebida'). 3. Utilizar la lógica de conjuntos para deducir el tamaño de las intersecciones o diferencias que sean calculables. 4. Determinar cuál de las opciones corresponde a un valor que se puede calcular con certeza.",
+              "errores_comunes": "Asumir que los eventos son independientes o que un grupo está contenido en otro sin que el problema lo especifique.",
+              "dificultad": "dificil",
+              "tiempo_estimado": 150,
+              "tags": [
+                "teoría de conjuntos",
+                "diagramas de venn",
+                "suficiencia de datos",
+                "lógica"
+              ]
+            },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Formulación y ejecución",
+              "contexto": "Un sistema requiere contraseñas de 3 caracteres, elegidos entre 26 letras (mayúsculas y minúsculas) y 10 dígitos. Se proponen cuatro restricciones: R1: tres dígitos cualesquiera (con repetición). R2: tres dígitos distintos (sin repetición). R3: una letra mayúscula, luego una minúscula y al final un dígito. R4: una letra cualquiera (may/min), y luego dos dígitos (con repetición).",
+              "enunciado": "Si se calcula el número de posibles contraseñas de acuerdo con cada una de las restricciones, ¿cuál es el orden de las restricciones, de menor a mayor, según el número de posibles contraseñas?",
+              "opciones": {
+                "A": "R1, R2, R4 y R3.",
+                "B": "R1, R2, R3 y R4.",
+                "C": "R2, R1, R4 y R3.",
+                "D": "R2, R3, R1 y R4."
+              },
+              "respuesta_correcta": "C",
+              "retroalimentacion": "Calculamos el número de contraseñas para cada restricción: \n- R1 (dígitos con repetición): 10 × 10 × 10 = 1.000. \n- R2 (dígitos sin repetición): 10 × 9 × 8 = 720. \n- R3 (Mayúscula, minúscula, dígito): 26 × 26 × 10 = 6.760. \n- R4 (Letra cualq., dígito, dígito): (26+26) × 10 × 10 = 52 × 100 = 5.200. \nOrdenando de menor a mayor: R2 (720) < R1 (1.000) < R4 (5.200) < R3 (6.760).",
+              "explicacion": "Se debe calcular el número de combinaciones posibles para cada restricción utilizando el principio de multiplicación. \n- **R1 (tres dígitos cualesquiera):** 10 opciones para la 1ra posición, 10 para la 2da y 10 para la 3ra. Total = 10³ = 1.000. \n- **R2 (tres dígitos distintos):** 10 opciones para la 1ra, 9 para la 2da y 8 para la 3ra. Total = 10 × 9 × 8 = 720. \n- **R3 (Mayúscula - minúscula - dígito):** 26 opciones para la 1ra, 26 para la 2da y 10 para la 3ra. Total = 26 × 26 × 10 = 6.760. \n- **R4 (Letra cualquiera - dígito - dígito):** 52 opciones para la 1ra letra (26 mayúsculas + 26 minúsculas), 10 para el 2do dígito y 10 para el 3ro. Total = 52 × 10 × 10 = 5.200. \n- **Orden:** 720 (R2) < 1.000 (R1) < 5.200 (R4) < 6.760 (R3). El orden correcto es R2, R1, R4, R3.",
+              "habilidad_evaluada": "Aplicación de técnicas de conteo (principio de multiplicación) para calcular y ordenar permutaciones con restricciones.",
+              "explicacion_opciones_incorrectas": {
+                "A": "El orden de R1 y R2 es incorrecto.",
+                "B": "El orden es incorrecto.",
+                "D": "El orden es incorrecto."
+              },
+              "estrategias_resolucion": "1. Para cada restricción, analizar las posiciones y el número de opciones para cada una. 2. Aplicar el principio de multiplicación. 3. Calcular el total de contraseñas para cada restricción. 4. Ordenar los cuatro totales de menor a mayor.",
+              "errores_comunes": "Olvidar la restricción 'distintos' en R2. No sumar las opciones de mayúsculas y minúsculas para 'letra cualquiera' en R4. Asumir que el orden en R3 y R4 puede variar, cuando el enunciado lo fija.",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "conteo",
+                "principio de multiplicación",
+                "combinatoria",
+                "permutaciones"
+              ]
+            },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Argumentación",
+              "contexto": "Se pueden construir números racionales mayores que un entero 'k' y muy cercanos a él calculando k + 1/j, donde 'j' es un entero positivo. Cuanto más grande sea 'j', más cercano a 'k' será el número.",
+              "enunciado": "¿Cuántos números racionales se pueden construir cercanos a k y menores que k + 1/11?",
+              "opciones": {
+                "A": "10, que es la cantidad de racionales menores que 11.",
+                "B": "Una cantidad infinita, pues existen infinitos números enteros mayores que 11.",
+                "C": "11, que es el número que equivale en este caso a j.",
+                "D": "Uno, pues el racional más cercano a k se halla con j = 10, es decir, con k + 0,1."
+              },
+              "respuesta_correcta": "B",
+              "retroalimentacion": "La condición es que el número construido, k + 1/j, sea menor que k + 1/11. Esto se traduce en la desigualdad k + 1/j < k + 1/11. Restando k de ambos lados, queda 1/j < 1/11. Para que esta desigualdad sea cierta con j positivo, 'j' debe ser un entero mayor que 11. Como hay infinitos enteros mayores que 11 (12, 13, 14, ...), se pueden construir infinitos números racionales que cumplan la condición.",
+              "explicacion": "El problema pregunta por la cantidad de números de la forma k + 1/j que satisfacen la desigualdad: \n   k + 1/j < k + 1/11 \n   1/j < 1/11 \nDado que j es un entero positivo, podemos multiplicar en cruz (o tomar los recíprocos e invertir la desigualdad) para obtener: \n   j > 11 \nLos valores de 'j' que cumplen esta condición son todos los enteros a partir del 12 (j = 12, 13, 14, ...). Puesto que el conjunto de estos enteros es infinito, la cantidad de números racionales que se pueden construir es infinita.",
+              "habilidad_evaluada": "Comprensión de la densidad de los números racionales y resolución de desigualdades con recíprocos.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Hay infinitos, no un número finito como 10.",
+                "C": "Si j=11, el número es k + 1/11, que es igual, no menor.",
+                "D": "Hay infinitos números, no solo uno."
+              },
+              "estrategias_resolucion": "1. Plantear la desigualdad matemática que representa la condición del enunciado. 2. Resolver la desigualdad para la variable 'j'. 3. Analizar el conjunto solución para 'j' y determinar su cardinalidad (si es finito o infinito).",
+              "errores_comunes": "Resolver incorrectamente la desigualdad 1/j < 1/11, olvidando que la desigualdad se invierte para los recíprocos de números positivos (j > 11).",
+              "dificultad": "dificil",
+              "tiempo_estimado": 150,
+              "tags": [
+                "números racionales",
+                "densidad",
+                "infinito",
+                "desigualdades",
+                "álgebra"
+              ]
+            },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Argumentación",
+              "contexto": "Se deben cumplir varios requerimientos para encerrar un terreno triangular: 1. Un ángulo de 90°. 2. Dos lados deben medir 7 metros y el otro 18 metros. 3. Un ángulo menor que 45°. 4. La suma de los ángulos interiores debe ser 180°.",
+              "enunciado": "¿Cuál de los requerimientos es imposible de cumplir?",
+              "opciones": {
+                "A": "Requerimiento 1.",
+                "B": "Requerimiento 2.",
+                "C": "Requerimiento 3.",
+                "D": "Requerimiento 4."
+              },
+              "respuesta_correcta": "B",
+              "retroalimentacion": "El Requerimiento 2 es imposible debido a la desigualdad triangular. Este teorema establece que la suma de las longitudes de dos lados de un triángulo debe ser siempre mayor que la longitud del tercer lado. En este caso, los lados son 7, 7 y 18. Al sumar los dos lados más cortos, 7 + 7 = 14. Como 14 no es mayor que 18, es geométricamente imposible construir un triángulo con estas medidas.",
+              "explicacion": "Se debe analizar la consistencia de los requerimientos geométricos. \n- **Requerimiento 4 (Suma de ángulos):** Es una propiedad fundamental de todos los triángulos planos, por lo que siempre es posible. \n- **Requerimiento 1 (Ángulo recto):** Es posible formar un triángulo rectángulo. \n- **Requerimiento 3 (Ángulo < 45°):** Es posible formar un triángulo con un ángulo agudo. \n- **Requerimiento 2 (Lados 7, 7, 18):** Este requerimiento viola el Teorema de la Desigualdad Triangular. La suma de los dos lados menores (7+7=14) no supera al lado mayor (18). Por lo tanto, no se puede formar un triángulo con esas longitudes de lado. Este requerimiento es imposible.",
+              "habilidad_evaluada": "Aplicación de propiedades geométricas fundamentales (Desigualdad Triangular) para evaluar la viabilidad de una figura.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Es posible tener un triángulo rectángulo (si los lados lo permiten).",
+                "C": "Es posible tener un ángulo menor a 45°.",
+                "D": "Es una propiedad universal de los triángulos."
+              },
+              "estrategias_resolucion": "1. Recordar las propiedades básicas de los triángulos (suma de ángulos, desigualdad triangular, Teorema de Pitágoras). 2. Evaluar cada requerimiento a la luz de estas propiedades. 3. Aplicar la desigualdad triangular a las longitudes dadas en el Requerimiento 2. 4. Concluir que este requerimiento es imposible.",
+              "errores_comunes": "Olvidar la desigualdad triangular y centrarse únicamente en otras propiedades como el Teorema de Pitágoras (que también falla si se combina con el Requerimiento 1, pero la desigualdad triangular es más fundamental).",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "geometría",
+                "desigualdad triangular",
+                "triángulos",
+                "argumentación"
+              ]
+            },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Formulación y ejecución",
+              "contexto": "Una cancha de fútbol real mide 60 metros de ancho por 100 metros de largo. Un arquitecto construye una maqueta a escala, con medidas cien veces menores que las originales.",
+              "enunciado": "El diseño de la maqueta medirá",
+              "opciones": {
+                "A": "6 x 10⁻² metros y 1 x 10⁻² metros",
+                "B": "6 x 10⁻² centímetros y 1 x 10⁻² centímetros",
+                "C": "6 x 10¹ metros y 1 x 10² metros",
+                "D": "6 x 10¹ centímetros y 1 x 10² centímetros"
+              },
+              "respuesta_correcta": "D",
+              "retroalimentacion": "Las medidas de la maqueta se obtienen dividiendo las medidas originales por 100. Ancho: 60 m / 100 = 0.6 m. Largo: 100 m / 100 = 1 m. Luego, se convierten estas medidas a centímetros (1 m = 100 cm). Ancho: 0.6 m * 100 cm/m = 60 cm. Largo: 1 m * 100 cm/m = 100 cm. Finalmente, se expresan en notación científica: 60 cm = 6 × 10¹ cm y 100 cm = 1 × 10² cm.",
+              "explicacion": "1. **Reducción de escala:** Se dividen las medidas originales entre 100. \n   - Nuevo ancho = 60 metros / 100 = 0.6 metros. \n   - Nuevo largo = 100 metros / 100 = 1 metro. \n2. **Conversión de unidades:** Se convierten los metros a centímetros. \n   - Nuevo ancho en cm = 0.6 metros × 100 cm/metro = 60 cm. \n   - Nuevo largo en cm = 1 metro × 100 cm/metro = 100 cm. \n3. **Expresión en notación científica:** \n   - 60 cm = 6 × 10¹ cm. \n   - 100 cm = 1 × 10² cm. \nEsta combinación coincide con la opción D.",
+              "habilidad_evaluada": "Realización de conversiones de unidades, reducción de escala y uso de notación científica.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Las unidades son incorrectas y la notación científica para el largo es incorrecta.",
+                "B": "La notación científica es incorrecta (potencias negativas).",
+                "C": "Las unidades son incorrectas (deberían ser centímetros para esos valores) y las medidas representarían una ampliación, no una reducción."
+              },
+              "estrategias_resolucion": "1. Calcular las nuevas dimensiones dividiendo por el factor de escala. 2. Realizar la conversión de unidades de metros a centímetros. 3. Convertir los resultados a notación científica. 4. Comparar con las opciones.",
+              "errores_comunes": "Confundir las unidades (metros y centímetros). Cometer errores al expresar los números en notación científica, especialmente con el exponente.",
+              "dificultad": "media",
+              "tiempo_estimado": 120,
+              "tags": [
+                "conversión de unidades",
+                "notación científica",
+                "escala",
+                "maquetas"
+              ]
+            },
+            {
+              "materia": "Matemáticas",
+              "competencia": "Interpretación y representación",
+              "contexto": "Se define el área (Ax) de una serie de rectángulos construidos a partir del origen, los ejes cartesianos y un punto de la función f(x) = 5/x (para x > 0). El área se describe con la expresión Ax = x * f(x).",
+              "enunciado": "¿Cuál de las siguientes gráficas corresponde a Ax?",
+              "opciones": {
+                "A": "Gráfica A (curva creciente)",
+                "B": "Gráfica B (línea horizontal)",
+                "C": "Gráfica C (curva tipo parábola)",
+                "D": "Gráfica D (curva decreciente)"
+              },
+              "respuesta_correcta": "B",
+              "retroalimentacion": "Para encontrar la función del área Ax, se sustituye la definición de f(x) en la expresión dada: Ax = x * (5/x). Al simplificar, la variable 'x' se cancela, resultando en Ax = 5. Esta es la ecuación de una función constante. La gráfica de una función constante y = k es una línea horizontal a la altura k. En este caso, es una línea horizontal a la altura 5.",
+              "explicacion": "El problema pide identificar la gráfica de la función Ax. \n1. **Encontrar la fórmula de Ax:** La expresión es Ax = x * f(x). \n2. **Sustituir f(x):** La función dada es f(x) = 5/x. Sustituyendo, tenemos Ax = x * (5/x). \n3. **Simplificar la expresión:** La 'x' en el numerador y el denominador se cancelan, lo que da como resultado Ax = 5. \n4. **Identificar la gráfica:** La ecuación Ax = 5 significa que, para cualquier valor de x (mayor que 0), el valor del área Ax es siempre 5. La gráfica que representa esta relación es una línea recta horizontal que pasa por y=5. Esto corresponde a la Gráfica B.",
+              "habilidad_evaluada": "Evaluación de funciones, simplificación de expresiones algebraicas y reconocimiento de la gráfica de una función constante.",
+              "explicacion_opciones_incorrectas": {
+                "A": "Representa una función creciente, no constante.",
+                "C": "Representa una función cuadrática, no constante.",
+                "D": "Representa una función decreciente (similar a la f(x) original, pero no a Ax)."
+              },
+              "estrategias_resolucion": "1. Escribir la expresión para el área Ax. 2. Sustituir la definición de f(x) en la expresión. 3. Simplificar algebraicamente la expresión resultante. 4. Reconocer el tipo de función obtenida y su representación gráfica correspondiente.",
+              "errores_comunes": "No realizar la simplificación algebraica y tratar de graficar la función x*(5/x) sin cancelarla, lo que puede llevar a confusión.",
+              "dificultad": "facil",
+              "tiempo_estimado": 90,
+              "tags": [
+                "funciones",
+                "álgebra",
+                "gráficas",
+                "función constante",
+                "hipérbola"
+              ]
+            },
+                {
+                  "materia": "Matemáticas",
+                  "competencia": "Formulación y ejecución",
+                  "contexto": "Una rueda giratoria de 3 m de radio está diseñada para 10 personas en 10 sectores circulares de igual área. Para determinar el área de un sector (S), se calcula el ángulo θ = 2π / 10 y se usa la fórmula S = r² * (θ/2). Se pide usar una aproximación de π al menor entero más cercano.",
+                  "enunciado": "Utilizando una aproximación de π al menor entero más cercano, ¿cuál es el área aproximada que le corresponde a cada persona?",
+                  "opciones": {
+                    "A": "3,6 m²",
+                    "B": "2,7 m²",
+                    "C": "9,0 m²",
+                    "D": "1,8 m²"
+                  },
+                  "respuesta_correcta": "B",
+                  "retroalimentacion": "El método más simple es calcular el área total del círculo y dividirla entre 10. El entero más cercano a π (≈3.1415) es 3. El radio 'r' es 3 m. El área total es A = πr² ≈ 3 * (3)² = 27 m². Como hay 10 sectores iguales, el área de cada sector es S = Área Total / 10 ≈ 27 / 10 = 2.7 m².",
+                  "explicacion": "El problema se puede resolver de dos maneras: \n**1. Siguiendo el procedimiento descrito:** \n   - Aproximar π al entero más cercano: π ≈ 3. \n   - Calcular el ángulo θ: θ = 2π / 10 ≈ (2 * 3) / 10 = 0.6 radianes. \n   - Aplicar la fórmula del área del sector: S = r² * (θ/2) = (3)² * (0.6 / 2) = 9 * 0.3 = 2.7 m². \n**2. Usando el área total del círculo:** \n   - Calcular el área total del círculo con la aproximación: A = πr² ≈ 3 * (3)² = 27 m². \n   - Dividir el área total entre los 10 sectores iguales: S = 27 m² / 10 = 2.7 m².",
+                  "habilidad_evaluada": "Cálculo del área de un sector circular utilizando aproximaciones numéricas.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Resultado de un error de cálculo.",
+                    "C": "9 m² es el área del círculo si πr² se calcula incorrectamente como 3*3.",
+                    "D": "Resultado de un error de cálculo."
+                  },
+                  "estrategias_resolucion": "1. Calcular el área total del círculo usando la aproximación de π indicada. 2. Dividir el área total por el número de sectores para encontrar el área de uno solo.",
+                  "errores_comunes": "No usar la aproximación de π solicitada (usar el valor completo o una aproximación diferente). Cometer errores en la fórmula del área del círculo o del sector.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "geometría",
+                    "área",
+                    "círculo",
+                    "sector circular",
+                    "aproximación"
+                  ]
+                },
+                {
+                  "materia": "Matemáticas",
+                  "competencia": "Formulación y ejecución",
+                  "contexto": "Un colegio necesita enviar 5 representantes a un foro: 2 de grado décimo y 3 de grado undécimo. Hay 5 estudiantes preparados en décimo grado y 4 estudiantes preparados en undécimo grado.",
+                  "enunciado": "¿Cuántos grupos diferentes pueden formarse para enviar al foro?",
+                  "opciones": {
+                    "A": "9",
+                    "B": "14",
+                    "C": "20",
+                    "D": "40"
+                  },
+                  "respuesta_correcta": "D",
+                  "retroalimentacion": "Este es un problema de combinatoria que involucra dos elecciones independientes. Primero, se eligen 2 estudiantes de décimo de un grupo de 5 (C(5,2)). Segundo, se eligen 3 de undécimo de un grupo de 4 (C(4,3)). El número total de grupos es el producto de estas dos combinaciones. C(5,2) = 5!/(2!3!) = 10. C(4,3) = 4!/(3!1!) = 4. Total de grupos = 10 × 4 = 40.",
+                  "explicacion": "El problema se resuelve en dos partes, aplicando el principio de multiplicación: \n1. **Selección de décimo grado:** Se deben escoger 2 estudiantes de un grupo de 5. Como el orden de selección no importa, se usan combinaciones: C(5, 2) = (5 × 4) / (2 × 1) = 10 maneras. \n2. **Selección de undécimo grado:** Se deben escoger 3 estudiantes de un grupo de 4. El número de combinaciones es: C(4, 3) = 4. \n3. **Total de grupos:** Para encontrar el número total de grupos diferentes, se multiplican las posibilidades de cada selección: 10 (de décimo) × 4 (de undécimo) = 40 grupos.",
+                  "habilidad_evaluada": "Aplicación de la fórmula de combinaciones y el principio de multiplicación para resolver un problema de conteo.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "9 es la suma de los estudiantes disponibles (5+4), no el número de grupos.",
+                    "B": "14 es la suma de las combinaciones (10+4), pero el principio correcto es el de multiplicación.",
+                    "C": "20 es el producto de 5×4, lo cual sería correcto si se eligiera un estudiante de cada grado, pero no se ajusta a la estructura del problema."
+                  },
+                  "estrategias_resolucion": "1. Identificar que es un problema de selección donde el orden no importa, por lo que se deben usar combinaciones. 2. Descomponer el problema en las selecciones independientes para cada grado. 3. Calcular el número de combinaciones para cada selección. 4. Multiplicar los resultados para obtener el total.",
+                  "errores_comunes": "Sumar las combinaciones en lugar de multiplicarlas. Usar permutaciones en lugar de combinaciones.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "combinatoria",
+                    "combinaciones",
+                    "principio de multiplicación",
+                    "conteo"
+                  ]
+                },
+                {
+                  "materia": "Matemáticas",
+                  "competencia": "Argumentación",
+                  "contexto": "Un niño gana una consola si gana en dos juegos consecutivos e independientes. Juego 1: lanzar un dado y obtener un número par (probabilidad de ganar P(G1) = 1/2). Juego 2: sacar la única pelota amarilla de una bolsa con 6 pelotas en total (probabilidad de ganar P(G2) = 1/6). Se proponen cuatro procedimientos para hallar la probabilidad de ganar la consola: 1. Sumar las probabilidades. 2. Multiplicar las probabilidades. 3. Restarle a 1 la probabilidad de perder en al menos uno de los dos juegos. 4. Restarle a 1 la probabilidad de perder exactamente en un juego.",
+                  "enunciado": "¿Cuáles de los anteriores procedimientos permiten hallar la probabilidad de ganar la consola de videojuegos?",
+                  "opciones": {
+                    "A": "1 y 3.",
+                    "B": "1 y 4.",
+                    "C": "2 y 3.",
+                    "D": "2 y 4."
+                  },
+                  "respuesta_correcta": "C",
+                  "retroalimentacion": "Para ganar la consola, se debe ganar el Juego 1 Y el Juego 2. Como los eventos son independientes, la probabilidad de que ambos ocurran es el producto de sus probabilidades individuales. Por lo tanto, el Procedimiento 2 es correcto. Adicionalmente, el evento 'ganar ambos juegos' es el complemento del evento 'perder en al menos uno de los juegos'. Por lo tanto, P(Ganar ambos) = 1 - P(Perder en al menos uno). Así, el Procedimiento 3 también es correcto. Ambos procedimientos, 2 y 3, son válidos.",
+                  "explicacion": "Se deben evaluar los procedimientos propuestos: \n- **Procedimiento 2 (Multiplicar):** Es correcto. Para eventos independientes, la probabilidad de que ocurran ambos (A y B) es P(A) × P(B). Ganar la consola requiere ganar G1 Y G2. \n- **Procedimiento 3 (Complemento de 'perder al menos uno'):** Es correcto. El único caso en que NO 'se pierde en al menos un juego' es cuando se ganan AMBOS juegos. Por lo tanto, 'ganar ambos' es el evento complementario a 'perder en al menos uno'. \n- **Procedimiento 1 (Sumar):** Es incorrecto. La suma de probabilidades se usa para la probabilidad de que ocurra A O B, cuando A y B son mutuamente excluyentes. \n- **Procedimiento 4 (Complemento de 'perder exactamente uno'):** Es incorrecto. El complemento de 'perder exactamente uno' incluye dos casos: ganar ambos y perder ambos.",
+                  "habilidad_evaluada": "Comprensión de la regla de la multiplicación para eventos independientes y la regla del complemento en probabilidad.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "El procedimiento 1 es incorrecto.",
+                    "B": "Los procedimientos 1 y 4 son incorrectos.",
+                    "D": "El procedimiento 4 es incorrecto."
+                  },
+                  "estrategias_resolucion": "1. Identificar que ganar la consola requiere que ocurran dos eventos independientes de forma conjunta ('y'). 2. Recordar la regla de la multiplicación para eventos independientes. 3. Analizar los eventos complementarios y darse cuenta de que 'ganar todo' es el complemento de 'perder algo'.",
+                  "errores_comunes": "Sumar las probabilidades en lugar de multiplicarlas. Confundir el evento complementario 'perder en al menos uno' con 'perder en ambos'.",
+                  "dificultad": "dificil",
+                  "tiempo_estimado": 150,
+                  "tags": [
+                    "probabilidad",
+                    "eventos independientes",
+                    "regla de la multiplicación",
+                    "evento complementario"
+                  ]
+                },
+                {
+                  "materia": "Matemáticas",
+                  "competencia": "Formulación y ejecución",
+                  "contexto": "La expresión matemática 10³ = I / I₀ relaciona la sonoridad de un sonido de 30 decibelios (dB) con su intensidad (I) y la menor intensidad que el oído humano puede percibir (I₀), que es un valor de referencia.",
+                  "enunciado": "¿Cuántas veces es el valor de I respecto a I₀?",
+                  "opciones": {
+                    "A": "Una milésima.",
+                    "B": "Un tercio.",
+                    "C": "Tres veces.",
+                    "D": "Mil veces."
+                  },
+                  "respuesta_correcta": "D",
+                  "retroalimentacion": "La ecuación dada es 10³ = I / I₀. Para saber cuántas veces es I respecto a I₀, simplemente se debe evaluar la potencia 10³ y despejar I. 10³ = 10 × 10 × 10 = 1.000. Por lo tanto, 1.000 = I / I₀, lo que significa que I = 1.000 × I₀. Es decir, I es mil veces I₀.",
+                  "explicacion": "El problema pide interpretar la ecuación dada. La expresión 'cuántas veces es I respecto a I₀' es equivalente a calcular la razón o cociente I / I₀. La propia ecuación nos da este valor: I / I₀ = 10³. Solo necesitamos calcular el valor numérico de 10³. \n10³ = 1.000. \nPor lo tanto, la intensidad I es 1.000 veces la intensidad de referencia I₀.",
+                  "habilidad_evaluada": "Interpretación y evaluación de una expresión exponencial en un contexto físico.",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Una milésima (1/1000) correspondería a una potencia de 10⁻³.",
+                    "B": "Un tercio no está relacionado con una potencia de 10.",
+                    "C": "Tres veces correspondería a una relación lineal I = 3 * I₀."
+                  },
+                  "estrategias_resolucion": "1. Tomar la ecuación proporcionada. 2. Calcular el valor numérico del término exponencial (10³). 3. Interpretar el resultado como el factor multiplicativo que relaciona I e I₀.",
+                  "errores_comunes": "Confundir 10³ con 10*3=30. No comprender que la expresión I/I₀ representa la razón que se está pidiendo.",
+                  "dificultad": "facil",
+                  "tiempo_estimado": 90,
+                  "tags": [
+                    "potenciación",
+                    "exponentes",
+                    "decibelios",
+                    "interpretación de fórmulas"
+                  ]
+                },
+                {
+                  "materia": "Matemáticas",
+                  "competencia": "Argumentación",
+                  "contexto": "Se rifa una boleta entre 16 estudiantes, que eligen un número del 3 al 18. El sorteo consiste en extraer una balota de una urna (con números del 1 al 6), anotar el número, devolverla, y repetir el proceso dos veces más. El número ganador es la suma de los tres puntajes obtenidos. En la primera extracción del sorteo se obtuvo un 2.",
+                  "enunciado": "¿Por qué es más probable que el estudiante que escogió el número 10 gane la rifa a que la gane el estudiante con el número 7?",
+                  "opciones": {
+                    "A": "Porque al ser mayor el número escogido, es mayor la probabilidad de ganar.",
+                    "B": "Porque el primer estudiante tiene una posibilidad más de ganar que el segundo.",
+                    "C": "Porque es más probable seguir obteniendo números pares.",
+                    "D": "Porque es mayor la diferencia entre 10 y 18 que entre 2 y 7."
+                  },
+                  "respuesta_correcta": "B",
+                  "retroalimentacion": "El primer resultado fue 2. El número ganador es 2 + d₂ + d₃, donde d₂ y d₃ son los resultados de los dos lanzamientos restantes (números del 1 al 6). \nPara ganar con el número 10: la suma de los dos lanzamientos restantes debe ser 8 (10 - 2 = 8). Las combinaciones (d₂,d₃) que suman 8 son: (2,6), (3,5), (4,4), (5,3), (6,2). Hay 5 combinaciones posibles. \nPara ganar con el número 7: la suma de los dos lanzamientos restantes debe ser 5 (7 - 2 = 5). Las combinaciones que suman 5 son: (1,4), (2,3), (3,2), (4,1). Hay 4 combinaciones posibles. \nComo hay más combinaciones para obtener un total de 10 (5 casos favorables) que para obtener 7 (4 casos favorables), es más probable ganar con el 10.",
+                  "explicacion": "El problema se reduce a comparar el número de formas en que se puede obtener una suma objetivo con dos dados (del 1 al 6). \n- **Objetivo 10:** Dado el 2 inicial, la suma de los siguientes dos dados debe ser 8. Las parejas son (2,6), (3,5), (4,4), (5,3) y (6,2). Hay 5 maneras. \n- **Objetivo 7:** Dado el 2 inicial, la suma de los siguientes dos dados debe ser 5. Las parejas son (1,4), (2,3), (3,2) y (4,1). Hay 4 maneras. \n- **Comparación:** La probabilidad de ganar con el 10 es 5/36, mientras que la de ganar con el 7 es 4/36. Por lo tanto, es más probable ganar con el 10. La opción B lo explica correctamente al decir que tiene 'una posibilidad más'.",
+                  "habilidad_evaluada": "Cálculo de probabilidades en un espacio muestral de lanzamientos repetidos (conteo de casos favorables).",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Es una generalización falsa. Por ejemplo, obtener un total de 14 (suma de 12 en dos dados) solo tiene una posibilidad (6,6), siendo menos probable que obtener 7.",
+                    "C": "La paridad del primer resultado no influye en la probabilidad de los siguientes.",
+                    "D": "La diferencia con los extremos del rango de números no tiene relación con la probabilidad."
+                  },
+                  "estrategias_resolucion": "1. Determinar la suma necesaria en los dos lanzamientos restantes para cada número objetivo. 2. Listar sistemáticamente todas las combinaciones posibles de dos dados que producen esa suma. 3. Contar el número de combinaciones para cada objetivo. 4. Comparar el número de casos favorables.",
+                  "errores_comunes": "No considerar que los dados son distinguibles (por ejemplo, contar (2,6) pero no (6,2)). No listar exhaustivamente todas las combinaciones posibles.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "probabilidad",
+                    "conteo",
+                    "casos favorables",
+                    "espacio muestral",
+                    "dados"
+                  ]
+                },
+                {
+                  "materia": "Matemáticas",
+                  "competencia": "Formulación y ejecución",
+                  "contexto": "En una zona de una ciudad, el costo inicial de un metro cuadrado es de $800.000. Se asegura que anualmente, el metro cuadrado se valoriza un 5% con respecto al costo del año anterior.",
+                  "enunciado": "¿Con cuál de las siguientes expresiones se representa el costo de un metro cuadrado en esa zona, transcurridos n años?",
+                  "opciones": {
+                    "A": "800.000 + 5n",
+                    "B": "800.000 (5n)",
+                    "C": "800.000 (5/100)ⁿ",
+                    "D": "800.000 (1 + 5/100)ⁿ"
+                  },
+                  "respuesta_correcta": "D",
+                  "retroalimentacion": "Este es un problema de crecimiento exponencial, análogo al interés compuesto. Cada año, el valor se multiplica por un factor de crecimiento. Un aumento del 5% significa que el nuevo valor es el 100% del valor anterior más un 5% adicional, es decir, 105% del valor anterior. El factor de crecimiento es 1.05. Si el valor inicial es C₀, después de n años el valor final C(n) es C₀ * (1.05)ⁿ. La expresión es 800.000 * (1 + 5/100)ⁿ.",
+                  "explicacion": "El problema describe un crecimiento porcentual compuesto, donde el aumento de cada año se calcula sobre el valor actualizado. \n- **Valor inicial (año 0):** C₀ = 800.000. \n- **Valor después de 1 año (n=1):** C₁ = C₀ + 5% de C₀ = C₀ * (1 + 0.05). \n- **Valor después de 2 años (n=2):** C₂ = C₁ + 5% de C₁ = C₁ * (1.05) = (C₀ * 1.05) * 1.05 = C₀ * (1.05)². \n- **Generalizando para n años:** El patrón muestra que el costo C(n) es C(n) = C₀ * (1.05)ⁿ. \nSustituyendo los valores, la expresión es: 800.000 * (1 + 5/100)ⁿ.",
+                  "habilidad_evaluada": "Modelado de situaciones de crecimiento exponencial (interés compuesto).",
+                  "explicacion_opciones_incorrectas": {
+                    "A": "Describe un crecimiento lineal (interés simple), no un crecimiento porcentual compuesto.",
+                    "B": "No representa un modelo de crecimiento válido.",
+                    "C": "Representaría una desvalorización muy rápida, ya que se multiplica por un factor menor que 1 (0.05) cada año."
+                  },
+                  "estrategias_resolucion": "1. Identificar el tipo de crecimiento como exponencial, ya que el porcentaje se aplica sobre el valor del año anterior. 2. Determinar el factor de crecimiento (1 + porcentaje/100). 3. Aplicar la fórmula general del crecimiento exponencial: Valor_Final = Valor_Inicial * (factor_crecimiento)ⁿ.",
+                  "errores_comunes": "Confundir el crecimiento exponencial con el crecimiento lineal y elegir la opción A.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "interés compuesto",
+                    "crecimiento exponencial",
+                    "porcentajes",
+                    "modelado matemático"
+                  ]
+                },
+                {
+                  "materia": "Matemáticas",
+                  "competencia": "Argumentación",
+                  "contexto": "Alfonso tiene tres empaques para almacenar dulces. Las medidas se muestran en una figura: 1. Un cilindro con altura h=2 y radio de la base r=3/2. 2. Una caja de base cuadrada con altura h=2 y lado de la base L=3/2. 3. Una esfera con radio r=3/2.",
+                  "enunciado": "¿Cuál de las siguientes afirmaciones es verdadera respecto al volumen de los tres empaques?",
+                  "opciones": {
+                    "A": "El volumen del cilindro es mayor que el volumen de la caja; además, el volumen de la esfera es igual que el volumen del cilindro.",
+                    "B": "El volumen del cilindro es igual que el volumen de la caja; además, el volumen de la esfera es mayor que el volumen del cilindro.",
+                    "C": "El volumen del cilindro es menor que el volumen de la caja; además, el volumen de la esfera es igual que el volumen del cilindro.",
+                    "D": "El volumen del cilindro es mayor que el volumen de la caja; además, el volumen de la esfera es mayor que el volumen del cilindro."
+                  },
+                  "respuesta_correcta": "A",
+                  "retroalimentacion": "Se deben calcular los tres volúmenes. \n- Volumen Cilindro: V_cil = π * r² * h = π * (3/2)² * 2 = π * (9/4) * 2 = 9π/2 ≈ 14.14. \n- Volumen Caja: V_caja = L² * h = (3/2)² * 2 = (9/4) * 2 = 9/2 = 4.5. \n- Volumen Esfera: V_esf = (4/3) * π * r³ = (4/3) * π * (3/2)³ = (4/3) * π * (27/8) = 9π/2 ≈ 14.14. \nComparando los resultados: V_cilindro (≈14.14) > V_caja (4.5). Y V_esfera (≈14.14) es igual a V_cilindro (≈14.14). La afirmación A es la correcta.",
+                  "explicacion": "El problema requiere calcular y comparar los volúmenes de tres sólidos geométricos. \n1. **Volumen del Cilindro:** V = π * r² * h. \n   V_cilindro = π * (3/2)² * 2 = π * (9/4) * 2 = 9π/2. \n2. **Volumen de la Caja (Prisma):** V = Área_base * h = L² * h. \n   V_caja = (3/2)² * 2 = (9/4) * 2 = 9/2. \n3. **Volumen de la Esfera:** V = (4/3) * π * r³. \n   V_esfera = (4/3) * π * (3/2)³ = (4/3) * π * (27/8) = (4×27)/(3×8) * π = 108/24 * π = 9π/2. \n**Comparación:** \n- Cilindro vs. Caja: 9π/2 (≈14.14) es mayor que 9/2 (4.5). \n- Esfera vs. Cilindro: 9π/2 es igual a 9π/2. \nLa afirmación que recoge ambas conclusiones es la A.",
+                  "habilidad_evaluada": "Cálculo de volúmenes de sólidos geométricos y comparación de sus valores.",
+                  "explicacion_opciones_incorrectas": {
+                    "B": "El volumen del cilindro no es igual al de la caja.",
+                    "C": "El volumen del cilindro es mayor que el de la caja, no menor.",
+                    "D": "El volumen de la esfera es igual al del cilindro, no mayor."
+                  },
+                  "estrategias_resolucion": "1. Recordar las fórmulas de volumen para cilindro, prisma de base cuadrada y esfera. 2. Sustituir cuidadosamente los valores dados para cada figura en su fórmula correspondiente. 3. Calcular los tres volúmenes, preferiblemente dejándolos en términos de π para una comparación exacta. 4. Comparar los resultados para verificar cuál de las afirmaciones es verdadera.",
+                  "errores_comunes": "Usar fórmulas de volumen incorrectas. Cometer errores en los cálculos aritméticos, especialmente con fracciones y potencias.",
+                  "dificultad": "media",
+                  "tiempo_estimado": 120,
+                  "tags": [
+                    "geometría del espacio",
+                    "volumen",
+                    "cilindro",
+                    "prisma",
+                    "esfera"
+                  ]
+                }
+              ]

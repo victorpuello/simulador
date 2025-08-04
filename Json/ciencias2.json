@@ -1,0 +1,203 @@
+[
+  {
+    "materia": "Ciencias Naturales",
+    "competencia": "Explicación de fenómenos",
+    "componente": "Entorno vivo",
+    "contexto": "Los ecosistemas son sistemas abiertos porque intercambian constantemente materia y energía con su medio externo.",
+    "enunciado": "De acuerdo con la información anterior, ¿cuál de los siguientes modelos representa precisamente un ecosistema abierto?",
+    "opciones": {
+      "A": "Diagrama A",
+      "B": "Diagrama B",
+      "C": "Diagrama C",
+      "D": "Diagrama D"
+    },
+    "respuesta_correcta": "C",
+    "retroalimentacion": "Un ecosistema abierto se caracteriza por tener flujos de entrada y salida de materia y energía. El diagrama C es el más completo al mostrar estos flujos. Tiene una entrada de materia ('Materia orgánica proveniente de ríos') y una salida de materia ('Pesca'). Además, implícitamente, la presencia de productores (plantas/algas) requiere una entrada de energía (solar, no dibujada pero fundamental) y la respiración de todos los organismos representa una salida de energía (calor). Los modelos A, B y D son más cerrados o incompletos en su representación de estos intercambios.",
+    "explicacion": "El problema pide identificar el modelo que mejor representa un 'ecosistema abierto'. Esto significa que el diagrama debe mostrar flechas que indiquen la entrada y/o salida de materia y energía desde y hacia el exterior del sistema (el lago). \n- **Diagrama A:** Solo muestra ciclos internos entre productores, consumidores y descomponedores. Es un modelo de un ecosistema cerrado. \n- **Diagrama B:** Muestra una entrada de materia ('materia orgánica'), pero ninguna salida. \n- **Diagrama D:** Muestra una entrada ('materia orgánica') y una salida ('pesca'), pero el ciclo interno está incompleto o representado de forma extraña. \n- **Diagrama C:** Es el que mejor representa un sistema abierto. Muestra claramente una entrada de materia ('Materia orgánica a través de ríos') y una salida de materia ('Pesca'), además de los ciclos internos de nutrientes entre los diferentes niveles tróficos.",
+    "habilidad_evaluada": "Aplicación del concepto de sistema abierto a un modelo de ecosistema.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Representa un sistema cerrado, con solo ciclos internos.",
+      "B": "Solo muestra entradas, no salidas.",
+      "D": "Aunque muestra entradas y salidas, la representación de los ciclos internos es menos clara que en C."
+    },
+    "estrategias_resolucion": "1. Entender la definición de 'sistema abierto': intercambia materia y energía con el entorno. 2. Analizar cada diagrama buscando flechas que crucen la frontera del ecosistema (el lago). 3. Identificar el diagrama que muestre tanto entradas como salidas de materia.",
+    "errores_comunes": "No diferenciar entre los flujos internos del ecosistema (ciclaje de nutrientes) y los flujos externos (intercambio con el medio).",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": [
+      "biología",
+      "ecología",
+      "ecosistemas",
+      "sistemas abiertos",
+      "flujo de materia y energía"
+    ]
+  },
+  {
+    "materia": "Ciencias Naturales",
+    "competencia": "Explicación de fenómenos",
+    "componente": "Física",
+    "contexto": "Una onda transversal (como en una cuerda) es aquella donde las partículas del medio vibran perpendicularmente a la dirección de propagación. En una onda longitudinal (como el sonido), las partículas vibran en la misma dirección de propagación. Un grupo de personas en fila quiere representar una onda longitudinal.",
+    "enunciado": "Para lograr la representación, ¿cuál es el movimiento que debe hacer la primera persona y que los demás deben repetir sucesivamente?",
+    "opciones": {
+      "A": "Alzar y bajar lateralmente los brazos.",
+      "B": "Sentarse y ponerse de pie.",
+      "C": "Balancearse de izquierda a derecha.",
+      "D": "Moverse hacia adelante y atrás."
+    },
+    "respuesta_correcta": "D",
+    "retroalimentacion": "La fila de personas representa la dirección de propagación de la onda. Para que la onda sea longitudinal, las 'partículas' (las personas) deben vibrar en esa misma dirección. Moverse hacia adelante y hacia atrás es un movimiento oscilatorio a lo largo de la dirección de la fila. Cuando la primera persona lo hace, empuja a la segunda, esta a la tercera, y así sucesivamente, creando zonas de compresión y rarefacción que se propagan a lo largo de la fila, que es exactamente como funciona una onda longitudinal.",
+    "explicacion": "El problema pide identificar el movimiento que simula una onda longitudinal. \n- **Dirección de propagación:** A lo largo de la fila de personas. \n- **Dirección de vibración (para ser longitudinal):** Debe ser la misma que la de propagación. \n- **Análisis de los movimientos:** \n   - A, B y C: Son movimientos perpendiculares a la dirección de la fila (arriba-abajo, izquierda-derecha). Estos movimientos representarían una onda transversal. \n   - D: Moverse 'hacia adelante y atrás' es un movimiento en la misma dirección de la fila. Esto representaría una onda longitudinal.",
+    "habilidad_evaluada": "Comprensión y diferenciación entre ondas transversales y longitudinales.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Representa una onda transversal.",
+      "B": "Representa una onda transversal.",
+      "C": "Representa una onda transversal."
+    },
+    "estrategias_resolucion": "1. Recordar la definición de onda longitudinal: vibración paralela a la propagación. 2. Identificar la dirección de propagación en el modelo (la fila). 3. Evaluar cuál de los movimientos descritos es paralelo a la fila.",
+    "errores_comunes": "Confundir la definición de onda longitudinal con la de onda transversal.",
+    "dificultad": "facil",
+    "tiempo_estimado": 90,
+    "tags": [
+      "física",
+      "ondas",
+      "onda longitudinal",
+      "onda transversal",
+      "propagación"
+    ]
+  },
+  {
+    "materia": "Ciencias Naturales",
+    "competencia": "Uso comprensivo del conocimiento científico",
+    "componente": "Ciencia, Tecnología y Sociedad (CTS)",
+    "contexto": "Se descubre que la contaminación de un río con metales tóxicos (cadmio y plomo) proviene de la descomposición de pilas en un botadero de basura cercano. Unos estudiantes proponen que, a futuro, las pilas se separen del resto de los desechos en contenedores completamente aislados.",
+    "enunciado": "Con base en la información anterior, ¿se puede afirmar que la propuesta de los estudiantes es apropiada o inapropiada?",
+    "opciones": {
+      "A": "Inapropiada, porque es mejor desarmar las pilas y luego desecharlas.",
+      "B": "Apropiada, porque se evitaría la presencia de metales pesados en el agua.",
+      "C": "Apropiada, porque luego se podrían reutilizar las pilas desechadas.",
+      "D": "Inapropiada, porque es mejor quemarlas ya que no entrarían en contacto con el agua."
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El problema identificado es que los metales pesados de las pilas se filtran al agua desde el botadero. La propuesta de los estudiantes es aislar las pilas en contenedores especiales. Esta medida ataca directamente la causa del problema: si las pilas están en contenedores aislados, sus componentes tóxicos no podrán filtrarse al suelo y, por consiguiente, al agua del río. Es una solución apropiada y es la base de los programas de recolección selectiva de residuos peligrosos.",
+    "explicacion": "La pregunta evalúa la pertinencia de una solución a un problema ambiental. \n- **Problema:** Lixiviación (filtración) de metales pesados de las pilas al agua. \n- **Propuesta:** Separar y aislar las pilas. \n- **Análisis:** Al aislar las pilas, se impide el contacto de sus componentes con el agua de lluvia y el suelo, cortando la ruta de contaminación. Por lo tanto, la propuesta es apropiada porque evita la liberación de metales pesados al ambiente acuático.",
+    "habilidad_evaluada": "Evaluación de la pertinencia y efectividad de una solución tecnológica a un problema de contaminación.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Desarmar pilas es peligroso y requiere procesos industriales, no es una solución práctica para el ciudadano común.",
+      "C": "Las pilas comunes no son reutilizables; el objetivo de separarlas es la disposición final segura, no la reutilización.",
+      "D": "Quemar las pilas es extremadamente inapropiado, ya que liberaría los metales pesados y otros compuestos tóxicos al aire, causando contaminación atmosférica."
+    },
+    "estrategias_resolucion": "1. Identificar la causa del problema (filtración de tóxicos desde las pilas). 2. Analizar la solución propuesta (aislamiento). 3. Evaluar si la solución interrumpe la causa del problema. 4. Concluir que el aislamiento impide la filtración y es, por tanto, una medida apropiada.",
+    "errores_comunes": "Proponer 'soluciones' como quemar o desarmar las pilas, que en realidad son peligrosas y generan otros problemas de contaminación.",
+    "dificultad": "facil",
+    "tiempo_estimado": 90,
+    "tags": [
+      "CTS",
+      "contaminación",
+      "residuos peligrosos",
+      "pilas",
+      "metales pesados",
+      "soluciones ambientales"
+    ]
+  },
+  {
+    "materia": "Ciencias Naturales",
+    "competencia": "Indagación",
+    "componente": "Entorno vivo",
+    "contexto": "Un investigador evalúa la capacidad de los ratones para recordar un lugar. Somete a dos grupos de ratones a un experimento en un tanque de agua (laberinto acuático de Morris). Grupo 1: hizo ejercicio antes del experimento. Grupo 2: no hizo ejercicio. Ambos grupos deben encontrar un recipiente transparente señalizado por un triángulo en la pared. La figura muestra que, en el último día, los ratones del grupo con ejercicio nadan directamente hacia el recipiente, mientras que los del grupo sin ejercicio nadan de forma errática.",
+    "enunciado": "De acuerdo con el experimento, ¿por qué los ratones del grupo con ejercicio ubicaron tan fácilmente el recipiente?",
+    "opciones": {
+      "A": "Porque el triángulo los guio hasta el recipiente.",
+      "B": "Porque nadaron más rápido que los ratones del grupo sin ejercicio.",
+      "C": "Porque permanecieron más tiempo en el tanque que los ratones del grupo sin ejercicio.",
+      "D": "Porque el ejercicio mejoró su capacidad de memorizar."
+    },
+    "respuesta_correcta": "D",
+    "retroalimentacion": "El experimento está diseñado para probar la memoria espacial. Ambos grupos fueron expuestos al mismo entorno y a la misma señal (el triángulo). La única diferencia sistemática entre los grupos fue la condición previa: hacer ejercicio o no. Dado que el grupo con ejercicio mostró un desempeño significativamente mejor en la tarea de recordar la ubicación del recipiente, la conclusión lógica es que el ejercicio tuvo un efecto positivo en la capacidad de memorización de los ratones.",
+    "explicacion": "Este es un experimento controlado que busca establecer una relación causal. \n- **Variable Independiente:** Realización de ejercicio. \n- **Variable Dependiente:** Capacidad de recordar la ubicación (medida por la eficiencia de la trayectoria de nado). \n- **Observación:** El grupo con ejercicio aprende y recuerda mejor la tarea. \n- **Conclusión:** Existe una correlación positiva entre el ejercicio y el rendimiento en la tarea de memoria. Por lo tanto, se infiere que el ejercicio mejoró su capacidad de memorizar.",
+    "habilidad_evaluada": "Interpretación de los resultados de un experimento controlado para establecer una conclusión causal.",
+    "explicacion_opciones_incorrectas": {
+      "A": "El triángulo era una guía para ambos grupos. No explica por qué un grupo lo usó más eficientemente que el otro.",
+      "B": "Nadar más rápido podría ser una consecuencia de saber a dónde ir, no la causa. La memoria es la variable cognitiva subyacente.",
+      "C": "Todos los ratones permanecieron el mismo tiempo (un minuto) en el tanque durante el entrenamiento."
+    },
+    "estrategias_resolucion": "1. Identificar el diseño del experimento (dos grupos, una variable diferente entre ellos). 2. Identificar qué se está midiendo (memoria espacial). 3. Comparar los resultados de ambos grupos. 4. Atribuir la diferencia en los resultados a la única variable que era diferente entre los grupos (el ejercicio).",
+    "errores_comunes": "Confundir la causa (ejercicio → memoria) con un efecto (memoria → nadar más rápido).",
+    "dificultad": "facil",
+    "tiempo_estimado": 90,
+    "tags": [
+      "biología",
+      "diseño experimental",
+      "indagación",
+      "memoria",
+      "neurociencia",
+      "variable de control"
+    ]
+  },
+  {
+    "materia": "Ciencias Naturales",
+    "competencia": "Indagación",
+    "componente": "Física",
+    "contexto": "Una estudiante mide la velocidad de propagación del sonido en el aire a diferentes temperaturas. Los resultados se muestran en una tabla: Temperatura (°C) vs. Velocidad del sonido (m/s). Los pares de datos son (0, 331.7), (1, 332.3), (2, 332.9), (3, 333.5).",
+    "enunciado": "¿Cuál de las siguientes gráficas muestra los resultados del experimento?",
+    "opciones": {
+      "A": "Gráfica A",
+      "B": "Gráfica B",
+      "C": "Gráfica C",
+      "D": "Gráfica D"
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "Se debe encontrar la gráfica que represente correctamente los datos de la tabla. La temperatura es la variable independiente (eje X) y la velocidad del sonido es la variable dependiente (eje Y). La gráfica B es la única que tiene las variables en los ejes correctos y cuyos puntos corresponden a los valores de la tabla. Por ejemplo, para T=0°C, la velocidad es 331.7 m/s; para T=1°C, la velocidad es 332.3 m/s, y así sucesivamente, mostrando una relación lineal creciente.",
+    "explicacion": "El problema consiste en traducir datos de una tabla a una representación gráfica. \n1. **Identificar los ejes:** La temperatura es la variable que se controla, por lo que va en el eje horizontal (X). La velocidad es la variable que se mide, por lo que va en el eje vertical (Y). \n2. **Verificar los ejes en las opciones:** Las gráficas A y C tienen los ejes intercambiados. Se descartan. Las gráficas B y D tienen los ejes correctos. \n3. **Verificar los puntos:** Se debe comprobar que los puntos en la gráfica coincidan con los pares (Temperatura, Velocidad) de la tabla. \n   - En la gráfica B: para X=0, Y≈331.7; para X=1, Y≈332.3; para X=2, Y≈332.9; para X=3, Y≈333.5. Los puntos coinciden. \n   - En la gráfica D: la escala de velocidad está invertida o los puntos están mal ubicados. \nPor lo tanto, la gráfica B es la representación correcta.",
+    "habilidad_evaluada": "Representación gráfica de datos tabulados en un plano cartesiano.",
+    "explicacion_opciones_incorrectas": {
+      "A": "Los ejes están intercambiados.",
+      "C": "Los ejes están intercambiados.",
+      "D": "Aunque los ejes son correctos, la representación de los puntos o la escala es incorrecta."
+    },
+    "estrategias_resolucion": "1. Determinar cuál es la variable independiente (eje X) y cuál la dependiente (eje Y). 2. Descartar las gráficas que no tengan los ejes correctos. 3. Para las gráficas restantes, verificar si los puntos marcados corresponden a los pares de datos de la tabla.",
+    "errores_comunes": "Confundir los ejes X e Y. No verificar los valores de los puntos en la gráfica.",
+    "dificultad": "facil",
+    "tiempo_estimado": 90,
+    "tags": [
+      "física",
+      "representación gráfica",
+      "plano cartesiano",
+      "análisis de datos",
+      "indagación"
+    ]
+  },
+  {
+    "materia": "Ciencias Naturales",
+    "competencia": "Explicación de fenómenos",
+    "componente": "Biología",
+    "contexto": "Se definen el anabolismo (proceso que requiere energía para elaborar moléculas complejas a partir de simples) y el catabolismo (proceso que produce energía al transformar moléculas complejas en simples). Se muestra el esquema de la fotosíntesis (CO₂ + H₂O + Luz → Glucosa + O₂) y de la respiración (Glucosa + O₂ → CO₂ + H₂O + ATP/Energía).",
+    "enunciado": "Con base en la información anterior, ¿qué se puede afirmar?",
+    "opciones": {
+      "A": "Que la fotosíntesis es un proceso anabólico porque produce glucosa como molécula compleja.",
+      "B": "Que la fotosíntesis es un proceso catabólico porque requiere energía en forma de luz solar.",
+      "C": "Que la respiración es un proceso anabólico porque produce energía en forma de ATP.",
+      "D": "Que la respiración es un proceso catabólico porque produce moléculas complejas como CO₂ y agua."
+    },
+    "respuesta_correcta": "A",
+    "retroalimentacion": "La fotosíntesis toma moléculas simples (CO₂ y H₂O) y, usando energía (luz solar), las convierte en una molécula compleja (glucosa, C₆H₁₂O₆). Según la definición, un proceso que elabora moléculas complejas a partir de simples es anabólico. Por lo tanto, la afirmación A es correcta.",
+    "explicacion": "Se debe aplicar las definiciones de anabolismo y catabolismo a los procesos de fotosíntesis y respiración. \n- **Fotosíntesis:** \n   - Reactivos: CO₂, H₂O (simples). \n   - Producto: Glucosa (compleja). \n   - Balance energético: Requiere energía. \n   - Conclusión: Cumple la definición de anabolismo. La afirmación A es correcta. \n- **Respiración:** \n   - Reactivo: Glucosa (compleja). \n   - Productos: CO₂, H₂O (simples). \n   - Balance energético: Produce energía. \n   - Conclusión: Cumple la definición de catabolismo.",
+    "habilidad_evaluada": "Clasificación de procesos metabólicos (fotosíntesis y respiración) como anabólicos o catabólicos a partir de sus definiciones.",
+    "explicacion_opciones_incorrectas": {
+      "B": "La fotosíntesis es anabólica. El hecho de que requiera energía es una característica del anabolismo, no del catabolismo.",
+      "C": "La respiración es catabólica. El hecho de que produzca energía es una característica del catabolismo, no del anabolismo.",
+      "D": "La respiración es catabólica, pero la justificación es incorrecta; el CO₂ y el agua son moléculas simples, no complejas."
+    },
+    "estrategias_resolucion": "1. Leer y entender las definiciones de anabolismo y catabolismo. 2. Analizar la ecuación de la fotosíntesis: identificar reactivos, productos y flujo de energía. 3. Clasificar la fotosíntesis. 4. Analizar la ecuación de la respiración. 5. Clasificar la respiración. 6. Evaluar cada opción para ver si la clasificación y la justificación son correctas.",
+    "errores_comunes": "Confundir anabolismo con catabolismo. No identificar correctamente qué moléculas son simples y cuáles son complejas.",
+    "dificultad": "facil",
+    "tiempo_estimado": 90,
+    "tags": [
+      "biología",
+      "metabolismo",
+      "anabolismo",
+      "catabolismo",
+      "fotosíntesis",
+      "respiración celular"
+    ]
+  }
+]

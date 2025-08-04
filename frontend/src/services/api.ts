@@ -5,23 +5,46 @@ import { useAppStore } from '../store';
 // Configuración base de axios
 const createApiInstance = (): AxiosInstance => {
   const instance = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || '/api',
+    baseURL: import.meta.env.DEV ? 'http://localhost:8000/api' : '/api',
     timeout: 10000,
     headers: {
       'Content-Type': 'application/json',
     },
+    withCredentials: true,
+    transformRequest: [(data, headers) => {
+      console.log('Transformando request:', { data, headers });
+      // Si es FormData, no transformar y quitar Content-Type para que axios lo maneje
+      if (data instanceof FormData) {
+        if (headers) {
+          delete headers['Content-Type'];
+        }
+        return data;
+      }
+      // Para datos normales, convertir a JSON
+      return JSON.stringify(data);
+    }],
   });
 
-  // Interceptor para agregar token de autenticación
+  // Interceptor para agregar token de autenticación y logging
   instance.interceptors.request.use(
     (config) => {
       const token = localStorage.getItem('access_token');
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;
       }
+      
+      // Log de la configuración final
+      console.log('Configuración final de la petición:', {
+        url: config.url,
+        method: config.method,
+        headers: config.headers,
+        data: config.data instanceof FormData ? 'FormData' : config.data
+      });
+      
       return config;
     },
     (error) => {
+      console.error('Error en interceptor de request:', error);
       return Promise.reject(error);
     }
   );
@@ -29,9 +52,24 @@ const createApiInstance = (): AxiosInstance => {
   // Interceptor para manejar respuestas y errores
   instance.interceptors.response.use(
     (response: AxiosResponse) => {
+      console.log('Respuesta exitosa:', {
+        url: response.config.url,
+        status: response.status,
+        data: response.data
+      });
       return response;
     },
     async (error) => {
+      console.error('Error en respuesta:', {
+        url: error.config?.url,
+        method: error.config?.method,
+        status: error.response?.status,
+        data: error.response?.data,
+        headers: error.config?.headers,
+        error: error.message,
+        detail: error.response?.data?.detail || error.response?.data?.error
+      });
+
       const originalRequest = error.config;
 
       // Si el error es 401 y no hemos intentado refrescar el token
@@ -41,7 +79,7 @@ const createApiInstance = (): AxiosInstance => {
         try {
           const refreshToken = localStorage.getItem('refresh_token');
           if (refreshToken) {
-            const response = await axios.post('/api/auth/token/refresh/', {
+            const response = await instance.post('/auth/token/refresh/', {
               refresh: refreshToken,
             });
 
@@ -298,6 +336,70 @@ export const gamificacionService = {
   // Obtener logros del usuario
   getUserAchievements: async () => {
     return apiGet<any[]>('/core/logros/');
+  },
+};
+
+export const simulacionService = {
+  // Obtener materias disponibles
+  getMateriasDisponibles: async () => {
+    return apiGet<any[]>('/simulacion/plantillas/materias_disponibles/');
+  },
+
+  // Obtener sesiones de simulación
+  getSesiones: async () => {
+    return apiGet<any[]>('/simulacion/sesiones/');
+  },
+
+  // Crear sesión de simulación
+  crearSesion: async (data: any) => {
+    return apiPost<any>('/simulacion/sesiones/iniciar_sesion/', data);
+  },
+
+  // Responder pregunta
+  responderPregunta: async (sesionId: number, data: any) => {
+    return apiPost<any>(`/simulacion/sesiones/${sesionId}/responder_pregunta/`, data);
+  },
+
+  // Verificar si hay sesión activa (general o por materia específica)
+  verificarSesionActiva: async (materiaId?: number) => {
+    const url = materiaId 
+      ? `/simulacion/sesiones/verificar_sesion_activa/?materia_id=${materiaId}`
+      : '/simulacion/sesiones/verificar_sesion_activa/';
+      
+    return apiGet<{
+      tiene_sesion_activa?: boolean;
+      tiene_sesiones_activas?: boolean;
+      sesion?: {
+        id: number;
+        materia: string;
+        materia_display: string;
+        materia_id: number;
+        fecha_inicio: string;
+        progreso: {
+          respondidas: number;
+          total: number;
+          porcentaje: number;
+        };
+      };
+      sesiones?: Array<{
+        id: number;
+        materia: string;
+        materia_display: string;
+        materia_id: number;
+        fecha_inicio: string;
+        progreso: {
+          respondidas: number;
+          total: number;
+          porcentaje: number;
+        };
+      }>;
+      count?: number;
+    }>(url);
+  },
+
+  // Obtener sesión específica
+  getSesion: async (sesionId: string) => {
+    return apiGet<any>(`/simulacion/sesiones/${sesionId}/`);
   },
 };
 

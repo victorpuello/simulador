@@ -1,0 +1,80 @@
+[
+  {
+    "materia": "Matemáticas",
+    "competencia": "Razonamiento y argumentación",
+    "contexto": "En un problema de aplicación de ecuaciones lineales",
+    "enunciado": "Si 2x + 5 = 13, ¿cuál es el valor de x?",
+    "opciones": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "Para resolver 2x + 5 = 13, restamos 5 de ambos lados: 2x = 8, luego dividimos entre 2: x = 4",
+    "explicacion": "Esta es una ecuación lineal simple que se resuelve despejando la variable x",
+    "habilidad_evaluada": "Resolución de ecuaciones lineales",
+    "explicacion_opciones_incorrectas": {
+      "A": "Este valor no satisface la ecuación original",
+      "C": "Al sustituir este valor, la ecuación no se cumple",
+      "D": "Este resultado viene de un error en el cálculo"
+    },
+    "estrategias_resolucion": "1. Aislar el término con la variable, 2. Realizar operaciones inversas, 3. Verificar el resultado",
+    "errores_comunes": "Olvidar cambiar el signo al pasar términos de un lado al otro",
+    "dificultad": "facil",
+    "tiempo_estimado": 90,
+    "tags": [
+      "álgebra",
+      "ecuaciones",
+      "básico"
+    ]
+  },
+  {
+    "materia": "Lenguaje",
+    "competencia": "Comprensión lectora",
+    "contexto": "Fragmento de texto sobre cambio climático",
+    "enunciado": "Según el texto, ¿cuál es la principal causa del calentamiento global?",
+    "opciones": {
+      "A": "La deforestación",
+      "B": "Las emisiones de gases de efecto invernadero",
+      "C": "Los fenómenos naturales",
+      "D": "La actividad volcánica"
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "Las emisiones de gases de efecto invernadero son identificadas en el texto como la principal causa antropogénica del calentamiento global",
+    "explicacion": "El texto claramente establece que las actividades humanas que generan gases de efecto invernadero son el factor principal",
+    "habilidad_evaluada": "Identificación de ideas principales en textos expositivos",
+    "dificultad": "media",
+    "tiempo_estimado": 120,
+    "tags": [
+      "comprensión",
+      "lectura",
+      "textos expositivos"
+    ]
+  },
+  {
+    "materia": "Ciencias Naturales",
+    "competencia": "Interpretación de gráficos y diagramas",
+    "contexto": "Análisis de datos experimentales en un gráfico",
+    "imagen_archivo": "grafico_experimento.png",
+    "enunciado": "Observando el gráfico, ¿qué se puede concluir sobre la relación entre la temperatura y la velocidad de reacción?",
+    "opciones": {
+      "A": "Son inversamente proporcionales",
+      "B": "Son directamente proporcionales",
+      "C": "No hay relación entre las variables",
+      "D": "La relación es exponencial"
+    },
+    "respuesta_correcta": "B",
+    "retroalimentacion": "El gráfico muestra una tendencia lineal ascendente, indicando que a mayor temperatura, mayor velocidad de reacción",
+    "explicacion": "Los datos experimentales demuestran una relación directamente proporcional entre ambas variables",
+    "habilidad_evaluada": "Interpretación de datos gráficos en contextos científicos",
+    "dificultad": "media",
+    "tiempo_estimado": 150,
+    "tags": [
+      "ciencias",
+      "gráficos",
+      "experimentos"
+    ],
+    "_comentario_imagen": "Para usar imágenes, coloca los archivos en la carpeta 'temp_images' del servidor y especifica el nombre del archivo en 'imagen_archivo'. Formatos soportados: JPG, PNG, GIF, WEBP (máximo 5MB)"
+  }
+]

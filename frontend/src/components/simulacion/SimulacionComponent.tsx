@@ -5,19 +5,30 @@ import {
   useSimulacionAcciones, 
   useSimulacionEstadisticas 
 } from '../../store/simulacion';
-import { useNotifications } from '../../store';
+import { useNotifications, useAuth } from '../../store';
+import { simulacionService } from '../../services/api';
+import SeleccionPrueba from './SeleccionPrueba';
+import BarraProgreso from './BarraProgreso';
+import ConfirmacionSesionModal from '../ui/ConfirmacionSesionModal';
 import Button from '../ui/Button';
 import Card from '../ui/Card';
 import LoadingSpinner from '../ui/LoadingSpinner';
 
 interface SimulacionComponentProps {
   materiaId?: number;
+  plantillaId?: number;
+  cantidadPreguntas?: number;
 }
 
-const SimulacionComponent: React.FC<SimulacionComponentProps> = ({ materiaId }) => {
+const SimulacionComponent: React.FC<SimulacionComponentProps> = ({ 
+  materiaId, 
+  plantillaId, 
+  cantidadPreguntas 
+}) => {
   const navigate = useNavigate();
   const params = useParams();
   const { addNotification } = useNotifications();
+  const { user } = useAuth();
   
   // Estado de la simulación
   const {
@@ -44,9 +55,7 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({ materiaId }) 
   // Estadísticas
   const {
     respuestasCorrectas,
-    respuestasIncorrectas,
     totalRespuestas,
-    porcentajeCompletado,
     porcentajeAcierto
   } = useSimulacionEstadisticas();
 
@@ -54,9 +63,16 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({ materiaId }) 
   const [respuestaSeleccionada, setRespuestaSeleccionada] = useState<string | null>(null);
   const [mostrandoRetroalimentacion, setMostrandoRetroalimentacion] = useState(false);
   const [ultimaRespuesta, setUltimaRespuesta] = useState<any>(null);
+  const [tiempoRestante, setTiempoRestante] = useState<number>(0);
+  
+  // Estado para modal de confirmación de sesión
+  const [mostrarModalSesion, setMostrarModalSesion] = useState(false);
+  const [sesionActivaDetalle, setSesionActivaDetalle] = useState<any>(null);
+  const [accionPendiente, setAccionPendiente] = useState<{materia: number; cantidad_preguntas?: number; plantilla?: number} | null>(null);
 
-  // Obtener materia ID de params si no se pasa como prop
+  // Obtener materia ID y plantilla ID de params si no se pasan como props
   const materiaIdFinal = materiaId || parseInt(params.materiaId || '1');
+  const plantillaIdFinal = plantillaId || parseInt(params.plantillaId || '0');
 
   // Pregunta actual
   const preguntaActual = preguntasActuales[preguntaActualIndex];
@@ -90,9 +106,50 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({ materiaId }) 
     }
   }, [error]);
 
-  const handleIniciarSimulacion = async () => {
+  // Controlar tiempo restante
+  useEffect(() => {
+    if (preguntaActual && !mostrandoRetroalimentacion) {
+      setTiempoRestante(preguntaActual.tiempo_estimado);
+      const timer = setInterval(() => {
+        setTiempoRestante(prev => {
+          if (prev <= 0) {
+            clearInterval(timer);
+            setMostrandoRetroalimentacion(true);
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+
+      return () => clearInterval(timer);
+    }
+  }, [preguntaActual, mostrandoRetroalimentacion]);
+
+  const handleIniciarSimulacion = async (forzarReinicio = false) => {
     try {
-      await iniciarSesion(materiaIdFinal, 10);
+      // Verificar si hay sesión activa para esta materia específica
+      if (!forzarReinicio) {
+        const verificacion = await simulacionService.verificarSesionActiva(materiaIdFinal);
+        if (verificacion.tiene_sesion_activa && verificacion.sesion) {
+          // Mostrar modal de confirmación para esta materia específica
+          setSesionActivaDetalle(verificacion.sesion);
+          setAccionPendiente({ 
+            materia: materiaIdFinal, 
+            cantidad_preguntas: cantidadPreguntas,
+            plantilla: plantillaIdFinal
+          });
+          setMostrarModalSesion(true);
+          return;
+        }
+      }
+
+      await iniciarSesion({
+        materia: materiaIdFinal,
+        plantilla: plantillaIdFinal,
+        cantidad_preguntas: cantidadPreguntas,
+        forzar_reinicio: forzarReinicio
+      });
+      
       addNotification({
         type: 'success',
         title: 'Simulación iniciada',
@@ -101,7 +158,56 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({ materiaId }) 
       });
     } catch (error) {
       console.error('Error al iniciar simulación:', error);
+      
+      addNotification({
+        type: 'error',
+        title: 'Error al iniciar',
+        message: 'No se pudo iniciar la simulación. Intenta nuevamente.',
+        duration: 5000
+      });
     }
+  };
+
+  // Handlers para el modal de sesión activa
+  const handleContinuarSesionActiva = () => {
+    if (sesionActivaDetalle) {
+      window.location.href = `/simulacion/activa/${sesionActivaDetalle.id}`;
+    }
+    setMostrarModalSesion(false);
+  };
+
+  const handleReiniciarSesion = async () => {
+    setMostrarModalSesion(false);
+    if (accionPendiente) {
+      try {
+        await iniciarSesion({
+          materia: accionPendiente.materia,
+          cantidad_preguntas: accionPendiente.cantidad_preguntas,
+          forzar_reinicio: true
+        });
+        
+        addNotification({
+          type: 'success',
+          title: 'Nueva simulación iniciada',
+          message: '¡Simulación reiniciada! Comenzemos desde el inicio.',
+          duration: 3000
+        });
+      } catch (error) {
+        console.error('Error al reiniciar simulación:', error);
+        addNotification({
+          type: 'error',
+          title: 'Error al reiniciar',
+          message: 'No se pudo reiniciar la simulación. Intenta nuevamente.',
+          duration: 5000
+        });
+      }
+    }
+  };
+
+  const handleCerrarModalSesion = () => {
+    setMostrarModalSesion(false);
+    setSesionActivaDetalle(null);
+    setAccionPendiente(null);
   };
 
   const handleResponderPregunta = async (respuesta: 'A' | 'B' | 'C' | 'D') => {
@@ -210,20 +316,22 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({ materiaId }) 
   if (!sesionActual || preguntasActuales.length === 0) {
     return (
       <div className="max-w-2xl mx-auto p-6">
-        <Card title="Iniciar Simulación">
-          <div className="text-center py-8">
-            <p className="text-gray-600 mb-6">
-              ¿Estás listo para comenzar tu práctica?
-            </p>
-            <Button 
-              variant="primary"
-              onClick={handleIniciarSimulacion}
-              loading={loading}
-            >
-              Comenzar Simulación
-            </Button>
-          </div>
-        </Card>
+        <SeleccionPrueba 
+          onSeleccionarPrueba={async (params) => {
+            try {
+              await iniciarSesion(params);
+              addNotification({
+                type: 'success',
+                title: 'Simulación iniciada',
+                message: '¡Comencemos! Lee cada pregunta cuidadosamente.',
+                duration: 3000
+              });
+            } catch (error) {
+              console.error('Error al iniciar simulación:', error);
+            }
+          }}
+          isDocente={user?.rol === 'docente'}
+        />
       </div>
     );
   }
@@ -265,6 +373,16 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({ materiaId }) 
 
   // Simulación en progreso
   return (
+    <>
+      {/* Modal de confirmación de sesión activa */}
+      <ConfirmacionSesionModal
+        isOpen={mostrarModalSesion}
+        sesion={sesionActivaDetalle}
+        onContinuar={handleContinuarSesionActiva}
+        onReiniciar={handleReiniciarSesion}
+        onCerrar={handleCerrarModalSesion}
+      />
+
     <div className="max-w-4xl mx-auto p-6">
       {/* Header con progreso */}
       <div className="mb-6">
@@ -282,16 +400,11 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({ materiaId }) 
         </div>
         
         {/* Barra de progreso */}
-        <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
-          <div 
-            className="bg-primary-600 h-2 rounded-full transition-all duration-300"
-            style={{ width: `${porcentajeCompletado}%` }}
-          />
-        </div>
+        <BarraProgreso className="mb-4" />
         
         <div className="flex justify-between text-sm text-gray-600">
           <span>Pregunta {preguntaActualIndex + 1} de {preguntasActuales.length}</span>
-          <span>{respuestasCorrectas} correctas • {respuestasIncorrectas} incorrectas</span>
+          <span>Tiempo restante: {tiempoRestante} segundos</span>
         </div>
       </div>
 
@@ -422,6 +535,7 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({ materiaId }) 
         </Card>
       )}
     </div>
+    </>
   );
 };
 

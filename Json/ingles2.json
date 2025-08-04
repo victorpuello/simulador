@@ -1,0 +1,456 @@
+[
+    {
+      "materia": "Inglés",
+      "competencia": "Cohesión y Coherencia",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto sobre la historia del café, donde se debe elegir el conector o pronombre relativo adecuado.",
+      "enunciado": "En la oración '...the beginning of the 14th century, (11)____ Sufi Yemenis started using coffee to stay alert...', ¿cuál es la palabra correcta para el espacio (11)?",
+      "opciones": {
+        "A": "when (cuando)",
+        "B": "which (el cual/la cual)",
+        "C": "who (quien)"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "El adverbio relativo 'when' (cuando) se utiliza para introducir una cláusula que describe un evento que ocurrió en un momento específico, en este caso, 'el comienzo del siglo XIV'.",
+      "explicacion": "La primera parte de la oración establece un marco temporal ('el comienzo del siglo XIV'). La segunda parte describe lo que sucedió en ese momento. 'When' es el conector que une una cláusula principal con una cláusula de tiempo. 'Who' se usaría para personas y 'which' para cosas, pero aquí el antecedente es el tiempo.",
+      "habilidad_evaluada": "Uso de adverbios relativos de tiempo para conectar ideas.",
+      "explicacion_opciones_incorrectas": {
+        "B": "'which' se refiere a objetos o ideas, no a un momento en el tiempo.",
+        "C": "'who' se refiere a personas, no a un momento en el tiempo."
+      },
+      "estrategias_resolucion": "1. Identificar que la primera cláusula establece un tiempo. 2. Reconocer que la segunda cláusula describe lo que pasó en ese tiempo. 3. Seleccionar el conector temporal 'when'.",
+      "errores_comunes": "Confundir el uso de los pronombres y adverbios relativos 'who', 'which' y 'when'.",
+      "dificultad": "A1",
+      "tiempo_estimado": 80,
+      "tags": [
+        "gramática",
+        "conectores",
+        "cláusulas relativas",
+        "comprensión lectora"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical / Léxica",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto sobre la popularización del café en Europa.",
+      "enunciado": "En la oración 'It became a popular medicine (12)____ Europeans in the 1600s.', ¿cuál es la palabra correcta para el espacio (12)?",
+      "opciones": {
+        "A": "among (entre)",
+        "B": "about (acerca de)",
+        "C": "along (a lo largo de)"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "La preposición 'among' (entre) se utiliza para indicar que algo sucede o es popular dentro de un grupo de personas o cosas, en este caso, 'Europeans' (los europeos).",
+      "explicacion": "La oración expresa que el café se convirtió en una medicina popular en el seno del grupo de los europeos. 'Among' es la preposición que indica esta idea de pertenencia o distribución dentro de un colectivo. 'About' o 'along' no tendrían sentido en este contexto.",
+      "habilidad_evaluada": "Uso correcto de preposiciones de relación/lugar.",
+      "explicacion_opciones_incorrectas": {
+        "B": "'about' significa 'sobre' o 'acerca de' y no encaja.",
+        "C": "'along' significa 'a lo largo de' y se usa para movimiento o posición, no para grupos."
+      },
+      "estrategias_resolucion": "1. Comprender que la idea a expresar es la popularidad 'dentro de un grupo'. 2. Conocer el significado de las preposiciones y seleccionar la que mejor se ajuste.",
+      "errores_comunes": "Confundir las preposiciones 'among' (para grupos de más de dos) y 'between' (generalmente para dos).",
+      "dificultad": "A2",
+      "tiempo_estimado": 85,
+      "tags": [
+        "gramática",
+        "preposiciones",
+        "léxico",
+        "comprensión lectora"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto sobre la historia del café y el descubrimiento de la cafeína.",
+      "enunciado": "En la oración 'Caffeine was first (13)____ in the 1800s by Ferdinand Runge...', ¿cuál es la palabra correcta para el espacio (13)?",
+      "opciones": {
+        "A": "describe (describir)",
+        "B": "described (descrito/a)",
+        "C": "describes (describe)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "La oración está en voz pasiva ('was... by Ferdinand Runge'), lo que requiere el uso del verbo en participio pasado. El participio pasado de 'describe' es 'described'.",
+      "explicacion": "La estructura 'was + verbo + by + agente' es la marca de la voz pasiva. En la voz pasiva, el verbo principal siempre debe estar en su forma de participio pasado. 'Describe' es el infinitivo, 'describes' es la forma de tercera persona singular del presente simple. 'Described' es tanto el pasado simple como el participio pasado, y es la forma correcta aquí.",
+      "habilidad_evaluada": "Reconocimiento y uso de la voz pasiva.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Es la forma base del verbo (infinitivo).",
+        "C": "Es la forma del presente simple para tercera persona del singular."
+      },
+      "estrategias_resolucion": "1. Identificar la estructura de la voz pasiva ('was... by...'). 2. Recordar que la voz pasiva se forma con 'to be' + participio pasado. 3. Elegir la forma del participio pasado del verbo 'describe'.",
+      "errores_comunes": "No reconocer la estructura de la voz pasiva y elegir una forma verbal incorrecta.",
+      "dificultad": "A1",
+      "tiempo_estimado": 85,
+      "tags": [
+        "gramática",
+        "voz pasiva",
+        "tiempos verbales",
+        "comprensión lectora"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto sobre las creencias populares acerca del café.",
+      "enunciado": "En la oración 'Some people say (14)____ coffee isn't good...', ¿cuál es la palabra correcta para el espacio (14)?",
+      "opciones": {
+        "A": "drink (beber)",
+        "B": "drinking (beber - gerundio)",
+        "C": "drunk (bebido)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "En esta oración, la acción de 'beber café' funciona como el sujeto de la cláusula '...isn't good'. Para usar un verbo como sujeto, se debe utilizar su forma en gerundio (-ing). Por lo tanto, 'drinking' es la respuesta correcta.",
+      "explicacion": "La estructura 'Some people say...' introduce una cláusula subordinada. El sujeto de esta nueva cláusula es la acción de beber café. Los gerundios (verbos terminados en -ing) pueden funcionar como sustantivos y, por lo tanto, como sujetos de una oración. La frase completa sería 'Algunas personas dicen que beber café no es bueno'.",
+      "habilidad_evaluada": "Uso de gerundios como sujeto de una oración.",
+      "explicacion_opciones_incorrectas": {
+        "A": "'drink' es la forma base, no puede ser el sujeto en este caso.",
+        "C": "'drunk' es el participio pasado, usado en tiempos perfectos o como adjetivo."
+      },
+      "estrategias_resolucion": "1. Analizar la estructura de la oración subordinada. 2. Identificar la necesidad de un sujeto para el verbo 'isn't good'. 3. Reconocer que un gerundio puede actuar como sujeto y elegir la forma -ing.",
+      "errores_comunes": "Intentar usar el infinitivo ('drink') como sujeto sin el 'to' (to drink), lo cual sería otra posibilidad no ofrecida.",
+      "dificultad": "A1",
+      "tiempo_estimado": 85,
+      "tags": [
+        "gramática",
+        "gerundios",
+        "sujeto",
+        "comprensión lectora"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical",
+      "componente": "Morfosintáctico",
+      "contexto": "Texto sobre las creencias de los médicos acerca del café.",
+      "enunciado": "En la oración '...but doctors say you (15)____ believe this.', ¿cuál es la palabra correcta para el espacio (15)?",
+      "opciones": {
+        "A": "mustn't (no debes - prohibición)",
+        "B": "couldn't (no podías/podrías)",
+        "C": "wouldn't (no harías)"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "El texto contrasta la creencia popular con la opinión de los médicos. Los médicos dicen que no se debe creer en la idea de que el café es malo. 'Mustn't' expresa una fuerte recomendación en contra de algo o una prohibición, lo que encaja en el contexto de un consejo médico.",
+      "explicacion": "Se necesita un verbo modal que exprese un consejo fuerte o una negación de obligación. 'Mustn't' significa que es importante no hacer algo. 'Couldn't' se refiere a una falta de habilidad en el pasado o una imposibilidad. 'Wouldn't' se usa para situaciones hipotéticas. Dado el contexto de una recomendación médica, 'mustn't' es la opción más lógica.",
+      "habilidad_evaluada": "Uso de verbos modales para expresar consejo o prohibición.",
+      "explicacion_opciones_incorrectas": {
+        "B": "Se refiere a habilidad o posibilidad, no a un consejo.",
+        "C": "Se refiere a una situación hipotética o voluntad, no a un consejo."
+      },
+      "estrategias_resolucion": "1. Comprender el contraste que establece la palabra 'but'. 2. Entender que se está transmitiendo el consejo de un médico. 3. Elegir el verbo modal que mejor expresa un consejo fuerte en forma negativa.",
+      "errores_comunes": "Confundir los matices de significado entre los diferentes verbos modales negativos.",
+      "dificultad": "A2",
+      "tiempo_estimado": 90,
+      "tags": [
+        "gramática",
+        "verbos modales",
+        "consejo",
+        "comprensión lectora"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Cohesión y Coherencia",
+      "componente": "Conectores Lógicos",
+      "contexto": "Texto sobre el café que contrapone una creencia popular con los hallazgos de estudios científicos.",
+      "enunciado": "En la oración '(16)____ many people believe coffee is bad, studies show it is good for your heart.', ¿cuál es la palabra correcta para el espacio (16)?",
+      "opciones": {
+        "A": "While (Mientras que / Aunque)",
+        "B": "Except (Excepto)",
+        "C": "Because (Porque)"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "La conjunción 'While' se utiliza para introducir una cláusula que presenta un contraste o una concesión. En este caso, contrasta la creencia popular ('coffee is bad') con la evidencia científica ('it is good for your heart').",
+      "explicacion": "La oración presenta dos ideas opuestas. Se necesita una conjunción que muestre esta relación de contraste. 'While' (o 'Although') es la palabra adecuada para este propósito. 'Because' introduciría una causa y 'Except' una excepción, ninguna de las cuales encaja en la relación lógica de la oración.",
+      "habilidad_evaluada": "Uso de conjunciones de contraste.",
+      "explicacion_opciones_incorrectas": {
+        "B": "'Except' no se usa para conectar dos cláusulas de esta manera.",
+        "C": "'Because' establecería una relación de causa-efecto, que es lo contrario a lo que la oración quiere expresar."
+      },
+      "estrategias_resolucion": "1. Identificar las dos ideas principales en la oración. 2. Reconocer que estas ideas son opuestas. 3. Seleccionar la conjunción que se utiliza para expresar contraste.",
+      "errores_comunes": "No identificar la relación de contraste entre las dos cláusulas y elegir un conector de causa.",
+      "dificultad": "A2",
+      "tiempo_estimado": 90,
+      "tags": [
+        "gramática",
+        "conjunciones",
+        "contraste",
+        "conectores"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico",
+      "contexto": "Artículo biográfico sobre el escritor James Salter y su carrera en el cine.",
+      "enunciado": "James Salter played an important part in the making of movies from...",
+      "opciones": {
+        "A": "1960 to 1979",
+        "B": "1960 to 1970",
+        "C": "1960 to 1985"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "El texto afirma que Salter trabajó en el cine 'during the sixties and seventies' (durante los años sesenta y setenta), lo que abarca el período completo de 1960 a 1979.",
+      "explicacion": "Esta pregunta requiere localizar información específica en el texto. Se debe encontrar la parte que habla de su trabajo en el cine y comprender que 'sixties' se refiere a la década de 1960 y 'seventies' a la de 1970. La opción A es la única que incluye ambas décadas.",
+      "habilidad_evaluada": "Localización de información específica (scanning for details).",
+      "explicacion_opciones_incorrectas": {
+        "B": "Es incompleto, ya que omite la década de los setenta, mencionada en el texto.",
+        "C": "Es incorrecto, ya que el texto no menciona que su trabajo en el cine se extendiera a los años ochenta."
+      },
+      "estrategias_resolucion": "1. Buscar las palabras clave 'film making', 'sixties' y 'seventies'. 2. Unir la información de ambas décadas para determinar el rango de años correcto.",
+      "errores_comunes": "Leer solo la primera parte del período ('sixties') y no continuar leyendo para incluir los 'seventies'.",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "lectura",
+        "biografía",
+        "scanning",
+        "información específica"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico",
+      "contexto": "Artículo biográfico sobre el escritor James Salter.",
+      "enunciado": "'Passionate Falsehoods' is...",
+      "opciones": {
+        "A": "a newspaper (un periódico)",
+        "B": "a play (una obra de teatro)",
+        "C": "a movie (una película)"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "El texto dice: 'In Passionate Falsehoods, which was adapted to film...', lo que significa que fue una adaptación cinematográfica, es decir, una película ('movie').",
+      "explicacion": "La pregunta requiere comprender el significado de la frase 'was adapted to film'. Esta expresión indica que una obra original (en este caso, un libro llamado 'Burning the Days') se convirtió en una película. Por lo tanto, 'Passionate Falsehoods' es el título de la película.",
+      "habilidad_evaluada": "Inferencia a partir de vocabulario específico ('adapted to film').",
+      "explicacion_opciones_incorrectas": {
+        "A": "No hay mención de que sea un periódico.",
+        "B": "No hay mención de que sea una obra de teatro."
+      },
+      "estrategias_resolucion": "1. Localizar el título 'Passionate Falsehoods' en el texto. 2. Leer la información que lo acompaña. 3. Interpretar la frase 'adapted to film' como 'convertida en película'.",
+      "errores_comunes": "Confundir la obra original (el libro) con su adaptación (la película).",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "lectura",
+        "biografía",
+        "inferencia",
+        "vocabulario"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico / Pragmático",
+      "contexto": "Artículo biográfico sobre las experiencias de James Salter en el mundo del cine.",
+      "enunciado": "Salter had nice and difficult times in his...",
+      "opciones": {
+        "A": "acting years (años de actuación)",
+        "B": "big screen work (trabajo en la gran pantalla)",
+        "C": "visit to one city (visita a una ciudad)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "El texto dice que 'Salter's time in the film world is both good and bad'. La expresión 'big screen work' (trabajo en la gran pantalla) es una forma de referirse al 'film world' (mundo del cine).",
+      "explicacion": "Esta pregunta evalúa la capacidad de entender una paráfrasis. La idea de 'tiempos buenos y malos' ('nice and difficult times') se corresponde con la descripción del texto 'good and bad'. El contexto en el que ocurrieron fue su carrera en el cine, que se parafrasea como 'big screen work'.",
+      "habilidad_evaluada": "Comprensión de paráfrasis y sinónimos.",
+      "explicacion_opciones_incorrectas": {
+        "A": "El texto no especifica que Salter fuera actor, sino que trabajó en la creación de películas.",
+        "C": "Sus visitas a ciudades como Roma o Nueva York son ejemplos específicos, pero los buenos y malos momentos se refieren a toda su carrera en el cine, no solo a una visita."
+      },
+      "estrategias_resolucion": "1. Identificar la frase 'both good and bad' en el texto. 2. Conectar esta idea con 'nice and difficult times'. 3. Identificar a qué se refiere esta dualidad (al 'film world'). 4. Encontrar la opción que sea sinónimo de 'film world'.",
+      "errores_comunes": "Elegir un detalle específico (como una ciudad) en lugar de la idea general (su carrera en el cine).",
+      "dificultad": "A2",
+      "tiempo_estimado": 85,
+      "tags": [
+        "lectura",
+        "paráfrasis",
+        "inferencia",
+        "biografía"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico",
+      "contexto": "Artículo biográfico que menciona varias obras y autores.",
+      "enunciado": "'The Last Book' was written by...",
+      "opciones": {
+        "A": "James Salter",
+        "B": "Deborah Treisman",
+        "C": "Nick Paumgarten"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "El texto dice claramente: 'Nick Paumgarten in The Last Book, describes Salter's opinion...'. Esto indica que Nick Paumgarten es el autor del libro 'The Last Book'.",
+      "explicacion": "La pregunta requiere una lectura atenta para atribuir correctamente la autoría de una obra. La estructura 'Autor in Obra' se usa para citar una fuente, estableciendo quién escribió qué. El texto no dice que Salter escribió este libro, sino que Paumgarten escribió sobre la opinión de Salter en él.",
+      "habilidad_evaluada": "Localización y atribución de información específica.",
+      "explicacion_opciones_incorrectas": {
+        "A": "James Salter es el sujeto sobre el que se escribe en el libro, no el autor.",
+        "B": "Deborah Treisman es mencionada en el texto, pero no como la autora de 'The Last Book'."
+      },
+      "estrategias_resolucion": "1. Localizar el título 'The Last Book' en el texto. 2. Leer cuidadosamente la frase en la que aparece para identificar el nombre asociado como autor.",
+      "errores_comunes": "Asumir que James Salter, por ser el protagonista del artículo, es el autor de todos los libros mencionados.",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "lectura",
+        "atribución",
+        "información específica",
+        "biografía"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Pragmático",
+      "contexto": "Artículo sobre la opinión de James Salter acerca de su carrera en el cine.",
+      "enunciado": "James Salter thinks that his work in the cinema business was...",
+      "opciones": {
+        "A": "not useful (no útil)",
+        "B": "not hard (no difícil)",
+        "C": "not usual (no usual)"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "El texto cita la opinión de Salter: 'Salter thought he was wasting his time' (Salter pensaba que estaba perdiendo el tiempo). Considerar que algo es una 'pérdida de tiempo' es equivalente a pensar que no fue útil ('not useful').",
+      "explicacion": "Esta pregunta requiere interpretar una expresión idiomática. 'Wasting his time' no significa que el trabajo fuera fácil o usual, sino que no le aportó un valor significativo o no fue un buen uso de su talento artístico, es decir, no fue útil para su carrera como novelista.",
+      "habilidad_evaluada": "Inferencia de la opinión de una persona a partir de sus palabras.",
+      "explicacion_opciones_incorrectas": {
+        "B": "El texto no da información sobre la dificultad del trabajo.",
+        "C": "El texto no da información sobre si su trabajo era común o no."
+      },
+      "estrategias_resolucion": "1. Localizar la opinión directa de Salter en el texto. 2. Interpretar el significado de la expresión 'wasting his time'. 3. Encontrar la opción que mejor parafrasee esa idea.",
+      "errores_comunes": "No comprender el significado de la expresión idiomática 'wasting time'.",
+      "dificultad": "A2",
+      "tiempo_estimado": 85,
+      "tags": [
+        "lectura",
+        "opinión",
+        "inferencia",
+        "idioms"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Pragmático",
+      "contexto": "Conclusión de un artículo biográfico sobre James Salter.",
+      "enunciado": "Reading about James Salter's years in the cinema could be...",
+      "opciones": {
+        "A": "clever enough (suficientemente inteligente)",
+        "B": "just fair (solo aceptable)",
+        "C": "quite interesting (bastante interesante)"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "El autor del artículo concluye que, aunque Salter sintiera que perdía el tiempo, 'it still makes for attractive reading'. Esta frase significa que leer sobre ello es atractivo o, en otras palabras, bastante interesante ('quite interesting').",
+      "explicacion": "La pregunta pide interpretar la opinión del autor del artículo (no de Salter). La frase final 'makes for attractive reading' es una valoración positiva. 'Quite interesting' es la opción que mejor captura este sentimiento positivo. 'Just fair' es una valoración mediocre y 'clever enough' no refleja la idea de ser 'atractivo'.",
+      "habilidad_evaluada": "Comprensión de la opinión y tono del autor.",
+      "explicacion_opciones_incorrectas": {
+        "A": "No es la idea que transmite la palabra 'attractive'.",
+        "B": "'Attractive' es una valoración más alta que 'just fair'."
+      },
+      "estrategias_resolucion": "1. Enfocarse en la última parte del texto para encontrar la conclusión del autor. 2. Interpretar la expresión 'makes for attractive reading'. 3. Seleccionar la opción que sea sinónimo de esa valoración.",
+      "errores_comunes": "Confundir la opinión del sujeto del artículo (Salter) con la del autor del artículo.",
+      "dificultad": "A2",
+      "tiempo_estimado": 85,
+      "tags": [
+        "lectura",
+        "opinión",
+        "tono del autor",
+        "inferencia"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura",
+      "componente": "Semántico",
+      "contexto": "Final de un artículo biográfico donde se menciona la disponibilidad de un libro.",
+      "enunciado": "'The Last Book' can be found...",
+      "opciones": {
+        "A": "in museums (en museos)",
+        "B": "at a café (en un café)",
+        "C": "on the web (en la red/internet)"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "La última frase del texto indica que 'The Last Book is available to everyone in online stores' (está disponible para todos en tiendas en línea). Las tiendas en línea se encuentran en internet ('on the web').",
+      "explicacion": "La pregunta requiere localizar un dato específico y entender la relación semántica entre 'online stores' y 'on the web'. El texto es explícito sobre dónde se puede encontrar el libro.",
+      "habilidad_evaluada": "Localización de información específica y comprensión de vocabulario relacionado.",
+      "explicacion_opciones_incorrectas": {
+        "A": "No se mencionan museos.",
+        "B": "No se mencionan cafés."
+      },
+      "estrategias_resolucion": "1. Leer la última oración del texto. 2. Identificar la frase 'online stores'. 3. Relacionar 'online stores' con la opción 'on the web'.",
+      "errores_comunes": "No hacer la conexión entre el concepto de 'tiendas en línea' y el de 'la web' o internet.",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "lectura",
+        "información específica",
+        "vocabulario",
+        "biografía"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura Global",
+      "componente": "Pragmático",
+      "contexto": "Texto que presenta la reseña de un cliente sobre un restaurante. El cliente, Mark, gana un premio por su reseña.",
+      "enunciado": "According to the text, the customer...",
+      "opciones": {
+        "A": "left a £25 tip to the waiters who work there (dejó una propina de £25)",
+        "B": "celebrated Christmas and New Year at this restaurant (celebró Navidad y Año Nuevo)",
+        "C": "found this great restaurant after many attempts (encontró el restaurante después de muchos intentos)",
+        "D": "posted an excellent review about this restaurant (publicó una reseña excelente)"
+      },
+      "respuesta_correcta": "D",
+      "retroalimentacion": "El texto introductorio dice: 'Today we have the pleasure of showing you the best letter written by our customer Mark. He wins £25 for writing about us...'. Esto significa que Mark escribió una carta (una reseña) que fue considerada excelente y por la cual ganó un premio.",
+      "explicacion": "La pregunta exige una comprensión global del propósito del texto. El texto no es una propina, ni una celebración literal de Navidad. Al contrario, el propio Mark dice que tuvo éxito 'on my first try' (en su primer intento), descartando la opción C. La única opción que describe correctamente la situación es que él escribió una reseña excelente.",
+      "habilidad_evaluada": "Comprensión de la idea principal y el propósito de un texto.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Él gana (wins) £25 como premio, no los da como propina.",
+        "B": "Usa la expresión 'Merry Sandwichmas' como un juego de palabras, no porque fuera Navidad.",
+        "C": "El texto dice explícitamente que lo consiguió 'on my first try' (en el primer intento)."
+      },
+      "estrategias_resolucion": "1. Leer la introducción del restaurante para entender el contexto. 2. Comprender que la 'letter' de Mark es una reseña. 3. Analizar el resultado de su reseña (ganó un premio por ser la mejor).",
+      "errores_comunes": "Interpretar literalmente el juego de palabras ('Merry Sandwichmas') o confundir un premio ('wins £25') con una propina ('tip').",
+      "dificultad": "B1",
+      "tiempo_estimado": 95,
+      "tags": [
+        "lectura",
+        "idea principal",
+        "reseña",
+        "pragmática"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comprensión de Lectura Inferencial",
+      "componente": "Semántico / Pragmático",
+      "contexto": "Reseña de un cliente sobre su experiencia con un restaurante de comida a domicilio.",
+      "enunciado": "It can be inferred from the text that Mark...",
+      "opciones": {
+        "A": "does not like cooking food for himself (no le gusta cocinar)",
+        "B": "almost always eats hamburgers (casi siempre come hamburguesas)",
+        "C": "enjoys eating fast food sometimes (disfruta comer comida rápida a veces)",
+        "D": "is tired of going to restaurants (está cansado de ir a restaurantes)"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "Mark menciona que en 'un día típico' estaba 'demasiado cansado para cocinar' y que es genial encontrar repartos de comida 'para cuando no tienes ganas de cocinar'. Esto sugiere que no es algo que haga siempre, sino una opción para ciertas ocasiones, por lo que disfruta de la comida rápida 'a veces'.",
+      "explicacion": "La pregunta requiere hacer una inferencia sobre los hábitos de Mark a partir de sus comentarios. Decir que a veces está cansado para cocinar no es lo mismo que decir que no le gusta cocinar. Tampoco hay evidencia de que siempre coma hamburguesas. Él pide comida a domicilio, no se queja de 'ir a restaurantes'. Por lo tanto, la inferencia más segura y lógica es que la comida rápida es una opción que disfruta ocasionalmente.",
+      "habilidad_evaluada": "Inferencia de hábitos y preferencias a partir de detalles textuales.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Es una generalización demasiado fuerte. Solo dice que a veces está cansado para hacerlo.",
+        "B": "No hay evidencia en el texto para afirmar que lo hace 'casi siempre'.",
+        "D": "Él está contento de encontrar un buen servicio a domicilio, no cansado de los restaurantes en general."
+      },
+      "estrategias_resolucion": "1. Evitar las generalizaciones absolutas ('always', 'never'). 2. Buscar palabras que indiquen frecuencia u ocasión ('one typical day', 'whenever'). 3. Elegir la conclusión más moderada y mejor respaldada por el texto.",
+      "errores_comunes": "Hacer una generalización extrema a partir de un único ejemplo o situación.",
+      "dificultad": "B1",
+      "tiempo_estimado": 100,
+      "tags": [
+        "lectura",
+        "inferencia",
+        "reseña",
+        "hábito"
+      ]
+    }
+  ]

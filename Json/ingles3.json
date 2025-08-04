@@ -1,0 +1,310 @@
+[
+    {
+      "materia": "Inglés",
+      "competencia": "Léxica",
+      "componente": "Léxico-semántico",
+      "contexto": "La Parte 1 de la prueba evalúa el vocabulario relacionado con la categoría 'Transporte' (Transportation).",
+      "enunciado": "People drive it on a road and it carries big things. (La gente lo conduce en una carretera y transporta cosas grandes).",
+      "opciones": {
+        "A": "ambulance (ambulancia)",
+        "B": "boat (barco)",
+        "C": "bus (autobús)",
+        "D": "motorbike (motocicleta)",
+        "E": "plane (avión)",
+        "F": "truck (camión)",
+        "G": "train (tren)"
+      },
+      "respuesta_correcta": "F",
+      "retroalimentacion": "Un camión ('truck') es el vehículo que se conduce por carretera ('on a road') y está diseñado para transportar carga pesada o cosas grandes ('carries big things').",
+      "explicacion": "El ejercicio pide identificar un medio de transporte a partir de dos características clave: se usa en carretera y lleva carga grande. Al analizar las opciones, el 'truck' es el único que cumple ambas condiciones. Un 'bus' es de carretera pero lleva personas. Un 'train' lleva carga pero no va por una carretera convencional. Un 'boat' o 'plane' no son vehículos de carretera.",
+      "habilidad_evaluada": "Asociación de una definición con el vocabulario correspondiente.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Una 'ambulance' transporta personas enfermas.",
+        "C": "Un 'bus' transporta pasajeros.",
+        "G": "Un 'train' va por vías, no por carretera."
+      },
+      "estrategias_resolucion": "1. Descomponer la descripción en sus partes clave ('drive on a road', 'carries big things'). 2. Evaluar cada opción del vocabulario en función de estas dos características. 3. Seleccionar la palabra que coincida con ambas.",
+      "errores_comunes": "Confundir vehículos de carga con vehículos de pasajeros, como 'truck' y 'bus'.",
+      "dificultad": "A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "vocabulario",
+        "transporte",
+        "léxico"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Léxica",
+      "componente": "Léxico-semántico",
+      "contexto": "Vocabulario sobre 'Transporte' (Transportation).",
+      "enunciado": "People pay to take this public transport by road. (La gente paga para tomar este transporte público por carretera).",
+      "opciones": {
+        "A": "ambulance (ambulancia)",
+        "B": "boat (barco)",
+        "C": "bus (autobús)",
+        "D": "motorbike (motocicleta)",
+        "E": "plane (avión)",
+        "F": "truck (camión)",
+        "G": "train (tren)"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "Un autobús ('bus') es el medio de transporte que es público ('public transport'), terrestre ('by road') y por el cual los pasajeros pagan para usarlo.",
+      "explicacion": "La descripción contiene tres elementos: es de pago, es público y es de carretera. El 'bus' encaja perfectamente. El 'train' es público y de pago, pero no de carretera. El 'truck' es de carretera, pero no es transporte público de pasajeros. El 'plane' es público y de pago, pero no de carretera.",
+      "habilidad_evaluada": "Asociación de una definición con el vocabulario correspondiente.",
+      "explicacion_opciones_incorrectas": {
+        "F": "'truck' no es un transporte público de pasajeros.",
+        "G": "'train' no es un transporte 'by road'.",
+        "E": "'plane' no es un transporte 'by road'."
+      },
+      "estrategias_resolucion": "1. Identificar las palabras clave en la descripción: 'pay', 'public transport', 'road'. 2. Filtrar las opciones que no cumplan con las tres condiciones. 3. Seleccionar la única opción que cumple todos los requisitos.",
+      "errores_comunes": "No considerar todas las condiciones de la descripción, por ejemplo, fijarse solo en 'public transport' y dudar entre 'bus' y 'train'.",
+      "dificultad": "A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "vocabulario",
+        "transporte",
+        "léxico"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Léxica",
+      "componente": "Léxico-semántico",
+      "contexto": "Vocabulario sobre 'Transporte' (Transportation).",
+      "enunciado": "Many people fly on it to go to a place. (Mucha gente vuela en él para ir a un lugar).",
+      "opciones": {
+        "A": "ambulance (ambulancia)",
+        "B": "boat (barco)",
+        "C": "bus (autobús)",
+        "D": "motorbike (motocicleta)",
+        "E": "plane (avión)",
+        "F": "truck (camión)",
+        "G": "train (tren)"
+      },
+      "respuesta_correcta": "E",
+      "retroalimentacion": "El verbo 'fly' (volar) se asocia directamente con un avión ('plane'). Es el medio de transporte utilizado para viajar por el aire.",
+      "explicacion": "La palabra clave en la descripción es 'fly'. De todas las opciones de transporte listadas, el único en el que se puede volar es el 'plane'.",
+      "habilidad_evaluada": "Asociación de una acción con el vocabulario correspondiente.",
+      "explicacion_opciones_incorrectas": {
+        "B": "En un 'boat' se navega (sail).",
+        "C": "En un 'bus' se viaja por carretera (ride/travel).",
+        "G": "En un 'train' se viaja por vías (ride/travel)."
+      },
+      "estrategias_resolucion": "1. Identificar el verbo principal de la acción ('fly'). 2. Buscar en la lista de opciones el único medio de transporte que puede realizar esa acción.",
+      "errores_comunes": "No conocer el verbo 'to fly' y su significado.",
+      "dificultad": "A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "vocabulario",
+        "transporte",
+        "verbos"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Pragmática",
+      "componente": "Uso del Lenguaje",
+      "contexto": "La Parte 2 de la prueba pide identificar el lugar o la situación donde se encontraría un aviso específico.",
+      "enunciado": "Considerando el aviso 'How do I drive? Phone: 0152067' (¿Cómo conduzco? Teléfono: 0152067), ¿dónde podría verlo?",
+      "opciones": {
+        "A": "on a plane (en un avión)",
+        "B": "on a bus (en un autobús)",
+        "C": "on a boat (en un barco)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "Este tipo de aviso, que invita al público a reportar la conducta de un conductor, es muy común en la parte trasera de vehículos comerciales de carretera, como autobuses ('bus') o camiones.",
+      "explicacion": "La pregunta evalúa la comprensión del contexto cultural y situacional de un aviso. La frase 'How do I drive?' es una invitación a la retroalimentación sobre la conducción, una práctica habitual en flotas de transporte terrestre para controlar la calidad y seguridad de sus conductores. Por lo tanto, el lugar más probable es un vehículo de carretera como un autobús.",
+      "habilidad_evaluada": "Comprensión del contexto situacional de un enunciado.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Los aviones no tienen este tipo de avisos, ya que la conducción está a cargo de pilotos altamente regulados.",
+        "C": "Aunque posible, es mucho menos común en barcos que en vehículos de carretera."
+      },
+      "estrategias_resolucion": "1. Leer el aviso y entender su propósito (pedir opinión sobre la conducción). 2. Pensar en qué situaciones o lugares de la vida real se ha visto un aviso similar. 3. Concluir que es propio de vehículos de transporte terrestre.",
+      "errores_comunes": "No reconocer el propósito del aviso y tratar de encontrar una conexión literal.",
+      "dificultad": "Pre A1",
+      "tiempo_estimado": 70,
+      "tags": [
+        "avisos",
+        "contexto",
+        "pragmática"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Pragmática",
+      "componente": "Uso del Lenguaje",
+      "contexto": "Identificar el lugar donde se encontraría un aviso específico.",
+      "enunciado": "Considerando el aviso 'New Toys: Green monsters, angry dolls, and black helicopters' (Juguetes Nuevos: Monstruos verdes, muñecas enfadadas y helicópteros negros), ¿dónde podría verlo?",
+      "opciones": {
+        "A": "in a house (en una casa)",
+        "B": "in a shop (en una tienda)",
+        "C": "in a zoo (en un zoológico)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "Un anuncio que lista juguetes nuevos ('New Toys') es propio de un entorno comercial donde se venden dichos productos, como una tienda ('shop') o una juguetería.",
+      "explicacion": "El contenido del aviso es una lista de productos a la venta (juguetes). El contexto más lógico para un anuncio de este tipo es un punto de venta. Una casa es un espacio privado y un zoológico exhibe animales, no vende juguetes de esta manera.",
+      "habilidad_evaluada": "Comprensión del contexto situacional de un enunciado.",
+      "explicacion_opciones_incorrectas": {
+        "A": "No es un anuncio público, es un espacio privado.",
+        "C": "Un zoológico tiene animales, no este tipo de juguetes como exhibición principal."
+      },
+      "estrategias_resolucion": "1. Leer el contenido del aviso. 2. Identificar el tipo de producto (juguetes). 3. Determinar en cuál de los lugares de las opciones se venden juguetes.",
+      "errores_comunes": "No asociar un anuncio de productos con un lugar de venta.",
+      "dificultad": "Pre A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "avisos",
+        "contexto",
+        "pragmática"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Pragmática",
+      "componente": "Uso del Lenguaje",
+      "contexto": "Identificar el lugar donde se encontraría un aviso específico.",
+      "enunciado": "Considerando el aviso 'Please, take the one you want to read' (Por favor, tome el que quiera leer), ¿dónde podría verlo?",
+      "opciones": {
+        "A": "on a board (en un tablero)",
+        "B": "on a computer (en un ordenador)",
+        "C": "on a bookcase (en una estantería)"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "Una invitación a tomar algo para leer ('read') se encontraría lógicamente en un lugar donde hay materiales de lectura disponibles para ser tomados, como una biblioteca o una estantería ('bookcase') con libros.",
+      "explicacion": "La acción clave es 'tomar' algo para 'leer'. Esto implica objetos físicos (libros, revistas). De las opciones, una 'bookcase' es el lugar que almacena estos objetos. Un tablero ('board') o un ordenador ('computer') muestran información, pero no suelen ofrecer objetos físicos para 'tomar' de esta manera.",
+      "habilidad_evaluada": "Comprensión del contexto situacional de un enunciado.",
+      "explicacion_opciones_incorrectas": {
+        "A": "Un tablero muestra información, no ofrece objetos para llevar.",
+        "B": "En un ordenador se lee información digitalmente, no se 'toma' un objeto físico."
+      },
+      "estrategias_resolucion": "1. Analizar la acción que pide el aviso ('take... to read'). 2. Evaluar qué lugar de los propuestos contiene objetos físicos para la lectura que se puedan tomar.",
+      "errores_comunes": "Interpretar 'read' de forma abstracta sin considerar la acción física de 'take'.",
+      "dificultad": "Pre A1",
+      "tiempo_estimado": 70,
+      "tags": [
+        "avisos",
+        "contexto",
+        "pragmática"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comunicativa",
+      "componente": "Pragmático / Interaccional",
+      "contexto": "La Parte 3 de la prueba consiste en completar conversaciones cortas, eligiendo la respuesta más lógica y apropiada.",
+      "enunciado": "Complete la conversación: \n- Persona 1: 'I can't eat a cold sandwich. It is horrible!' (No puedo comer un sándwich frío. ¡Es horrible!) \n- Persona 2: ?",
+      "opciones": {
+        "A": "I hope so. (Eso espero.)",
+        "B": "I agree. (Estoy de acuerdo.)",
+        "C": "I am not. (No lo soy / No estoy.)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "La primera persona está expresando una opinión personal fuerte. La respuesta 'I agree' es la forma correcta y directa de mostrar que se comparte esa misma opinión.",
+      "explicacion": "La función comunicativa del primer enunciado es dar una opinión. La respuesta lógica de la segunda persona es reaccionar a esa opinión, ya sea mostrando acuerdo, desacuerdo o indiferencia. 'I agree' expresa acuerdo. Las otras opciones no son respuestas lógicas a una declaración de opinión.",
+      "habilidad_evaluada": "Selección de la respuesta adecuada para expresar acuerdo.",
+      "explicacion_opciones_incorrectas": {
+        "A": "'I hope so' expresa esperanza, lo cual no tiene sentido aquí.",
+        "C": "'I am not' no es una respuesta gramatical ni lógicamente coherente a la frase anterior."
+      },
+      "estrategias_resolucion": "1. Identificar que el primer enunciado es una opinión. 2. Buscar en las opciones una frase que sirva para reaccionar a una opinión. 3. Seleccionar 'I agree' como la expresión de acuerdo.",
+      "errores_comunes": "No reconocer la función del primer enunciado y buscar una conexión de vocabulario en lugar de una conexión lógica.",
+      "dificultad": "A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "conversación",
+        "diálogo",
+        "funciones comunicativas",
+        "opinión"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comunicativa",
+      "componente": "Pragmático / Interaccional",
+      "contexto": "Completar una conversación sobre planes de viaje.",
+      "enunciado": "Complete la conversación: \n- Persona 1: 'I am going on vacation to Vancouver!' (¡Me voy de vacaciones a Vancouver!) \n- Persona 2: ?",
+      "opciones": {
+        "A": "That's great! (¡Qué genial!)",
+        "B": "I like swimming! (¡Me gusta nadar!)",
+        "C": "You are first! (¡Tú eres el primero!)"
+      },
+      "respuesta_correcta": "A",
+      "retroalimentacion": "Cuando alguien comparte una noticia positiva, como irse de vacaciones, una respuesta socialmente apropiada es mostrar entusiasmo o alegría por esa persona. 'That's great!' cumple perfectamente esta función.",
+      "explicacion": "El intercambio es de naturaleza social. La Persona 1 anuncia un plan emocionante. La respuesta esperada de la Persona 2 es una reacción positiva que reconozca la noticia. 'That's great!' es una exclamación positiva estándar. Las otras opciones son irrelevantes o no tienen sentido en este contexto.",
+      "habilidad_evaluada": "Selección de la respuesta socialmente adecuada a una noticia positiva.",
+      "explicacion_opciones_incorrectas": {
+        "B": "Es una declaración irrelevante a menos que se sepa que Vancouver es famoso por la natación y se quiera continuar la conversación sobre eso, pero no es la reacción inicial más lógica.",
+        "C": "No tiene ningún sentido en este contexto conversacional."
+      },
+      "estrategias_resolucion": "1. Entender que el primer enunciado es una noticia feliz. 2. Evaluar qué opción representa una reacción positiva y apropiada a esa noticia. 3. Descartar las opciones irrelevantes.",
+      "errores_comunes": "Buscar una conexión temática literal (Vancouver -> agua -> nadar) en lugar de la reacción social más común y directa.",
+      "dificultad": "A1",
+      "tiempo_estimado": 60,
+      "tags": [
+        "conversación",
+        "diálogo",
+        "reacciones sociales"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Comunicativa",
+      "componente": "Pragmático / Interaccional",
+      "contexto": "Completar una conversación sobre el clima.",
+      "enunciado": "Complete la conversación: \n- Persona 1: 'It rained a lot last night!' (¡Llovió mucho anoche!) \n- Persona 2: ?",
+      "opciones": {
+        "A": "Did you accept? (¿Aceptaste?)",
+        "B": "Did you understand? (¿Entendiste?)",
+        "C": "Did you sleep? (¿Dormiste?)"
+      },
+      "respuesta_correcta": "C",
+      "retroalimentacion": "Una lluvia fuerte durante la noche puede ser ruidosa e interrumpir el sueño. Por lo tanto, una pregunta de seguimiento común y lógica a un comentario sobre una lluvia intensa es preguntar si afectó el descanso de la otra persona ('Did you sleep?').",
+      "explicacion": "Esta pregunta requiere una inferencia pragmática sobre temas de conversación comunes. La lluvia nocturna está culturalmente asociada con el ruido y la posibilidad de no dormir bien. Por lo tanto, preguntar sobre el sueño es una forma natural de continuar la conversación y mostrar interés. Las otras preguntas ('Did you accept?' o 'Did you understand?') no tienen ninguna conexión lógica con el hecho de que haya llovido.",
+      "habilidad_evaluada": "Realizar inferencias pragmáticas para mantener la coherencia de una conversación.",
+      "explicacion_opciones_incorrectas": {
+        "A": "No hay nada que aceptar en la declaración sobre la lluvia.",
+        "B": "No hay nada complejo que entender en la declaración sobre la lluvia."
+      },
+      "estrategias_resolucion": "1. Leer el enunciado sobre la lluvia nocturna. 2. Pensar en las posibles consecuencias de una lluvia fuerte por la noche (ruido, frío, etc.). 3. Deducir que una consecuencia común es la interrupción del sueño y elegir la pregunta relacionada.",
+      "errores_comunes": "Buscar una respuesta literal sin considerar las implicaciones o temas de conversación asociados culturalmente.",
+      "dificultad": "A1",
+      "tiempo_estimado": 70,
+      "tags": [
+        "conversación",
+        "diálogo",
+        "inferencia pragmática",
+        "coherencia"
+      ]
+    },
+    {
+      "materia": "Inglés",
+      "competencia": "Gramatical",
+      "componente": "Morfosintáctico",
+      "contexto": "La Parte 4 presenta un texto con espacios para ser completados. El texto trata sobre el lobo etíope.",
+      "enunciado": "En la oración 'Some scientists have (10)____ it is not a real wolf.', ¿cuál es la palabra correcta para el espacio (10)?",
+      "opciones": {
+        "A": "saying (diciendo)",
+        "B": "said (dicho)",
+        "C": "say (decir)"
+      },
+      "respuesta_correcta": "B",
+      "retroalimentacion": "La estructura gramatical 'have + verbo' corresponde al tiempo verbal Presente Perfecto. Este tiempo siempre requiere que el verbo principal esté en su forma de participio pasado. El participio pasado del verbo 'to say' es 'said'.",
+      "explicacion": "Esta es una pregunta puramente gramatical. El verbo auxiliar 'have' indica que la estructura es un tiempo perfecto. La forma correcta del verbo principal que debe seguir es el participio pasado. 'Say' es la forma base, 'saying' es el gerundio o participio presente. 'Said' es la forma correcta del participio pasado.",
+      "habilidad_evaluada": "Uso del tiempo verbal Presente Perfecto (Present Perfect).",
+      "explicacion_opciones_incorrectas": {
+        "A": "Es la forma de gerundio/participio presente, se usaría en tiempos continuos (p. ej., are saying).",
+        "C": "Es la forma base, se usaría en presente simple (p. ej., they say) o con modales (p. ej., can say)."
+      },
+      "estrategias_resolucion": "1. Identificar el verbo auxiliar 'have' en la oración. 2. Recordar la regla de formación del Presente Perfecto: have/has + participio pasado. 3. Seleccionar el participio pasado del verbo 'to say'.",
+      "errores_comunes": "No reconocer la estructura del Presente Perfecto y elegir una forma verbal incorrecta por error.",
+      "dificultad": "A2",
+      "tiempo_estimado": 80,
+      "tags": [
+        "gramática",
+        "presente perfecto",
+        "tiempos verbales",
+        "comprensión lectora"
+      ]
+    }
+  ]

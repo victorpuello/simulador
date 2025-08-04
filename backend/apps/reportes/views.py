@@ -5,7 +5,8 @@ from rest_framework.permissions import IsAuthenticated
 from django.db.models import Avg, Count, Sum, Max, Q
 from django.utils import timezone
 from datetime import timedelta, date
-from apps.core.models import Sesion, RespuestaUsuario, Materia
+from apps.simulacion.models import SesionSimulacion, PreguntaSesion
+from apps.core.models import Materia
 from apps.simulacion.permissions import SoloEstudiantes
 from .serializers import (
     EstadisticasUsuarioSerializer,
@@ -13,6 +14,7 @@ from .serializers import (
     HistorialSesionSerializer,
     ProgresoDiarioSerializer
 )
+from .utils import calcular_estadisticas_icfes
 
 class ReportesViewSet(viewsets.ViewSet):
     """ViewSet para todos los reportes y analytics"""
@@ -24,27 +26,32 @@ class ReportesViewSet(viewsets.ViewSet):
         user = request.user
         
         # Calcular estadísticas básicas
-        sesiones = Sesion.objects.filter(usuario=user)
+        sesiones = SesionSimulacion.objects.filter(estudiante=user)
         sesiones_completadas = sesiones.filter(completada=True)
+        
+        # Calcular tiempo total de estudio basado en las respuestas
+        tiempo_total_segundos = 0
+        for sesion in sesiones_completadas:
+            preguntas_sesion = sesion.preguntas_sesion.all()
+            tiempo_sesion = sum(p.tiempo_respuesta or 0 for p in preguntas_sesion)
+            tiempo_total_segundos += tiempo_sesion
         
         estadisticas = {
             'total_simulaciones': sesiones.count(),
             'simulaciones_completadas': sesiones_completadas.count(),
             'promedio_puntaje': sesiones_completadas.aggregate(
-                promedio=Avg('puntaje_final')
+                promedio=Avg('puntuacion')
             )['promedio'] or 0,
-            'tiempo_total_estudio': sesiones_completadas.aggregate(
-                total=Sum('tiempo_total')
-            )['total'] or 0,
+            'tiempo_total_estudio': round(tiempo_total_segundos / 60),  # Convertir a minutos
             'mejor_puntaje': sesiones_completadas.aggregate(
-                mejor=Max('puntaje_final')
+                mejor=Max('puntuacion')
             )['mejor'] or 0,
-            'ultima_simulacion': sesiones.order_by('-fecha_inicio').first().fecha_inicio if sesiones.exists() else None,
-            'racha_actual': user.racha_actual if hasattr(user, 'racha_actual') else 0
+            'ultima_simulacion': sesiones.order_by('-fecha_inicio').first().fecha_inicio if sesiones.exists() and sesiones.order_by('-fecha_inicio').first() else None,
+            'racha_actual': getattr(user, 'racha_actual', 0)
         }
         
-        # Convertir tiempo de segundos a minutos
-        estadisticas['tiempo_total_estudio'] = round(estadisticas['tiempo_total_estudio'] / 60) if estadisticas['tiempo_total_estudio'] else 0
+        # Redondear promedio de puntaje
+        estadisticas['promedio_puntaje'] = round(estadisticas['promedio_puntaje'], 1) if estadisticas['promedio_puntaje'] else 0
         estadisticas['promedio_puntaje'] = round(estadisticas['promedio_puntaje'], 1) if estadisticas['promedio_puntaje'] else 0
         
         serializer = EstadisticasUsuarioSerializer(estadisticas)
@@ -59,19 +66,19 @@ class ReportesViewSet(viewsets.ViewSet):
         estadisticas_materias = []
         
         for materia in materias:
-            sesiones = Sesion.objects.filter(usuario=user, materia=materia, completada=True)
-            respuestas = RespuestaUsuario.objects.filter(sesion__in=sesiones)
+            sesiones = SesionSimulacion.objects.filter(estudiante=user, materia=materia, completada=True)
+            preguntas_sesion = PreguntaSesion.objects.filter(sesion__in=sesiones)
             
             if sesiones.exists():
-                total_preguntas = respuestas.count()
-                preguntas_correctas = respuestas.filter(es_correcta=True).count()
+                total_preguntas = preguntas_sesion.count()
+                preguntas_correctas = preguntas_sesion.filter(es_correcta=True).count()
                 
                 estadistica = {
                     'materia_id': materia.id,
                     'materia_nombre': materia.nombre_display,
                     'simulaciones_realizadas': sesiones.count(),
-                    'promedio_puntaje': round(sesiones.aggregate(promedio=Avg('puntaje_final'))['promedio'] or 0, 1),
-                    'mejor_puntaje': sesiones.aggregate(mejor=Max('puntaje_final'))['mejor'] or 0,
+                    'promedio_puntaje': round(sesiones.aggregate(promedio=Avg('puntuacion'))['promedio'] or 0, 1),
+                    'mejor_puntaje': sesiones.aggregate(mejor=Max('puntuacion'))['mejor'] or 0,
                     'total_preguntas': total_preguntas,
                     'preguntas_correctas': preguntas_correctas,
                     'porcentaje_acierto': round((preguntas_correctas / total_preguntas * 100), 1) if total_preguntas > 0 else 0
@@ -88,10 +95,10 @@ class ReportesViewSet(viewsets.ViewSet):
         user = request.user
         
         # Parámetros de filtrado opcionales
-        materia_id = request.query_params.get('materia_id')
-        limite = int(request.query_params.get('limite', 20))
+        materia_id = request.GET.get('materia_id')
+        limite = int(request.GET.get('limite', 20))
         
-        sesiones = Sesion.objects.filter(usuario=user).order_by('-fecha_inicio')
+        sesiones = SesionSimulacion.objects.filter(estudiante=user).order_by('-fecha_inicio')
         
         if materia_id:
             sesiones = sesiones.filter(materia_id=materia_id)
@@ -116,18 +123,25 @@ class ReportesViewSet(viewsets.ViewSet):
         fecha_actual = fecha_inicio
         while fecha_actual <= fecha_fin:
             # Sesiones de este día
-            sesiones_dia = Sesion.objects.filter(
-                usuario=user,
+            sesiones_dia = SesionSimulacion.objects.filter(
+                estudiante=user,
                 fecha_inicio__date=fecha_actual,
                 completada=True
             )
             
             if sesiones_dia.exists():
+                # Calcular tiempo total de estudio para este día
+                tiempo_total_segundos = 0
+                for sesion in sesiones_dia:
+                    preguntas_sesion = sesion.preguntas_sesion.all()
+                    tiempo_sesion = sum(p.tiempo_respuesta or 0 for p in preguntas_sesion)
+                    tiempo_total_segundos += tiempo_sesion
+                
                 datos_dia = {
                     'fecha': fecha_actual,
                     'simulaciones': sesiones_dia.count(),
-                    'promedio_puntaje': round(sesiones_dia.aggregate(promedio=Avg('puntaje_final'))['promedio'] or 0, 1),
-                    'tiempo_estudio': round((sesiones_dia.aggregate(total=Sum('tiempo_total'))['total'] or 0) / 60)
+                    'promedio_puntaje': round(sesiones_dia.aggregate(promedio=Avg('puntuacion'))['promedio'] or 0, 1),
+                    'tiempo_estudio': round(tiempo_total_segundos / 60)  # Convertir a minutos
                 }
             else:
                 datos_dia = {
@@ -151,10 +165,10 @@ class ReportesViewSet(viewsets.ViewSet):
         materias_stats = []
         
         for materia in Materia.objects.filter(activa=True):
-            sesiones = Sesion.objects.filter(usuario=user, materia=materia, completada=True)
+            sesiones = SesionSimulacion.objects.filter(estudiante=user, materia=materia, completada=True)
             
             if sesiones.exists():
-                promedio = sesiones.aggregate(promedio=Avg('puntaje_final'))['promedio'] or 0
+                promedio = sesiones.aggregate(promedio=Avg('puntuacion'))['promedio'] or 0
                 materias_stats.append({
                     'materia_id': materia.id,
                     'materia_nombre': materia.nombre_display,
@@ -167,3 +181,13 @@ class ReportesViewSet(viewsets.ViewSet):
         materias_stats.sort(key=lambda x: x['promedio_puntaje'], reverse=True)
         
         return Response(materias_stats)
+    
+    @action(detail=False, methods=['get'])
+    def reporte_icfes(self, request):
+        """Reporte completo del puntaje ICFES del estudiante"""
+        user = request.user
+        
+        # Calcular estadísticas ICFES
+        estadisticas_icfes = calcular_estadisticas_icfes(user)
+        
+        return Response(estadisticas_icfes)

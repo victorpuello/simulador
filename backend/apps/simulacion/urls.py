@@ -1,11 +1,12 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import SimulacionViewSet
-
-app_name = 'simulacion'
+from .views import PlantillaSimulacionViewSet, SesionSimulacionViewSet
 
 router = DefaultRouter()
-router.register(r'sesiones', SimulacionViewSet, basename='sesiones')
+router.register(r'plantillas', PlantillaSimulacionViewSet)
+router.register(r'sesiones', SesionSimulacionViewSet)
+
+app_name = 'simulacion'
 
 urlpatterns = [
     path('', include(router.urls)),

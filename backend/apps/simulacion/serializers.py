@@ -1,151 +1,62 @@
 from rest_framework import serializers
-from apps.core.models import Sesion, RespuestaUsuario, Pregunta, Materia, Competencia
-from apps.core.serializers import PreguntaSerializer
+from .models import PlantillaSimulacion, SesionSimulacion, PreguntaSesion
+from apps.core.serializers import MateriaSerializer, PreguntaSerializer
 
+class PlantillaSimulacionSerializer(serializers.ModelSerializer):
+    materia_nombre = serializers.CharField(source='materia.nombre_display', read_only=True)
+    docente_username = serializers.CharField(source='docente.username', read_only=True)
+    preguntas_count = serializers.IntegerField(read_only=True)
+    es_personalizada = serializers.BooleanField(read_only=True)
+
+    class Meta:
+        model = PlantillaSimulacion
+        fields = [
+            'id', 'docente', 'docente_username', 'materia', 'materia_nombre',
+            'titulo', 'descripcion', 'cantidad_preguntas', 'preguntas_especificas',
+            'preguntas_count', 'es_personalizada', 'activa', 'fecha_creacion',
+            'fecha_modificacion'
+        ]
+        read_only_fields = ['docente', 'fecha_creacion', 'fecha_modificacion']
+
+class PreguntaSesionSerializer(serializers.ModelSerializer):
+    pregunta = PreguntaSerializer(read_only=True)
+    
+    class Meta:
+        model = PreguntaSesion
+        fields = [
+            'id', 'pregunta', 'respuesta_estudiante', 'es_correcta',
+            'tiempo_respuesta', 'orden'
+        ]
+        read_only_fields = ['pregunta', 'es_correcta']
+
+class SesionSimulacionSerializer(serializers.ModelSerializer):
+    materia = MateriaSerializer(read_only=True)
+    preguntas_sesion = PreguntaSesionSerializer(many=True, read_only=True)
+    progreso = serializers.SerializerMethodField()
+
+    class Meta:
+        model = SesionSimulacion
+        fields = [
+            'id', 'estudiante', 'materia', 'plantilla', 'preguntas_sesion',
+            'fecha_inicio', 'fecha_fin', 'completada', 'puntuacion', 'progreso'
+        ]
+        read_only_fields = ['estudiante', 'fecha_inicio', 'fecha_fin', 'completada', 'puntuacion']
+
+    def get_progreso(self, obj):
+        total_preguntas = obj.preguntas.count()
+        respondidas = obj.preguntas_sesion.exclude(respuesta_estudiante=None).count()
+        return {
+            'total': total_preguntas,
+            'respondidas': respondidas,
+            'porcentaje': (respondidas / total_preguntas * 100) if total_preguntas > 0 else 0
+        }
 
 class IniciarSesionSerializer(serializers.Serializer):
-    """Serializer para iniciar una nueva sesión de simulación"""
-    materia_id = serializers.IntegerField()
-    cantidad_preguntas = serializers.IntegerField(default=10, min_value=1, max_value=50)
-    modo = serializers.ChoiceField(
-        choices=['practica', 'simulacro', 'asignada'],
-        default='practica'
-    )
-    competencias = serializers.ListField(
-        child=serializers.IntegerField(),
-        required=False,
-        help_text="IDs de competencias específicas (opcional)"
-    )
-    dificultad = serializers.ChoiceField(
-        choices=['facil', 'media', 'dificil', 'mixta'],
-        default='mixta',
-        required=False
-    )
-    
-    def validate_materia_id(self, value):
-        try:
-            Materia.objects.get(id=value, activa=True)
-        except Materia.DoesNotExist:
-            raise serializers.ValidationError("Materia no encontrada o inactiva")
-        return value
-    
-    def validate_competencias(self, value):
-        if value:
-            for comp_id in value:
-                try:
-                    Competencia.objects.get(id=comp_id)
-                except Competencia.DoesNotExist:
-                    raise serializers.ValidationError(f"Competencia {comp_id} no encontrada")
-        return value
-
-
-class SesionSerializer(serializers.ModelSerializer):
-    """Serializer para sesiones de simulación"""
-    materia_nombre = serializers.CharField(source='materia.nombre_display', read_only=True)
-    usuario_nombre = serializers.CharField(source='usuario.first_name', read_only=True)
-    tiempo_transcurrido = serializers.SerializerMethodField()
-    progreso = serializers.SerializerMethodField()
-    
-    class Meta:
-        model = Sesion
-        fields = [
-            'id', 'usuario', 'materia', 'materia_nombre', 'usuario_nombre',
-            'fecha_inicio', 'fecha_fin', 'puntaje_final', 'tiempo_total',
-            'completada', 'modo', 'tiempo_transcurrido', 'progreso'
-        ]
-        read_only_fields = ['id', 'usuario', 'fecha_inicio']
-    
-    def get_tiempo_transcurrido(self, obj):
-        """Calcula el tiempo transcurrido desde el inicio"""
-        if not obj.fecha_inicio:
-            return 0
-        
-        from django.utils import timezone
-        if obj.fecha_fin:
-            delta = obj.fecha_fin - obj.fecha_inicio
-        else:
-            delta = timezone.now() - obj.fecha_inicio
-        
-        return int(delta.total_seconds())
-    
-    def get_progreso(self, obj):
-        """Calcula el progreso de la sesión"""
-        total_respuestas = obj.respuestas.count()
-        if total_respuestas == 0:
-            return 0
-        
-        # Asumiendo que queremos 10 preguntas por defecto
-        total_esperado = 10  # Esto podría venir de la configuración de la sesión
-        return min(100, (total_respuestas / total_esperado) * 100)
-
+    materia = serializers.IntegerField()
+    plantilla = serializers.IntegerField(required=False, allow_null=True)
+    cantidad_preguntas = serializers.IntegerField(required=False, min_value=5, max_value=50)
+    forzar_reinicio = serializers.BooleanField(required=False, default=False)
 
 class ResponderPreguntaSerializer(serializers.Serializer):
-    """Serializer para responder una pregunta"""
-    pregunta_id = serializers.IntegerField()
-    respuesta_seleccionada = serializers.CharField(max_length=1)
-    tiempo_respuesta = serializers.IntegerField(min_value=1)
-    
-    def validate_respuesta_seleccionada(self, value):
-        if value not in ['A', 'B', 'C', 'D']:
-            raise serializers.ValidationError("Respuesta debe ser A, B, C o D")
-        return value
-    
-    def validate_pregunta_id(self, value):
-        try:
-            Pregunta.objects.get(id=value, activa=True)
-        except Pregunta.DoesNotExist:
-            raise serializers.ValidationError("Pregunta no encontrada o inactiva")
-        return value
-
-
-class RespuestaUsuarioSerializer(serializers.ModelSerializer):
-    """Serializer para respuestas de usuario"""
-    pregunta_enunciado = serializers.CharField(source='pregunta.enunciado', read_only=True)
-    pregunta_opciones = serializers.JSONField(source='pregunta.opciones', read_only=True)
-    respuesta_correcta = serializers.CharField(source='pregunta.respuesta_correcta', read_only=True)
-    retroalimentacion = serializers.CharField(source='pregunta.retroalimentacion', read_only=True)
-    
-    class Meta:
-        model = RespuestaUsuario
-        fields = [
-            'id', 'pregunta', 'pregunta_enunciado', 'pregunta_opciones',
-            'respuesta_seleccionada', 'respuesta_correcta', 'es_correcta',
-            'tiempo_respuesta', 'timestamp', 'retroalimentacion', 'revisada'
-        ]
-        read_only_fields = ['id', 'timestamp', 'es_correcta']
-
-
-class PreguntaSimulacionSerializer(PreguntaSerializer):
-    """Serializer específico para preguntas en simulación (sin respuesta correcta)"""
-    class Meta:
-        model = Pregunta
-        fields = [
-            'id', 'materia', 'competencia', 'contexto', 'enunciado',
-            'opciones', 'dificultad', 'tiempo_estimado', 'tags'
-        ]
-        # Excluimos respuesta_correcta y retroalimentacion para evitar trampas
-
-
-class FinalizarSesionSerializer(serializers.Serializer):
-    """Serializer para finalizar una sesión"""
-    forzar_finalizacion = serializers.BooleanField(default=False)
-    
-    def validate(self, attrs):
-        # Aquí podríamos agregar validaciones adicionales
-        # como verificar que el tiempo no haya expirado, etc.
-        return attrs
-
-
-class EstadisticasSesionSerializer(serializers.Serializer):
-    """Serializer para estadísticas de una sesión completada"""
-    sesion_id = serializers.IntegerField()
-    puntaje_final = serializers.IntegerField()
-    tiempo_total = serializers.IntegerField()
-    total_preguntas = serializers.IntegerField()
-    respuestas_correctas = serializers.IntegerField()
-    respuestas_incorrectas = serializers.IntegerField()
-    porcentaje_acierto = serializers.FloatField()
-    tiempo_promedio_pregunta = serializers.FloatField()
-    estadisticas_por_competencia = serializers.DictField()
-    estadisticas_por_dificultad = serializers.DictField()
-    recomendaciones = serializers.ListField(child=serializers.CharField())
+    respuesta = serializers.CharField(max_length=1)
+    tiempo_respuesta = serializers.IntegerField(min_value=0)

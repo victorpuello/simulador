@@ -106,6 +106,12 @@ class PreguntaSerializer(serializers.ModelSerializer):
         return None
 
 
+class PreguntaDetailSerializer(PreguntaSerializer):
+    """Serializer detallado para Pregunta con objetos completos de materia y competencia"""
+    materia = MateriaSerializer(read_only=True)
+    competencia = CompetenciaSerializer(read_only=True)
+
+
 class PreguntaSimulacionSerializer(serializers.ModelSerializer):
     """Serializer para preguntas en simulaciones (sin respuesta correcta)"""
     materia_nombre = serializers.CharField(source='materia.nombre_display', read_only=True)

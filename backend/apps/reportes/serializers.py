@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from apps.core.models import Sesion, Materia
+from apps.simulacion.models import SesionSimulacion
+from apps.core.models import Materia
 
 class EstadisticasUsuarioSerializer(serializers.Serializer):
     """Serializer para estadísticas generales del usuario"""
@@ -28,16 +29,17 @@ class HistorialSesionSerializer(serializers.ModelSerializer):
     duracion_minutos = serializers.SerializerMethodField()
     
     class Meta:
-        model = Sesion
+        model = SesionSimulacion
         fields = [
             'id', 'materia_nombre', 'fecha_inicio', 'fecha_fin', 
-            'puntaje_final', 'completada', 'modo', 'duracion_minutos'
+            'puntuacion', 'completada', 'duracion_minutos'
         ]
     
     def get_duracion_minutos(self, obj):
-        if obj.tiempo_total:
-            return round(obj.tiempo_total / 60, 1)
-        return 0
+        # Calcular duración basada en las respuestas de las preguntas
+        preguntas_sesion = obj.preguntas_sesion.all()
+        tiempo_total_segundos = sum(p.tiempo_respuesta or 0 for p in preguntas_sesion)
+        return round(tiempo_total_segundos / 60, 1)
 
 class ProgresoDiarioSerializer(serializers.Serializer):
     """Serializer para progreso diario (últimos 30 días)"""

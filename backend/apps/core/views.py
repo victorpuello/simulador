@@ -20,7 +20,7 @@ from .models import (
 from .serializers import (
     MateriaSerializer, MateriaDetailSerializer,
     CompetenciaSerializer, CompetenciaDetailSerializer,
-    PreguntaSerializer, PreguntaSimulacionSerializer,
+    PreguntaSerializer, PreguntaDetailSerializer, PreguntaSimulacionSerializer,
     SesionSerializer, SesionCreateSerializer, SesionDetailSerializer,
     RespuestaUsuarioSerializer, RespuestaUsuarioCreateSerializer,
     ClaseSerializer, ClaseDetailSerializer,
@@ -37,6 +37,7 @@ class MateriaViewSet(viewsets.ModelViewSet):
     search_fields = ['nombre', 'nombre_display', 'descripcion']
     ordering_fields = ['nombre', 'nombre_display']
     ordering = ['nombre']
+    permission_classes = [IsAuthenticated]
     
     def get_serializer_class(self):
         if self.action == 'retrieve':
@@ -79,6 +80,7 @@ class CompetenciaViewSet(viewsets.ModelViewSet):
     search_fields = ['nombre', 'descripcion']
     ordering_fields = ['nombre', 'peso_icfes']
     ordering = ['materia__nombre', 'nombre']
+    permission_classes = [IsAuthenticated]
     
     def get_serializer_class(self):
         if self.action == 'retrieve':
@@ -147,6 +149,9 @@ class PreguntaViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         # Para gestión de preguntas (docentes/admin), usar PreguntaSerializer completo
         if self.request.user.rol in ['docente', 'admin'] or self.request.user.is_staff:
+            # Para retrieve (obtener una pregunta individual), usar PreguntaDetailSerializer
+            if self.action == 'retrieve':
+                return PreguntaDetailSerializer
             return PreguntaSerializer
         # Para estudiantes, usar PreguntaSimulacionSerializer (sin campos sensibles)
         return PreguntaSimulacionSerializer
@@ -186,7 +191,30 @@ class PreguntaViewSet(viewsets.ModelViewSet):
         perm_error = self.check_management_permissions(request)
         if perm_error:
             return perm_error
-        return super().update(request, *args, **kwargs)
+        
+        # Obtener la pregunta existente
+        pregunta = self.get_object()
+        
+        # Log para depuración
+        print(f"Actualizando pregunta {pregunta.id}")
+        print(f"Request FILES: {request.FILES}")
+        print(f"Request DATA: {request.data}")
+        
+        # Si hay un archivo de imagen en la request, manejarlo correctamente
+        if 'imagen' in request.FILES:
+            print(f"Imagen encontrada en request.FILES")
+            # Eliminar la imagen anterior si existe
+            if pregunta.imagen:
+                print(f"Eliminando imagen anterior: {pregunta.imagen}")
+                pregunta.imagen.delete(save=False)
+        
+        try:
+            result = super().update(request, *args, **kwargs)
+            print(f"Actualización exitosa: {result}")
+            return result
+        except Exception as e:
+            print(f"Error en actualización: {e}")
+            raise
     
     def destroy(self, request, *args, **kwargs):
         """Eliminar pregunta con validación de permisos"""

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
+import logging.handlers
 from pathlib import Path
 from datetime import timedelta
 from decouple import config
@@ -219,6 +220,27 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True  # Solo para desarrollo
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
 CORS_ALLOW_CREDENTIALS = True
 
 # Cache Configuration
@@ -254,6 +276,20 @@ LOGGING = {
             'filename': os.path.join(BASE_DIR, 'logs', 'django.log'),
             'formatter': 'verbose',
         },
+        'session_file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'sessions.log'),
+            'maxBytes': 10485760,  # 10MB
+            'backupCount': 5,
+            'formatter': 'verbose',
+            'encoding': 'utf-8',
+        },
+        'session_console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
@@ -268,6 +304,26 @@ LOGGING = {
         'django': {
             'handlers': ['console', 'file'],
             'level': 'INFO',
+            'propagate': False,
+        },
+        'simulacion.sessions': {
+            'handlers': ['session_file', 'session_console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'simulacion.cleanup': {
+            'handlers': ['session_file', 'session_console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'simulacion.maintenance': {
+            'handlers': ['session_file', 'session_console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'simulacion': {
+            'handlers': ['session_file', 'console'],
+            'level': 'DEBUG',
             'propagate': False,
         },
     },

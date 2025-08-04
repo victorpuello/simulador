@@ -1,4 +1,4 @@
-# Usar imagen oficial de Python
+# Usar imagen oficial de Python optimizada para AWS
 FROM python:3.11-slim
 
 # Establecer variables de entorno
@@ -11,6 +11,7 @@ RUN apt-get update \
         postgresql-client \
         build-essential \
         libpq-dev \
+        curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Crear directorio de trabajo
@@ -23,7 +24,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar código de la aplicación
 COPY . .
 
-# Crear usuario no-root
+# Crear directorios necesarios
+RUN mkdir -p /app/staticfiles /app/media /app/logs
+
+# Crear usuario no-root para seguridad
 RUN adduser --disabled-password --gecos '' appuser
 RUN chown -R appuser:appuser /app
 USER appuser
@@ -31,5 +35,9 @@ USER appuser
 # Exponer puerto
 EXPOSE 8000
 
-# Comando por defecto
-CMD ["gunicorn", "simulador.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"] 
+# Health check
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8000/api/health/ || exit 1
+
+# Comando por defecto optimizado para AWS
+CMD ["gunicorn", "simulador.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "120", "--keep-alive", "2"] 

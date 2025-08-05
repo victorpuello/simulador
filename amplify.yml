@@ -1,24 +1,25 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - echo "Instalando dependencias del frontend..."
-        - cd frontend
-        - npm ci
-        - echo "Verificando linting..."
-        - npm run lint --if-present
-    build:
-      commands:
-        - echo "Construyendo aplicación frontend..."
-        - npm run build
-        - echo "Ejecutando tests..."
-        - npm run test:ci --if-present
-  artifacts:
-    baseDirectory: frontend/dist
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - frontend/node_modules/**/*
-      - frontend/.npm-cache/**/*
+applications:
+  - appRoot: frontend
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - echo "Instalando dependencias del frontend..."
+            - npm ci
+            - echo "Verificando linting..."
+            - npm run lint --if-present
+        build:
+          commands:
+            - echo "Construyendo aplicación frontend..."
+            - npm run build
+            - echo "Ejecutando tests..."
+            - npm run test:ci --if-present
+      artifacts:
+        baseDirectory: dist
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - .npm-cache/**/*

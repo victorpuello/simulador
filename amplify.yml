@@ -1,23 +1,25 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - echo "Instalando dependencias..."
-        - npm ci
-        - echo "Verificando linting..."
-        - npm run lint --if-present
-    build:
-      commands:
-        - echo "Construyendo aplicación..."
-        - npm run build
-        - echo "Verificando tests..."
-        - npm run test:ci --if-present
-  artifacts:
-    baseDirectory: dist
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
-      - .npm-cache/**/* 
+applications:
+  - appRoot: frontend          # carpeta donde está tu package.json
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - echo "Instalando dependencias…"
+            - npm ci
+            - echo "Verificando linting…"
+            - npm run lint --if-present
+        build:
+          commands:
+            - echo "Construyendo aplicación…"
+            - npm run build
+            - echo "Ejecutando tests…"
+            - npm run test:ci --if-present
+      artifacts:
+        baseDirectory: dist    # => frontend/dist
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - .npm-cache/**/*

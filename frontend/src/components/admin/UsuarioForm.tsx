@@ -78,17 +78,40 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
     is_active: true
   });
 
+  // Debug: Log para verificar el mode (solo al cambiar)
+  const isInitialRender = React.useRef(true);
+  if (isInitialRender.current) {
+    console.log('UsuarioForm INICIAL - mode:', mode, 'usuario:', usuario);
+    isInitialRender.current = false;
+  }
+
   useEffect(() => {
-    if (usuario && mode === 'edit') {
+    console.log('useEffect ejecutándose. Mode:', mode, 'Usuario:', usuario);
+    
+    if (mode === 'edit' && usuario) {
+      console.log('Configurando formulario para edición');
       setFormData({
-        username: usuario.username,
-        email: usuario.email,
-        first_name: usuario.first_name,
-        last_name: usuario.last_name,
-        rol: usuario.rol,
-        is_active: usuario.is_active,
+        username: usuario.username || '',
+        email: usuario.email || '',
+        first_name: usuario.first_name || '',
+        last_name: usuario.last_name || '',
+        rol: usuario.rol || 'estudiante',
+        is_active: usuario.is_active ?? true,
         password: '',
         password_confirm: ''
+      });
+    } else if (mode === 'create') {
+      console.log('Configurando formulario para creación');
+      // Asegurar que el formData se reinicie correctamente para creación
+      setFormData({
+        username: '',
+        email: '',
+        first_name: '',
+        last_name: '',
+        rol: 'estudiante',
+        password: '',
+        password_confirm: '',
+        is_active: true
       });
     }
   }, [usuario, mode]);
@@ -108,7 +131,7 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
     if (!formData.first_name) errors.push('El nombre es requerido');
     if (!formData.last_name) errors.push('El apellido es requerido');
     
-    if (mode === 'create') {
+    if (isCreateMode) {
       if (!formData.password) errors.push('La contraseña es requerida');
       if (!formData.password_confirm) errors.push('La confirmación de contraseña es requerida');
       if (formData.password !== formData.password_confirm) {
@@ -152,7 +175,7 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
       setLoading(true);
       let result: Usuario;
 
-      if (mode === 'create') {
+      if (isCreateMode) {
         result = await usuariosService.createUsuario(formData as UsuarioCreate);
         addNotification({
           type: 'success',
@@ -229,11 +252,20 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
     }
   };
 
+  // Verificación adicional de props
+  if (!mode) {
+    console.error('UsuarioForm: mode es requerido');
+    return <div>Error: Modo no especificado</div>;
+  }
+
+  const isCreateMode = mode === 'create';
+  const isEditMode = mode === 'edit';
+
   return (
     <Card>
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold text-gray-900">
-          {mode === 'create' ? 'Crear Usuario' : 'Editar Usuario'}
+          {isCreateMode ? 'Crear Usuario' : 'Editar Usuario'}
         </h2>
         <button
           onClick={onCancel}
@@ -252,12 +284,19 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
             </label>
             <input
               type="text"
-              value={formData.username}
+              value={formData.username ?? ''}
               onChange={(e) => handleInputChange('username', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className={`w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                isEditMode ? 'bg-gray-100 cursor-not-allowed' : ''
+              }`}
               placeholder="usuario123"
-              disabled={mode === 'edit'}
+              disabled={isEditMode}
+              data-testid="username-input"
             />
+            {/* Debug info */}
+            <div className="text-xs text-gray-500 mt-1">
+              Debug: Mode={mode}, Disabled={isEditMode.toString()}, Value="{formData.username}"
+            </div>
           </div>
 
           <div>
@@ -266,7 +305,7 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
             </label>
             <input
               type="email"
-              value={formData.email}
+              value={formData.email ?? ''}
               onChange={(e) => handleInputChange('email', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="usuario@ejemplo.com"
@@ -279,7 +318,7 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
             </label>
             <input
               type="text"
-              value={formData.first_name}
+              value={formData.first_name ?? ''}
               onChange={(e) => handleInputChange('first_name', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Juan"
@@ -292,7 +331,7 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
             </label>
             <input
               type="text"
-              value={formData.last_name}
+              value={formData.last_name ?? ''}
               onChange={(e) => handleInputChange('last_name', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Pérez"
@@ -304,7 +343,7 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
               Rol *
             </label>
             <select
-              value={formData.rol}
+              value={formData.rol ?? 'estudiante'}
               onChange={(e) => handleInputChange('rol', e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
@@ -332,21 +371,21 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
         {/* Contraseñas */}
         <div className="border-t pt-6">
           <h3 className="text-lg font-medium text-gray-900 mb-4">
-            {mode === 'create' ? 'Contraseña' : 'Cambiar Contraseña (opcional)'}
+            {isCreateMode ? 'Contraseña' : 'Cambiar Contraseña (opcional)'}
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Contraseña {mode === 'create' ? '*' : ''}
+                Contraseña {isCreateMode ? '*' : ''}
               </label>
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}
-                  value={formData.password}
+                  value={formData.password ?? ''}
                   onChange={(e) => handleInputChange('password', e.target.value)}
                   className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder={mode === 'create' ? 'Mínimo 8 caracteres' : 'Dejar vacío para no cambiar'}
+                  placeholder={isCreateMode ? 'Mínimo 8 caracteres' : 'Dejar vacío para no cambiar'}
                 />
                 <button
                   type="button"
@@ -364,12 +403,12 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Confirmar Contraseña {mode === 'create' ? '*' : ''}
+                Confirmar Contraseña {isCreateMode ? '*' : ''}
               </label>
               <div className="relative">
                 <input
                   type={showConfirmPassword ? 'text' : 'password'}
-                  value={formData.password_confirm}
+                  value={formData.password_confirm ?? ''}
                   onChange={(e) => handleInputChange('password_confirm', e.target.value)}
                   className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Repetir contraseña"
@@ -410,7 +449,7 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
             {loading ? (
               <LoadingSpinner size="sm" />
             ) : null}
-            {mode === 'create' ? 'Crear Usuario' : 'Guardar Cambios'}
+            {isCreateMode ? 'Crear Usuario' : 'Guardar Cambios'}
           </Button>
         </div>
       </form>

@@ -1,0 +1,44 @@
+version: 1.0
+runtime: python3
+build:
+  commands:
+    build:
+      - echo "Installing dependencies..."
+      - pip install -r requirements.txt
+      - echo "Collecting static files..."
+      - python manage.py collectstatic --noinput
+      - echo "Running migrations..."
+      - python manage.py migrate --noinput
+      - echo "Creating superuser if not exists..."
+      - python manage.py shell -c "
+        from django.contrib.auth import get_user_model;
+        User = get_user_model();
+        if not User.objects.filter(username='admin').exists():
+            User.objects.create_superuser('admin', 'admin@victorpuello.com', 'AdminPass123!')
+        "
+run:
+  runtime-version: python3.11
+  command: gunicorn --bind 0.0.0.0:8000 --workers 3 --timeout 120 simulador.wsgi:application
+  network:
+    port: 8000
+  env:
+    - name: DATABASE_URL
+      value: "postgresql://simulador_user:SimuladorPass123!@simulador-db.ccdmowgk2m5e.us-east-1.rds.amazonaws.com:5432/simulador_db"
+    - name: DEBUG
+      value: "False"
+    - name: ALLOWED_HOSTS
+      value: "*"
+    - name: SECRET_KEY
+      value: "django-insecure-production-key-change-this-in-real-production"
+    - name: DATABASE_ENGINE
+      value: "django.db.backends.postgresql"
+    - name: DATABASE_NAME
+      value: "simulador_db"
+    - name: DATABASE_USER
+      value: "simulador_user"
+    - name: DATABASE_PASSWORD
+      value: "SimuladorPass123!"
+    - name: DATABASE_HOST
+      value: "simulador-db.ccdmowgk2m5e.us-east-1.rds.amazonaws.com"
+    - name: DATABASE_PORT
+      value: "5432"

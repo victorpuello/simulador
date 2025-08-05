@@ -32,6 +32,12 @@ const GestionUsuariosPage: React.FC = () => {
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState<Usuario | null>(null);
   const [usuarioEditando, setUsuarioEditando] = useState<Usuario | null>(null);
 
+  // Debug: Log del estado
+  console.log('GestionUsuariosPage - Vista actual:', vista);
+  console.log('GestionUsuariosPage - UsuarioEditando:', usuarioEditando);
+  console.log('GestionUsuariosPage - Usuario:', user);
+  console.log('GestionUsuariosPage - Puede crear usuarios:', user?.rol === 'admin' || user?.is_staff);
+
   // Verificar permisos
   if (!user) {
     return <Navigate to="/login" replace />;
@@ -69,8 +75,12 @@ const GestionUsuariosPage: React.FC = () => {
   };
 
   const renderContenido = () => {
+    console.log('renderContenido - Vista:', vista);
+    console.log('renderContenido - UsuarioEditando:', usuarioEditando);
+    
     switch (vista) {
       case 'lista':
+        console.log('Renderizando lista');
         return (
           <UsuarioList
             onEdit={handleEdit}
@@ -80,6 +90,7 @@ const GestionUsuariosPage: React.FC = () => {
         );
       
       case 'crear':
+        console.log('Renderizando formulario CREAR');
         return (
           <UsuarioForm
             mode="create"
@@ -89,6 +100,7 @@ const GestionUsuariosPage: React.FC = () => {
         );
       
       case 'editar':
+        console.log('Renderizando formulario EDITAR con usuario:', usuarioEditando);
         return (
           <UsuarioForm
             usuario={usuarioEditando || undefined}
@@ -99,9 +111,11 @@ const GestionUsuariosPage: React.FC = () => {
         );
       
       case 'estadisticas':
+        console.log('Renderizando estadísticas');
         return <UsuarioStats />;
       
       default:
+        console.log('Vista por defecto');
         return null;
     }
   };
@@ -135,7 +149,15 @@ const GestionUsuariosPage: React.FC = () => {
             ].map((tab) => (
               <button
                 key={tab.key}
-                onClick={() => setVista(tab.key as Vista)}
+                onClick={() => {
+                  console.log('Clic en tab:', tab.key);
+                  setVista(tab.key as Vista);
+                  // Limpiar estado al cambiar de vista
+                  if (tab.key === 'crear') {
+                    console.log('Limpiando usuarioEditando para crear');
+                    setUsuarioEditando(null);
+                  }
+                }}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   vista === tab.key
                     ? 'bg-blue-100 text-blue-700'

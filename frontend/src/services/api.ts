@@ -5,7 +5,7 @@ import { useAppStore } from '../store';
 // Configuración base de axios
 const createApiInstance = (): AxiosInstance => {
   const instance = axios.create({
-    baseURL: import.meta.env.DEV ? 'http://localhost:8000/api' : '/api',
+    baseURL: import.meta.env.VITE_API_URL || import.meta.env.DEV ? 'http://localhost:8000/api' : '/api',
     timeout: 10000,
     headers: {
       'Content-Type': 'application/json',

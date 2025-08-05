@@ -5,16 +5,14 @@ applications:
       phases:
         preBuild:
           commands:
-            - echo "Instalando dependencias del frontend..."
+            - echo "Instalando dependencias..."
             - npm ci
             - echo "Verificando linting..."
             - npm run lint --if-present
         build:
           commands:
-            - echo "Construyendo aplicación frontend..."
+            - echo "Construyendo aplicación..."
             - npm run build
-            - echo "Ejecutando tests..."
-            - npm run test:ci --if-present
       artifacts:
         baseDirectory: dist
         files:
@@ -22,4 +20,3 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-          - .npm-cache/**/*

@@ -1,6 +1,7 @@
 import axios, { type AxiosRequestConfig, type AxiosResponse } from 'axios';
 import type { AxiosInstance } from 'axios';
 import { useAppStore } from '../store';
+import { mockLogin, mockLogout, mockRefreshToken, mockUserProfile } from './mockApi';
 
 // Configuración base de axios
 const createApiInstance = (): AxiosInstance => {
@@ -194,10 +195,19 @@ export const apiDelete = async <T>(url: string, config?: AxiosRequestConfig): Pr
 export const authService = {
   // Login
   login: async (credentials: { username: string; password: string }) => {
-    return apiPost<{ message: string; user: any; tokens: { access: string; refresh: string } }>(
-      '/auth/login/',
-      credentials
-    );
+    try {
+      return await apiPost<{ message: string; user: any; tokens: { access: string; refresh: string } }>(
+        '/auth/login/',
+        credentials
+      );
+    } catch (error: any) {
+      // Si el backend no está disponible, usar mock
+      if (error.code === 'ERR_NETWORK' || error.code === 'ECONNREFUSED' || error.response?.status >= 500) {
+        console.log('🔄 Backend no disponible, usando mock login...');
+        return await mockLogin(credentials.username, credentials.password);
+      }
+      throw error;
+    }
   },
 
   // Registro
@@ -225,7 +235,16 @@ export const authService = {
 
   // Logout
   logout: async (refreshToken: string) => {
-    return apiPost<{ message: string }>('/auth/logout/', { refresh: refreshToken });
+    try {
+      return await apiPost<{ message: string }>('/auth/logout/', { refresh: refreshToken });
+    } catch (error: any) {
+      // Si el backend no está disponible, usar mock
+      if (error.code === 'ERR_NETWORK' || error.code === 'ECONNREFUSED' || error.response?.status >= 500) {
+        console.log('🔄 Backend no disponible, usando mock logout...');
+        return await mockLogout();
+      }
+      throw error;
+    }
   },
 };
 

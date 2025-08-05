@@ -23,7 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-change-me-in-production')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
+# Forzar DEBUG=False en plataformas de producción
+if os.environ.get('RAILWAY_ENVIRONMENT') or os.environ.get('HEROKU_APP_NAME') or os.environ.get('VERCEL_ENV') or os.environ.get('RENDER'):
+    DEBUG = False
+else:
+    DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lambda v: [s.strip() for s in v.split(',')])
 
@@ -373,8 +377,8 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 
-# Development Settings
-if DEBUG:
+# Development Settings - Solo para desarrollo local
+if DEBUG and not os.environ.get('RAILWAY_ENVIRONMENT') and not os.environ.get('HEROKU_APP_NAME') and not os.environ.get('VERCEL_ENV'):
     try:
         import debug_toolbar
         INSTALLED_APPS += ['debug_toolbar']

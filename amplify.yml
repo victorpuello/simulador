@@ -1,25 +1,45 @@
 version: 1
 applications:
-  - appRoot: frontend          # carpeta donde está tu package.json
+  - appRoot: frontend
     frontend:
       phases:
         preBuild:
           commands:
-            - echo "Instalando dependencias…"
+            - echo "Instalando dependencias del frontend..."
             - npm ci
-            - echo "Verificando linting…"
+            - echo "Verificando linting..."
             - npm run lint --if-present
         build:
           commands:
-            - echo "Construyendo aplicación…"
+            - echo "Construyendo aplicación frontend..."
             - npm run build
-            - echo "Ejecutando tests…"
+            - echo "Ejecutando tests..."
             - npm run test:ci --if-present
       artifacts:
-        baseDirectory: dist    # => frontend/dist
+        baseDirectory: dist
         files:
           - '**/*'
       cache:
         paths:
           - node_modules/**/*
           - .npm-cache/**/*
+  
+  - appRoot: backend
+    backend:
+      phases:
+        build:
+          commands:
+            - echo "Instalando dependencias del backend..."
+            - pip install -r requirements.txt
+            - echo "Ejecutando migraciones..."
+            - python manage.py migrate --noinput
+            - echo "Recolectando archivos estáticos..."
+            - python manage.py collectstatic --noinput
+      artifacts:
+        baseDirectory: .
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - venv/**/*
+          - .pip-cache/**/*

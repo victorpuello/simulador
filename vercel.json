@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/simulador/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "backend/simulador/wsgi.py"
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "postgresql://simulador_user:SimuladorPass123!@simulador-db.ccdmowgk2m5e.us-east-1.rds.amazonaws.com:5432/simulador_db",
+    "DJANGO_SETTINGS_MODULE": "simulador.settings",
+    "DEBUG": "False",
+    "SECRET_KEY": "django-production-secret-key"
+  }
+}

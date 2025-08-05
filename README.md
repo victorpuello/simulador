@@ -137,6 +137,44 @@ npm run test:e2e
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
+## 🚀 Deployment
+
+### AWS Amplify Hosting (Recomendado)
+
+Para un deployment rápido y automático:
+
+1. **Subir a GitHub**
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+2. **Configurar AWS Amplify**
+- Ve a [AWS Console](https://console.aws.amazon.com)
+- Busca "Amplify" → "New app" → "Host web app"
+- Conecta tu repositorio de GitHub
+- Amplify detectará automáticamente el framework
+
+3. **Configurar dominio**
+- En Amplify Console → "Domain management"
+- Agrega tu dominio: `victorpuello.com`
+- Configura los registros CNAME en GoDaddy
+
+4. **Backend separado**
+```bash
+./deploy-backend-aws.sh
+```
+
+**Ventajas:**
+- ✅ Deployment automático en cada push
+- ✅ SSL automático con CloudFront CDN
+- ✅ Rollback instantáneo
+- ✅ Preview deployments por rama
+- ✅ Tiempo de setup: ~10 minutos
+
+Ver [DEPLOYMENT-GUIDE.md](DEPLOYMENT-GUIDE.md) para instrucciones detalladas.
+
 ## 📞 Contacto
 
 - **Desarrollador**: [Tu Nombre]

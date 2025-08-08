@@ -6,6 +6,7 @@ import LoadingSpinner from '../components/ui/LoadingSpinner';
 import { simulacionService } from '../services/api';
 import { useNotifications } from '../store';
 import RevisionGuiadaModal from '../components/simulacion/RevisionGuiadaModal';
+import { exportarResultadosPDF } from '../utils/exportPDF';
 
 interface Pregunta {
   id: number;
@@ -84,8 +85,15 @@ const ResultadosDetalladosPage: React.FC = () => {
   };
 
   const exportarPDF = async () => {
-    // Exportación simple usando print del navegador; en proyectos grandes se puede integrar jsPDF
-    window.print();
+    const resultados = preguntas.map(pregunta => {
+      const respuesta = respuestas.find(r => r.pregunta_id === pregunta.id);
+      return { pregunta, respuesta };
+    });
+    exportarResultadosPDF(resultados, {
+      materia: sesion?.materia.nombre_display,
+      fecha: sesion?.fecha_fin ? new Date(sesion.fecha_fin).toLocaleString() : undefined,
+      puntaje,
+    });
   };
 
   if (loading) {

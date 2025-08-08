@@ -13,101 +13,59 @@ import {
 } from '@heroicons/react/24/outline';
 import { useAuth } from '../../hooks/useAuth';
 
+interface NavItem {
+  name: string;
+  href: string;
+  icon: any;
+  current: boolean;
+  title?: string;
+}
+
 const Sidebar: React.FC = () => {
   const location = useLocation();
   const { user } = useAuth();
 
-  const navigation = [
-    {
-      name: 'Dashboard',
-      href: '/dashboard',
-      icon: HomeIcon,
-      current: location.pathname === '/dashboard',
-    },
-    {
-      name: 'Perfil',
-      href: '/perfil',
-      icon: UserIcon,
-      current: location.pathname === '/perfil',
-    },
+  // Secciones del menú (evitar enlaces rotos y mejorar UX con grupos)
+  const seccionGeneral: NavItem[] = [
+    { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: location.pathname === '/dashboard' },
+    { name: user?.rol === 'docente' ? 'Crear Simulación' : 'Simulación', href: '/simulacion', icon: AcademicCapIcon, current: location.pathname.startsWith('/simulacion') },
+    // Reportes: mostrar versión adecuada según rol
+    ...(user?.rol === 'docente'
+      ? [{ name: 'Reportes Docente', href: '/reportes/docente', icon: ChartBarIcon, current: location.pathname.startsWith('/reportes/docente') }]
+      : [{ name: 'Reportes', href: '/reportes', icon: ChartBarIcon, current: location.pathname.startsWith('/reportes') }]
+    ),
+    { name: 'Perfil', href: '/perfil', icon: UserIcon, current: location.pathname === '/perfil' },
   ];
 
-  // Simulación para estudiantes y docentes
-  navigation.splice(1, 0, {
-    name: user?.rol === 'docente' ? 'Crear Simulación' : 'Simulación',
-    href: '/simulacion',
-    icon: AcademicCapIcon,
-    current: location.pathname.startsWith('/simulacion'),
-  });
-  navigation.splice(2, 0, {
-    name: 'Reportes',
-    href: '/reportes',
-    icon: ChartBarIcon,
-    current: location.pathname === '/reportes',
-  });
-
-  // Agregar elementos específicos para docentes
+  const seccionDocente: NavItem[] = [];
   if (user?.rol === 'docente') {
-    navigation.splice(2, 0, {
-      name: 'Gestión de Preguntas',
-      href: '/gestion-preguntas',
-      icon: DocumentTextIcon,
-      current: location.pathname === '/gestion-preguntas',
-    });
-    navigation.splice(3, 0, {
-      name: 'Clases',
-      href: '/clases',
-      icon: BookOpenIcon,
-      current: location.pathname === '/clases',
-    });
-    navigation.splice(4, 0, {
-      name: 'Gamificación',
-      href: '/gamificacion',
-      icon: TrophyIcon,
-      current: location.pathname === '/gamificacion',
-    });
+    seccionDocente.push(
+      { name: 'Gestión de Preguntas', href: '/gestion-preguntas', icon: DocumentTextIcon, current: location.pathname.startsWith('/gestion-preguntas') },
+      // Enlaces que antes estaban rotos (/clases, /gamificacion) se omiten hasta que existan rutas
+      { name: 'Gestión de Usuarios', href: '/gestion-usuarios', icon: UserIcon, current: location.pathname.startsWith('/gestion-usuarios') },
+      { name: 'Métricas', href: '/metricas', icon: PresentationChartBarIcon, current: location.pathname.startsWith('/metricas') },
+    );
   }
 
-  // Gestión de Usuarios para docentes y administradores
-  if (user?.rol === 'docente' || user?.rol === 'admin' || user?.is_staff) {
-    navigation.push({
-      name: 'Gestión de Usuarios',
-      href: '/gestion-usuarios',
-      icon: UserIcon,
-      current: location.pathname === '/gestion-usuarios',
-    });
-  }
-
-  // Métricas para docentes
-  if (user?.rol === 'docente') {
-    navigation.push({
-      name: 'Métricas',
-      href: '/metricas',
-      icon: PresentationChartBarIcon,
-      current: location.pathname === '/metricas',
-    });
-  }
-
-  // Administración solo para administradores del sistema (otras funciones administrativas)
+  const seccionAdmin: NavItem[] = [];
   if (user?.rol === 'admin' || user?.is_staff) {
-    navigation.push({
-      name: 'Administración',
-      href: '/admin',
-      icon: CogIcon,
-      current: location.pathname === '/admin',
-    });
+    seccionAdmin.push({ name: 'Administración', href: '/admin', icon: CogIcon, current: location.pathname.startsWith('/admin') });
   }
 
   return (
     <div className="w-64 bg-white shadow-sm border-r border-gray-200">
-      <nav className="mt-5 px-2">
-        <div className="space-y-1">
-          {navigation.map((item) => {
+      <nav className="mt-5 px-2" aria-label="Sidebar">
+        {/* General */}
+        <div className="px-2 py-1 text-xs font-semibold text-gray-500 uppercase tracking-wide">General</div>
+        <div className="space-y-1 mb-4">
+          {seccionGeneral.map((item) => {
             const Icon = item.icon;
             return (
               <Link
                 key={item.name}
                 to={item.href}
+                aria-current={item.current ? 'page' : undefined}
+                title={item.name}
                 className={`group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors ${
                   item.current
                     ? 'bg-primary-100 text-primary-900 border-r-2 border-primary-600'
@@ -124,6 +82,70 @@ const Sidebar: React.FC = () => {
             );
           })}
         </div>
+
+        {/* Docente */}
+        {seccionDocente.length > 0 && (
+          <>
+            <div className="px-2 py-1 text-xs font-semibold text-gray-500 uppercase tracking-wide">Docente</div>
+            <div className="space-y-1 mb-4">
+              {seccionDocente.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    aria-current={item.current ? 'page' : undefined}
+                    title={item.name}
+                    className={`group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors ${
+                      item.current
+                        ? 'bg-primary-100 text-primary-900 border-r-2 border-primary-600'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    }`}
+                  >
+                    <Icon
+                      className={`mr-3 h-5 w-5 ${
+                        item.current ? 'text-primary-500' : 'text-gray-400 group-hover:text-gray-500'
+                      }`}
+                    />
+                    {item.name}
+                  </Link>
+                );
+              })}
+            </div>
+          </>
+        )}
+
+        {/* Administración */}
+        {seccionAdmin.length > 0 && (
+          <>
+            <div className="px-2 py-1 text-xs font-semibold text-gray-500 uppercase tracking-wide">Administración</div>
+            <div className="space-y-1">
+              {seccionAdmin.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    aria-current={item.current ? 'page' : undefined}
+                    title={item.name}
+                    className={`group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors ${
+                      item.current
+                        ? 'bg-primary-100 text-primary-900 border-r-2 border-primary-600'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    }`}
+                  >
+                    <Icon
+                      className={`mr-3 h-5 w-5 ${
+                        item.current ? 'text-primary-500' : 'text-gray-400 group-hover:text-gray-500'
+                      }`}
+                    />
+                    {item.name}
+                  </Link>
+                );
+              })}
+            </div>
+          </>
+        )}
       </nav>
     </div>
   );

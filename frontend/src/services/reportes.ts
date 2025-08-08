@@ -68,6 +68,41 @@ export interface ReporteICFES {
   };
 }
 
+// ===== Docentes =====
+export interface DocenteResumen {
+  simulaciones_totales: number;
+  simulaciones_completadas: number;
+  estudiantes_activos_7d: number;
+  estudiantes_activos_30d: number;
+  promedio_puntaje: number;
+  tiempo_promedio_pregunta: number;
+}
+
+export interface DocenteMateriaItem {
+  materia_id: number;
+  materia_nombre: string;
+  simulaciones: number;
+  promedio_puntaje: number;
+  porcentaje_acierto: number;
+  tiempo_promedio_pregunta: number;
+}
+
+export interface DocentePreguntaItem {
+  pregunta_id: number;
+  enunciado_resumen: string;
+  porcentaje_acierto: number;
+  total_respuestas: number;
+  opcion_mas_elegida: string | null;
+}
+
+export interface DocenteEstudianteItem {
+  estudiante_id: number;
+  nombre: string;
+  simulaciones: number;
+  porcentaje_acierto: number;
+  tiempo_promedio_pregunta: number;
+}
+
 export const reportesService = {
   // Obtener estadísticas generales del usuario
   async getEstadisticasGenerales(): Promise<EstadisticasGenerales> {
@@ -106,6 +141,27 @@ export const reportesService = {
   // Obtener reporte ICFES
   async getReporteICFES(): Promise<ReporteICFES> {
     const response = await api.get('/reportes/reporte_icfes/');
+    return response.data;
+  },
+
+  // ===== Docentes =====
+  async getDocenteResumen(): Promise<DocenteResumen> {
+    const response = await api.get('/reportes/docente/resumen/');
+    return response.data;
+  },
+  async getDocenteMaterias(): Promise<DocenteMateriaItem[]> {
+    const response = await api.get('/reportes/docente/materias/');
+    return response.data;
+  },
+  async getDocentePreguntas(materia?: number, limit: number = 50): Promise<DocentePreguntaItem[]> {
+    const params = new URLSearchParams();
+    if (materia) params.append('materia', String(materia));
+    if (limit) params.append('limit', String(limit));
+    const response = await api.get(`/reportes/docente/preguntas/?${params.toString()}`);
+    return response.data;
+  },
+  async getDocenteEstudiantes(): Promise<DocenteEstudianteItem[]> {
+    const response = await api.get('/reportes/docente/estudiantes/');
     return response.data;
   }
 };

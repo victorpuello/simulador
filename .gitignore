@@ -157,4 +157,9 @@ temp/
 
 # Backup files
 *.bak
-*.backup 
+*.backup backend/venv/
+reports/
+backend/htmlcov/
+**/__pycache__/
+**/*.pyc
+*.log

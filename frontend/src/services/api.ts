@@ -1,17 +1,31 @@
 import axios, { type AxiosRequestConfig, type AxiosResponse } from 'axios';
 import type { AxiosInstance } from 'axios';
 import { useAppStore } from '../store';
-import { mockLogin, mockLogout, mockRefreshToken, mockUserProfile } from './mockApi';
+import { mockLogin, mockLogout } from './mockApi';
 
 // Configuración base de axios
 const createApiInstance = (): AxiosInstance => {
+  const isDev = !!((import.meta as any).env?.DEV);
+  const configuredBaseUrl = (import.meta as any).env?.VITE_API_URL as string | undefined;
+  // En dev usamos el proxy '/api'. En preview/prod NO hay proxy, así que
+  // si no hay VITE_API_URL configurado, apuntamos a backend local por defecto.
+  const baseURL = isDev ? '/api' : (configuredBaseUrl || 'http://127.0.0.1:8000/api');
+
+  // Log inicial de baseURL seleccionada
+  try {
+    // eslint-disable-next-line no-console
+    console.info('[API] baseURL seleccionada:', baseURL, 'isDev:', isDev, 'VITE_API_URL:', configuredBaseUrl);
+  } catch {}
+
   const instance = axios.create({
-    baseURL: 'http://localhost:8000/api', // Forzar localhost temporalmente
+    // Usar proxy de Vite en dev; en prod permite override por VITE_API_URL
+    baseURL,
     timeout: 10000,
     headers: {
       'Content-Type': 'application/json',
     },
-    withCredentials: true,
+    // JWT en Authorization header, no usamos cookies en dev → evitar preflight estrictos por credenciales
+    withCredentials: false,
     transformRequest: [(data, headers) => {
       console.log('Transformando request:', { data, headers });
       // Si es FormData, no transformar y quitar Content-Type para que axios lo maneje
@@ -37,6 +51,10 @@ const createApiInstance = (): AxiosInstance => {
       // Log de la configuración final
       console.log('Configuración final de la petición:', {
         url: config.url,
+        baseURL: config.baseURL,
+        resolved: (() => {
+          try { return new URL(config.url || '', config.baseURL || baseURL).toString(); } catch { return 'n/a'; }
+        })(),
         method: config.method,
         headers: config.headers,
         data: config.data instanceof FormData ? 'FormData' : config.data

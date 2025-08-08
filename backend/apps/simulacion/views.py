@@ -461,77 +461,87 @@ class SesionSimulacionViewSet(viewsets.ModelViewSet):
     
     @action(detail=False, methods=['get'], permission_classes=[IsAuthenticated, EsDocente])
     def metricas(self, request):
-        """Endpoint para obtener métricas de sesiones para docentes"""
+        """Endpoint para obtener métricas de sesiones para docentes (shape compatible con frontend)"""
         from django.db.models import Count, Avg, Sum
         from datetime import timedelta
         
         # Parámetros de consulta
         days = int(request.query_params.get('days', 7))
-        start_date = timezone.now() - timedelta(days=days)
+        fecha_fin = timezone.now()
+        start_date = fecha_fin - timedelta(days=days)
+        
+        sesiones_periodo = SesionSimulacion.objects.filter(fecha_inicio__gte=start_date)
+        completadas_periodo = sesiones_periodo.filter(completada=True)
         
         # Métricas generales
-        total_sesiones = SesionSimulacion.objects.filter(fecha_inicio__gte=start_date).count()
-        sesiones_completadas = SesionSimulacion.objects.filter(
-            fecha_inicio__gte=start_date,
-            completada=True
-        ).count()
-        sesiones_activas = SesionSimulacion.objects.filter(
-            fecha_inicio__gte=start_date,
-            completada=False
-        ).count()
-        
+        total_sesiones = sesiones_periodo.count()
+        sesiones_completadas = completadas_periodo.count()
+        sesiones_activas = sesiones_periodo.filter(completada=False).count()
         tasa_finalizacion = (sesiones_completadas / total_sesiones * 100) if total_sesiones > 0 else 0
+        
+        # Tiempo promedio por sesión (en minutos)
+        from apps.simulacion.models import PreguntaSesion
+        total_tiempo_seg = PreguntaSesion.objects.filter(sesion__in=completadas_periodo).aggregate(total=Sum('tiempo_respuesta'))['total'] or 0
+        tiempo_promedio_min = None
+        if sesiones_completadas > 0:
+            tiempo_promedio_min = round(float(total_tiempo_seg) / sesiones_completadas / 60.0, 1)
         
         # Métricas por materia
         from apps.core.models import Materia
-        materias_stats = []
+        por_materia = []
         for materia in Materia.objects.all():
-            sesiones_materia = SesionSimulacion.objects.filter(
-                materia=materia,
-                fecha_inicio__gte=start_date
-            )
+            sesiones_materia = sesiones_periodo.filter(materia=materia)
             total_materia = sesiones_materia.count()
-            
             if total_materia > 0:
                 completadas_materia = sesiones_materia.filter(completada=True).count()
-                promedio_puntuacion = sesiones_materia.filter(
-                    completada=True
-                ).aggregate(avg_score=Avg('puntuacion'))['avg_score'] or 0
-                
-                materias_stats.append({
+                promedio_puntuacion = sesiones_materia.filter(completada=True).aggregate(avg_score=Avg('puntuacion'))['avg_score'] or 0
+                por_materia.append({
                     'materia': materia.nombre_display,
                     'total_sesiones': total_materia,
                     'completadas': completadas_materia,
                     'activas': total_materia - completadas_materia,
                     'tasa_finalizacion': round((completadas_materia / total_materia * 100), 1),
-                    'promedio_puntuacion': round(promedio_puntuacion, 2)
+                    'promedio_puntuacion': round(promedio_puntuacion, 2),
                 })
         
         # Top estudiantes activos
         from apps.core.models import Usuario
-        estudiantes_activos = Usuario.objects.filter(
+        estudiantes_qs = Usuario.objects.filter(
             rol='estudiante',
             sesiones_simulacion__fecha_inicio__gte=start_date
         ).annotate(
             sesiones_count=Count('sesiones_simulacion'),
             sesiones_completadas=Count('sesiones_simulacion', filter=Q(sesiones_simulacion__completada=True))
         ).order_by('-sesiones_count')[:10]
+        estudiantes_activos = []
+        for est in estudiantes_qs:
+            total = est.sesiones_count or 0
+            comp = est.sesiones_completadas or 0
+            tasa = round((comp / total * 100), 1) if total > 0 else 0
+            estudiantes_activos.append({
+                'username': est.username,
+                'nombre_completo': f"{est.first_name} {est.last_name}".strip() or est.username,
+                'total_sesiones': total,
+                'sesiones_completadas': comp,
+                'tasa_finalizacion': tasa,
+            })
         
         return Response({
-            'periodo_dias': days,
-            'total_sesiones': total_sesiones,
-            'sesiones_completadas': sesiones_completadas,
-            'sesiones_activas': sesiones_activas,
-            'tasa_finalizacion': round(tasa_finalizacion, 1),
-            'materias_stats': materias_stats,
-            'estudiantes_activos': [
-                {
-                    'username': est.username,
-                    'sesiones_count': est.sesiones_count,
-                    'sesiones_completadas': est.sesiones_completadas
-                }
-                for est in estudiantes_activos
-            ]
+            'periodo': {
+                'dias': days,
+                'fecha_inicio': start_date,
+                'fecha_fin': fecha_fin,
+            },
+            'generales': {
+                'total_sesiones': total_sesiones,
+                'sesiones_completadas': sesiones_completadas,
+                'sesiones_activas': sesiones_activas,
+                'tasa_finalizacion': round(tasa_finalizacion, 1),
+                'tiempo_promedio_minutos': tiempo_promedio_min,
+            },
+            'por_materia': por_materia,
+            'estudiantes_activos': estudiantes_activos,
+            'timestamp': fecha_fin,
         })
 
     @action(detail=True, methods=['get'], permission_classes=[IsAuthenticated])

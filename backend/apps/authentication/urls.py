@@ -13,16 +13,22 @@ urlpatterns = [
     # JWT Token endpoints
     path('token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', CustomTokenRefreshView.as_view(), name='token_refresh'),
+    # Alias para compatibilidad con clientes/fixtures antiguos
+    path('refresh/', CustomTokenRefreshView.as_view(), name='refresh'),
     
     # Authentication endpoints
     path('registro/', UsuarioRegistroView.as_view(), name='registro'),
     path('login/', UsuarioLoginView.as_view(), name='login'),
     path('logout/', UsuarioLogoutView.as_view(), name='logout'),
+    # Alias en inglés para compatibilidad
+    path('register/', UsuarioRegistroView.as_view(), name='register'),
     
     # User profile endpoints
     path('perfil/', UsuarioPerfilView.as_view(), name='perfil'),
     path('usuario-actual/', usuario_actual, name='usuario_actual'),
     path('cambiar-password/', CambioPasswordView.as_view(), name='cambiar_password'),
+    # Alias en inglés para compatibilidad
+    path('profile/', UsuarioPerfilView.as_view(), name='profile'),
     
     # Validation endpoints
     path('verificar-username/', verificar_username, name='verificar_username'),

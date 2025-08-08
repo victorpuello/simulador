@@ -36,7 +36,7 @@ const GestionUsuariosPage: React.FC = () => {
   console.log('GestionUsuariosPage - Vista actual:', vista);
   console.log('GestionUsuariosPage - UsuarioEditando:', usuarioEditando);
   console.log('GestionUsuariosPage - Usuario:', user);
-  console.log('GestionUsuariosPage - Puede crear usuarios:', user?.rol === 'admin' || user?.is_staff);
+  console.log('GestionUsuariosPage - Puede crear usuarios:', user?.rol === 'admin' || !!user?.is_staff);
 
   // Verificar permisos
   if (!user) {

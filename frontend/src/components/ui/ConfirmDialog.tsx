@@ -3,13 +3,13 @@ import Button from './Button';
 
 interface Props {
   isOpen: boolean;
+  onClose: () => void;
+  onConfirm: () => void | Promise<void>;
   title: string;
   message: string;
   confirmText?: string;
   cancelText?: string;
-  onConfirm: () => void;
-  onCancel: () => void;
-  type?: 'danger' | 'warning' | 'info';
+  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'outline' | 'ghost' | 'danger';
 }
 
 const ConfirmDialog: React.FC<Props> = ({
@@ -19,21 +19,12 @@ const ConfirmDialog: React.FC<Props> = ({
   confirmText = 'Confirmar',
   cancelText = 'Cancelar',
   onConfirm,
-  onCancel,
-  type = 'info'
+  onClose,
+  variant = 'primary'
 }) => {
   if (!isOpen) return null;
 
-  const getIcon = () => {
-    switch (type) {
-      case 'danger':
-        return '🗑️';
-      case 'warning':
-        return '⚠️';
-      default:
-        return 'ℹ️';
-    }
-  };
+  const getIcon = () => (variant === 'danger' ? '🗑️' : variant === 'warning' ? '⚠️' : 'ℹ️');
 
   const getConfirmVariant = () => {
     switch (type) {
@@ -49,7 +40,7 @@ const ConfirmDialog: React.FC<Props> = ({
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
       {/* Overlay */}
-      <div className="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onClick={onCancel} />
+      <div className="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onClick={onClose} />
       
       {/* Dialog */}
       <div className="flex min-h-full items-center justify-center p-4">
@@ -68,12 +59,12 @@ const ConfirmDialog: React.FC<Props> = ({
             <div className="flex justify-end space-x-3">
               <Button
                 variant="secondary"
-                onClick={onCancel}
+                onClick={onClose}
               >
                 {cancelText}
               </Button>
               <Button
-                variant={getConfirmVariant()}
+                variant={variant === 'danger' ? 'error' : variant}
                 onClick={onConfirm}
               >
                 {confirmText}

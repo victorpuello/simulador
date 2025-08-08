@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseClasses = 'btn';
   
-  const variantClasses = {
+  const variantClasses: Record<NonNullable<ButtonProps['variant']>, string> = {
     primary: 'btn-primary',
     secondary: 'btn-secondary',
     success: 'btn-success',
@@ -22,6 +22,7 @@ const Button: React.FC<ButtonProps> = ({
     error: 'btn-error',
     outline: 'btn-outline',
     ghost: 'btn-ghost',
+    danger: 'btn-error',
   };
   
   const sizeClasses = {

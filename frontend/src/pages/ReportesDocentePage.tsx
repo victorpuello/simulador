@@ -3,6 +3,7 @@ import Card from '../components/ui/Card';
 import BarChart from '../components/charts/BarChart';
 import DoughnutChart from '../components/charts/DoughnutChart';
 import { reportesService, type DocenteResumen, type DocenteMateriaItem, type DocentePreguntaItem, type DocenteEstudianteItem } from '../services/reportes';
+import { exportToCSV } from '../utils/exportCSV';
 
 const ReportesDocentePage: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -40,6 +41,38 @@ const ReportesDocentePage: React.FC = () => {
   const cargarPreguntas = async () => {
     const preg = await reportesService.getDocentePreguntas(materiaFiltro, 50);
     setPreguntas(preg);
+  };
+
+  const exportarMateriasCSV = () => {
+    const rows = materias.map(m => ({
+      materia: m.materia_nombre,
+      simulaciones: m.simulaciones,
+      promedio_puntaje: m.promedio_puntaje,
+      porcentaje_acierto: m.porcentaje_acierto,
+      tiempo_promedio_pregunta_seg: m.tiempo_promedio_pregunta,
+    }));
+    exportToCSV(rows, 'docente_materias.csv');
+  };
+
+  const exportarPreguntasCSV = () => {
+    const rows = preguntas.map(p => ({
+      pregunta_id: p.pregunta_id,
+      enunciado_resumen: p.enunciado_resumen,
+      porcentaje_acierto: p.porcentaje_acierto,
+      total_respuestas: p.total_respuestas,
+      opcion_mas_elegida: p.opcion_mas_elegida ?? '-',
+    }));
+    exportToCSV(rows, 'docente_preguntas.csv');
+  };
+
+  const exportarEstudiantesCSV = () => {
+    const rows = estudiantes.map(e => ({
+      estudiante: e.nombre,
+      simulaciones: e.simulaciones,
+      porcentaje_acierto: e.porcentaje_acierto,
+      tiempo_promedio_pregunta_seg: e.tiempo_promedio_pregunta,
+    }));
+    exportToCSV(rows, 'docente_estudiantes.csv');
   };
 
   const doughnutData = useMemo(() => ({
@@ -106,7 +139,10 @@ const ReportesDocentePage: React.FC = () => {
           <DoughnutChart data={doughnutData} height={300} />
         </Card>
         <Card title="Acierto por Materia">
-          <BarChart data={barMaterias} height={300} />
+          <div className="flex justify-end p-3">
+            <button onClick={exportarMateriasCSV} className="text-sm px-3 py-1.5 rounded bg-emerald-600 text-white hover:bg-emerald-700">Exportar CSV</button>
+          </div>
+          <BarChart data={barMaterias} height={260} />
         </Card>
       </div>
 
@@ -125,6 +161,9 @@ const ReportesDocentePage: React.FC = () => {
               <option key={m.materia_id} value={m.materia_id}>{m.materia_nombre}</option>
             ))}
           </select>
+        </div>
+        <div className="flex justify-end p-3">
+          <button onClick={exportarPreguntasCSV} className="text-sm px-3 py-1.5 rounded bg-emerald-600 text-white hover:bg-emerald-700">Exportar CSV</button>
         </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
@@ -152,6 +191,9 @@ const ReportesDocentePage: React.FC = () => {
 
       {/* Estudiantes */}
       <Card title="Estudiantes">
+        <div className="flex justify-end p-3">
+          <button onClick={exportarEstudiantesCSV} className="text-sm px-3 py-1.5 rounded bg-emerald-600 text-white hover:bg-emerald-700">Exportar CSV</button>
+        </div>
         <div className="overflow-x-auto">
           <table className="min-w-full">
             <thead>

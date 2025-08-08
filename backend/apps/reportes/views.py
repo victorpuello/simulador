@@ -7,7 +7,7 @@ from django.utils import timezone
 from datetime import timedelta, date
 from apps.simulacion.models import SesionSimulacion, PreguntaSesion
 from apps.core.models import Materia
-from apps.simulacion.permissions import SoloEstudiantes
+from apps.simulacion.permissions import SoloEstudiantes, EsDocente
 from .serializers import (
     EstadisticasUsuarioSerializer,
     EstadisticasPorMateriaSerializer,
@@ -191,3 +191,136 @@ class ReportesViewSet(viewsets.ViewSet):
         estadisticas_icfes = calcular_estadisticas_icfes(user)
         
         return Response(estadisticas_icfes)
+
+
+class ReportesDocenteViewSet(viewsets.ViewSet):
+    """Reportes y métricas para docentes"""
+    permission_classes = [IsAuthenticated, EsDocente]
+
+    def _filtrar_clases_estudiantes(self, request):
+        docente = request.user
+        # Recolectar estudiantes de todas las clases activas del docente
+        from apps.core.models import Clase
+        clases = Clase.objects.filter(docente=docente, activa=True)
+        estudiantes_ids = set()
+        for c in clases:
+            estudiantes_ids.update(c.estudiantes.values_list('id', flat=True))
+        return list(estudiantes_ids)
+
+    @action(detail=False, methods=['get'])
+    def resumen(self, request):
+        estudiantes_ids = self._filtrar_clases_estudiantes(request)
+        sesiones = SesionSimulacion.objects.filter(estudiante_id__in=estudiantes_ids)
+        completadas = sesiones.filter(completada=True)
+
+        # Activos por ventana de tiempo
+        ahora = timezone.now()
+        activos_7d = sesiones.filter(fecha_inicio__gte=ahora - timedelta(days=7)).values('estudiante').distinct().count()
+        activos_30d = sesiones.filter(fecha_inicio__gte=ahora - timedelta(days=30)).values('estudiante').distinct().count()
+
+        # Tiempo promedio por pregunta
+        ps_qs = PreguntaSesion.objects.filter(sesion__in=completadas)
+        total_respuestas = ps_qs.count()
+        tiempo_promedio = (ps_qs.aggregate(total=Sum('tiempo_respuesta'))['total'] or 0) / total_respuestas if total_respuestas else 0
+
+        data = {
+            'simulaciones_totales': sesiones.count(),
+            'simulaciones_completadas': completadas.count(),
+            'estudiantes_activos_7d': activos_7d,
+            'estudiantes_activos_30d': activos_30d,
+            'promedio_puntaje': round(completadas.aggregate(p=Avg('puntuacion'))['p'] or 0, 1),
+            'tiempo_promedio_pregunta': round(float(tiempo_promedio), 2),
+        }
+
+        from .serializers import DocenteResumenSerializer
+        return Response(DocenteResumenSerializer(data).data)
+
+    @action(detail=False, methods=['get'])
+    def materias(self, request):
+        estudiantes_ids = self._filtrar_clases_estudiantes(request)
+        materias = Materia.objects.filter(activa=True)
+        items = []
+        for materia in materias:
+            sesiones = SesionSimulacion.objects.filter(estudiante_id__in=estudiantes_ids, materia=materia, completada=True)
+            ps = PreguntaSesion.objects.filter(sesion__in=sesiones)
+            total = ps.count()
+            correctas = ps.filter(es_correcta=True).count()
+            tiempo_prom = (ps.aggregate(total=Sum('tiempo_respuesta'))['total'] or 0) / total if total else 0
+            if sesiones.exists():
+                items.append({
+                    'materia_id': materia.id,
+                    'materia_nombre': materia.nombre_display,
+                    'simulaciones': sesiones.count(),
+                    'promedio_puntaje': round(sesiones.aggregate(p=Avg('puntuacion'))['p'] or 0, 1),
+                    'porcentaje_acierto': round((correctas / total * 100), 1) if total else 0,
+                    'tiempo_promedio_pregunta': round(float(tiempo_prom), 2),
+                })
+        from .serializers import DocenteMateriaSerializer
+        return Response(DocenteMateriaSerializer(items, many=True).data)
+
+    @action(detail=False, methods=['get'])
+    def preguntas(self, request):
+        estudiantes_ids = self._filtrar_clases_estudiantes(request)
+        materia_id = request.GET.get('materia')
+        limit = int(request.GET.get('limit', 50))
+
+        ps = PreguntaSesion.objects.filter(sesion__estudiante_id__in=estudiantes_ids)
+        if materia_id:
+            ps = ps.filter(pregunta__materia_id=materia_id)
+
+        # Agrupar por pregunta
+        from django.db.models import Count, Case, When, FloatField
+        qs = ps.values('pregunta_id', 'pregunta__enunciado').annotate(
+            total=Count('id'),
+            correctas=Count(Case(When(es_correcta=True, then=1))),
+        ).order_by('pregunta_id')
+
+        items = []
+        for row in qs[:limit]:
+            total = row['total']
+            correctas = row['correctas'] or 0
+            acierto = round((correctas / total * 100), 1) if total else 0
+            # Opción más elegida entre incorrectas
+            opciones = PreguntaSesion.objects.filter(
+                sesion__estudiante_id__in=estudiantes_ids,
+                pregunta_id=row['pregunta_id'],
+            ).values('respuesta_estudiante').annotate(c=Count('id')).order_by('-c')
+            opcion_top = opciones[0]['respuesta_estudiante'] if opciones else None
+            items.append({
+                'pregunta_id': row['pregunta_id'],
+                'enunciado_resumen': (row['pregunta__enunciado'] or '')[:120],
+                'porcentaje_acierto': acierto,
+                'total_respuestas': total,
+                'opcion_mas_elegida': opcion_top,
+            })
+
+        from .serializers import DocentePreguntaItemSerializer
+        return Response(DocentePreguntaItemSerializer(items, many=True).data)
+
+    @action(detail=False, methods=['get'])
+    def estudiantes(self, request):
+        estudiantes_ids = self._filtrar_clases_estudiantes(request)
+        sesiones = SesionSimulacion.objects.filter(estudiante_id__in=estudiantes_ids)
+        completadas = sesiones.filter(completada=True)
+
+        # Agregar por estudiante
+        from django.db.models import Count
+        items = []
+        for est_id in sesiones.values_list('estudiante_id', flat=True).distinct():
+            ses_est = completadas.filter(estudiante_id=est_id)
+            ps = PreguntaSesion.objects.filter(sesion__in=ses_est)
+            total = ps.count()
+            correctas = ps.filter(es_correcta=True).count()
+            tiempo_prom = (ps.aggregate(total=Sum('tiempo_respuesta'))['total'] or 0) / total if total else 0
+            from apps.core.models import Usuario
+            u = Usuario.objects.filter(id=est_id).first()
+            items.append({
+                'estudiante_id': est_id,
+                'nombre': f"{u.first_name} {u.last_name}".strip() or u.username if u else str(est_id),
+                'simulaciones': ses_est.count(),
+                'porcentaje_acierto': round((correctas / total * 100), 1) if total else 0,
+                'tiempo_promedio_pregunta': round(float(tiempo_prom), 2),
+            })
+
+        from .serializers import DocenteEstudianteSerializer
+        return Response(DocenteEstudianteSerializer(items, many=True).data)

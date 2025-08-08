@@ -55,6 +55,9 @@ const SimulacionActiva: React.FC = () => {
   // Estado local
   const [respuestaSeleccionada, setRespuestaSeleccionada] = useState<string | null>(null);
   const [mostrandoRetroalimentacion, setMostrandoRetroalimentacion] = useState(false);
+  const [retroInmediata, setRetroInmediata] = useState<boolean>(
+    () => localStorage.getItem('simulacion-retro-inmediata') === 'true'
+  );
   const [ultimaRespuesta, setUltimaRespuesta] = useState<any>(null);
   const [tiempoRestante, setTiempoRestante] = useState<number>(0);
   const [mostrarConfirmSalir, setMostrarConfirmSalir] = useState(false);
@@ -72,7 +75,25 @@ const SimulacionActiva: React.FC = () => {
   // Cargar la sesión al montar el componente
   useEffect(() => {
     if (sesionId) {
-      cargarSesionExistente(sesionId).catch(error => {
+      cargarSesionExistente(sesionId).then(() => {
+        // Restaurar borrador local si existe para la pregunta actual
+        try {
+          const draftRaw = localStorage.getItem('simulacion-draft');
+          if (draftRaw) {
+            const draft = JSON.parse(draftRaw);
+            if (
+              draft?.sesionId === sesionId &&
+              typeof draft?.preguntaId === 'number' &&
+              typeof draft?.respuesta === 'string'
+            ) {
+              const p = preguntasActuales[preguntaActualIndex];
+              if (p && p.id === draft.preguntaId && !respuestasActuales.some(r => r.pregunta === p.id)) {
+                setRespuestaSeleccionada(draft.respuesta);
+              }
+            }
+          }
+        } catch {}
+      }).catch(error => {
         console.error('Error al cargar sesión:', error);
         addNotification({
           type: 'error',
@@ -130,6 +151,16 @@ const SimulacionActiva: React.FC = () => {
 
     try {
       await responderPregunta(respuestaSeleccionada);
+      // Limpiar borrador de esa pregunta
+      try {
+        const draftRaw = localStorage.getItem('simulacion-draft');
+        if (draftRaw) {
+          const draft = JSON.parse(draftRaw);
+          if (draft?.sesionId === sesionId && draft?.preguntaId === preguntaActual.id) {
+            localStorage.removeItem('simulacion-draft');
+          }
+        }
+      } catch {}
       
       // Mostrar retroalimentación
       setUltimaRespuesta({
@@ -141,7 +172,9 @@ const SimulacionActiva: React.FC = () => {
         explicacionGeneral: preguntaActual.explicacion,
         explicacionIncorrectas: preguntaActual.explicacion_opciones_incorrectas
       });
-      setMostrandoRetroalimentacion(true);
+      if (retroInmediata) {
+        setMostrandoRetroalimentacion(true);
+      }
       
       addNotification({
         type: respuestaSeleccionada === preguntaActual.respuesta_correcta ? 'success' : 'warning',
@@ -303,6 +336,18 @@ const SimulacionActiva: React.FC = () => {
               >
                 Índice
               </Button>
+              <label className="flex items-center gap-2 text-sm text-gray-600">
+                <input
+                  type="checkbox"
+                  className="rounded"
+                  checked={retroInmediata}
+                  onChange={(e) => {
+                    setRetroInmediata(e.target.checked);
+                    try { localStorage.setItem('simulacion-retro-inmediata', String(e.target.checked)); } catch {}
+                  }}
+                />
+                Retro. inmediata
+              </label>
               <Button
                 variant="outline"
                 size="sm"
@@ -330,10 +375,10 @@ const SimulacionActiva: React.FC = () => {
            <RetroalimentacionSimple
              esCorrecta={ultimaRespuesta.esCorrecta}
              respuestaSeleccionada={ultimaRespuesta.seleccionada}
-             respuestaCorrecta={preguntaActual.respuesta_correcta}
+             respuestaCorrecta={preguntaActual.respuesta_correcta || ''}
              opciones={preguntaActual.opciones}
-             retroEstructurada={preguntaActual.retroalimentacion_estructurada}
-             explicacionOpcionesIncorrectas={preguntaActual.explicacion_opciones_incorrectas}
+             retroEstructurada={preguntaActual.retroalimentacion_estructurada as any}
+             explicacionOpcionesIncorrectas={preguntaActual.explicacion_opciones_incorrectas as any}
              explicacionGeneral={ultimaRespuesta.explicacionGeneral}
              retroalimentacion={ultimaRespuesta.retroalimentacionPlano}
              onContinuar={handleSiguientePregunta}
@@ -403,7 +448,23 @@ const SimulacionActiva: React.FC = () => {
                 return (
                   <button
                     key={opcion}
-                    onClick={() => !preguntaYaRespondida && !pausada && setRespuestaSeleccionada(opcion)}
+                    onClick={() => {
+                      if (!preguntaYaRespondida && !pausada) {
+                        setRespuestaSeleccionada(opcion);
+                        // Guardar borrador local de respuesta
+                        try {
+                          localStorage.setItem(
+                            'simulacion-draft',
+                            JSON.stringify({
+                              sesionId,
+                              preguntaId: preguntaActual.id,
+                              respuesta: opcion,
+                              savedAt: Date.now()
+                            })
+                          );
+                        } catch {}
+                      }
+                    }}
                     disabled={preguntaYaRespondida || pausada}
                     className={`w-full text-left p-4 rounded-lg border-2 transition-all ${
                       preguntaYaRespondida

@@ -59,7 +59,7 @@ const MATERIAS_CONFIG = {
 
 const SimulacionPage: React.FC = () => {
   const navigate = useNavigate();
-  const { user } = useAuth();
+  // const { user } = useAuth();
   const { addNotification } = useNotifications();
   const [materias, setMaterias] = useState<Materia[]>([]);
   const [simulacionesCompletadas, setSimulacionesCompletadas] = useState<SimulacionCompletada[]>([]);

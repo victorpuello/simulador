@@ -13,6 +13,7 @@ export interface User {
   ultima_practica?: string;
   configuracion: Record<string, any>;
   date_joined: string;
+  is_staff?: boolean;
 }
 
 // Tipos de autenticación
@@ -75,6 +76,9 @@ export interface Pregunta {
   enunciado: string;
   opciones: Record<string, string>;
   respuesta_correcta?: string;
+  retroalimentacion_estructurada?: string;
+  explicacion_opciones_incorrectas?: string;
+  imagen_url?: string | null;
   retroalimentacion?: string;
   explicacion?: string;
   dificultad: 'facil' | 'media' | 'dificil';
@@ -302,7 +306,7 @@ export interface UseApiReturn<T> {
 
 // Tipos de componentes
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'outline' | 'ghost' | 'danger';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   loading?: boolean;

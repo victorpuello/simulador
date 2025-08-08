@@ -27,7 +27,7 @@ const CargaMasivaPreguntas: React.FC = () => {
   const [mostrarDetalles, setMostrarDetalles] = useState(false);
 
   // Verificar permisos
-  if (!user || !['docente', 'admin'].includes(user.rol) && !user.is_staff) {
+  if (!user || (!['docente', 'admin'].includes(user.rol) && !user.is_staff)) {
     return (
       <Card title="Acceso Restringido">
         <p className="text-gray-600">

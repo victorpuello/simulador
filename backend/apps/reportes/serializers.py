@@ -47,3 +47,39 @@ class ProgresoDiarioSerializer(serializers.Serializer):
     simulaciones = serializers.IntegerField()
     promedio_puntaje = serializers.FloatField()
     tiempo_estudio = serializers.IntegerField()  # en minutos
+
+
+# ==== Serializers para reportes de Docentes ====
+
+class DocenteResumenSerializer(serializers.Serializer):
+    simulaciones_totales = serializers.IntegerField()
+    simulaciones_completadas = serializers.IntegerField()
+    estudiantes_activos_7d = serializers.IntegerField()
+    estudiantes_activos_30d = serializers.IntegerField()
+    promedio_puntaje = serializers.FloatField()
+    tiempo_promedio_pregunta = serializers.FloatField()  # en segundos
+
+
+class DocenteMateriaSerializer(serializers.Serializer):
+    materia_id = serializers.IntegerField()
+    materia_nombre = serializers.CharField()
+    simulaciones = serializers.IntegerField()
+    promedio_puntaje = serializers.FloatField()
+    porcentaje_acierto = serializers.FloatField()
+    tiempo_promedio_pregunta = serializers.FloatField()
+
+
+class DocentePreguntaItemSerializer(serializers.Serializer):
+    pregunta_id = serializers.IntegerField()
+    enunciado_resumen = serializers.CharField()
+    porcentaje_acierto = serializers.FloatField()
+    total_respuestas = serializers.IntegerField()
+    opcion_mas_elegida = serializers.CharField(allow_null=True)
+
+
+class DocenteEstudianteSerializer(serializers.Serializer):
+    estudiante_id = serializers.IntegerField()
+    nombre = serializers.CharField()
+    simulaciones = serializers.IntegerField()
+    porcentaje_acierto = serializers.FloatField()
+    tiempo_promedio_pregunta = serializers.FloatField()

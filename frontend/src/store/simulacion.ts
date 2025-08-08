@@ -172,6 +172,19 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
         porcentajeAcierto: totalResp > 0 ? (correctas / totalResp) * 100 : 0,
         loading: false
       });
+
+      // Autosave local simple de progreso (pregunta y respuestas)
+      try {
+        localStorage.setItem(
+          'simulacion-autosave',
+          JSON.stringify({
+            sesionId: sesionActual.id,
+            preguntaIndex: preguntaActualIndex,
+            respuestas: respuestasServidor,
+            updatedAt: Date.now()
+          })
+        );
+      } catch {}
     } catch (error: any) {
       set({ 
         error: error.message || 'Error al registrar la respuesta',
@@ -202,10 +215,32 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
   },
 
   pausarSimulacion: () => {
+    const state = get();
+    // Persistir estado mínimo para reanudar
+    try {
+      localStorage.setItem(
+        'simulacion-pausa',
+        JSON.stringify({
+          sesionId: state.sesionActual?.id,
+          preguntaIndex: state.preguntaActualIndex,
+          timestamp: Date.now(),
+        })
+      );
+    } catch {}
     set({ pausada: true });
   },
 
   reanudarSimulacion: () => {
+    try {
+      const raw = localStorage.getItem('simulacion-pausa');
+      if (raw) {
+        const data = JSON.parse(raw);
+        if (typeof data?.preguntaIndex === 'number') {
+          set({ preguntaActualIndex: data.preguntaIndex });
+        }
+      }
+      localStorage.removeItem('simulacion-pausa');
+    } catch {}
     set({ pausada: false });
   },
 

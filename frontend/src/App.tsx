@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './hooks/useAuth';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { useTheme } from './store';
 import NotificationContainer from './components/ui/NotificationContainer';
 import ProtectedRoute from './components/auth/ProtectedRoute';

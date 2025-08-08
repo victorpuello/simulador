@@ -5,8 +5,8 @@ import { mockLogin, mockLogout } from './mockApi';
 
 // Configuración base de axios
 const createApiInstance = (): AxiosInstance => {
-  const isDev = !!((import.meta as any).env?.DEV);
-  const configuredBaseUrl = (import.meta as any).env?.VITE_API_URL as string | undefined;
+  const isDev = !!(import.meta as unknown as { env?: Record<string, unknown> })?.env?.DEV;
+  const configuredBaseUrl = (import.meta as unknown as { env?: Record<string, unknown> })?.env?.VITE_API_URL as string | undefined;
   // En dev usamos el proxy '/api'. En preview/prod NO hay proxy, así que
   // si no hay VITE_API_URL configurado, apuntamos a backend local por defecto.
   const baseURL = isDev ? '/api' : (configuredBaseUrl || 'http://127.0.0.1:8000/api');
@@ -15,7 +15,7 @@ const createApiInstance = (): AxiosInstance => {
   try {
     // eslint-disable-next-line no-console
     console.info('[API] baseURL seleccionada:', baseURL, 'isDev:', isDev, 'VITE_API_URL:', configuredBaseUrl);
-  } catch {}
+  } catch { /* noop */ }
 
   const instance = axios.create({
     // Usar proxy de Vite en dev; en prod permite override por VITE_API_URL
@@ -53,7 +53,7 @@ const createApiInstance = (): AxiosInstance => {
         url: config.url,
         baseURL: config.baseURL,
         resolved: (() => {
-          try { return new URL(config.url || '', config.baseURL || baseURL).toString(); } catch { return 'n/a'; }
+      try { return new URL(config.url || '', config.baseURL || baseURL).toString(); } catch { return 'n/a'; }
         })(),
         method: config.method,
         headers: config.headers,
@@ -78,21 +78,22 @@ const createApiInstance = (): AxiosInstance => {
       });
       return response;
     },
-    async (error) => {
+    async (error: unknown) => {
+      const err = error as any;
       console.error('Error en respuesta:', {
-        url: error.config?.url,
-        method: error.config?.method,
-        status: error.response?.status,
-        data: error.response?.data,
-        headers: error.config?.headers,
-        error: error.message,
-        detail: error.response?.data?.detail || error.response?.data?.error
+        url: err.config?.url,
+        method: err.config?.method,
+        status: err.response?.status,
+        data: err.response?.data,
+        headers: err.config?.headers,
+        error: err.message,
+        detail: err.response?.data?.detail || err.response?.data?.error
       });
 
-      const originalRequest = error.config;
+      const originalRequest = err.config || {};
 
       // Si el error es 401 y no hemos intentado refrescar el token
-      if (error.response?.status === 401 && !originalRequest._retry) {
+      if (err.response?.status === 401 && !originalRequest._retry) {
         originalRequest._retry = true;
 
         try {
@@ -118,7 +119,7 @@ const createApiInstance = (): AxiosInstance => {
         }
       }
 
-      return Promise.reject(error);
+      return Promise.reject(err);
     }
   );
 
@@ -148,15 +149,16 @@ export class ApiException extends Error {
 }
 
 // Función para manejar errores de axios
-export const handleApiError = (error: any): ApiException => {
-  if (error.response) {
-    const { data, status } = error.response;
+export const handleApiError = (error: unknown): ApiException => {
+  const err = error as { response?: { data?: any; status: number }; request?: unknown };
+  if (err.response) {
+    const { data, status } = err.response;
     return new ApiException(
       data.message || data.detail || 'Error en la petición',
       status,
       data.errors
     );
-  } else if (error.request) {
+  } else if (err.request) {
     return new ApiException('Error de conexión', 0);
   } else {
     return new ApiException('Error inesperado', 0);
@@ -173,7 +175,7 @@ export const apiGet = async <T>(url: string, config?: AxiosRequestConfig): Promi
   }
 };
 
-export const apiPost = async <T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T> => {
+export const apiPost = async <T>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<T> => {
   try {
     const response = await api.post<T>(url, data, config);
     return response.data;
@@ -182,7 +184,7 @@ export const apiPost = async <T>(url: string, data?: any, config?: AxiosRequestC
   }
 };
 
-export const apiPut = async <T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T> => {
+export const apiPut = async <T>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<T> => {
   try {
     const response = await api.put<T>(url, data, config);
     return response.data;
@@ -191,7 +193,7 @@ export const apiPut = async <T>(url: string, data?: any, config?: AxiosRequestCo
   }
 };
 
-export const apiPatch = async <T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T> => {
+export const apiPatch = async <T>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<T> => {
   try {
     const response = await api.patch<T>(url, data, config);
     return response.data;
@@ -214,13 +216,14 @@ export const authService = {
   // Login
   login: async (credentials: { username: string; password: string }) => {
     try {
-      return await apiPost<{ message: string; user: any; tokens: { access: string; refresh: string } }>(
+      return await apiPost<{ message: string; user: Record<string, unknown>; tokens: { access: string; refresh: string } }>(
         '/auth/login/',
         credentials
       );
-    } catch (error: any) {
+    } catch (error: unknown) {
       // Si el backend no está disponible, usar mock
-      if (error.code === 'ERR_NETWORK' || error.code === 'ECONNREFUSED' || error.response?.status >= 500) {
+      const err = error as { code?: string; response?: { status?: number } };
+      if (err.code === 'ERR_NETWORK' || err.code === 'ECONNREFUSED' || (err.response?.status ?? 0) >= 500) {
         console.log('🔄 Backend no disponible, usando mock login...');
         return await mockLogin(credentials.username, credentials.password);
       }
@@ -229,8 +232,8 @@ export const authService = {
   },
 
   // Registro
-  register: async (userData: any) => {
-    return apiPost<{ message: string; user: any; tokens: { access: string; refresh: string } }>(
+  register: async (userData: Record<string, unknown>) => {
+    return apiPost<{ message: string; user: Record<string, unknown>; tokens: { access: string; refresh: string } }>(
       '/auth/registro/',
       userData
     );
@@ -238,16 +241,16 @@ export const authService = {
 
   // Obtener usuario actual
   getCurrentUser: async () => {
-    return apiGet<any>('/auth/usuario-actual/');
+    return apiGet<Record<string, unknown>>('/auth/usuario-actual/');
   },
 
   // Actualizar perfil
-  updateProfile: async (userData: any) => {
-    return apiPut<any>('/auth/perfil/', userData);
+  updateProfile: async (userData: Record<string, unknown>) => {
+    return apiPut<Record<string, unknown>>('/auth/perfil/', userData);
   },
 
   // Cambiar contraseña
-  changePassword: async (passwordData: any) => {
+  changePassword: async (passwordData: Record<string, unknown>) => {
     return apiPost<{ message: string }>('/auth/cambiar-password/', passwordData);
   },
 
@@ -255,9 +258,10 @@ export const authService = {
   logout: async (refreshToken: string) => {
     try {
       return await apiPost<{ message: string }>('/auth/logout/', { refresh: refreshToken });
-    } catch (error: any) {
+    } catch (error: unknown) {
       // Si el backend no está disponible, usar mock
-      if (error.code === 'ERR_NETWORK' || error.code === 'ECONNREFUSED' || error.response?.status >= 500) {
+      const err = error as { code?: string; response?: { status?: number } };
+      if (err.code === 'ERR_NETWORK' || err.code === 'ECONNREFUSED' || (err.response?.status ?? 0) >= 500) {
         console.log('🔄 Backend no disponible, usando mock logout...');
         return await mockLogout();
       }
@@ -269,132 +273,136 @@ export const authService = {
 export const materiasService = {
   // Obtener todas las materias
   getAll: async () => {
-    return apiGet<any[]>('/core/materias/');
+    return apiGet<Array<Record<string, unknown>>>('/core/materias/');
   },
 
   // Obtener materia por ID
   getById: async (id: number) => {
-    return apiGet<any>(`/core/materias/${id}/`);
+    return apiGet<Record<string, unknown>>(`/core/materias/${id}/`);
   },
 
   // Obtener estadísticas de materia
   getStats: async (id: number) => {
-    return apiGet<any>(`/core/materias/${id}/estadisticas/`);
+    return apiGet<Record<string, unknown>>(`/core/materias/${id}/estadisticas/`);
   },
 };
 
 export const preguntasService = {
   // Obtener todas las preguntas
-  getAll: async (params?: Record<string, any>) => {
+  getAll: async (params?: Record<string, string | number | boolean>) => {
     const queryString = params ? `?${new URLSearchParams(params).toString()}` : '';
-    return apiGet<any[]>(`/core/preguntas/${queryString}`);
+    return apiGet<Array<Record<string, unknown>>>(`/core/preguntas/${queryString}`);
   },
 
   // Obtener preguntas para simulación
   getForSimulation: async (params: { materia?: number; cantidad?: number; dificultad?: string }) => {
-    const queryString = new URLSearchParams(params as Record<string, string>).toString();
-    return apiGet<any[]>(`/core/preguntas/para_simulacion/?${queryString}`);
+    const strParams: Record<string, string> = {};
+    if (typeof params.materia === 'number') strParams.materia = String(params.materia);
+    if (typeof params.cantidad === 'number') strParams.cantidad = String(params.cantidad);
+    if (params.dificultad) strParams.dificultad = params.dificultad;
+    const queryString = new URLSearchParams(strParams).toString();
+    return apiGet<Array<Record<string, unknown>>>(`/core/preguntas/para_simulacion/?${queryString}`);
   },
 };
 
 export const sesionesService = {
   // Crear sesión
-  create: async (sesionData: any) => {
-    return apiPost<any>('/core/sesiones/', sesionData);
+  create: async (sesionData: Record<string, unknown>) => {
+    return apiPost<Record<string, unknown>>('/core/sesiones/', sesionData);
   },
 
   // Obtener sesiones del usuario
-  getUserSessions: async (params?: Record<string, any>) => {
+  getUserSessions: async (params?: Record<string, string | number | boolean>) => {
     const queryString = params ? `?${new URLSearchParams(params).toString()}` : '';
-    return apiGet<any[]>(`/core/sesiones/${queryString}`);
+    return apiGet<Array<Record<string, unknown>>>(`/core/sesiones/${queryString}`);
   },
 
   // Finalizar sesión
   finish: async (id: number) => {
-    return apiPost<any>(`/core/sesiones/${id}/finalizar/`);
+    return apiPost<Record<string, unknown>>(`/core/sesiones/${id}/finalizar/`);
   },
 
   // Obtener estadísticas del usuario
   getUserStats: async () => {
-    return apiGet<any>('/core/sesiones/estadisticas_usuario/');
+    return apiGet<Record<string, unknown>>('/core/sesiones/estadisticas_usuario/');
   },
 };
 
 export const respuestasService = {
   // Crear respuesta
-  create: async (respuestaData: any) => {
-    return apiPost<any>('/core/respuestas/', respuestaData);
+  create: async (respuestaData: Record<string, unknown>) => {
+    return apiPost<Record<string, unknown>>('/core/respuestas/', respuestaData);
   },
 
   // Obtener respuestas del usuario
-  getUserResponses: async (params?: Record<string, any>) => {
+  getUserResponses: async (params?: Record<string, string | number | boolean>) => {
     const queryString = params ? `?${new URLSearchParams(params).toString()}` : '';
-    return apiGet<any[]>(`/core/respuestas/${queryString}`);
+    return apiGet<Array<Record<string, unknown>>>(`/core/respuestas/${queryString}`);
   },
 };
 
 export const clasesService = {
   // Obtener clases del usuario
-  getUserClasses: async (params?: Record<string, any>) => {
+  getUserClasses: async (params?: Record<string, string | number | boolean>) => {
     const queryString = params ? `?${new URLSearchParams(params).toString()}` : '';
-    return apiGet<any[]>(`/core/clases/${queryString}`);
+    return apiGet<Array<Record<string, unknown>>>(`/core/clases/${queryString}`);
   },
 
   // Crear clase
-  create: async (claseData: any) => {
-    return apiPost<any>('/core/clases/', claseData);
+  create: async (claseData: Record<string, unknown>) => {
+    return apiPost<Record<string, unknown>>('/core/clases/', claseData);
   },
 
   // Inscribir estudiante
   enrollStudent: async (id: number, codigo: string) => {
-    return apiPost<any>(`/core/clases/${id}/inscribir_estudiante/`, { codigo });
+    return apiPost<Record<string, unknown>>(`/core/clases/${id}/inscribir_estudiante/`, { codigo });
   },
 };
 
 export const asignacionesService = {
   // Obtener asignaciones del usuario
-  getUserAssignments: async (params?: Record<string, any>) => {
+  getUserAssignments: async (params?: Record<string, string | number | boolean>) => {
     const queryString = params ? `?${new URLSearchParams(params).toString()}` : '';
-    return apiGet<any[]>(`/core/asignaciones/${queryString}`);
+    return apiGet<Array<Record<string, unknown>>>(`/core/asignaciones/${queryString}`);
   },
 
   // Crear asignación
-  create: async (asignacionData: any) => {
-    return apiPost<any>('/core/asignaciones/', asignacionData);
+  create: async (asignacionData: Record<string, unknown>) => {
+    return apiPost<Record<string, unknown>>('/core/asignaciones/', asignacionData);
   },
 };
 
 export const gamificacionService = {
   // Obtener insignias
   getInsignias: async () => {
-    return apiGet<any[]>('/core/insignias/');
+    return apiGet<Array<Record<string, unknown>>>('/core/insignias/');
   },
 
   // Obtener logros del usuario
   getUserAchievements: async () => {
-    return apiGet<any[]>('/core/logros/');
+    return apiGet<Array<Record<string, unknown>>>('/core/logros/');
   },
 };
 
 export const simulacionService = {
   // Obtener materias disponibles
   getMateriasDisponibles: async () => {
-    return apiGet<any[]>('/simulacion/plantillas/materias_disponibles/');
+    return apiGet<Array<Record<string, unknown>>>('/simulacion/plantillas/materias_disponibles/');
   },
 
   // Obtener sesiones de simulación
   getSesiones: async () => {
-    return apiGet<any[]>('/simulacion/sesiones/');
+    return apiGet<Array<Record<string, unknown>>>('/simulacion/sesiones/');
   },
 
   // Crear sesión de simulación
-  crearSesion: async (data: any) => {
-    return apiPost<any>('/simulacion/sesiones/iniciar_sesion/', data);
+  crearSesion: async (data: Record<string, unknown>) => {
+    return apiPost<Record<string, unknown>>('/simulacion/sesiones/iniciar_sesion/', data);
   },
 
   // Responder pregunta
-  responderPregunta: async (sesionId: number, data: any) => {
-    return apiPost<any>(`/simulacion/sesiones/${sesionId}/responder_pregunta/`, data);
+  responderPregunta: async (sesionId: number, data: Record<string, unknown>) => {
+    return apiPost<Record<string, unknown>>(`/simulacion/sesiones/${sesionId}/responder_pregunta/`, data);
   },
 
   // Verificar si hay sesión activa (general o por materia específica)
@@ -436,7 +444,7 @@ export const simulacionService = {
 
   // Obtener sesión específica
   getSesion: async (sesionId: string) => {
-    return apiGet<any>(`/simulacion/sesiones/${sesionId}/`);
+    return apiGet<Record<string, unknown>>(`/simulacion/sesiones/${sesionId}/`);
   },
 
   // Cargar sesión activa con preguntas para continuar

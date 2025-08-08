@@ -26,16 +26,7 @@ const ConfirmDialog: React.FC<Props> = ({
 
   const getIcon = () => (variant === 'danger' ? '🗑️' : variant === 'warning' ? '⚠️' : 'ℹ️');
 
-  const getConfirmVariant = () => {
-    switch (type) {
-      case 'danger':
-        return 'danger';
-      case 'warning':
-        return 'secondary';
-      default:
-        return 'primary';
-    }
-  };
+  // Nota: botón de confirmar usa variant mapeado directamente más abajo
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">

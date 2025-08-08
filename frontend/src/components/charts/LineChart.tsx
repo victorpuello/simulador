@@ -60,8 +60,8 @@ const LineChart: React.FC<LineChartProps> = ({ data, title, height = 300 }) => {
         beginAtZero: true,
         max: 100,
         ticks: {
-          callback: function(value: any) {
-            return value + '%';
+          callback: function(value: number | string) {
+            return String(value) + '%';
           }
         }
       },
@@ -75,7 +75,7 @@ const LineChart: React.FC<LineChartProps> = ({ data, title, height = 300 }) => {
       intersect: false,
       mode: 'index' as const,
     },
-  };
+  } as const;
 
   return (
     <div style={{ height: `${height}px` }}>

@@ -58,7 +58,15 @@ const SimulacionActiva: React.FC = () => {
   const [retroInmediata, setRetroInmediata] = useState<boolean>(
     () => localStorage.getItem('simulacion-retro-inmediata') === 'true'
   );
-  const [ultimaRespuesta, setUltimaRespuesta] = useState<any>(null);
+  const [ultimaRespuesta, setUltimaRespuesta] = useState<{
+    seleccionada: string;
+    correcta: string | undefined;
+    esCorrecta: boolean;
+    retroalimentacion?: unknown;
+    retroalimentacionPlano?: string;
+    explicacionGeneral?: string;
+    explicacionIncorrectas?: unknown;
+  } | null>(null);
   const [tiempoRestante, setTiempoRestante] = useState<number>(0);
   const [mostrarConfirmSalir, setMostrarConfirmSalir] = useState(false);
   const [mostrarImagen, setMostrarImagen] = useState(false);
@@ -92,7 +100,7 @@ const SimulacionActiva: React.FC = () => {
               }
             }
           }
-        } catch {}
+         } catch { /* noop */ }
       }).catch(error => {
         console.error('Error al cargar sesión:', error);
         addNotification({
@@ -111,7 +119,7 @@ const SimulacionActiva: React.FC = () => {
     if (preguntaActual && !mostrandoRetroalimentacion && !preguntaYaRespondida && !pausada) {
       setTiempoRestante(preguntaActual.tiempo_estimado || 60);
       
-      const timer = setInterval(() => {
+       const timer = setInterval(() => {
         setTiempoRestante((prev) => {
           if (prev <= 1) {
             clearInterval(timer);
@@ -142,9 +150,9 @@ const SimulacionActiva: React.FC = () => {
         handleAnteriorPregunta();
       }
     };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
-  }, [preguntaActual, mostrandoRetroalimentacion, preguntaYaRespondida, pausada]);
+     window.addEventListener('keydown', handler);
+     return () => window.removeEventListener('keydown', handler);
+   }, [preguntaActual, mostrandoRetroalimentacion, preguntaYaRespondida, pausada, handleAnteriorPregunta, handleSiguientePregunta]);
 
   const handleResponder = async () => {
     if (!respuestaSeleccionada || !preguntaActual) return;
@@ -377,8 +385,8 @@ const SimulacionActiva: React.FC = () => {
              respuestaSeleccionada={ultimaRespuesta.seleccionada}
              respuestaCorrecta={preguntaActual.respuesta_correcta || ''}
              opciones={preguntaActual.opciones}
-             retroEstructurada={preguntaActual.retroalimentacion_estructurada as any}
-             explicacionOpcionesIncorrectas={preguntaActual.explicacion_opciones_incorrectas as any}
+              retroEstructurada={preguntaActual.retroalimentacion_estructurada as unknown as Record<string, unknown>}
+              explicacionOpcionesIncorrectas={preguntaActual.explicacion_opciones_incorrectas as unknown as Record<string, unknown>}
              explicacionGeneral={ultimaRespuesta.explicacionGeneral}
              retroalimentacion={ultimaRespuesta.retroalimentacionPlano}
              onContinuar={handleSiguientePregunta}
@@ -452,7 +460,7 @@ const SimulacionActiva: React.FC = () => {
                       if (!preguntaYaRespondida && !pausada) {
                         setRespuestaSeleccionada(opcion);
                         // Guardar borrador local de respuesta
-                        try {
+                         try {
                           localStorage.setItem(
                             'simulacion-draft',
                             JSON.stringify({
@@ -462,7 +470,7 @@ const SimulacionActiva: React.FC = () => {
                               savedAt: Date.now()
                             })
                           );
-                        } catch {}
+                         } catch { /* noop */ }
                       }
                     }}
                     disabled={preguntaYaRespondida || pausada}
@@ -550,7 +558,7 @@ const SimulacionActiva: React.FC = () => {
         onClose={() => setMostrarIndice(false)}
         totalPreguntas={preguntasActuales.length}
         preguntaActualIndex={preguntaActualIndex}
-        respuestasActuales={respuestasActuales as any}
+         respuestasActuales={respuestasActuales as unknown as Array<{ pregunta: number; respuesta: string; es_correcta?: boolean }>} 
         preguntasIds={preguntasActuales.map(p => p.id)}
         onGoTo={(idx) => irAPregunta(idx)}
       />

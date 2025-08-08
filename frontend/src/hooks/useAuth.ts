@@ -38,7 +38,7 @@ export const useAuth = () => {
     };
 
     initializeAuth();
-  }, []);
+  }, [addNotification, isAuthenticated, setLoading, setUser]);
 
   const login = async (credentials: LoginCredentials) => {
     try {
@@ -61,11 +61,11 @@ export const useAuth = () => {
       });
       
       return response;
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error de login',
-        message: error.message || 'Credenciales inválidas',
+        message: error instanceof Error ? error.message : 'Credenciales inválidas',
         duration: 5000,
       });
       throw error;
@@ -95,11 +95,11 @@ export const useAuth = () => {
       });
       
       return response;
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error de registro',
-        message: error.message || 'Error al crear la cuenta',
+        message: error instanceof Error ? error.message : 'Error al crear la cuenta',
         duration: 5000,
       });
       throw error;
@@ -124,11 +124,11 @@ export const useAuth = () => {
       });
       
       return updatedUser;
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error al actualizar',
-        message: error.message || 'Error al actualizar el perfil',
+        message: error instanceof Error ? error.message : 'Error al actualizar el perfil',
         duration: 5000,
       });
       throw error;
@@ -152,11 +152,11 @@ export const useAuth = () => {
         message: 'Tu contraseña ha sido cambiada correctamente.',
         duration: 3000,
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error al cambiar contraseña',
-        message: error.message || 'Error al cambiar la contraseña',
+        message: error instanceof Error ? error.message : 'Error al cambiar la contraseña',
         duration: 5000,
       });
       throw error;

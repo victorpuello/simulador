@@ -1,5 +1,5 @@
 export function exportToCSV(
-  rows: Array<Record<string, any>>,
+  rows: Array<Record<string, string | number | boolean | null | undefined>>,
   filename: string = 'export.csv'
 ) {
   if (!rows || rows.length === 0) {
@@ -13,7 +13,7 @@ export function exportToCSV(
     }, new Set<string>())
   );
 
-  const escape = (val: any) => {
+  const escape = (val: unknown) => {
     if (val === null || val === undefined) return '';
     const str = String(val).replaceAll('"', '""');
     // Encerrar en comillas si contiene separadores o saltos

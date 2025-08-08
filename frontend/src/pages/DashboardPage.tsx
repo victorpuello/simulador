@@ -48,7 +48,7 @@ const DashboardPage: React.FC = () => {
         setDocenteResumen(res);
         setDocenteMaterias(mats);
       } finally {
-        // noop
+        /* noop */
       }
     };
     cargarDocente();
@@ -345,11 +345,14 @@ const DashboardPage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Acierto por materia</h3>
                 <BarChart
                   data={{
-                    labels: (estadisticasMaterias ?? []).map((m: any) => m.materia_nombre || m.nombre),
+                    labels: (estadisticasMaterias ?? []).map((m) => (m as unknown as { materia_nombre?: string; nombre?: string }).materia_nombre || (m as unknown as { materia_nombre?: string; nombre?: string }).nombre || ''),
                     datasets: [
                       {
                         label: 'Acierto %',
-                        data: (estadisticasMaterias ?? []).map((m: any) => Math.round(((m.preguntas_correctas || 0) / Math.max(1, (m.total_preguntas || 0))) * 100)),
+                        data: (estadisticasMaterias ?? []).map((m) => {
+                          const mm = m as unknown as { preguntas_correctas?: number; total_preguntas?: number };
+                          return Math.round((((mm.preguntas_correctas || 0) / Math.max(1, (mm.total_preguntas || 0))) * 100));
+                        }),
                         backgroundColor: '#3b82f6',
                       },
                     ],
@@ -449,11 +452,11 @@ const DashboardPage: React.FC = () => {
             <h3 className="text-lg font-semibold text-gray-900 mb-3">Acierto por materia</h3>
             <BarChart
               data={{
-                labels: (user?.estadisticas?.por_materia ?? []).map((m: any) => m.nombre),
+                    labels: (user?.estadisticas?.por_materia ?? []).map((m: { nombre: string }) => m.nombre),
                 datasets: [
                   {
                     label: 'Acierto %',
-                    data: (user?.estadisticas?.por_materia ?? []).map((m: any) => Math.round((m.correctas / Math.max(1, m.total)) * 100)),
+                        data: (user?.estadisticas?.por_materia ?? []).map((m: { correctas: number; total: number }) => Math.round((m.correctas / Math.max(1, m.total)) * 100)),
                     backgroundColor: '#3b82f6',
                   },
                 ],

@@ -171,7 +171,7 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({
   // Handlers para el modal de sesión activa
   const handleContinuarSesionActiva = () => {
     if (sesionActivaDetalle) {
-      window.location.href = `/simulacion/activa/${sesionActivaDetalle.id}`;
+      navigate(`/simulacion/activa/${sesionActivaDetalle.id}`);
     }
     setMostrarModalSesion(false);
   };
@@ -416,6 +416,32 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({
             <div className="mb-4 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
               <p className="text-gray-700 leading-relaxed">
                 {preguntaActual.contexto}
+              </p>
+            </div>
+          )}
+
+          {/* Imagen de contexto */}
+          {preguntaActual.imagen_url && (
+            <div className="mb-4">
+              <div className="flex justify-center">
+                <img
+                  src={preguntaActual.imagen_url}
+                  alt="Imagen de contexto de la pregunta"
+                  className="max-w-full max-h-80 rounded-lg shadow-lg border border-gray-200"
+                  style={{ objectFit: 'contain' }}
+                  onClick={() => {
+                    // Abrir imagen en nueva ventana para vista completa
+                    window.open(preguntaActual.imagen_url, '_blank');
+                  }}
+                  onError={(e) => {
+                    // Ocultar imagen si no se puede cargar
+                    (e.target as HTMLImageElement).style.display = 'none';
+                    console.error('Error cargando imagen:', preguntaActual.imagen_url);
+                  }}
+                />
+              </div>
+              <p className="text-xs text-gray-500 text-center mt-2">
+                Haz clic en la imagen para verla en tamaño completo
               </p>
             </div>
           )}

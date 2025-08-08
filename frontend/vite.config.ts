@@ -20,10 +20,10 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    host: true,
+    host: '0.0.0.0',
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:8000',
+        target: 'http://localhost:8000',
         changeOrigin: true,
         secure: false,
         ws: true,
@@ -46,5 +46,53 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json', 'html', 'lcov'],
+      reportsDirectory: './coverage',
+      exclude: [
+        'node_modules/',
+        'src/test/',
+        '**/*.d.ts',
+        '**/*.test.{ts,tsx}',
+        '**/__tests__/',
+        'src/main.tsx',
+        'src/vite-env.d.ts',
+        'dist/',
+        'coverage/',
+        'public/',
+        '*.config.{js,ts}',
+      ],
+      include: [
+        'src/**/*.{ts,tsx}',
+      ],
+      thresholds: {
+        global: {
+          branches: 70,
+          functions: 70,
+          lines: 70,
+          statements: 70,
+        },
+        // Thresholds específicos para directorios importantes
+        'src/components/': {
+          branches: 75,
+          functions: 75,
+          lines: 75,
+          statements: 75,
+        },
+        'src/hooks/': {
+          branches: 80,
+          functions: 80,
+          lines: 80,
+          statements: 80,
+        },
+        'src/store/': {
+          branches: 80,
+          functions: 80,
+          lines: 80,
+          statements: 80,
+        },
+      },
+    },
   },
 })

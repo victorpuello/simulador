@@ -1,0 +1,302 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+env:
+  NODE_VERSION: '18'
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  backend-tests:
+    name: Backend Tests
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: test_simulador
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+      
+      redis:
+        image: redis:6-alpine
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 6379:6379
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        cd backend
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run migrations
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_simulador
+        REDIS_URL: redis://localhost:6379
+        SECRET_KEY: test-secret-key-for-ci
+        DEBUG: 'True'
+      run: |
+        cd backend
+        python manage.py migrate
+
+    - name: Run linting
+      run: |
+        cd backend
+        black --check .
+        flake8 .
+        isort --check-only .
+
+    - name: Run tests with coverage
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_simulador
+        REDIS_URL: redis://localhost:6379
+        SECRET_KEY: test-secret-key-for-ci
+        DEBUG: 'True'
+      run: |
+        cd backend
+        python -m pytest \
+          --verbose \
+          --cov=apps \
+          --cov-report=xml \
+          --cov-report=term \
+          --cov-fail-under=70 \
+          --durations=10
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./backend/coverage.xml
+        flags: backend
+        name: backend-coverage
+
+    - name: Archive test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: backend-test-results
+        path: |
+          backend/htmlcov/
+          backend/coverage.xml
+          backend/logs/
+
+  frontend-tests:
+    name: Frontend Tests
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        cache-dependency-path: frontend/package-lock.json
+
+    - name: Install dependencies
+      run: |
+        cd frontend
+        npm ci
+
+    - name: Run linting
+      run: |
+        cd frontend
+        npm run lint
+
+    - name: Run type checking
+      run: |
+        cd frontend
+        npx tsc --noEmit
+
+    - name: Run tests with coverage
+      run: |
+        cd frontend
+        npm run test:coverage
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./frontend/coverage/lcov.info
+        flags: frontend
+        name: frontend-coverage
+
+    - name: Archive test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: frontend-test-results
+        path: |
+          frontend/coverage/
+          frontend/test-results.xml
+
+  e2e-tests:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    needs: [backend-tests, frontend-tests]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: test_simulador
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        cache-dependency-path: frontend/package-lock.json
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+
+    - name: Install backend dependencies
+      run: |
+        cd backend
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Install frontend dependencies
+      run: |
+        cd frontend
+        npm ci
+
+    - name: Start backend server
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_simulador
+        SECRET_KEY: test-secret-key-for-ci
+        DEBUG: 'True'
+      run: |
+        cd backend
+        python manage.py migrate
+        python manage.py populate_data
+        python manage.py runserver &
+        sleep 10
+
+    - name: Start frontend dev server
+      env:
+        VITE_API_URL: http://localhost:8000/api
+      run: |
+        cd frontend
+        npm run dev &
+        sleep 10
+
+    - name: Install Playwright
+      run: |
+        cd frontend
+        npx playwright install --with-deps
+
+    - name: Run E2E tests
+      run: |
+        cd frontend
+        npx playwright test
+
+    - name: Archive E2E results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: e2e-test-results
+        path: |
+          frontend/playwright-report/
+          frontend/test-results/
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run Bandit security scan
+      run: |
+        pip install bandit
+        bandit -r backend/apps/ -f json -o bandit-report.json || true
+
+    - name: Run npm audit
+      run: |
+        cd frontend
+        npm audit --audit-level moderate || true
+
+    - name: Archive security results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: security-scan-results
+        path: |
+          bandit-report.json
+
+  test-summary:
+    name: Test Summary
+    runs-on: ubuntu-latest
+    needs: [backend-tests, frontend-tests]
+    if: always()
+
+    steps:
+    - name: Download all artifacts
+      uses: actions/download-artifact@v3
+
+    - name: Generate test summary
+      run: |
+        echo "## 📊 Test Results Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ needs.backend-tests.result }}" == "success" ]; then
+          echo "✅ Backend Tests: PASSED" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ Backend Tests: FAILED" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if [ "${{ needs.frontend-tests.result }}" == "success" ]; then
+          echo "✅ Frontend Tests: PASSED" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ Frontend Tests: FAILED" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "📈 Coverage reports and test artifacts are available in the build artifacts." >> $GITHUB_STEP_SUMMARY

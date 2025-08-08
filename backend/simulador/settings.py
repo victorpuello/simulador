@@ -29,7 +29,7 @@ if os.environ.get('RAILWAY_ENVIRONMENT') or os.environ.get('HEROKU_APP_NAME') or
 else:
     DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lambda v: [s.strip() for s in v.split(',')])
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,192.168.1.53', cast=lambda v: [s.strip() for s in v.split(',')])
 
 # Application definition
 
@@ -246,6 +246,16 @@ CORS_ALLOW_HEADERS = [
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+# CSRF Settings for network access
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://192.168.1.53:3000",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000", 
+    "http://192.168.1.53:8000",
+]
 
 # Cache Configuration
 CACHES = {

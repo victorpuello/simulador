@@ -12,6 +12,7 @@ const RegisterPage = React.lazy(() => import('./pages/RegisterPage'));
 const DashboardPage = React.lazy(() => import('./pages/DashboardPage'));
 const SimulacionPage = React.lazy(() => import('./pages/SimulacionPage'));
 const SimulacionComponent = React.lazy(() => import('./components/simulacion/SimulacionComponent'));
+const SimulacionActiva = React.lazy(() => import('./components/simulacion/SimulacionActiva'));
 const ReportesPage = React.lazy(() => import('./pages/ReportesPage'));
 const PerfilPage = React.lazy(() => import('./pages/PerfilPage'));
 const AdminPage = React.lazy(() => import('./pages/AdminPage'));
@@ -116,6 +117,16 @@ function App() {
                 <ProtectedRoute allowedRoles={['estudiante']}>
                   <Layout>
                     <SimulacionComponent />
+                  </Layout>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/simulacion/activa/:sesionId"
+              element={
+                <ProtectedRoute allowedRoles={['estudiante']}>
+                  <Layout>
+                    <SimulacionActiva />
                   </Layout>
                 </ProtectedRoute>
               }

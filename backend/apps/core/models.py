@@ -200,6 +200,12 @@ class Pregunta(models.Model):
     retroalimentacion = models.TextField(
         verbose_name='Retroalimentación'
     )
+    # Retroalimentación estructurada para mostrar mensajes y recursos por opción
+    retroalimentacion_estructurada = models.JSONField(
+        default=dict,
+        blank=True,
+        verbose_name='Retroalimentación Estructurada'
+    )
     explicacion = models.TextField(
         blank=True,
         verbose_name='Explicación'

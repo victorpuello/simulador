@@ -9,6 +9,8 @@ import { useNotifications } from '../store';
 interface Pregunta {
   id: number;
   enunciado: string;
+  contexto?: string;
+  imagen_url?: string | null;
   opciones: {
     A: string;
     B: string;
@@ -268,6 +270,30 @@ const ResultadosDetalladosPage: React.FC = () => {
                     <h3 className="font-medium text-gray-900 mb-2">
                       {pregunta.enunciado}
                     </h3>
+                    
+                    {/* Contexto si existe */}
+                    {pregunta.contexto && (
+                      <div className="mb-2 p-2 bg-blue-50 rounded border-l-4 border-blue-400">
+                        <p className="text-sm text-gray-700">{pregunta.contexto}</p>
+                      </div>
+                    )}
+                    
+                    {/* Imagen si existe */}
+                    {pregunta.imagen_url && (
+                      <div className="mb-2">
+                        <img
+                          src={pregunta.imagen_url}
+                          alt="Imagen de contexto"
+                          className="max-w-full max-h-48 rounded border border-gray-200"
+                          style={{ objectFit: 'contain' }}
+                          onClick={() => window.open(pregunta.imagen_url, '_blank')}
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = 'none';
+                          }}
+                        />
+                      </div>
+                    )}
+                    
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm">
                       <span className={`font-medium ${
                         respuesta?.es_correcta ? 'text-green-600' : 'text-red-600'

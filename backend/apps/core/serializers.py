@@ -90,19 +90,26 @@ class PreguntaSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'materia', 'materia_nombre', 'competencia', 'competencia_nombre',
             'contexto', 'imagen', 'imagen_url', 'enunciado', 'opciones', 'respuesta_correcta',
-            'retroalimentacion', 'explicacion', 'habilidad_evaluada', 
+            'retroalimentacion', 'retroalimentacion_estructurada', 'explicacion', 'habilidad_evaluada', 
             'explicacion_opciones_incorrectas', 'estrategias_resolucion', 
             'errores_comunes', 'dificultad', 'tiempo_estimado', 'activa', 'tags'
         ]
         read_only_fields = ['id', 'imagen_url']
     
     def get_imagen_url(self, obj):
-        """Obtener URL completa de la imagen"""
-        if obj.imagen:
-            request = self.context.get('request')
-            if request:
-                return request.build_absolute_uri(obj.imagen.url)
-            return obj.imagen.url
+        """Obtener URL de imagen de forma segura (evita 500 si el archivo no existe)."""
+        try:
+            if obj.imagen and getattr(obj.imagen, 'name', None):
+                # Verificar existencia en el storage antes de acceder a .url
+                from django.core.files.storage import default_storage
+                if default_storage.exists(obj.imagen.name):
+                    request = self.context.get('request')
+                    if request:
+                        return request.build_absolute_uri(obj.imagen.url)
+                    return obj.imagen.url
+        except Exception:
+            # Si hay cualquier problema con el archivo, no bloquear la respuesta
+            return None
         return None
     
     def validate_opciones(self, value):
@@ -143,16 +150,21 @@ class PreguntaSimulacionSerializer(serializers.ModelSerializer):
         model = Pregunta
         fields = [
             'id', 'materia', 'materia_nombre', 'competencia', 'competencia_nombre',
-            'contexto', 'imagen', 'imagen_url', 'enunciado', 'opciones', 'respuesta_correcta', 'dificultad', 'tiempo_estimado'
+            'contexto', 'imagen', 'imagen_url', 'enunciado', 'opciones', 'respuesta_correcta', 'dificultad', 'tiempo_estimado', 'retroalimentacion_estructurada'
         ]
     
     def get_imagen_url(self, obj):
-        """Obtener URL completa de la imagen"""
-        if obj.imagen:
-            request = self.context.get('request')
-            if request:
-                return request.build_absolute_uri(obj.imagen.url)
-            return obj.imagen.url
+        """Obtener URL de imagen de forma segura (evita 500 si el archivo no existe)."""
+        try:
+            if obj.imagen and getattr(obj.imagen, 'name', None):
+                from django.core.files.storage import default_storage
+                if default_storage.exists(obj.imagen.name):
+                    request = self.context.get('request')
+                    if request:
+                        return request.build_absolute_uri(obj.imagen.url)
+                    return obj.imagen.url
+        except Exception:
+            return None
         return None
 
 
@@ -166,17 +178,22 @@ class PreguntaRetroalimentacionSerializer(serializers.ModelSerializer):
         model = Pregunta
         fields = [
             'id', 'materia_nombre', 'competencia_nombre', 'contexto', 'imagen', 'imagen_url', 'enunciado', 'opciones',
-            'respuesta_correcta', 'retroalimentacion', 'explicacion', 'habilidad_evaluada',
+            'respuesta_correcta', 'retroalimentacion', 'retroalimentacion_estructurada', 'explicacion', 'habilidad_evaluada',
             'explicacion_opciones_incorrectas', 'estrategias_resolucion', 'errores_comunes'
         ]
     
     def get_imagen_url(self, obj):
-        """Obtener URL completa de la imagen"""
-        if obj.imagen:
-            request = self.context.get('request')
-            if request:
-                return request.build_absolute_uri(obj.imagen.url)
-            return obj.imagen.url
+        """Obtener URL de imagen de forma segura (evita 500 si el archivo no existe)."""
+        try:
+            if obj.imagen and getattr(obj.imagen, 'name', None):
+                from django.core.files.storage import default_storage
+                if default_storage.exists(obj.imagen.name):
+                    request = self.context.get('request')
+                    if request:
+                        return request.build_absolute_uri(obj.imagen.url)
+                    return obj.imagen.url
+        except Exception:
+            return None
         return None
 
 

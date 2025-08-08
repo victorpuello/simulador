@@ -98,31 +98,49 @@ class PlantillaSimulacionViewSet(viewsets.ModelViewSet):
                 plantillas_disponibles__gt=0
             )
 
-        print(f"Materias encontradas: {materias.count()}")
-        print(f"Query SQL: {materias.query}")
+        # Serializar y agregar información de preguntas/plantillas disponibles
+        materias_data = []
+        for materia in materias:
+            preguntas_disponibles = materia.preguntas.filter(activa=True).count()
 
-        serializer = MateriaSerializer(materias, many=True)
-        
-        # Agregar información adicional a cada materia
-        data = serializer.data
-        for materia_data in data:
-            materia = materias.get(id=materia_data['id'])
-            materia_data['preguntas_disponibles'] = materia.preguntas_activas
-            materia_data['plantillas_disponibles'] = materia.plantillas_disponibles
-            
-            # Obtener información de plantillas específicas para estudiantes
-            if request.user.rol == 'estudiante':
-                plantillas_activas = PlantillaSimulacion.objects.filter(
-                    materia_id=materia_data['id'],
-                    activa=True
-                ).values('id', 'titulo', 'descripcion', 'cantidad_preguntas')
-                materia_data['plantillas'] = list(plantillas_activas)
-                
-                # Debug: Verificar que solo se incluyen plantillas activas
-                print(f'Materia {materia_data["nombre_display"]}: {len(materia_data["plantillas"])} plantillas activas')
+            # Plantillas visibles según rol
+            if request.user.rol == 'docente':
+                # Para docentes, listar solo sus plantillas activas de la materia
+                plantillas_qs = PlantillaSimulacion.objects.filter(
+                    materia=materia,
+                    activa=True,
+                    docente=request.user,
+                )
+            else:
+                # Para estudiantes, listar todas las plantillas activas de la materia
+                plantillas_qs = PlantillaSimulacion.objects.filter(
+                    materia=materia,
+                    activa=True,
+                )
 
-        print(f"Datos a retornar: {data}")
-        return Response(data)
+            plantillas_data = [
+                {
+                    'id': p.id,
+                    'titulo': p.titulo,
+                    'descripcion': p.descripcion,
+                    'cantidad_preguntas': p.cantidad_preguntas,
+                }
+                for p in plantillas_qs
+            ]
+
+            materias_data.append({
+                'id': materia.id,
+                'nombre': materia.nombre,
+                'nombre_display': materia.nombre_display,
+                'color': materia.color,
+                'icono': materia.icono,
+                'descripcion': materia.descripcion,
+                'preguntas_disponibles': preguntas_disponibles,
+                'plantillas_disponibles': materia.plantillas_disponibles,
+                'plantillas': plantillas_data,
+            })
+
+        return Response(materias_data)
 
 class SesionSimulacionViewSet(viewsets.ModelViewSet):
     """ViewSet para sesiones de simulación"""
@@ -133,6 +151,113 @@ class SesionSimulacionViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         """Filtrar sesiones por estudiante"""
         return self.queryset.filter(estudiante=self.request.user)
+
+    @action(detail=False, methods=['get'], permission_classes=[IsAuthenticated])
+    def test_endpoint(self, request):
+        """Endpoint de prueba para verificar autenticación"""
+        return Response({
+            'message': 'Test endpoint working',
+            'user': request.user.username,
+            'user_id': request.user.id,
+            'user_role': request.user.rol
+        })
+
+    @action(detail=False, methods=['get'], permission_classes=[IsAuthenticated])
+    def test_simple(self, request):
+        """Endpoint de prueba simple sin lógica compleja"""
+        try:
+            return Response({
+                'message': 'Simple test endpoint working',
+                'user': request.user.username,
+                'user_id': request.user.id,
+                'user_role': request.user.rol,
+                'timestamp': timezone.now().isoformat()
+            })
+        except Exception as e:
+            return Response({
+                'error': str(e),
+                'message': 'Error in simple test endpoint'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    @action(detail=False, methods=['get'], permission_classes=[IsAuthenticated])
+    def test_queryset(self, request):
+        """Endpoint de prueba para verificar si el problema está en get_queryset"""
+        try:
+            # Usar el queryset base sin filtros
+            queryset = self.queryset.all()
+            count = queryset.count()
+            
+            # Intentar filtrar por estudiante
+            user_sessions = queryset.filter(estudiante=request.user)
+            user_count = user_sessions.count()
+            
+            return Response({
+                'message': 'Queryset test working',
+                'total_sessions': count,
+                'user_sessions': user_count,
+                'user': request.user.username,
+                'user_id': request.user.id,
+                'user_role': request.user.rol
+            })
+        except Exception as e:
+            return Response({
+                'error': str(e),
+                'message': 'Error in queryset test endpoint'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    @action(detail=False, methods=['get'], permission_classes=[IsAuthenticated])
+    def test_serializer(self, request):
+        """Endpoint de prueba para verificar si el problema está en el serializer"""
+        try:
+            # Obtener una sesión del usuario
+            user_session = self.queryset.filter(estudiante=request.user).first()
+            
+            if user_session:
+                # Usar el serializer básico
+                serializer = self.get_serializer(user_session)
+                return Response({
+                    'message': 'Serializer test working',
+                    'session_data': serializer.data,
+                    'user': request.user.username,
+                    'user_id': request.user.id,
+                    'user_role': request.user.rol
+                })
+            else:
+                return Response({
+                    'message': 'No sessions found for user',
+                    'user': request.user.username,
+                    'user_id': request.user.id,
+                    'user_role': request.user.rol
+                })
+        except Exception as e:
+            return Response({
+                'error': str(e),
+                'message': 'Error in serializer test endpoint'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    @action(detail=False, methods=['get'], permission_classes=[IsAuthenticated])
+    def test_list_method(self, request):
+        """Endpoint de prueba para verificar el método list del viewset"""
+        try:
+            # Simular el método list del viewset
+            queryset = self.get_queryset()
+            serializer = self.get_serializer(queryset, many=True)
+            
+            return Response({
+                'message': 'List method test working',
+                'count': queryset.count(),
+                'data': serializer.data,
+                'user': request.user.username,
+                'user_id': request.user.id,
+                'user_role': request.user.rol
+            })
+        except Exception as e:
+            import traceback
+            return Response({
+                'error': str(e),
+                'traceback': traceback.format_exc(),
+                'message': 'Error in list method test endpoint'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     @action(detail=False, methods=['get'], permission_classes=[IsAuthenticated, SoloEstudiantes])
     def verificar_sesion_activa(self, request):
@@ -224,65 +349,67 @@ class SesionSimulacionViewSet(viewsets.ModelViewSet):
                 sesion_activa.delete()
             else:
                 progreso = sesion_activa.get_progreso()
-                return Response(
-                    {
-                        'detail': f'Ya tienes una sesión activa para {materia.nombre_display}',
-                        'sesion_id': sesion_activa.id,
-                        'materia': materia.nombre_display,
+                return Response({
+                    'detail': 'Ya tienes una sesión activa para esta materia',
+                    'sesion_activa': {
+                        'id': sesion_activa.id,
+                        'materia': sesion_activa.materia.nombre_display,
                         'progreso': progreso
-                    },
-                    status=status.HTTP_400_BAD_REQUEST
-                )
+                    }
+                }, status=status.HTTP_409_CONFLICT)
 
         # Crear nueva sesión
-        sesion = SesionSimulacion.objects.create(
-            estudiante=request.user,
-            materia=materia
-        )
-        
-        # Log de creación de sesión
-        logger.info(f"Sesión creada: ID={sesion.id}, Usuario={request.user.username}, Materia={materia.nombre_display}")
-
-        # Obtener preguntas según la configuración
-        plantilla_id = serializer.validated_data.get('plantilla')
-        if plantilla_id:
-            try:
+        try:
+            plantilla = None
+            if serializer.validated_data.get('plantilla'):
                 plantilla = PlantillaSimulacion.objects.get(
-                    pk=plantilla_id,
+                    pk=serializer.validated_data['plantilla'],
                     activa=True
                 )
-                sesion.plantilla = plantilla
-                sesion.save()
-                if plantilla.preguntas_especificas.exists():
-                    preguntas = list(plantilla.preguntas_especificas.all())
-                else:
-                    preguntas = list(Pregunta.objects.filter(
-                        materia=materia,
-                        activa=True
-                    )[:plantilla.cantidad_preguntas])
-            except PlantillaSimulacion.DoesNotExist:
-                return Response(
-                    {'detail': 'Plantilla no encontrada'},
-                    status=status.HTTP_404_NOT_FOUND
-                )
-        else:
-            cantidad = serializer.validated_data.get('cantidad_preguntas', 10)
-            preguntas = list(Pregunta.objects.filter(
-                materia=materia,
-                activa=True
-            ).order_by('?')[:cantidad])
 
-        # Crear PreguntaSesion para cada pregunta
-        for i, pregunta in enumerate(preguntas):
-            PreguntaSesion.objects.create(
-                sesion=sesion,
-                pregunta=pregunta,
-                orden=i
+            # Crear sesión
+            sesion = SesionSimulacion.objects.create(
+                estudiante=request.user,
+                materia=materia,
+                plantilla=plantilla
             )
 
-        serializer = SesionSimulacionSerializer(sesion)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    
+            # Obtener preguntas
+            if plantilla and plantilla.preguntas_especificas.exists():
+                # Si la plantilla define preguntas específicas, usar exactamente esas
+                preguntas = plantilla.preguntas_especificas.all()
+            else:
+                # Determinar cantidad priorizando: dato del request > cantidad de plantilla > 10 por defecto
+                cantidad = serializer.validated_data.get('cantidad_preguntas')
+                if cantidad is None and plantilla:
+                    cantidad = plantilla.cantidad_preguntas
+                if cantidad is None:
+                    cantidad = 10
+
+                preguntas = Pregunta.objects.filter(
+                    materia=materia,
+                    activa=True
+                ).order_by('?')[:cantidad]
+
+            # Crear relaciones pregunta-sesión
+            for i, pregunta in enumerate(preguntas):
+                PreguntaSesion.objects.create(
+                    sesion=sesion,
+                    pregunta=pregunta,
+                    orden=i + 1
+                )
+
+            logger.info(f"Nueva sesión creada: ID={sesion.id}, Usuario={request.user.username}, Materia={materia.nombre_display}, Preguntas={preguntas.count()}")
+
+            return Response(SesionSimulacionSerializer(sesion).data, status=status.HTTP_201_CREATED)
+
+        except Exception as e:
+            logger.error(f"Error al crear sesión: {str(e)}")
+            return Response(
+                {'detail': 'Error al crear la sesión'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
     @action(detail=True, methods=['post'])
     def responder_pregunta(self, request, pk=None):
         """Registra la respuesta a una pregunta"""
@@ -386,51 +513,134 @@ class SesionSimulacionViewSet(viewsets.ModelViewSet):
             rol='estudiante',
             sesiones_simulacion__fecha_inicio__gte=start_date
         ).annotate(
-            total_sesiones=Count('sesiones_simulacion'),
+            sesiones_count=Count('sesiones_simulacion'),
             sesiones_completadas=Count('sesiones_simulacion', filter=Q(sesiones_simulacion__completada=True))
-        ).order_by('-total_sesiones')[:10]
-        
-        estudiantes_data = []
-        for estudiante in estudiantes_activos:
-            estudiantes_data.append({
-                'username': estudiante.username,
-                'nombre_completo': f"{estudiante.first_name} {estudiante.last_name}".strip() or estudiante.username,
-                'total_sesiones': estudiante.total_sesiones,
-                'sesiones_completadas': estudiante.sesiones_completadas,
-                'tasa_finalizacion': round((estudiante.sesiones_completadas / estudiante.total_sesiones * 100), 1) if estudiante.total_sesiones > 0 else 0
-            })
-        
-        # Estadísticas de tiempo
-        sesiones_con_tiempo = SesionSimulacion.objects.filter(
-            fecha_inicio__gte=start_date,
-            completada=True,
-            fecha_fin__isnull=False
-        )
-        
-        tiempo_promedio = None
-        if sesiones_con_tiempo.exists():
-            tiempos = []
-            for sesion in sesiones_con_tiempo:
-                if sesion.duracion:
-                    tiempos.append(sesion.duracion.total_seconds() / 60)  # en minutos
-            
-            if tiempos:
-                tiempo_promedio = round(sum(tiempos) / len(tiempos), 1)
+        ).order_by('-sesiones_count')[:10]
         
         return Response({
-            'periodo': {
-                'dias': days,
-                'fecha_inicio': start_date.isoformat(),
-                'fecha_fin': timezone.now().isoformat()
-            },
-            'generales': {
-                'total_sesiones': total_sesiones,
-                'sesiones_completadas': sesiones_completadas,
-                'sesiones_activas': sesiones_activas,
-                'tasa_finalizacion': round(tasa_finalizacion, 1),
-                'tiempo_promedio_minutos': tiempo_promedio
-            },
-            'por_materia': materias_stats,
-            'estudiantes_activos': estudiantes_data,
-            'timestamp': timezone.now().isoformat()
+            'periodo_dias': days,
+            'total_sesiones': total_sesiones,
+            'sesiones_completadas': sesiones_completadas,
+            'sesiones_activas': sesiones_activas,
+            'tasa_finalizacion': round(tasa_finalizacion, 1),
+            'materias_stats': materias_stats,
+            'estudiantes_activos': [
+                {
+                    'username': est.username,
+                    'sesiones_count': est.sesiones_count,
+                    'sesiones_completadas': est.sesiones_completadas
+                }
+                for est in estudiantes_activos
+            ]
         })
+
+    @action(detail=True, methods=['get'], permission_classes=[IsAuthenticated])
+    def cargar_sesion(self, request, pk=None):
+        """Carga una sesión activa con todas sus preguntas para continuar"""
+        sesion = self.get_object()
+        
+        # Verificar que la sesión pertenece al usuario actual
+        if sesion.estudiante != request.user:
+            return Response(
+                {'detail': 'No tienes permiso para acceder a esta sesión'},
+                status=status.HTTP_403_FORBIDDEN
+            )
+        
+        # Verificar que la sesión no esté completada
+        if sesion.completada:
+            return Response(
+                {'detail': 'Esta sesión ya está completada'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        # Obtener preguntas con sus respuestas
+        preguntas_sesion = sesion.preguntas_sesion.select_related('pregunta').order_by('orden')
+        
+        # Formatear preguntas para el frontend
+        preguntas_data = []
+        respuestas_data = []
+        siguiente_pregunta_index = None
+        
+        from django.core.files.storage import default_storage
+        for i, ps in enumerate(preguntas_sesion):
+            # Construir URL absoluta de imagen si existe
+            imagen_url = None
+            if ps.pregunta.imagen and getattr(ps.pregunta.imagen, 'name', None):
+                try:
+                    if default_storage.exists(ps.pregunta.imagen.name):
+                        if request:
+                            imagen_url = request.build_absolute_uri(ps.pregunta.imagen.url)
+                        else:
+                            imagen_url = ps.pregunta.imagen.url
+                except Exception:
+                    imagen_url = None
+            pregunta_data = {
+                'id': ps.pregunta.id,
+                'enunciado': ps.pregunta.enunciado,
+                'contexto': ps.pregunta.contexto,
+                'opciones': ps.pregunta.opciones,
+                'imagen_url': imagen_url,
+                # Campos adicionales solicitados para retroalimentación
+                'respuesta_correcta': ps.pregunta.respuesta_correcta,
+                'explicacion': ps.pregunta.explicacion,
+                'estrategias_resolucion': ps.pregunta.estrategias_resolucion,
+                # Campos de apoyo (mejor UX del modal)
+                'retroalimentacion': ps.pregunta.retroalimentacion,
+                'retroalimentacion_estructurada': ps.pregunta.retroalimentacion_estructurada,
+                'explicacion_opciones_incorrectas': ps.pregunta.explicacion_opciones_incorrectas,
+                'dificultad': ps.pregunta.dificultad,
+                'tiempo_estimado': ps.pregunta.tiempo_estimado,
+                'materia': ps.pregunta.materia.id,
+                'competencia': ps.pregunta.competencia.id if ps.pregunta.competencia else None,
+                'tags': ps.pregunta.tags,
+                'orden': ps.orden
+            }
+            preguntas_data.append(pregunta_data)
+            
+            # Si ya fue respondida, agregar a respuestas
+            if ps.respuesta_estudiante:
+                respuestas_data.append({
+                    'pregunta': ps.pregunta.id,
+                    'respuesta': ps.respuesta_estudiante,
+                    'es_correcta': ps.es_correcta,
+                    'tiempo_respuesta': ps.tiempo_respuesta or 0,
+                    'orden': ps.orden
+                })
+            elif siguiente_pregunta_index is None:
+                # Esta es la primera pregunta sin responder
+                siguiente_pregunta_index = i
+        
+        # Si no encontramos pregunta sin responder, ir al final
+        if siguiente_pregunta_index is None:
+            siguiente_pregunta_index = len(preguntas_data) - 1
+        
+        # Calcular progreso
+        progreso = sesion.get_progreso()
+        
+        # Preparar datos de respuesta
+        sesion_data = {
+            'id': sesion.id,
+            'materia': {
+                'id': sesion.materia.id,
+                'nombre': sesion.materia.nombre,
+                'nombre_display': sesion.materia.nombre_display,
+                'color': sesion.materia.color
+            },
+            'plantilla': {
+                'id': sesion.plantilla.id,
+                'titulo': sesion.plantilla.titulo,
+                'descripcion': sesion.plantilla.descripcion
+            } if sesion.plantilla else None,
+            'fecha_inicio': sesion.fecha_inicio,
+            'completada': sesion.completada,
+            'puntuacion': sesion.puntuacion,
+            'progreso': progreso,
+            'preguntas_sesion': preguntas_data,
+            'respuestas_existentes': respuestas_data,
+            'siguiente_pregunta_index': siguiente_pregunta_index,
+            'puede_continuar': True
+        }
+        
+        logger.info(f"Sesión cargada para continuar: ID={sesion.id}, Usuario={request.user.username}, Progreso={progreso['porcentaje']}%")
+        
+        return Response(sesion_data, status=status.HTTP_200_OK)

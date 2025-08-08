@@ -43,7 +43,7 @@ class SesionSimulacionSerializer(serializers.ModelSerializer):
         read_only_fields = ['estudiante', 'fecha_inicio', 'fecha_fin', 'completada', 'puntuacion']
 
     def get_progreso(self, obj):
-        total_preguntas = obj.preguntas.count()
+        total_preguntas = obj.preguntas_sesion.count()
         respondidas = obj.preguntas_sesion.exclude(respuesta_estudiante=None).count()
         return {
             'total': total_preguntas,

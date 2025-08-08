@@ -102,6 +102,35 @@ const SimulacionPage: React.FC = () => {
     }
   };
 
+  // Inicio rápido: continuar sesión activa o crear una nueva y navegar
+  const handleStartQuick = async (materiaId: number, plantillaId?: number) => {
+    try {
+      // 1) Verificar sesión activa para la materia
+      const verif = await simulacionService.verificarSesionActiva(materiaId);
+      if (verif.tiene_sesion_activa && verif.sesion?.id) {
+        navigate(`/simulacion/activa/${verif.sesion.id}`);
+        return;
+      }
+
+      // 2) Crear sesión nueva (usar plantilla si llega)
+      const nueva = await simulacionService.crearSesion({
+        materia: materiaId,
+        ...(plantillaId ? { plantilla: plantillaId } : {}),
+      });
+
+      // 3) Navegar a la sesión activa recién creada
+      navigate(`/simulacion/activa/${nueva.id}`);
+    } catch (e) {
+      console.error('Error inicio rápido:', e);
+      addNotification({
+        type: 'error',
+        title: 'No se pudo iniciar la simulación',
+        message: 'Intenta nuevamente en unos segundos.',
+        duration: 4000,
+      });
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -160,6 +189,7 @@ const SimulacionPage: React.FC = () => {
                 mejorPuntaje={simulacionCompletada?.mejor_puntaje}
                 plantillas={materia.plantillas || []}
                 preguntasDisponibles={materia.preguntas_disponibles}
+                onStart={handleStartQuick}
               />
             );
           })}

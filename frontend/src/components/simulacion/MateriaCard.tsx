@@ -20,6 +20,7 @@ interface MateriaCardProps {
   mejorPuntaje?: number;
   plantillas?: Plantilla[];
   preguntasDisponibles?: number;
+  onStart?: (materiaId: number, plantillaId?: number) => void;
 }
 
 const MateriaCard: React.FC<MateriaCardProps> = ({
@@ -33,6 +34,8 @@ const MateriaCard: React.FC<MateriaCardProps> = ({
   mejorPuntaje,
   plantillas = [],
   preguntasDisponibles = 0
+ ,
+  onStart
 }) => {
   const navigate = useNavigate();
 
@@ -71,10 +74,15 @@ const MateriaCard: React.FC<MateriaCardProps> = ({
 
   const handleClick = () => {
     if (plantillas.length > 0) {
-      // Si hay plantillas disponibles, ir a la página de selección
+      // Inicio rápido: usar la primera plantilla disponible
+      const firstPlantillaId = plantillas[0]?.id;
+      if (onStart) {
+        onStart(id, firstPlantillaId);
+        return;
+      }
+      // Fallback anterior si no hay callback
       navigate(`/simulacion/iniciar/${id}`);
     } else {
-      // Si no hay plantillas, mostrar mensaje
       console.log('No hay plantillas disponibles para esta materia');
     }
   };

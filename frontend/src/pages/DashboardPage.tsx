@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import AccesoRapidoSimulaciones from '../components/dashboard/AccesoRapidoSimulaciones';
 
 const DashboardPage: React.FC = () => {
   const { user } = useAuth();
@@ -77,22 +78,25 @@ const DashboardPage: React.FC = () => {
 
       {/* Acciones rápidas */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Card className="transform hover:scale-105 transition-transform duration-200">
-          <button 
-            onClick={handleIniciarSimulacion}
-            className="w-full h-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg"
-          >
-            <div className="flex items-center space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                <span className="text-2xl">🎯</span>
+        {/* Ocultar para estudiantes la tarjeta de "Nueva simulación" */}
+        {user?.rol !== 'estudiante' && (
+          <Card className="transform hover:scale-105 transition-transform duration-200">
+            <button 
+              onClick={handleIniciarSimulacion}
+              className="w-full h-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">🎯</span>
+                </div>
+                <div>
+                  <div className="text-lg font-semibold text-gray-900">Nueva simulación</div>
+                  <div className="text-sm text-gray-600">Comienza tu práctica ahora</div>
+                </div>
               </div>
-              <div>
-                <div className="text-lg font-semibold text-gray-900">Nueva simulación</div>
-                <div className="text-sm text-gray-600">Comienza tu práctica ahora</div>
-              </div>
-            </div>
-          </button>
-        </Card>
+            </button>
+          </Card>
+        )}
 
         <Card className="transform hover:scale-105 transition-transform duration-200">
           <button 
@@ -129,32 +133,8 @@ const DashboardPage: React.FC = () => {
         </Card>
       </div>
 
-      {/* Materias disponibles */}
-      <Card>
-        <div className="p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Materias disponibles</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { id: 1, nombre: 'Matemáticas', icono: '🔢', color: 'blue' },
-              { id: 2, nombre: 'Lenguaje', icono: '📚', color: 'green' },
-              { id: 3, nombre: 'Ciencias', icono: '🧪', color: 'purple' },
-              { id: 4, nombre: 'Sociales', icono: '🌍', color: 'orange' }
-            ].map(materia => (
-              <button
-                key={materia.id}
-                onClick={() => navigate(`/simulacion/${materia.id}`)}
-                className={`p-4 rounded-lg border-2 border-${materia.color}-200 hover:bg-${materia.color}-50 transition-colors`}
-              >
-                <div className="flex flex-col items-center space-y-2">
-                  <span className="text-3xl">{materia.icono}</span>
-                  <span className="font-medium text-gray-900">{materia.nombre}</span>
-                  <span className="text-xs text-gray-500">Iniciar práctica</span>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </Card>
+      {/* Acceso rápido a simulaciones */}
+      <AccesoRapidoSimulaciones />
     </div>
   );
 };

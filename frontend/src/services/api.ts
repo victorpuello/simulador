@@ -6,7 +6,7 @@ import { mockLogin, mockLogout, mockRefreshToken, mockUserProfile } from './mock
 // Configuración base de axios
 const createApiInstance = (): AxiosInstance => {
   const instance = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || import.meta.env.DEV ? 'http://localhost:8000/api' : '/api',
+    baseURL: 'http://localhost:8000/api', // Forzar localhost temporalmente
     timeout: 10000,
     headers: {
       'Content-Type': 'application/json',
@@ -419,6 +419,53 @@ export const simulacionService = {
   // Obtener sesión específica
   getSesion: async (sesionId: string) => {
     return apiGet<any>(`/simulacion/sesiones/${sesionId}/`);
+  },
+
+  // Cargar sesión activa con preguntas para continuar
+  cargarSesionActiva: async (sesionId: string) => {
+    return apiGet<{
+      id: number;
+      materia: {
+        id: number;
+        nombre: string;
+        nombre_display: string;
+        color: string;
+      };
+      plantilla?: {
+        id: number;
+        titulo: string;
+        descripcion: string;
+      };
+      fecha_inicio: string;
+      completada: boolean;
+      puntuacion: number;
+      progreso: {
+        respondidas: number;
+        total: number;
+        porcentaje: number;
+      };
+      preguntas_sesion: Array<{
+        id: number;
+        enunciado: string;
+        contexto: string;
+        opciones: Record<string, string>;
+        dificultad: string;
+        tiempo_estimado: number;
+        materia: number;
+        competencia?: number;
+        tags: string[];
+        orden: number;
+      }>;
+      respuestas_existentes: Array<{
+        pregunta: number;
+        respuesta: string;
+        es_correcta: boolean;
+        tiempo_respuesta: number;
+        orden: number;
+      }>;
+      siguiente_pregunta_index: number;
+      puede_continuar: boolean;
+    }>(`/simulacion/sesiones/${sesionId}/cargar_sesion/`);
   },
 };
 

@@ -137,7 +137,7 @@ const SeleccionPrueba: React.FC<Props> = ({ onSeleccionarPrueba, isDocente = fal
   // Handlers para el modal de sesión activa
   const handleContinuarSesionActiva = () => {
     if (sesionActivaDetalle) {
-      window.location.href = `/simulacion/activa/${sesionActivaDetalle.id}`;
+      navigate(`/simulacion/activa/${sesionActivaDetalle.id}`);
     }
     setMostrarModalSesion(false);
   };

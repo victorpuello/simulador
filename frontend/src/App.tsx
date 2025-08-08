@@ -22,6 +22,7 @@ const GestionSimulacionesPage = React.lazy(() => import('./pages/GestionSimulaci
 const SeleccionPlantillaPage = React.lazy(() => import('./pages/SeleccionPlantillaPage'));
 const ResultadosDetalladosPage = React.lazy(() => import('./pages/ResultadosDetalladosPage'));
 const MetricasPage = React.lazy(() => import('./pages/MetricasPage'));
+const ReportesDocentePage = React.lazy(() => import('./pages/ReportesDocentePage'));
 
 // Componentes de layout
 const Layout = React.lazy(() => import('./components/layout/Layout'));
@@ -147,6 +148,16 @@ function App() {
                 <ProtectedRoute allowedRoles={['estudiante']}>
                   <Layout>
                     <ReportesPage />
+                  </Layout>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/reportes/docente"
+              element={
+                <ProtectedRoute allowedRoles={['docente']}>
+                  <Layout>
+                    <ReportesDocentePage />
                   </Layout>
                 </ProtectedRoute>
               }

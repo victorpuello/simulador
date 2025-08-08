@@ -18,6 +18,7 @@ interface SimulacionState {
   sesionCompletada: boolean;
   loading: boolean;
   error: string | null;
+  pausada: boolean;
 
   // Estadísticas
   respuestasCorrectas: number;
@@ -33,6 +34,9 @@ interface SimulacionState {
   responderPregunta: (respuesta: string) => Promise<void>;
   siguientePregunta: () => void;
   anteriorPregunta: () => void;
+  irAPregunta: (index: number) => void;
+  pausarSimulacion: () => void;
+  reanudarSimulacion: () => void;
   limpiarSimulacion: () => void;
   setError: (error: string | null) => void;
 }
@@ -46,6 +50,7 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
   sesionCompletada: false,
   loading: false,
   error: null,
+  pausada: false,
 
   // Estadísticas iniciales
   respuestasCorrectas: 0,
@@ -189,6 +194,21 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
     }
   },
 
+  irAPregunta: (index: number) => {
+    const { preguntasActuales } = get();
+    if (index >= 0 && index < preguntasActuales.length) {
+      set({ preguntaActualIndex: index });
+    }
+  },
+
+  pausarSimulacion: () => {
+    set({ pausada: true });
+  },
+
+  reanudarSimulacion: () => {
+    set({ pausada: false });
+  },
+
   limpiarSimulacion: () => {
     set({
       sesionActual: null,
@@ -218,7 +238,8 @@ export const useSimulacionEstado = () => {
     preguntaActualIndex,
     sesionCompletada,
     loading,
-    error
+    error,
+    pausada
   } = useSimulacionStore();
 
   return {
@@ -228,7 +249,8 @@ export const useSimulacionEstado = () => {
     preguntaActualIndex,
     sesionCompletada,
     loading,
-    error
+    error,
+    pausada
   };
 };
 
@@ -240,6 +262,9 @@ export const useSimulacionAcciones = () => {
     responderPregunta,
     siguientePregunta,
     anteriorPregunta,
+    irAPregunta,
+    pausarSimulacion,
+    reanudarSimulacion,
     limpiarSimulacion,
     setError
   } = useSimulacionStore();
@@ -251,6 +276,9 @@ export const useSimulacionAcciones = () => {
     responderPregunta,
     siguientePregunta,
     anteriorPregunta,
+    irAPregunta,
+    pausarSimulacion,
+    reanudarSimulacion,
     limpiarSimulacion,
     setError
   };

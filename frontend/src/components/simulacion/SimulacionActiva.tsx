@@ -13,6 +13,7 @@ import Card from '../ui/Card';
 import ImageModal from '../ui/ImageModal';
 import LoadingSpinner from '../ui/LoadingSpinner';
 import ConfirmDialog from '../ui/ConfirmDialog';
+import IndicePreguntasModal from './IndicePreguntasModal';
 
 const SimulacionActiva: React.FC = () => {
   const navigate = useNavigate();
@@ -27,7 +28,8 @@ const SimulacionActiva: React.FC = () => {
     preguntaActualIndex,
     sesionCompletada,
     loading,
-    error
+    error,
+    pausada,
   } = useSimulacionEstado();
   
   // Acciones
@@ -37,6 +39,9 @@ const SimulacionActiva: React.FC = () => {
     responderPregunta,
     siguientePregunta,
     anteriorPregunta,
+    irAPregunta,
+    pausarSimulacion,
+    reanudarSimulacion,
     limpiarSimulacion
   } = useSimulacionAcciones();
   
@@ -54,6 +59,7 @@ const SimulacionActiva: React.FC = () => {
   const [tiempoRestante, setTiempoRestante] = useState<number>(0);
   const [mostrarConfirmSalir, setMostrarConfirmSalir] = useState(false);
   const [mostrarImagen, setMostrarImagen] = useState(false);
+  const [mostrarIndice, setMostrarIndice] = useState(false);
 
   // Pregunta actual
   const preguntaActual = preguntasActuales[preguntaActualIndex];
@@ -81,7 +87,7 @@ const SimulacionActiva: React.FC = () => {
 
   // Temporizador para la pregunta actual
   useEffect(() => {
-    if (preguntaActual && !mostrandoRetroalimentacion && !preguntaYaRespondida) {
+    if (preguntaActual && !mostrandoRetroalimentacion && !preguntaYaRespondida && !pausada) {
       setTiempoRestante(preguntaActual.tiempo_estimado || 60);
       
       const timer = setInterval(() => {
@@ -96,7 +102,28 @@ const SimulacionActiva: React.FC = () => {
 
       return () => clearInterval(timer);
     }
-  }, [preguntaActual, mostrandoRetroalimentacion, preguntaYaRespondida]);
+  }, [preguntaActual, mostrandoRetroalimentacion, preguntaYaRespondida, pausada]);
+
+  // Atajos de teclado: A/B/C/D para opciones y flechas para navegación
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (!preguntaActual || mostrandoRetroalimentacion) return;
+      if (pausada) return;
+      const key = e.key.toLowerCase();
+      if (["a","b","c","d"].includes(key)) {
+        const may = key.toUpperCase();
+        if (!preguntaYaRespondida) setRespuestaSeleccionada(may);
+      }
+      if (e.key === 'ArrowRight') {
+        handleSiguientePregunta();
+      }
+      if (e.key === 'ArrowLeft') {
+        handleAnteriorPregunta();
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [preguntaActual, mostrandoRetroalimentacion, preguntaYaRespondida, pausada]);
 
   const handleResponder = async () => {
     if (!respuestaSeleccionada || !preguntaActual) return;
@@ -268,22 +295,32 @@ const SimulacionActiva: React.FC = () => {
                 Continuando simulación
               </span>
             </div>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleSalir}
-            >
-              Salir
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setMostrarIndice(true)}
+              >
+                Índice
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleSalir}
+              >
+                Salir
+              </Button>
+            </div>
           </div>
           
-          <BarraProgreso
-            preguntaActual={preguntaActualIndex + 1}
-            totalPreguntas={preguntasActuales.length}
-            tiempoRestante={tiempoRestante}
-            tiempoTotal={preguntaActual.tiempo_estimado || 60}
-            porcentajeAcierto={porcentajeAcierto}
-          />
+            <BarraProgreso
+              totalPreguntas={preguntasActuales.length}
+              preguntaActual={preguntaActualIndex + 1}
+              onSelectPregunta={(idx) => irAPregunta(idx)}
+              pausada={pausada}
+              onPausar={() => pausarSimulacion()}
+              onReanudar={() => reanudarSimulacion()}
+            />
         </div>
       </div>
 
@@ -366,8 +403,8 @@ const SimulacionActiva: React.FC = () => {
                 return (
                   <button
                     key={opcion}
-                    onClick={() => !preguntaYaRespondida && setRespuestaSeleccionada(opcion)}
-                    disabled={preguntaYaRespondida}
+                    onClick={() => !preguntaYaRespondida && !pausada && setRespuestaSeleccionada(opcion)}
+                    disabled={preguntaYaRespondida || pausada}
                     className={`w-full text-left p-4 rounded-lg border-2 transition-all ${
                       preguntaYaRespondida
                         ? clasesRespondida
@@ -395,7 +432,7 @@ const SimulacionActiva: React.FC = () => {
               <Button
                 variant="outline"
                 onClick={handleAnteriorPregunta}
-                disabled={preguntaActualIndex === 0}
+                disabled={preguntaActualIndex === 0 || pausada}
               >
                 ← Anterior
               </Button>
@@ -405,7 +442,7 @@ const SimulacionActiva: React.FC = () => {
                   <Button
                     variant="primary"
                     onClick={handleResponder}
-                    disabled={!respuestaSeleccionada || loading}
+                    disabled={!respuestaSeleccionada || loading || pausada}
                   >
                     {loading ? 'Guardando...' : 'Responder'}
                   </Button>
@@ -413,6 +450,7 @@ const SimulacionActiva: React.FC = () => {
                   <Button
                     variant="primary"
                     onClick={handleSiguientePregunta}
+                    disabled={pausada}
                   >
                     {preguntaActualIndex === preguntasActuales.length - 1 ? 'Finalizar' : 'Siguiente →'}
                   </Button>
@@ -422,6 +460,19 @@ const SimulacionActiva: React.FC = () => {
           </Card>
         )}
       </div>
+      {/* Overlay de Pausa */}
+      {pausada && (
+        <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm flex items-center justify-center">
+          <div className="bg-white rounded-lg shadow-xl w-full max-w-md p-6 text-center">
+            <div className="text-5xl mb-4">⏸️</div>
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">Simulación en pausa</h2>
+            <p className="text-gray-600 mb-6">Tu progreso se mantiene. Cuando estés listo, reanuda para continuar.</p>
+            <div className="flex justify-center">
+              <Button variant="primary" onClick={reanudarSimulacion}>Reanudar</Button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Modal de imagen ampliada (solo imagen) */}
       {preguntaActual.imagen_url && (
         <ImageModal
@@ -431,6 +482,17 @@ const SimulacionActiva: React.FC = () => {
           alt="Imagen de contexto"
         />
       )}
+
+      {/* Modal de índice de preguntas */}
+      <IndicePreguntasModal
+        isOpen={mostrarIndice}
+        onClose={() => setMostrarIndice(false)}
+        totalPreguntas={preguntasActuales.length}
+        preguntaActualIndex={preguntaActualIndex}
+        respuestasActuales={respuestasActuales as any}
+        preguntasIds={preguntasActuales.map(p => p.id)}
+        onGoTo={(idx) => irAPregunta(idx)}
+      />
     </div>
   );
 };

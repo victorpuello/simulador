@@ -5,6 +5,7 @@ import Card from '../components/ui/Card';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
 import { simulacionService } from '../services/api';
 import { useNotifications } from '../store';
+import RevisionGuiadaModal from '../components/simulacion/RevisionGuiadaModal';
 
 interface Pregunta {
   id: number;
@@ -55,6 +56,7 @@ const ResultadosDetalladosPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [expandido, setExpandido] = useState<number | null>(null);
   const [mostrarSolo, setMostrarSolo] = useState<'todas' | 'correctas' | 'incorrectas'>('todas');
+  const [mostrarRevision, setMostrarRevision] = useState(false);
 
   useEffect(() => {
     if (sesionId) {
@@ -79,6 +81,11 @@ const ResultadosDetalladosPage: React.FC = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const exportarPDF = async () => {
+    // Exportación simple usando print del navegador; en proyectos grandes se puede integrar jsPDF
+    window.print();
   };
 
   if (loading) {
@@ -191,6 +198,18 @@ const ResultadosDetalladosPage: React.FC = () => {
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
               Nueva simulación
+            </button>
+            <button
+              onClick={() => setMostrarRevision(true)}
+              className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Revisión guiada
+            </button>
+            <button
+              onClick={exportarPDF}
+              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Exportar PDF
             </button>
             <button
               onClick={handleVolverDashboard}
@@ -371,6 +390,14 @@ const ResultadosDetalladosPage: React.FC = () => {
           </Card>
         )}
       </div>
+      {/* Revisión Guiada */}
+      {sesion && (
+        <RevisionGuiadaModal
+          isOpen={mostrarRevision}
+          onClose={() => setMostrarRevision(false)}
+          resultados={resultados}
+        />
+      )}
     </div>
   );
 };

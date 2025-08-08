@@ -1,11 +1,18 @@
 import React from 'react';
 import { useSimulacionEstadisticas } from '../../store/simulacion';
+import Button from '../ui/Button';
 
 interface Props {
   className?: string;
+  totalPreguntas?: number;
+  preguntaActual?: number; // 1-based
+  onSelectPregunta?: (index: number) => void;
+  pausada?: boolean;
+  onPausar?: () => void;
+  onReanudar?: () => void;
 }
 
-const BarraProgreso: React.FC<Props> = ({ className = '' }) => {
+const BarraProgreso: React.FC<Props> = ({ className = '', totalPreguntas, preguntaActual, onSelectPregunta, pausada, onPausar, onReanudar }) => {
   const {
     respuestasCorrectas,
     respuestasIncorrectas,
@@ -40,6 +47,34 @@ const BarraProgreso: React.FC<Props> = ({ className = '' }) => {
           </div>
         </div>
       </div>
+
+      {/* Índice de preguntas y pausa */}
+      {typeof totalPreguntas === 'number' && typeof preguntaActual === 'number' && (
+        <div className="mt-3 flex items-center justify-between">
+          <div className="flex flex-wrap gap-1">
+            {Array.from({ length: totalPreguntas }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => onSelectPregunta && onSelectPregunta(idx)}
+                className={`w-4 h-4 rounded-full border transition-colors ${
+                  idx === (preguntaActual - 1)
+                    ? 'bg-primary-600 border-primary-600'
+                    : 'bg-white border-gray-300 hover:border-primary-400'
+                }`}
+                aria-label={`Ir a pregunta ${idx + 1}`}
+                title={`Pregunta ${idx + 1}`}
+              />
+            ))}
+          </div>
+          <div>
+            {pausada ? (
+              <Button size="sm" variant="secondary" onClick={onReanudar}>Reanudar</Button>
+            ) : (
+              <Button size="sm" variant="outline" onClick={onPausar}>Pausar</Button>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Estadísticas detalladas */}
       <div className="grid grid-cols-3 gap-4 text-center">

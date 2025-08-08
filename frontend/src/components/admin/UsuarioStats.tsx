@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { 
   UsersIcon, 
   UserGroupIcon, 
@@ -35,7 +35,7 @@ const UsuarioStats: React.FC = () => {
   const [stats, setStats] = useState<UsuarioStatsType | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const cargarStats = async () => {
+  const cargarStats = useCallback(async () => {
     try {
       setLoading(true);
       const data = await usuariosService.getStats();
@@ -50,11 +50,11 @@ const UsuarioStats: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [addNotification]);
 
   useEffect(() => {
     cargarStats();
-  }, []);
+  }, [cargarStats]);
 
   if (loading) {
     return (
@@ -74,14 +74,7 @@ const UsuarioStats: React.FC = () => {
     );
   }
 
-  const getRolColor = (rol: string) => {
-    switch (rol) {
-      case 'admin': return 'text-red-600 bg-red-100';
-      case 'docente': return 'text-blue-600 bg-blue-100';
-      case 'estudiante': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
-    }
-  };
+  // Colores de rol (no usados actualmente en la UI)
 
   const getRolIcon = (rol: string) => {
     switch (rol) {

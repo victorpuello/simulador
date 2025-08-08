@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { 
   MagnifyingGlassIcon, 
   FunnelIcon,
@@ -7,7 +7,6 @@ import {
   PencilIcon,
   TrashIcon,
   EyeIcon,
-  KeyIcon,
   UserPlusIcon,
   ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';
@@ -78,7 +77,7 @@ const UsuarioList: React.FC<UsuarioListProps> = ({
   const [sortField, setSortField] = useState<string>('-date_joined');
   const [showFilters, setShowFilters] = useState(false);
 
-  const cargarUsuarios = async (page: number = 1, resetList: boolean = false) => {
+  const cargarUsuarios = useCallback(async (page: number = 1, resetList: boolean = false) => {
     try {
       setLoading(true);
       const params = {
@@ -108,11 +107,11 @@ const UsuarioList: React.FC<UsuarioListProps> = ({
     } finally {
       setLoading(false);
     }
-  };
+  }, [addNotification, filters, sortField, searchTerm]);
 
   useEffect(() => {
     cargarUsuarios(1, true);
-  }, [filters, sortField, searchTerm]);
+  }, [filters, sortField, searchTerm, cargarUsuarios]);
 
   const handleSearch = (value: string) => {
     setSearchTerm(value);
@@ -124,10 +123,7 @@ const UsuarioList: React.FC<UsuarioListProps> = ({
     setCurrentPage(1);
   };
 
-  const handleSort = (field: string) => {
-    const newSort = sortField === field ? `-${field}` : field;
-    setSortField(newSort);
-  };
+  // Ordenación se maneja directamente en select de sortField
 
   const handleSelectUsuario = (id: number) => {
     setSelectedUsuarios(prev => 

@@ -67,19 +67,19 @@ const SimulacionProgress: React.FC = () => {
           const totalSesiones = sesiones.length;
           const completadas = sesiones.filter((s: any) => s.completada);
           const promedioPuntuacion = completadas.length > 0 
-            ? completadas.reduce((acc: number, s: any) => {
+            ? completadas.reduce((acc: number, s: { puntuacion: number; preguntas_sesion?: Array<unknown> }) => {
                 const totalPreguntas = s.preguntas_sesion?.length || 1;
                 return acc + (s.puntuacion / totalPreguntas * 100);
               }, 0) / completadas.length
             : 0;
           const mejorPuntuacion = completadas.length > 0
-            ? Math.max(...completadas.map((s: any) => {
+            ? Math.max(...completadas.map((s: { puntuacion: number; preguntas_sesion?: Array<unknown> }) => {
                 const totalPreguntas = s.preguntas_sesion?.length || 1;
                 return s.puntuacion / totalPreguntas * 100;
               }))
             : 0;
 
-          const stats = {
+          const stats: EstadisticasSimulacion = {
             total_sesiones: totalSesiones,
             sesiones_completadas: completadas.length,
             promedio_puntuacion: promedioPuntuacion,
@@ -113,7 +113,7 @@ const SimulacionProgress: React.FC = () => {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [user?.username, user?.rol]);
 
 
 

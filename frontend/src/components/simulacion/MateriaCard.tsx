@@ -33,8 +33,7 @@ const MateriaCard: React.FC<MateriaCardProps> = ({
   totalPreguntas,
   mejorPuntaje,
   plantillas = [],
-  preguntasDisponibles = 0
- ,
+   preguntasDisponibles = 0,
   onStart
 }) => {
   const navigate = useNavigate();

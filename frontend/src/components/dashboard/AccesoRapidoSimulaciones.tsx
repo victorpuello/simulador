@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useNotifications } from '../../store';
 import { simulacionService } from '../../services/api';
@@ -36,11 +36,7 @@ const AccesoRapidoSimulaciones: React.FC = () => {
   const [materias, setMaterias] = useState<Materia[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    cargarDatos();
-  }, []);
-
-  const cargarDatos = async () => {
+  const cargarDatos = useCallback(async () => {
     try {
       setLoading(true);
       
@@ -66,7 +62,11 @@ const AccesoRapidoSimulaciones: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [addNotification]);
+
+  useEffect(() => {
+    cargarDatos();
+  }, [cargarDatos]);
 
   const handleContinuarSesion = (sesion: SesionActiva) => {
     navigate(`/simulacion/activa/${sesion.id}`);

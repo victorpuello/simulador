@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
 
@@ -29,24 +29,8 @@ interface Props {
 const PreguntaFilters: React.FC<Props> = ({ filtros, onChange }) => {
   const [materias, setMaterias] = useState<Materia[]>([]);
   const [competencias, setCompetencias] = useState<Competencia[]>([]);
-  const [loading, setLoading] = useState(false);
 
-  // Cargar materias al montar
-  useEffect(() => {
-    cargarMaterias();
-  }, []);
-
-  // Cargar competencias cuando cambie la materia
-  useEffect(() => {
-    if (filtros.materia) {
-      cargarCompetencias(filtros.materia);
-    } else {
-      setCompetencias([]);
-      onChange({ competencia: '' });
-    }
-  }, [filtros.materia]);
-
-  const cargarMaterias = async () => {
+  const cargarMaterias = useCallback(async () => {
     try {
       const token = localStorage.getItem('access_token');
       const response = await fetch('/api/core/materias/', {
@@ -68,9 +52,9 @@ const PreguntaFilters: React.FC<Props> = ({ filtros, onChange }) => {
       console.error('Error al cargar materias:', error);
       setMaterias([]);
     }
-  };
+  }, []);
 
-  const cargarCompetencias = async (materiaId: string) => {
+  const cargarCompetencias = useCallback(async (materiaId: string) => {
     try {
       const token = localStorage.getItem('access_token');
       const response = await fetch(`/api/core/competencias/?materia=${materiaId}`, {
@@ -92,7 +76,22 @@ const PreguntaFilters: React.FC<Props> = ({ filtros, onChange }) => {
       console.error('Error al cargar competencias:', error);
       setCompetencias([]);
     }
-  };
+  }, []);
+
+  // Cargar materias al montar
+  useEffect(() => {
+    cargarMaterias();
+  }, [cargarMaterias]);
+
+  // Cargar competencias cuando cambie la materia
+  useEffect(() => {
+    if (filtros.materia) {
+      cargarCompetencias(filtros.materia);
+    } else {
+      setCompetencias([]);
+      onChange({ competencia: '' });
+    }
+  }, [filtros.materia, cargarCompetencias, onChange]);
 
   const limpiarFiltros = () => {
     onChange({

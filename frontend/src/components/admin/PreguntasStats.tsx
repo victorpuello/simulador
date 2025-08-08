@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Card from '../ui/Card';
 import LoadingSpinner from '../ui/LoadingSpinner';
 import { useNotifications } from '../../store';
@@ -34,11 +34,7 @@ const PreguntasStats: React.FC = () => {
   const [estadisticas, setEstadisticas] = useState<EstadisticasCompletas | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    cargarEstadisticas();
-  }, []);
-
-  const cargarEstadisticas = async () => {
+  const cargarEstadisticas = useCallback(async () => {
     setLoading(true);
     try {
       const token = localStorage.getItem('access_token');
@@ -55,17 +51,22 @@ const PreguntasStats: React.FC = () => {
       const data = await response.json();
       setEstadisticas(data);
 
-    } catch (error: any) {
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : 'Error al cargar estadísticas';
       addNotification({
         type: 'error',
         title: 'Error',
-        message: error.message || 'Error al cargar estadísticas',
+        message,
         duration: 5000,
       });
     } finally {
       setLoading(false);
     }
-  };
+  }, [addNotification]);
+
+  useEffect(() => {
+    cargarEstadisticas();
+  }, [cargarEstadisticas]);
 
   const getDificultadLabel = (dificultad: string) => {
     switch (dificultad) {

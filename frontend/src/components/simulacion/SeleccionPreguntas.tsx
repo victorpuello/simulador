@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import type { Pregunta } from '../../types';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
@@ -16,11 +16,7 @@ const SeleccionPreguntas: React.FC<Props> = ({ materiaId, onSeleccionarPreguntas
   const [preguntasSeleccionadas, setPreguntasSeleccionadas] = useState<Set<number>>(new Set());
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    cargarPreguntas();
-  }, [materiaId]);
-
-  const cargarPreguntas = async () => {
+  const cargarPreguntas = useCallback(async () => {
     try {
       setLoading(true);
       const token = localStorage.getItem('access_token');
@@ -54,7 +50,11 @@ const SeleccionPreguntas: React.FC<Props> = ({ materiaId, onSeleccionarPreguntas
     } finally {
       setLoading(false);
     }
-  };
+  }, [addNotification, materiaId]);
+
+  useEffect(() => {
+    cargarPreguntas();
+  }, [materiaId, cargarPreguntas]);
 
   const togglePregunta = (preguntaId: number) => {
     const nuevasSeleccionadas = new Set(preguntasSeleccionadas);

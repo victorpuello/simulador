@@ -37,7 +37,7 @@ export const mockLogin = (username: string, password: string) => {
   );
   
   if (user) {
-    const { password: _password, ...userWithoutPassword } = user;
+    const { password: _omitPw, ...userWithoutPassword } = user; // eslint-disable-line @typescript-eslint/no-unused-vars
     return Promise.resolve({
       access: 'mock-access-token-' + Date.now(),
       refresh: 'mock-refresh-token-' + Date.now(),

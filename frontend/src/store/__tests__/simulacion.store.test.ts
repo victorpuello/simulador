@@ -29,7 +29,7 @@ vi.mock('../../services/api', () => ({
 describe('store/simulacion', () => {
   beforeEach(() => {
     // resetear localStorage mock
-    (window.localStorage.setItem as any).mockClear?.();
+    (window.localStorage.setItem as unknown as { mockClear?: () => void }).mockClear?.();
   });
 
   it('inicia sesión y carga preguntas', async () => {

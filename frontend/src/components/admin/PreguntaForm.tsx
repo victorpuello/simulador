@@ -315,7 +315,8 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
 
 
     } catch (error: unknown) {
-      const message = (error as any)?.response?.data?.detail || (error instanceof Error ? error.message : 'Error al guardar la pregunta');
+      const apiErr = error as { response?: { data?: { detail?: string } } };
+      const message = apiErr.response?.data?.detail || (error instanceof Error ? error.message : 'Error al guardar la pregunta');
       addNotification({
         type: 'error',
         title: 'Error',

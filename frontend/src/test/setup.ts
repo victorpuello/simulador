@@ -74,7 +74,8 @@ global.console = {
 };
 
 // Mock de window.location
-delete (window as any).location;
+// @ts-expect-error test env override
+delete (window as unknown as { location?: unknown }).location;
 window.location = {
   ...window.location,
   href: 'http://localhost:3000',
@@ -87,8 +88,8 @@ window.location = {
 // Mock de navigator
 Object.defineProperty(window.navigator, 'clipboard', {
   value: {
-    writeText: vi.fn(() => Promise.resolve()),
-    readText: vi.fn(() => Promise.resolve('')),
+    writeText: vi.fn(async () => undefined),
+    readText: vi.fn(async () => ''),
   },
 });
 

@@ -47,9 +47,7 @@ const DashboardPage: React.FC = () => {
         ]);
         setDocenteResumen(res);
         setDocenteMaterias(mats);
-      } finally {
-        /* noop */
-      }
+      } catch { /* noop */ }
     };
     cargarDocente();
   }, [user?.rol]);
@@ -66,7 +64,7 @@ const DashboardPage: React.FC = () => {
         setEstadisticas(gen);
         setEstadisticasMaterias(mats);
         setHistorialReciente(hist);
-      } catch {}
+      } catch { /* noop */ }
     };
     cargarEstudiante();
   }, [user?.rol]);

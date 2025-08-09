@@ -226,7 +226,7 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
           timestamp: Date.now(),
         })
       );
-    } catch {}
+      } catch { /* noop */ }
     set({ pausada: true });
   },
 
@@ -240,7 +240,7 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
         }
       }
       localStorage.removeItem('simulacion-pausa');
-    } catch {}
+    } catch { /* noop */ }
     set({ pausada: false });
   },
 

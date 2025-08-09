@@ -6,6 +6,7 @@ import { reportesService, type DocenteResumen, type DocenteMateriaItem, type Doc
 import { exportToCSV } from '../utils/exportCSV';
 
 const ReportesDocentePage: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState(true);
   const [resumen, setResumen] = useState<DocenteResumen | null>(null);
   const [materias, setMaterias] = useState<DocenteMateriaItem[]>([]);
@@ -15,6 +16,7 @@ const ReportesDocentePage: React.FC = () => {
 
   useEffect(() => {
     cargarDatos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

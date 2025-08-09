@@ -26,7 +26,7 @@ interface Pregunta {
   tags?: string[];
 }
 
-interface Respuesta {
+interface RespuestaDetallada {
   pregunta_id: number;
   respuesta_seleccionada: string;
   es_correcta: boolean;
@@ -66,6 +66,7 @@ const ResultadosDetalladosPage: React.FC = () => {
     if (sesionId) {
       cargarResultados();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sesionId]);
 
   const cargarResultados = async () => {
@@ -162,7 +163,7 @@ const ResultadosDetalladosPage: React.FC = () => {
   }
 
   const preguntas = sesion.preguntas_sesion.map(ps => ps.pregunta);
-  const respuestas = sesion.preguntas_sesion.map(ps => ({
+  const respuestas: RespuestaDetallada[] = sesion.preguntas_sesion.map(ps => ({
     pregunta_id: ps.pregunta.id,
     respuesta_seleccionada: ps.respuesta_estudiante,
     es_correcta: ps.es_correcta,

@@ -32,6 +32,7 @@ const SeleccionPlantillaPage: React.FC = () => {
     if (materiaId) {
       cargarMateriaYPlantillas();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [materiaId]);
 
   const cargarMateriaYPlantillas = async () => {

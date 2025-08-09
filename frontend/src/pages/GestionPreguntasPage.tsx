@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { Navigate } from 'react-router-dom';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import LoadingSpinner from '../components/ui/LoadingSpinner';
+// import Card from '../components/ui/Card';
+// import Button from '../components/ui/Button';
+// import LoadingSpinner from '../components/ui/LoadingSpinner';
 import { useNotifications } from '../store';
 import PreguntasList from '../components/admin/PreguntasList';
 import PreguntaFilters from '../components/admin/PreguntaFilters';

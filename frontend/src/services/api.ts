@@ -79,7 +79,7 @@ const createApiInstance = (): AxiosInstance => {
       return response;
     },
     async (error: unknown) => {
-      const err = error as { config?: any; response?: { status?: number; data?: any }; message?: string };
+      const err = error as { config?: Record<string, unknown>; response?: { status?: number; data?: Record<string, unknown> }; message?: string };
       console.error('Error en respuesta:', {
         url: err.config?.url,
         method: err.config?.method,
@@ -90,7 +90,7 @@ const createApiInstance = (): AxiosInstance => {
         detail: err.response?.data?.detail || err.response?.data?.error
       });
 
-      const originalRequest = err.config || {};
+      const originalRequest = (err.config || {}) as Record<string, unknown> & { _retry?: boolean; headers?: Record<string, unknown> };
 
       // Si el error es 401 y no hemos intentado refrescar el token
       if (err.response?.status === 401 && !originalRequest._retry) {
@@ -107,10 +107,11 @@ const createApiInstance = (): AxiosInstance => {
             localStorage.setItem('access_token', access);
 
             // Reintentar la petición original con el nuevo token
-            originalRequest.headers.Authorization = `Bearer ${access}`;
+            if (!originalRequest.headers) originalRequest.headers = {};
+            (originalRequest.headers as Record<string, string>).Authorization = `Bearer ${access}`;
             return instance(originalRequest);
           }
-        } catch (refreshError) {
+        } catch {
           // Si el refresh token también falla, hacer logout
           useAppStore.getState().logout();
           localStorage.removeItem('access_token');

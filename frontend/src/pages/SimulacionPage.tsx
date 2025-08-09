@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth, useNotifications } from '../store';
+import { useNotifications } from '../store';
 import MateriaCard from '../components/simulacion/MateriaCard';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
 import { simulacionService } from '../services/api';
@@ -78,15 +78,15 @@ const SimulacionPage: React.FC = () => {
 
       // Cargar simulaciones completadas
       const response = await simulacionService.getSesiones();
-      const sesionesData = response.results || response;
-      const sesiones = Array.isArray(sesionesData) ? sesionesData : [];
+      const sesionesData = (response as unknown as { results?: unknown[] }).results || (response as unknown as unknown[]);
+      const sesiones: Array<{ completada: boolean; materia: { id: number }; preguntas_sesion?: unknown[]; puntuacion: number }> = Array.isArray(sesionesData) ? sesionesData as Array<{ completada: boolean; materia: { id: number }; preguntas_sesion?: unknown[]; puntuacion: number }> : [];
       
       const simulaciones = sesiones
-        .filter((s: any) => s.completada)
-        .map((s: any) => ({
+        .filter((s) => s.completada)
+        .map((s) => ({
           materia_id: s.materia.id,
-          total_preguntas: s.preguntas_sesion?.length || 0,
-          mejor_puntaje: s.preguntas_sesion?.length > 0 ? (s.puntuacion / s.preguntas_sesion.length) * 100 : 0
+          total_preguntas: Array.isArray(s.preguntas_sesion) ? s.preguntas_sesion.length : 0,
+          mejor_puntaje: Array.isArray(s.preguntas_sesion) && s.preguntas_sesion.length > 0 ? (s.puntuacion / s.preguntas_sesion.length) * 100 : 0
         }));
       setSimulacionesCompletadas(simulaciones);
     } catch (error) {

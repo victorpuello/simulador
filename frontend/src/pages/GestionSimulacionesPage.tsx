@@ -11,11 +11,11 @@ const GestionSimulacionesPage: React.FC = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { addNotification } = useNotifications();
-  const [simulacionesCreadas, setSimulacionesCreadas] = useState<any[]>([]);
+  const [simulacionesCreadas, setSimulacionesCreadas] = useState<Array<{ id: number; titulo?: string; materia_nombre?: string; descripcion?: string; preguntas_especificas: unknown[]; cantidad_preguntas: number; activa: boolean; fecha_creacion: string }>>([]);
   const [loading, setLoading] = useState(false);
   const [previewData, setPreviewData] = useState<{
     isOpen: boolean;
-    preguntas: any[];
+    preguntas: Array<Record<string, unknown>>;
     titulo: string;
   }>({
     isOpen: false,
@@ -29,7 +29,7 @@ const GestionSimulacionesPage: React.FC = () => {
       return;
     }
     cargarSimulaciones();
-  }, []);
+  }, [navigate, user?.rol]);
 
   const cargarSimulaciones = async () => {
     try {
@@ -87,7 +87,7 @@ const GestionSimulacionesPage: React.FC = () => {
     }
   };
 
-  const handleToggleActiva = async (simulacionId: number, estadoActual: boolean) => {
+  const handleToggleActiva = async (simulacionId: number) => {
     try {
       const token = localStorage.getItem('access_token');
       const response = await fetch(`/api/simulacion/plantillas/${simulacionId}/toggle_activa/`, {

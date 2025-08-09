@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { Navigate } from 'react-router-dom';
 // import Card from '../components/ui/Card';
@@ -50,6 +50,8 @@ type Vista = 'lista' | 'crear' | 'editar' | 'estadisticas' | 'carga-masiva';
 const GestionPreguntasPage: React.FC = () => {
   const { user } = useAuth();
   const { addNotification } = useNotifications();
+  const addNotifRef = useRef(addNotification);
+  useEffect(() => { addNotifRef.current = addNotification; }, [addNotification]);
   
   // Estados principales
   const [vista, setVista] = useState<Vista>('lista');
@@ -73,7 +75,7 @@ const GestionPreguntasPage: React.FC = () => {
   // Nota: no retornar antes de declarar hooks. Validación de permisos al renderizar
 
   // Cargar preguntas
-  const cargarPreguntas = async (pageNum: number = 1) => {
+  const cargarPreguntas = useCallback(async (pageNum: number = 1) => {
     setLoading(true);
     try {
       const params = new URLSearchParams({
@@ -112,10 +114,10 @@ const GestionPreguntasPage: React.FC = () => {
       setPreguntas(data.results);
       setTotalPages(Math.ceil(data.count / itemsPerPage));
       setTotalItems(data.count);
-      setPage(pageNum);
+      setPage((prev) => (prev === pageNum ? prev : pageNum));
 
-    } catch (error: unknown) {
-      addNotification({
+      } catch (error: unknown) {
+      addNotifRef.current({
         type: 'error',
         title: 'Error',
         message: (error as { message?: string }).message || 'Error al cargar preguntas',
@@ -124,23 +126,36 @@ const GestionPreguntasPage: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [filtros]);
 
   // Cargar preguntas al montar y cuando cambien filtros
   useEffect(() => {
     cargarPreguntas(1);
-  }, [filtros]);
+  }, [cargarPreguntas]);
 
   // Manejar cambios de filtros
-  const handleFiltrosChange = (nuevosFiltros: Partial<Filtros>) => {
-    setFiltros(prev => ({ ...prev, ...nuevosFiltros }));
-    setPage(1);
-  };
+  const handleFiltrosChange = useCallback((nuevosFiltros: Partial<Filtros>) => {
+    setFiltros((prev) => {
+      const next: Filtros = { ...prev, ...nuevosFiltros } as Filtros;
+      const noChange =
+        next.materia === prev.materia &&
+        next.competencia === prev.competencia &&
+        next.dificultad === prev.dificultad &&
+        next.busqueda === prev.busqueda &&
+        next.mostrar_inactivas === prev.mostrar_inactivas;
+      if (noChange) {
+        return prev;
+      }
+      // Resetear a página 1 solo si cambió algún filtro
+      setPage(1);
+      return next;
+    });
+  }, []);
 
   // Manejar cambio de página
-  const handlePageChange = (newPage: number) => {
+  const handlePageChange = useCallback((newPage: number) => {
     cargarPreguntas(newPage);
-  };
+  }, [cargarPreguntas]);
 
   // Eliminar pregunta
   const handleEliminarPregunta = async (id: number) => {

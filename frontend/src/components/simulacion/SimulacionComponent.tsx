@@ -96,6 +96,7 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({
       // Limpiar errores al desmontar
       setError(null);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [materiaIdFinal]);
 
   // Manejar errores
@@ -108,7 +109,7 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({
         duration: 5000
       });
     }
-  }, [error]);
+  }, [error, addNotification]);
 
   // Controlar tiempo restante
   useEffect(() => {

@@ -83,15 +83,21 @@ const PreguntaFilters: React.FC<Props> = ({ filtros, onChange }) => {
     cargarMaterias();
   }, [cargarMaterias]);
 
-  // Cargar competencias cuando cambie la materia
+  // Cargar competencias cuando cambie la materia (solo fetch)
   useEffect(() => {
     if (filtros.materia) {
       cargarCompetencias(filtros.materia);
-    } else {
-      setCompetencias([]);
-      onChange({ competencia: '' });
     }
-  }, [filtros.materia, cargarCompetencias, onChange]);
+  }, [filtros.materia, cargarCompetencias]);
+
+  // Cuando se limpia la materia, limpiar competencias y filtro de competencia una sola vez
+  useEffect(() => {
+    if (!filtros.materia) {
+      if (competencias.length > 0) setCompetencias([]);
+      if (filtros.competencia) onChange({ competencia: '' });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filtros.materia]);
 
   const limpiarFiltros = () => {
     onChange({

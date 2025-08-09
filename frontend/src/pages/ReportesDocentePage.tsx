@@ -21,6 +21,7 @@ const ReportesDocentePage: React.FC = () => {
 
   useEffect(() => {
     cargarPreguntas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [materiaFiltro]);
 
   const cargarDatos = async () => {

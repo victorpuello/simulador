@@ -328,7 +328,7 @@ const SimulacionActiva: React.FC = () => {
                   checked={retroInmediata}
                   onChange={(e) => {
                     setRetroInmediata(e.target.checked);
-                    try { localStorage.setItem('simulacion-retro-inmediata', String(e.target.checked)); } catch {}
+                    try { localStorage.setItem('simulacion-retro-inmediata', String(e.target.checked)); } catch { /* noop */ }
                   }}
                 />
                 Retro. inmediata

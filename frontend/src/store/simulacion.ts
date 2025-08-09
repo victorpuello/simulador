@@ -141,7 +141,6 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
     try {
       const pregunta = preguntasActuales[preguntaActualIndex];
       const params = {
-        pregunta_id: pregunta.id,
         respuesta,
         tiempo_respuesta: pregunta.tiempo_estimado || 0,
       } as Record<string, unknown>;

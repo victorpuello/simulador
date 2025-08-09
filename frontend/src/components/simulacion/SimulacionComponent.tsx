@@ -62,12 +62,16 @@ const SimulacionComponent: React.FC<SimulacionComponentProps> = ({
   // Estado local
   const [respuestaSeleccionada, setRespuestaSeleccionada] = useState<string | null>(null);
   const [mostrandoRetroalimentacion, setMostrandoRetroalimentacion] = useState(false);
-  const [ultimaRespuesta, setUltimaRespuesta] = useState<any>(null);
+  const [ultimaRespuesta, setUltimaRespuesta] = useState<{
+    es_correcta: boolean;
+    respuesta_correcta?: string;
+    retroalimentacion?: string;
+  } | null>(null);
   const [tiempoRestante, setTiempoRestante] = useState<number>(0);
   
   // Estado para modal de confirmación de sesión
   const [mostrarModalSesion, setMostrarModalSesion] = useState(false);
-  const [sesionActivaDetalle, setSesionActivaDetalle] = useState<any>(null);
+  const [sesionActivaDetalle, setSesionActivaDetalle] = useState<{ id: number } | null>(null);
   const [accionPendiente, setAccionPendiente] = useState<{materia: number; cantidad_preguntas?: number; plantilla?: number} | null>(null);
 
   // Obtener materia ID y plantilla ID de params si no se pasan como props

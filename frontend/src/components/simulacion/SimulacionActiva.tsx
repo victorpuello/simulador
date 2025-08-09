@@ -46,11 +46,7 @@ const SimulacionActiva: React.FC = () => {
   } = useSimulacionAcciones();
   
   // Estadísticas
-  const {
-    respuestasCorrectas,
-    totalRespuestas,
-    porcentajeAcierto
-  } = useSimulacionEstadisticas();
+  const { respuestasCorrectas, totalRespuestas, porcentajeAcierto } = useSimulacionEstadisticas();
 
   // Estado local
   const [respuestaSeleccionada, setRespuestaSeleccionada] = useState<string | null>(null);
@@ -101,7 +97,7 @@ const SimulacionActiva: React.FC = () => {
             }
           }
          } catch { /* noop */ }
-      }).catch(error => {
+      }).catch((error) => {
         console.error('Error al cargar sesión:', error);
         addNotification({
           type: 'error',

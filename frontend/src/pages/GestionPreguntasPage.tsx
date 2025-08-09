@@ -70,10 +70,7 @@ const GestionPreguntasPage: React.FC = () => {
     mostrar_inactivas: false
   });
 
-  // Verificar permisos
-  if (!user || !['docente', 'admin'].includes(user.rol) && !user.is_staff) {
-    return <Navigate to="/dashboard" replace />;
-  }
+  // Nota: no retornar antes de declarar hooks. Validación de permisos al renderizar
 
   // Cargar preguntas
   const cargarPreguntas = async (pageNum: number = 1) => {
@@ -117,11 +114,11 @@ const GestionPreguntasPage: React.FC = () => {
       setTotalItems(data.count);
       setPage(pageNum);
 
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error',
-        message: error.message || 'Error al cargar preguntas',
+        message: (error as { message?: string }).message || 'Error al cargar preguntas',
         duration: 5000,
       });
     } finally {
@@ -169,11 +166,11 @@ const GestionPreguntasPage: React.FC = () => {
         duration: 3000,
       });
 
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error',
-        message: error.message || 'Error al eliminar pregunta',
+        message: (error as { message?: string }).message || 'Error al eliminar pregunta',
         duration: 5000,
       });
     }
@@ -204,11 +201,11 @@ const GestionPreguntasPage: React.FC = () => {
         duration: 3000,
       });
 
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error',
-        message: error.message || 'Error al duplicar pregunta',
+        message: (error as { message?: string }).message || 'Error al duplicar pregunta',
         duration: 5000,
       });
     }
@@ -225,14 +222,14 @@ const GestionPreguntasPage: React.FC = () => {
               onChange={handleFiltrosChange}
             />
             
-            <PreguntasList
+             <PreguntasList
               preguntas={preguntas}
               loading={loading}
               currentPage={page}
               totalPages={totalPages}
               totalItems={totalItems}
               itemsPerPage={itemsPerPage}
-                             onEditar={async (pregunta) => {
+                             onEditar={async (pregunta: Pregunta) => {
                  try {
                    // Obtener la pregunta completa con objetos de materia y competencia
                    const token = localStorage.getItem('access_token');
@@ -250,11 +247,11 @@ const GestionPreguntasPage: React.FC = () => {
                    } else {
                      throw new Error('Error al cargar la pregunta para editar');
                    }
-                 } catch (error: any) {
+                 } catch (error: unknown) {
                    addNotification({
                      type: 'error',
                      title: 'Error',
-                     message: error.message || 'Error al cargar la pregunta para editar',
+                     message: (error as { message?: string }).message || 'Error al cargar la pregunta para editar',
                      duration: 5000,
                    });
                  }
@@ -320,6 +317,9 @@ const GestionPreguntasPage: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-6">
+      {(!user || (!['docente', 'admin'].includes(user.rol) && !user.is_staff)) && (
+        <Navigate to="/dashboard" replace />
+      )}
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">

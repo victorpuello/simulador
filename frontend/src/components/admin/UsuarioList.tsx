@@ -35,7 +35,8 @@ type Usuario = {
   racha_actual: number;
   puntos_totales: number;
   avatar?: string;
-  configuracion?: any;
+  configuracion?: Record<string, unknown>;
+  is_staff?: boolean;
 };
 
 type UsuarioFilters = {

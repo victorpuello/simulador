@@ -79,7 +79,7 @@ const createApiInstance = (): AxiosInstance => {
       return response;
     },
     async (error: unknown) => {
-      const err = error as any;
+      const err = error as { config?: any; response?: { status?: number; data?: any }; message?: string };
       console.error('Error en respuesta:', {
         url: err.config?.url,
         method: err.config?.method,
@@ -150,13 +150,13 @@ export class ApiException extends Error {
 
 // Función para manejar errores de axios
 export const handleApiError = (error: unknown): ApiException => {
-  const err = error as { response?: { data?: any; status: number }; request?: unknown };
+  const err = error as { response?: { data?: Record<string, unknown>; status: number }; request?: unknown };
   if (err.response) {
     const { data, status } = err.response;
     return new ApiException(
-      data.message || data.detail || 'Error en la petición',
+      (data?.message as string) || (data?.detail as string) || 'Error en la petición',
       status,
-      data.errors
+      data?.errors as Record<string, string[]> | undefined
     );
   } else if (err.request) {
     return new ApiException('Error de conexión', 0);

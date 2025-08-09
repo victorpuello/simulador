@@ -605,7 +605,7 @@ const SimulacionActiva: React.FC = () => {
                 {!preguntaYaRespondida ? (
                   <Button
                     variant="primary"
-                    onClick={handleResponder}
+                    onClick={() => handleResponder()}
                     disabled={!respuestaSeleccionada || loading || pausada}
                   >
                     {loading ? 'Guardando...' : 'Responder'}

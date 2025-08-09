@@ -12,10 +12,10 @@ const createApiInstance = (): AxiosInstance => {
   const baseURL = isDev ? '/api' : (configuredBaseUrl || 'http://127.0.0.1:8000/api');
 
   // Log inicial de baseURL seleccionada
-  try {
-    // eslint-disable-next-line no-console
-    console.info('[API] baseURL seleccionada:', baseURL, 'isDev:', isDev, 'VITE_API_URL:', configuredBaseUrl);
-  } catch { /* noop */ }
+  // Log inicial controlado (solo en dev)
+  if (isDev) {
+    try { console.info('[API] baseURL:', String(baseURL)); } catch { /* noop */ }
+  }
 
   const instance = axios.create({
     // Usar proxy de Vite en dev; en prod permite override por VITE_API_URL
@@ -27,7 +27,7 @@ const createApiInstance = (): AxiosInstance => {
     // JWT en Authorization header, no usamos cookies en dev → evitar preflight estrictos por credenciales
     withCredentials: false,
     transformRequest: [(data, headers) => {
-      console.log('Transformando request:', { data, headers });
+      // No loguear data para evitar objetos circulares
       // Si es FormData, no transformar y quitar Content-Type para que axios lo maneje
       if (data instanceof FormData) {
         if (headers) {
@@ -36,7 +36,12 @@ const createApiInstance = (): AxiosInstance => {
         return data;
       }
       // Para datos normales, convertir a JSON
-      return JSON.stringify(data);
+      try {
+        return JSON.stringify(data);
+      } catch {
+        // Evitar crash si llega un objeto con referencias circulares (p.ej., eventos del DOM)
+        return data as string;
+      }
     }],
   });
 
@@ -49,16 +54,7 @@ const createApiInstance = (): AxiosInstance => {
       }
       
       // Log de la configuración final
-      console.log('Configuración final de la petición:', {
-        url: config.url,
-        baseURL: config.baseURL,
-        resolved: (() => {
-      try { return new URL(config.url || '', config.baseURL || baseURL).toString(); } catch { return 'n/a'; }
-        })(),
-        method: config.method,
-        headers: config.headers,
-        data: config.data instanceof FormData ? 'FormData' : config.data
-      });
+      // Reducir ruido: no loguear config completa
       
       return config;
     },
@@ -79,16 +75,19 @@ const createApiInstance = (): AxiosInstance => {
       return response;
     },
     async (error: unknown) => {
-      const err = error as { config?: Record<string, unknown>; response?: { status?: number; data?: Record<string, unknown> }; message?: string };
-      console.error('Error en respuesta:', {
+      const err = error as { config?: Record<string, unknown>; response?: { status?: number; data?: Record<string, unknown> }; message?: string; code?: string; request?: unknown };
+      if (isDev) {
+        console.error('Error en respuesta (parsed):', {
         url: err.config?.url,
         method: err.config?.method,
         status: err.response?.status,
         data: err.response?.data,
         headers: err.config?.headers,
         error: err.message,
+        code: err.code,
         detail: err.response?.data?.detail || err.response?.data?.error
-      });
+        });
+      }
 
       const originalRequest = (err.config || {}) as Record<string, unknown> & { _retry?: boolean; headers?: Record<string, unknown> };
 
@@ -181,6 +180,16 @@ export const apiPost = async <T>(url: string, data?: unknown, config?: AxiosRequ
     const response = await api.post<T>(url, data, config);
     return response.data;
   } catch (error) {
+    if (import.meta && (import.meta as unknown as { env?: Record<string, unknown> }).env?.DEV) {
+      try {
+        const base = (api.defaults?.baseURL || '') as string;
+        console.error('[apiPost] fallo POST', {
+          url,
+          base,
+          resolved: (() => { try { return new URL(url, base).toString(); } catch { return 'n/a'; } })(),
+        });
+      } catch { /* noop */ }
+    }
     throw handleApiError(error);
   }
 };

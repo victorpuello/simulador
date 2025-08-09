@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { 
   useSimulacionEstado, 
@@ -67,6 +67,7 @@ const SimulacionActiva: React.FC = () => {
   const [mostrarConfirmSalir, setMostrarConfirmSalir] = useState(false);
   const [mostrarImagen, setMostrarImagen] = useState(false);
   const [mostrarIndice, setMostrarIndice] = useState(false);
+  const respondiendoRef = useRef(false);
 
   // Pregunta actual
   const preguntaActual = preguntasActuales[preguntaActualIndex];
@@ -145,6 +146,7 @@ const SimulacionActiva: React.FC = () => {
     };
 
     const onKeyDown = (e: KeyboardEvent) => {
+      if (e.repeat) return; // evitar autorepeat al mantener la tecla
       if (isEditableTarget(e.target)) return; // No interferir con campos de entrada
 
       // Mapeo numérico 1-5 a opciones A-E (según orden en objeto)
@@ -244,8 +246,11 @@ const SimulacionActiva: React.FC = () => {
   const handleResponder = async (respuesta?: string) => {
     const seleccion = respuesta ?? respuestaSeleccionada;
     if (!seleccion || !preguntaActual) return;
+    if (respondiendoRef.current) return;
+    if (mostrandoRetroalimentacion || preguntaYaRespondida) return;
 
     try {
+      respondiendoRef.current = true;
       await responderPregunta(seleccion);
       // Limpiar borrador de esa pregunta
       try {
@@ -288,6 +293,8 @@ const SimulacionActiva: React.FC = () => {
         message: 'No se pudo registrar la respuesta. Intenta nuevamente.',
         duration: 5000
       });
+    } finally {
+      respondiendoRef.current = false;
     }
   };
 

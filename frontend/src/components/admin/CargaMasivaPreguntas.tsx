@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import type { AxiosError } from 'axios';
 import { useAuth } from '../../hooks/useAuth';
 import Button from '../ui/Button';
 import Card from '../ui/Card';
@@ -27,7 +28,7 @@ const CargaMasivaPreguntas: React.FC = () => {
   const [mostrarDetalles, setMostrarDetalles] = useState(false);
 
   // Verificar permisos
-  if (!user || !['docente', 'admin'].includes(user.rol) && !user.is_staff) {
+  if (!user || (!['docente', 'admin'].includes(user.rol) && !user.is_staff)) {
     return (
       <Card title="Acceso Restringido">
         <p className="text-gray-600">
@@ -77,11 +78,11 @@ const CargaMasivaPreguntas: React.FC = () => {
         message: 'La plantilla se ha descargado correctamente',
         duration: 3000,
       });
-    } catch (error) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error',
-        message: 'No se pudo descargar la plantilla',
+        message: error instanceof Error ? error.message : 'No se pudo descargar la plantilla',
         duration: 5000,
       });
     }
@@ -114,11 +115,11 @@ const CargaMasivaPreguntas: React.FC = () => {
         message: `${data.exitosas} preguntas cargadas exitosamente${data.errores > 0 ? `, ${data.errores} errores` : ''}`,
         duration: 5000,
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error en la carga',
-        message: error.response?.data?.detail || error.message || 'Error desconocido',
+        message: (error as AxiosError<{ detail?: string }>)?.response?.data?.detail || (error instanceof Error ? error.message : 'Error desconocido'),
         duration: 5000,
       });
     } finally {

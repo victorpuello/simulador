@@ -21,7 +21,7 @@ type Usuario = {
   racha_actual: number;
   puntos_totales: number;
   avatar?: string;
-  configuracion?: any;
+  configuracion?: Record<string, unknown>;
 };
 
 type Vista = 'lista' | 'crear' | 'editar' | 'estadisticas';
@@ -29,6 +29,8 @@ type Vista = 'lista' | 'crear' | 'editar' | 'estadisticas';
 const GestionUsuariosPage: React.FC = () => {
   const { user } = useAuth();
   const [vista, setVista] = useState<Vista>('lista');
+  // Nota: estado reservado para futura vista de detalle
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState<Usuario | null>(null);
   const [usuarioEditando, setUsuarioEditando] = useState<Usuario | null>(null);
 
@@ -36,7 +38,7 @@ const GestionUsuariosPage: React.FC = () => {
   console.log('GestionUsuariosPage - Vista actual:', vista);
   console.log('GestionUsuariosPage - UsuarioEditando:', usuarioEditando);
   console.log('GestionUsuariosPage - Usuario:', user);
-  console.log('GestionUsuariosPage - Puede crear usuarios:', user?.rol === 'admin' || user?.is_staff);
+  console.log('GestionUsuariosPage - Puede crear usuarios:', user?.rol === 'admin' || !!user?.is_staff);
 
   // Verificar permisos
   if (!user) {
@@ -59,7 +61,8 @@ const GestionUsuariosPage: React.FC = () => {
     console.log('Ver usuario:', usuario);
   };
 
-  const handleSave = (usuario: Usuario) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const handleSave = (_usuario: Usuario) => {
     setUsuarioEditando(null);
     setVista('lista');
     // Recargar la lista

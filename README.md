@@ -1,6 +1,6 @@
 # 🎯 Simulador Pruebas Saber 11
 
-Una plataforma web integral para la preparación de las Pruebas Saber 11, diseñada para estudiantes y docentes con funcionalidades gamificadas y análisis avanzado de rendimiento.
+Plataforma web integral para la preparación de las Pruebas Saber 11, para estudiantes y docentes, con funcionalidades de simulación, gamificación y reportes.
 
 ## 🚀 Características Principales
 
@@ -54,7 +54,7 @@ simulador-saber-11/
 └── README.md
 ```
 
-## 🛠️ Instalación y Desarrollo
+## 🛠️ Instalación y Desarrollo (Local)
 
 ### Prerrequisitos
 - Python 3.11+
@@ -76,9 +76,9 @@ docker-compose up -d
 ```
 
 3. **Acceder a la aplicación**
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- Admin Django: http://localhost:8000/admin
+- Frontend (Vite): `http://localhost:5173` (o el puerto que indique Vite)
+- Backend API (Django): `http://127.0.0.1:8000`
+- Admin Django: `http://127.0.0.1:8000/admin`
 
 ### Desarrollo Local
 
@@ -99,6 +99,23 @@ npm install
 npm run dev
 ```
 
+Notas importantes Frontend:
+- En desarrollo, las llamadas a la API usan el proxy de Vite con baseURL `/api` y se redirigen a `http://127.0.0.1:8000`.
+- Para builds/preview, define `VITE_API_URL` (ver Variables de entorno).
+- El Service Worker (PWA) solo se registra en producción. En desarrollo se desregistra y limpia caches para evitar interferir con peticiones a `/api`.
+
+Variables de entorno Frontend:
+- Copia `frontend/env.local.example` a `frontend/.env.local` y ajusta según tu entorno.
+- Para build/preview local:
+```powershell
+# PowerShell
+$env:VITE_API_URL = "http://127.0.0.1:8000/api"; npm run build; npm run preview
+```
+```bash
+# bash/zsh
+VITE_API_URL=http://127.0.0.1:8000/api npm run build && npm run preview
+```
+
 ## 🧪 Testing
 
 ### Backend
@@ -110,7 +127,9 @@ pytest
 ### Frontend
 ```bash
 cd frontend
-npm test
+npm run lint
+npm run typecheck
+npm run test:coverage
 ```
 
 ### E2E
@@ -175,6 +194,18 @@ git push origin main
 
 Ver [DEPLOYMENT-GUIDE.md](DEPLOYMENT-GUIDE.md) para instrucciones detalladas.
 
+## ⚙️ CI/CD
+
+- Workflow de GitHub Actions para frontend en `.github/workflows/frontend-ci.yml`:
+  - Instala dependencias, ejecuta ESLint, `tsc -b`, tests con cobertura (`vitest`) y build (`vite build`).
+  - Sube artefactos de cobertura y resultados JUnit.
+
+## 🧩 Solución de problemas
+
+- Ves peticiones apuntando a una IP local (p.ej. `192.168.x.x`)? Asegúrate de no tener `.env` con `VITE_API_URL` incorrecto. En desarrollo debe usarse el proxy `/api` (sin definir `VITE_API_URL`).
+- Error con Service Worker en desarrollo: Vite desregistra el SW automáticamente; si persiste, borra storage/caches del sitio y recarga.
+- CORS en desarrollo: usa `http://127.0.0.1:8000` para backend y el proxy de Vite para evitar problemas.
+
 ## 📞 Contacto
 
 - **Desarrollador**: [Tu Nombre]
@@ -183,4 +214,4 @@ Ver [DEPLOYMENT-GUIDE.md](DEPLOYMENT-GUIDE.md) para instrucciones detalladas.
 
 ---
 
-*Desarrollado con ❤️ para mejorar la educación en Colombia* 
+*Desarrollado con ❤️ para mejorar la educación en Colombia*

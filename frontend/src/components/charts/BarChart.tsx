@@ -62,13 +62,13 @@ const BarChart: React.FC<BarChartProps> = ({
       [horizontal ? 'x' : 'y']: {
         beginAtZero: true,
         ticks: {
-          callback: function(value: any) {
-            return value + '%';
+          callback: function(value: number | string) {
+            return String(value) + '%';
           }
         }
       },
     },
-  };
+  } as const;
 
   return (
     <div style={{ height: `${height}px` }}>

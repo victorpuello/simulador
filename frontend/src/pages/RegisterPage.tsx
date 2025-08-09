@@ -50,9 +50,10 @@ const RegisterPage: React.FC = () => {
 
     try {
       await register(formData);
-    } catch (error: any) {
-      if (error.errors) {
-        setErrors(error.errors);
+    } catch (error: unknown) {
+      const err = error as { errors?: Record<string, string> };
+      if (err.errors) {
+        setErrors(err.errors);
       }
     }
   };

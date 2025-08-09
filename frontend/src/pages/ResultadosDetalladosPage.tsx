@@ -7,6 +7,7 @@ import { simulacionService } from '../services/api';
 import { useNotifications } from '../store';
 import RevisionGuiadaModal from '../components/simulacion/RevisionGuiadaModal';
 import { exportarResultadosPDF } from '../utils/exportPDF';
+import { exportToCSV } from '../utils/exportCSV';
 
 interface Pregunta {
   id: number;
@@ -21,9 +22,11 @@ interface Pregunta {
   };
   respuesta_correcta: string;
   materia_nombre: string;
+  competencia_nombre?: string;
+  tags?: string[];
 }
 
-interface Respuesta {
+interface RespuestaDetallada {
   pregunta_id: number;
   respuesta_seleccionada: string;
   es_correcta: boolean;
@@ -63,6 +66,7 @@ const ResultadosDetalladosPage: React.FC = () => {
     if (sesionId) {
       cargarResultados();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sesionId]);
 
   const cargarResultados = async () => {
@@ -94,6 +98,37 @@ const ResultadosDetalladosPage: React.FC = () => {
       fecha: sesion?.fecha_fin ? new Date(sesion.fecha_fin).toLocaleString() : undefined,
       puntaje,
     });
+  };
+
+  const exportarCSV = () => {
+    const rows = sesion?.preguntas_sesion.map((ps, idx) => ({
+      numero: idx + 1,
+      materia: ps.pregunta.materia_nombre,
+      competencia: ps.pregunta.competencia_nombre || '',
+      enunciado: ps.pregunta.enunciado,
+      respuesta_correcta: ps.pregunta.respuesta_correcta,
+      respuesta_estudiante: ps.respuesta_estudiante,
+      es_correcta: ps.es_correcta ? 'Sí' : 'No',
+      tiempo_respuesta_seg: ps.tiempo_respuesta ?? 0,
+    })) || [];
+    const fechaStr = sesion?.fecha_fin ? new Date(sesion.fecha_fin).toISOString().slice(0, 10) : 'sin-fecha';
+    exportToCSV(rows, `resultados_${sesion?.materia.nombre_display || 'materia'}_${fechaStr}.csv`);
+  };
+
+  const exportarCompetenciasCSV = () => {
+    if (!sesion) return;
+    const compStats = calcularCompetencias();
+    const rows = compStats.map((c) => ({
+      materia: sesion.materia.nombre_display,
+      competencia: c.nombre,
+      total_preguntas: c.total,
+      correctas: c.correctas,
+      incorrectas: c.incorrectas,
+      porcentaje_acierto: c.acierto,
+      tiempo_promedio_seg: c.total > 0 ? Math.round(c.tiempoSum / c.total) : 0,
+    }));
+    const fechaStr = sesion?.fecha_fin ? new Date(sesion.fecha_fin).toISOString().slice(0, 10) : 'sin-fecha';
+    exportToCSV(rows, `competencias_${sesion?.materia.nombre_display || 'materia'}_${fechaStr}.csv`);
   };
 
   if (loading) {
@@ -128,7 +163,7 @@ const ResultadosDetalladosPage: React.FC = () => {
   }
 
   const preguntas = sesion.preguntas_sesion.map(ps => ps.pregunta);
-  const respuestas = sesion.preguntas_sesion.map(ps => ({
+  const respuestas: RespuestaDetallada[] = sesion.preguntas_sesion.map(ps => ({
     pregunta_id: ps.pregunta.id,
     respuesta_seleccionada: ps.respuesta_estudiante,
     es_correcta: ps.es_correcta,
@@ -146,6 +181,50 @@ const ResultadosDetalladosPage: React.FC = () => {
       respuesta
     };
   });
+
+  const calcularCompetencias = () => {
+    const mapa = new Map<string, { nombre: string; total: number; correctas: number; incorrectas: number; acierto: number; tiempoSum: number }>();
+    sesion.preguntas_sesion.forEach((ps) => {
+      const nombre = ps.pregunta.competencia_nombre || 'General';
+      const prev = mapa.get(nombre) || { nombre, total: 0, correctas: 0, incorrectas: 0, acierto: 0, tiempoSum: 0 };
+      prev.total += 1;
+      prev.correctas += ps.es_correcta ? 1 : 0;
+      prev.incorrectas += ps.es_correcta ? 0 : 1;
+      prev.tiempoSum += ps.tiempo_respuesta || 0;
+      mapa.set(nombre, prev);
+    });
+    const lista = Array.from(mapa.values()).map((c) => ({
+      ...c,
+      acierto: c.total > 0 ? Math.round((c.correctas / c.total) * 100) : 0,
+    }));
+    return lista.sort((a, b) => a.acierto - b.acierto);
+  };
+
+  const competencias = calcularCompetencias();
+
+  const recomendaciones = competencias
+    .filter((c) => c.acierto < 60)
+    .slice(0, 3)
+    .map((c) => {
+      // tags más frecuentes en fallos
+      const tagsCount: Record<string, number> = {};
+      sesion.preguntas_sesion.forEach((ps) => {
+        const nombre = ps.pregunta.competencia_nombre || 'General';
+        if (nombre === c.nombre && !ps.es_correcta && Array.isArray(ps.pregunta.tags)) {
+          ps.pregunta.tags.forEach((t) => {
+            tagsCount[t] = (tagsCount[t] || 0) + 1;
+          });
+        }
+      });
+      const topTags = Object.entries(tagsCount)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3)
+        .map(([t]) => t);
+      return {
+        competencia: c.nombre,
+        sugerencias: topTags.length > 0 ? topTags : undefined,
+      };
+    });
 
   // Filtrar según la opción seleccionada
   const resultadosFiltrados = resultados.filter(({ respuesta }) => {
@@ -182,6 +261,12 @@ const ResultadosDetalladosPage: React.FC = () => {
             <p className="text-lg sm:text-xl text-gray-600">Tu puntuación</p>
             <p className="text-sm text-gray-500 mt-2">
               {sesion.materia.nombre_display} • {new Date(sesion.fecha_fin).toLocaleDateString()}
+            </p>
+            {/* Tiempo total aproximado (suma por pregunta) */}
+            <p className="text-xs text-gray-500 mt-1">
+              Tiempo total: {
+                (sesion.preguntas_sesion.reduce((acc, ps) => acc + (ps.tiempo_respuesta || 0), 0) / 60).toFixed(1)
+              } min
             </p>
           </div>
           
@@ -220,6 +305,18 @@ const ResultadosDetalladosPage: React.FC = () => {
               Exportar PDF
             </button>
             <button
+              onClick={exportarCSV}
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Exportar CSV
+            </button>
+            <button
+              onClick={exportarCompetenciasCSV}
+              className="bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              CSV (competencias)
+            </button>
+            <button
               onClick={handleVolverDashboard}
               className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
@@ -227,6 +324,51 @@ const ResultadosDetalladosPage: React.FC = () => {
             </button>
           </div>
         </Card>
+
+        {/* Resumen por competencias */}
+        <Card className="mb-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Resumen por competencias</h3>
+          <div className="overflow-x-auto">
+            <div className="min-w-[640px] divide-y divide-gray-200">
+              <div className="grid grid-cols-6 gap-2 py-2 text-xs font-medium text-gray-500 uppercase">
+                <div className="col-span-2">Competencia</div>
+                <div>Total</div>
+                <div>Correctas</div>
+                <div>Acierto</div>
+                <div>t.prom (s)</div>
+              </div>
+              {competencias.map((c) => (
+                <div key={c.nombre} className="grid grid-cols-6 gap-2 py-2 items-center">
+                  <div className="col-span-2 text-gray-900">{c.nombre}</div>
+                  <div className="text-gray-700">{c.total}</div>
+                  <div className="text-green-700">{c.correctas}</div>
+                  <div className={c.acierto < 60 ? 'text-red-600 font-semibold' : c.acierto < 80 ? 'text-yellow-600 font-semibold' : 'text-green-700 font-semibold'}>
+                    {c.acierto}%
+                  </div>
+                  <div className="text-gray-700">{c.total > 0 ? Math.round(c.tiempoSum / c.total) : 0}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Card>
+
+        {/* Recomendaciones */}
+        {recomendaciones.length > 0 && (
+          <Card className="mb-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Recomendaciones</h3>
+            <p className="text-sm text-gray-600 mb-4">Enfócate en las competencias con menor porcentaje de acierto.</p>
+            <ul className="space-y-2">
+              {recomendaciones.map((r) => (
+                <li key={r.competencia} className="text-sm text-gray-800">
+                  <span className="font-medium">{r.competencia}:</span>{' '}
+                  {r.sugerencias && r.sugerencias.length > 0
+                    ? <>repasar <span className="italic">{r.sugerencias.join(', ')}</span>.</>
+                    : 'practicar ejercicios adicionales.'}
+                </li>
+              ))}
+            </ul>
+          </Card>
+        )}
 
         {/* Filtros */}
         <Card className="mb-6">

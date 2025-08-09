@@ -11,8 +11,9 @@ export interface User {
   puntos_totales: number;
   avatar?: string;
   ultima_practica?: string;
-  configuracion: Record<string, any>;
+  configuracion: Record<string, unknown>;
   date_joined: string;
+  is_staff?: boolean;
 }
 
 // Tipos de autenticación
@@ -75,6 +76,9 @@ export interface Pregunta {
   enunciado: string;
   opciones: Record<string, string>;
   respuesta_correcta?: string;
+  retroalimentacion_estructurada?: string;
+  explicacion_opciones_incorrectas?: string;
+  imagen_url?: string | null;
   retroalimentacion?: string;
   explicacion?: string;
   dificultad: 'facil' | 'media' | 'dificil';
@@ -136,7 +140,7 @@ export interface Clase {
   codigo_inscripcion: string;
   fecha_creacion: string;
   activa: boolean;
-  configuracion: Record<string, any>;
+  configuracion: Record<string, unknown>;
   estudiantes_count: number;
 }
 
@@ -163,7 +167,7 @@ export interface Insignia {
   descripcion: string;
   icono: string;
   color: string;
-  criterio: Record<string, any>;
+  criterio: Record<string, unknown>;
   puntos: number;
   rara: boolean;
 }
@@ -176,7 +180,7 @@ export interface LogroUsuario {
   insignia_icono: string;
   insignia_color: string;
   fecha_obtenido: string;
-  contexto: Record<string, any>;
+  contexto: Record<string, unknown>;
 }
 
 // Tipos de estadísticas
@@ -279,7 +283,7 @@ export interface AppState {
 // Tipos de acciones
 export interface AppAction {
   type: string;
-  payload?: any;
+  payload?: unknown;
 }
 
 // Tipos de hooks
@@ -302,7 +306,7 @@ export interface UseApiReturn<T> {
 
 // Tipos de componentes
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'outline' | 'ghost' | 'danger';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   loading?: boolean;

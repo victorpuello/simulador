@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { simulacionService } from '../../services/api';
 import { useNotifications } from '../../store';
@@ -27,11 +27,7 @@ const SesionesActivas: React.FC = () => {
   const [mostrarModal, setMostrarModal] = useState(false);
   const [sesionSeleccionada, setSesionSeleccionada] = useState<SesionActiva | null>(null);
 
-  useEffect(() => {
-    cargarSesionesActivas();
-  }, []);
-
-  const cargarSesionesActivas = async () => {
+  const cargarSesionesActivas = useCallback(async () => {
     try {
       setLoading(true);
       const response = await simulacionService.verificarSesionActiva();
@@ -52,7 +48,11 @@ const SesionesActivas: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [addNotification]);
+
+  useEffect(() => {
+    cargarSesionesActivas();
+  }, [cargarSesionesActivas]);
 
   const handleContinuarSesion = (sesion: SesionActiva) => {
     setSesionSeleccionada(sesion);

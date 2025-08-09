@@ -54,32 +54,32 @@ const SimulacionProgress: React.FC = () => {
         if (!mounted) return;
         
         // La respuesta puede ser directa o paginada
-        const sesionesData = response.results || response;
-        const sesiones = Array.isArray(sesionesData) ? sesionesData : [];
+        const sesionesData = (response as unknown as { results?: unknown[] }).results || (response as unknown as unknown[]);
+        const sesiones: Array<{ completada: boolean; puntuacion: number; preguntas_sesion?: Array<unknown> }> = Array.isArray(sesionesData) ? sesionesData as Array<{ completada: boolean; puntuacion: number; preguntas_sesion?: Array<unknown> }> : [];
         
         console.log('📊 Sesiones procesadas:', sesiones);
         
-        const sesionEnCurso = sesiones.find((s: any) => !s.completada);
+        const sesionEnCurso = sesiones.find((s) => !s.completada) as SesionActiva | undefined;
         setSesionActiva(sesionEnCurso || null);
 
         // Calcular estadísticas
         if (sesiones.length > 0) {
           const totalSesiones = sesiones.length;
-          const completadas = sesiones.filter((s: any) => s.completada);
+          const completadas = sesiones.filter((s) => s.completada);
           const promedioPuntuacion = completadas.length > 0 
-            ? completadas.reduce((acc: number, s: any) => {
+            ? completadas.reduce((acc: number, s) => {
                 const totalPreguntas = s.preguntas_sesion?.length || 1;
                 return acc + (s.puntuacion / totalPreguntas * 100);
               }, 0) / completadas.length
             : 0;
           const mejorPuntuacion = completadas.length > 0
-            ? Math.max(...completadas.map((s: any) => {
+            ? Math.max(...completadas.map((s) => {
                 const totalPreguntas = s.preguntas_sesion?.length || 1;
                 return s.puntuacion / totalPreguntas * 100;
               }))
             : 0;
 
-          const stats = {
+          const stats: EstadisticasSimulacion = {
             total_sesiones: totalSesiones,
             sesiones_completadas: completadas.length,
             promedio_puntuacion: promedioPuntuacion,
@@ -113,7 +113,7 @@ const SimulacionProgress: React.FC = () => {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [user?.username, user?.rol]);
 
 
 

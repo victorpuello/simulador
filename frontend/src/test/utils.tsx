@@ -1,3 +1,4 @@
+/* eslint react-refresh/only-export-components: "off" */
 // Testing utilities for React components
 import React from "react";
 import { render, RenderOptions } from "@testing-library/react";

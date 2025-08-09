@@ -11,7 +11,7 @@ interface RespuestaUsuario {
 
 interface SimulacionState {
   // Estado
-  sesionActual: any;
+  sesionActual: Record<string, unknown> | null;
   preguntasActuales: Pregunta[];
   respuestasActuales: RespuestaUsuario[];
   preguntaActualIndex: number;
@@ -63,19 +63,19 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
   iniciarSesion: async (params: { materia: number; cantidad_preguntas?: number; plantilla?: number; forzar_reinicio?: boolean }) => {
     set({ loading: true, error: null });
     try {
-      const sesion = await simulacionService.crearSesion(params);
+      const sesion = await simulacionService.crearSesion(params) as unknown as { preguntas_sesion: Array<{ pregunta: Pregunta }>; id: number };
       
       set({
         sesionActual: sesion,
-        preguntasActuales: sesion.preguntas_sesion.map((ps: any) => ps.pregunta),
+        preguntasActuales: sesion.preguntas_sesion.map((ps) => ps.pregunta),
         respuestasActuales: [],
         preguntaActualIndex: 0,
         sesionCompletada: false,
         loading: false
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       set({ 
-        error: error.message || 'Error al iniciar la simulación',
+        error: (error as { message?: string }).message || 'Error al iniciar la simulación',
         loading: false 
       });
       throw error; // Re-lanzar el error para manejarlo en el componente
@@ -105,9 +105,9 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
         porcentajeAcierto: respuestasExistentes.length > 0 ? (correctas / respuestasExistentes.length) * 100 : 0,
         loading: false
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       set({ 
-        error: error.message || 'Error al cargar la simulación',
+        error: (error as { message?: string }).message || 'Error al cargar la simulación',
         loading: false 
       });
       throw error;
@@ -125,9 +125,9 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
         sesionCompletada: true,
         loading: false
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       set({ 
-        error: error.message || 'Error al finalizar la simulación',
+        error: (error as { message?: string }).message || 'Error al finalizar la simulación',
         loading: false 
       });
     }
@@ -151,8 +151,8 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
 
       // Sincronizar respuestas desde backend para evitar discrepancias
       const respuestasServidor: RespuestaUsuario[] = (sesionActualizada.preguntas_sesion || [])
-        .filter((ps: any) => ps.respuesta_estudiante != null)
-        .map((ps: any) => ({
+        .filter((ps: { respuesta_estudiante?: string | null }) => ps.respuesta_estudiante != null)
+        .map((ps: { pregunta: { id: number }; respuesta_estudiante: string; es_correcta?: boolean; tiempo_respuesta?: number }) => ({
           pregunta: ps.pregunta.id,
           respuesta: ps.respuesta_estudiante,
           es_correcta: !!ps.es_correcta,
@@ -172,9 +172,22 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
         porcentajeAcierto: totalResp > 0 ? (correctas / totalResp) * 100 : 0,
         loading: false
       });
-    } catch (error: any) {
+
+      // Autosave local simple de progreso (pregunta y respuestas)
+      try {
+        localStorage.setItem(
+          'simulacion-autosave',
+          JSON.stringify({
+            sesionId: sesionActual.id,
+            preguntaIndex: preguntaActualIndex,
+            respuestas: respuestasServidor,
+            updatedAt: Date.now()
+          })
+        );
+      } catch { /* noop */ }
+    } catch (error: unknown) {
       set({ 
-        error: error.message || 'Error al registrar la respuesta',
+        error: (error as { message?: string }).message || 'Error al registrar la respuesta',
         loading: false 
       });
     }
@@ -202,10 +215,32 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
   },
 
   pausarSimulacion: () => {
+    const state = get();
+    // Persistir estado mínimo para reanudar
+    try {
+      localStorage.setItem(
+        'simulacion-pausa',
+        JSON.stringify({
+          sesionId: state.sesionActual?.id,
+          preguntaIndex: state.preguntaActualIndex,
+          timestamp: Date.now(),
+        })
+      );
+      } catch { /* noop */ }
     set({ pausada: true });
   },
 
   reanudarSimulacion: () => {
+    try {
+      const raw = localStorage.getItem('simulacion-pausa');
+      if (raw) {
+        const data = JSON.parse(raw);
+        if (typeof data?.preguntaIndex === 'number') {
+          set({ preguntaActualIndex: data.preguntaIndex });
+        }
+      }
+      localStorage.removeItem('simulacion-pausa');
+    } catch { /* noop */ }
     set({ pausada: false });
   },
 

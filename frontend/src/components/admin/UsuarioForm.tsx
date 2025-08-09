@@ -23,7 +23,7 @@ type Usuario = {
   racha_actual: number;
   puntos_totales: number;
   avatar?: string;
-  configuracion?: any;
+  configuracion?: Record<string, unknown>;
 };
 
 type UsuarioCreate = {
@@ -47,7 +47,7 @@ type UsuarioUpdate = {
   password?: string;
   password_confirm?: string;
   avatar?: string;
-  configuracion?: any;
+  configuracion?: Record<string, unknown>;
 };
 
 interface UsuarioFormProps {
@@ -116,7 +116,7 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
     }
   }, [usuario, mode]);
 
-  const handleInputChange = (field: string, value: any) => {
+  const handleInputChange = (field: keyof (UsuarioCreate & UsuarioUpdate), value: string | boolean) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -211,31 +211,37 @@ const UsuarioForm: React.FC<UsuarioFormProps> = ({
       }
 
       onSave?.(result);
-    } catch (error: any) {
+  } catch (error: unknown) {
       console.error('Error guardando usuario:', error);
       console.error('Datos enviados:', formData);
       
       let errorMessage = 'Error al guardar el usuario';
-      if (error.response?.data) {
-        const data = error.response.data;
+      const err = error as { response?: { data?: unknown } };
+      if (err.response?.data) {
+        const data = err.response.data as Record<string, unknown>;
         console.error('Respuesta del servidor:', data);
         
         if (typeof data === 'string') {
-          errorMessage = data;
-        } else if (data.detail) {
-          errorMessage = data.detail;
+          errorMessage = data as string;
+        } else if (typeof (data.detail) === 'string') {
+          errorMessage = data.detail as string;
         } else if (data.username) {
-          errorMessage = `Usuario: ${Array.isArray(data.username) ? data.username.join(', ') : data.username}`;
+          const v = data.username as unknown;
+          errorMessage = `Usuario: ${Array.isArray(v) ? (v as string[]).join(', ') : String(v)}`;
         } else if (data.email) {
-          errorMessage = `Email: ${Array.isArray(data.email) ? data.email.join(', ') : data.email}`;
+          const v = data.email as unknown;
+          errorMessage = `Email: ${Array.isArray(v) ? (v as string[]).join(', ') : String(v)}`;
         } else if (data.password) {
-          errorMessage = `Contraseña: ${Array.isArray(data.password) ? data.password.join(', ') : data.password}`;
+          const v = data.password as unknown;
+          errorMessage = `Contraseña: ${Array.isArray(v) ? (v as string[]).join(', ') : String(v)}`;
         } else if (data.non_field_errors) {
-          errorMessage = Array.isArray(data.non_field_errors) ? data.non_field_errors.join(', ') : data.non_field_errors;
+          const v = data.non_field_errors as unknown;
+          errorMessage = Array.isArray(v) ? (v as string[]).join(', ') : String(v);
         } else {
           // Mostrar todos los errores de validación
-          const errors = Object.entries(data).map(([field, messages]) => {
-            const message = Array.isArray(messages) ? messages.join(', ') : messages;
+          const entries = Object.entries(data);
+          const errors = entries.map(([field, messages]) => {
+            const message = Array.isArray(messages) ? (messages as unknown[]).join(', ') : String(messages);
             return `${field}: ${message}`;
           }).join('; ');
           errorMessage = errors || errorMessage;

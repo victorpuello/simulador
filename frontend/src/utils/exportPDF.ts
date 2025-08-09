@@ -66,7 +66,7 @@ export function exportarResultadosPDF(
       4: { cellWidth: 80 },
       5: { cellWidth: 60 },
     },
-    didDrawPage: (data) => {
+    didDrawPage: () => {
       // Footer con página
       const pageSize = doc.internal.pageSize;
       const pageHeight = pageSize.height ? pageSize.height : pageSize.getHeight();

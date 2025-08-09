@@ -16,7 +16,7 @@ export interface Usuario {
   racha_actual: number;
   puntos_totales: number;
   avatar?: string;
-  configuracion?: any;
+  configuracion?: Record<string, unknown>;
 }
 
 export interface UsuarioCreate {
@@ -40,7 +40,7 @@ export interface UsuarioUpdate {
   password?: string;
   password_confirm?: string;
   avatar?: string;
-  configuracion?: any;
+  configuracion?: Record<string, unknown>;
 }
 
 export interface UsuarioStats {
@@ -157,7 +157,7 @@ export const usuariosService = {
   },
 
   // Exportar usuarios
-  async exportUsuarios(formato: 'json' | 'csv' = 'json'): Promise<any> {
+  async exportUsuarios(formato: 'json' | 'csv' = 'json'): Promise<unknown> {
     const response = await api.get('/usuarios/usuarios/exportar/', {
       params: { formato }
     });

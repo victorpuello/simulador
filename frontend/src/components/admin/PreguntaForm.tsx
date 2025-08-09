@@ -60,7 +60,25 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
 
   // Estado del formulario
-  const [formData, setFormData] = useState({
+  type FormDataState = {
+    materia: string;
+    competencia: string;
+    contexto: string;
+    enunciado: string;
+    opciones: { A: string; B: string; C: string; D: string };
+    respuesta_correcta: 'A' | 'B' | 'C' | 'D';
+    retroalimentacion: string;
+    explicacion: string;
+    habilidad_evaluada: string;
+    explicacion_opciones_incorrectas: { A: string; B: string; C: string; D: string };
+    estrategias_resolucion: string;
+    errores_comunes: string;
+    dificultad: 'facil' | 'media' | 'dificil';
+    tiempo_estimado: number;
+    tags: string;
+  };
+
+  const [formData, setFormData] = useState<FormDataState>({
     materia: '',
     competencia: '',
     contexto: '',
@@ -75,15 +93,10 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
     retroalimentacion: '',
     explicacion: '',
     habilidad_evaluada: '',
-    explicacion_opciones_incorrectas: {
-      A: '',
-      B: '',
-      C: '',
-      D: ''
-    },
+    explicacion_opciones_incorrectas: { A: '', B: '', C: '', D: '' },
     estrategias_resolucion: '',
     errores_comunes: '',
-    dificultad: 'media' as 'facil' | 'media' | 'dificil',
+    dificultad: 'media',
     tiempo_estimado: 90,
     tags: ''
   });
@@ -99,7 +112,7 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
   useEffect(() => {
     if (pregunta) {
       const materiaId = pregunta.materia?.id?.toString() || '';
-      const competenciaId = (pregunta.competencia as any)?.id?.toString() || '';
+      const competenciaId = (pregunta.competencia as { id?: number } | undefined)?.id?.toString() || '';
       
       console.log('Actualizando formulario con pregunta:', {
         materiaId,
@@ -152,7 +165,7 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
   // Establecer competencia cuando se carguen las competencias y haya una competencia guardada
   useEffect(() => {
     if (competencias.length > 0 && pregunta && pregunta.competencia) {
-      const competenciaId = (pregunta.competencia as any)?.id?.toString() || '';
+      const competenciaId = (pregunta.competencia as { id?: number } | undefined)?.id?.toString() || '';
       if (competenciaId && formData.competencia !== competenciaId) {
         console.log('Estableciendo competencia:', competenciaId, 'de competencias disponibles:', competencias);
         setFormData(prev => ({ ...prev, competencia: competenciaId }));
@@ -287,9 +300,9 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
       }
 
       // Log de los datos que se enviarán
-      const formDataEntries: Record<string, any> = {};
+      const formDataEntries: Record<string, string> = {};
       for (const [key, value] of formDataToSend.entries()) {
-        formDataEntries[key] = value instanceof File ? `File: ${value.name}` : value;
+        formDataEntries[key] = value instanceof File ? `File: ${value.name}` : String(value);
       }
       console.log('FormData a enviar:', formDataEntries);
       
@@ -301,11 +314,13 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
 
 
 
-    } catch (error: any) {
+    } catch (error: unknown) {
+      const apiErr = error as { response?: { data?: { detail?: string } } };
+      const message = apiErr.response?.data?.detail || (error instanceof Error ? error.message : 'Error al guardar la pregunta');
       addNotification({
         type: 'error',
         title: 'Error',
-        message: error.response?.data?.detail || error.message || 'Error al guardar la pregunta',
+        message,
         duration: 5000,
       });
     } finally {
@@ -313,15 +328,15 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
     }
   };
 
-  const handleInputChange = (field: string, value: any) => {
+  const handleInputChange = <K extends keyof FormDataState>(field: K, value: FormDataState[K]) => {
     // Normalizar dificultad si es necesario
-    const normalizedValue = field === 'dificultad' ? normalizarDificultad(value) : value;
+    const normalizedValue = field === 'dificultad' && typeof value === 'string' ? normalizarDificultad(value) : value;
     
     setFormData(prev => ({ ...prev, [field]: normalizedValue }));
     
     // Limpiar error si existe
-    if (errores[field]) {
-      setErrores(prev => ({ ...prev, [field]: '' }));
+    if (errores[String(field)]) {
+      setErrores(prev => ({ ...prev, [String(field)]: '' }));
     }
   };
 
@@ -345,7 +360,7 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
     }
   };
 
-  const handleOpcionChange = (letra: string, valor: string) => {
+  const handleOpcionChange = (letra: 'A' | 'B' | 'C' | 'D', valor: string) => {
     setFormData(prev => ({
       ...prev,
       opciones: { ...prev.opciones, [letra]: valor }
@@ -481,11 +496,11 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
                     </label>
                   </div>
                   <div className="flex-1">
-                                         <Input
+                <Input
                        type="text" 
                        name={`opcion_${letra}`}
                        value={formData.opciones[letra as keyof typeof formData.opciones]}
-                       onChange={(value) => handleOpcionChange(letra, value)}
+                  onChange={(value) => handleOpcionChange(letra as 'A'|'B'|'C'|'D', value)}
                        placeholder={`Opción ${letra}`}
                        className={`w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 ${errores[`opcion_${letra}`] ? 'border-red-300' : ''}`}
                        required
@@ -613,7 +628,7 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
                     </label>
                   </div>
                   <div className="flex-1">
-                                         <Input
+                <Input
                        type="text"
                        name={`explicacion_${letra}`}
                        value={formData.explicacion_opciones_incorrectas[letra as keyof typeof formData.explicacion_opciones_incorrectas]}

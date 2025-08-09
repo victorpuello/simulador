@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { Navigate } from 'react-router-dom';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import LoadingSpinner from '../components/ui/LoadingSpinner';
+// import Card from '../components/ui/Card';
+// import Button from '../components/ui/Button';
+// import LoadingSpinner from '../components/ui/LoadingSpinner';
 import { useNotifications } from '../store';
 import PreguntasList from '../components/admin/PreguntasList';
 import PreguntaFilters from '../components/admin/PreguntaFilters';
@@ -50,6 +50,8 @@ type Vista = 'lista' | 'crear' | 'editar' | 'estadisticas' | 'carga-masiva';
 const GestionPreguntasPage: React.FC = () => {
   const { user } = useAuth();
   const { addNotification } = useNotifications();
+  const addNotifRef = useRef(addNotification);
+  useEffect(() => { addNotifRef.current = addNotification; }, [addNotification]);
   
   // Estados principales
   const [vista, setVista] = useState<Vista>('lista');
@@ -70,13 +72,10 @@ const GestionPreguntasPage: React.FC = () => {
     mostrar_inactivas: false
   });
 
-  // Verificar permisos
-  if (!user || !['docente', 'admin'].includes(user.rol) && !user.is_staff) {
-    return <Navigate to="/dashboard" replace />;
-  }
+  // Nota: no retornar antes de declarar hooks. Validación de permisos al renderizar
 
   // Cargar preguntas
-  const cargarPreguntas = async (pageNum: number = 1) => {
+  const cargarPreguntas = useCallback(async (pageNum: number = 1) => {
     setLoading(true);
     try {
       const params = new URLSearchParams({
@@ -115,35 +114,48 @@ const GestionPreguntasPage: React.FC = () => {
       setPreguntas(data.results);
       setTotalPages(Math.ceil(data.count / itemsPerPage));
       setTotalItems(data.count);
-      setPage(pageNum);
+      setPage((prev) => (prev === pageNum ? prev : pageNum));
 
-    } catch (error: any) {
-      addNotification({
+      } catch (error: unknown) {
+      addNotifRef.current({
         type: 'error',
         title: 'Error',
-        message: error.message || 'Error al cargar preguntas',
+        message: (error as { message?: string }).message || 'Error al cargar preguntas',
         duration: 5000,
       });
     } finally {
       setLoading(false);
     }
-  };
+  }, [filtros]);
 
   // Cargar preguntas al montar y cuando cambien filtros
   useEffect(() => {
     cargarPreguntas(1);
-  }, [filtros]);
+  }, [cargarPreguntas]);
 
   // Manejar cambios de filtros
-  const handleFiltrosChange = (nuevosFiltros: Partial<Filtros>) => {
-    setFiltros(prev => ({ ...prev, ...nuevosFiltros }));
-    setPage(1);
-  };
+  const handleFiltrosChange = useCallback((nuevosFiltros: Partial<Filtros>) => {
+    setFiltros((prev) => {
+      const next: Filtros = { ...prev, ...nuevosFiltros } as Filtros;
+      const noChange =
+        next.materia === prev.materia &&
+        next.competencia === prev.competencia &&
+        next.dificultad === prev.dificultad &&
+        next.busqueda === prev.busqueda &&
+        next.mostrar_inactivas === prev.mostrar_inactivas;
+      if (noChange) {
+        return prev;
+      }
+      // Resetear a página 1 solo si cambió algún filtro
+      setPage(1);
+      return next;
+    });
+  }, []);
 
   // Manejar cambio de página
-  const handlePageChange = (newPage: number) => {
+  const handlePageChange = useCallback((newPage: number) => {
     cargarPreguntas(newPage);
-  };
+  }, [cargarPreguntas]);
 
   // Eliminar pregunta
   const handleEliminarPregunta = async (id: number) => {
@@ -169,11 +181,11 @@ const GestionPreguntasPage: React.FC = () => {
         duration: 3000,
       });
 
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error',
-        message: error.message || 'Error al eliminar pregunta',
+        message: (error as { message?: string }).message || 'Error al eliminar pregunta',
         duration: 5000,
       });
     }
@@ -204,11 +216,11 @@ const GestionPreguntasPage: React.FC = () => {
         duration: 3000,
       });
 
-    } catch (error: any) {
+    } catch (error: unknown) {
       addNotification({
         type: 'error',
         title: 'Error',
-        message: error.message || 'Error al duplicar pregunta',
+        message: (error as { message?: string }).message || 'Error al duplicar pregunta',
         duration: 5000,
       });
     }
@@ -225,14 +237,14 @@ const GestionPreguntasPage: React.FC = () => {
               onChange={handleFiltrosChange}
             />
             
-            <PreguntasList
+             <PreguntasList
               preguntas={preguntas}
               loading={loading}
               currentPage={page}
               totalPages={totalPages}
               totalItems={totalItems}
               itemsPerPage={itemsPerPage}
-                             onEditar={async (pregunta) => {
+                             onEditar={async (pregunta: Pregunta) => {
                  try {
                    // Obtener la pregunta completa con objetos de materia y competencia
                    const token = localStorage.getItem('access_token');
@@ -250,11 +262,11 @@ const GestionPreguntasPage: React.FC = () => {
                    } else {
                      throw new Error('Error al cargar la pregunta para editar');
                    }
-                 } catch (error: any) {
+                 } catch (error: unknown) {
                    addNotification({
                      type: 'error',
                      title: 'Error',
-                     message: error.message || 'Error al cargar la pregunta para editar',
+                     message: (error as { message?: string }).message || 'Error al cargar la pregunta para editar',
                      duration: 5000,
                    });
                  }
@@ -320,6 +332,9 @@ const GestionPreguntasPage: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-6">
+      {(!user || (!['docente', 'admin'].includes(user.rol) && !user.is_staff)) && (
+        <Navigate to="/dashboard" replace />
+      )}
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">

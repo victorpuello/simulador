@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { api } from '../../services/api';
 import { useNotifications } from '../../store';
 import Card from '../ui/Card';
@@ -49,11 +49,7 @@ const MetricasSesiones: React.FC = () => {
     { value: 90, label: 'Últimos 3 meses' },
   ];
 
-  useEffect(() => {
-    cargarMetricas();
-  }, [selectedPeriod]);
-
-  const cargarMetricas = async () => {
+  const cargarMetricas = useCallback(async () => {
     try {
       setLoading(true);
       const response = await api.get(`/simulacion/sesiones/metricas/?days=${selectedPeriod}`);
@@ -69,7 +65,11 @@ const MetricasSesiones: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [addNotification, selectedPeriod]);
+
+  useEffect(() => {
+    cargarMetricas();
+  }, [selectedPeriod, cargarMetricas]);
 
   const formatearFecha = (fechaString: string) => {
     const fecha = new Date(fechaString);

@@ -5,8 +5,6 @@ import {
   AcademicCapIcon, 
   ChartBarIcon, 
   UserIcon,
-  BookOpenIcon,
-  TrophyIcon,
   CogIcon,
   DocumentTextIcon,
   PresentationChartBarIcon
@@ -16,7 +14,7 @@ import { useAuth } from '../../hooks/useAuth';
 interface NavItem {
   name: string;
   href: string;
-  icon: any;
+  icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
   current: boolean;
   title?: string;
 }

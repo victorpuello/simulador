@@ -259,7 +259,7 @@ describe('Auth Store', () => {
 
   describe('Persistence', () => {
     it('persists user and authentication state', () => {
-      const persistKey = 'auth-storage';
+      const __persistKey = 'auth-storage'; // eslint-disable-line @typescript-eslint/no-unused-vars
       
       useAuthStore.setState({
         user: mockUser,

@@ -26,7 +26,6 @@ const SimulacionActiva: React.FC = () => {
     preguntasActuales,
     respuestasActuales,
     preguntaActualIndex,
-    sesionCompletada,
     loading,
     error,
     pausada,
@@ -46,16 +45,24 @@ const SimulacionActiva: React.FC = () => {
   } = useSimulacionAcciones();
   
   // Estadísticas
-  const {
-    respuestasCorrectas,
-    totalRespuestas,
-    porcentajeAcierto
-  } = useSimulacionEstadisticas();
+  const { respuestasCorrectas, totalRespuestas } = useSimulacionEstadisticas();
 
   // Estado local
   const [respuestaSeleccionada, setRespuestaSeleccionada] = useState<string | null>(null);
   const [mostrandoRetroalimentacion, setMostrandoRetroalimentacion] = useState(false);
-  const [ultimaRespuesta, setUltimaRespuesta] = useState<any>(null);
+  const [retroInmediata, setRetroInmediata] = useState<boolean>(
+    () => localStorage.getItem('simulacion-retro-inmediata') === 'true'
+  );
+  const [ultimaRespuesta, setUltimaRespuesta] = useState<{
+    seleccionada: string;
+    correcta: string | undefined;
+    esCorrecta: boolean;
+    retroalimentacion?: unknown;
+    retroalimentacionPlano?: string;
+    explicacionGeneral?: string;
+    explicacionIncorrectas?: unknown;
+  } | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [tiempoRestante, setTiempoRestante] = useState<number>(0);
   const [mostrarConfirmSalir, setMostrarConfirmSalir] = useState(false);
   const [mostrarImagen, setMostrarImagen] = useState(false);
@@ -72,7 +79,25 @@ const SimulacionActiva: React.FC = () => {
   // Cargar la sesión al montar el componente
   useEffect(() => {
     if (sesionId) {
-      cargarSesionExistente(sesionId).catch(error => {
+      cargarSesionExistente(sesionId).then(() => {
+        // Restaurar borrador local si existe para la pregunta actual
+        try {
+          const draftRaw = localStorage.getItem('simulacion-draft');
+          if (draftRaw) {
+            const draft = JSON.parse(draftRaw);
+            if (
+              draft?.sesionId === sesionId &&
+              typeof draft?.preguntaId === 'number' &&
+              typeof draft?.respuesta === 'string'
+            ) {
+              const p = preguntasActuales[preguntaActualIndex];
+              if (p && p.id === draft.preguntaId && !respuestasActuales.some(r => r.pregunta === p.id)) {
+                setRespuestaSeleccionada(draft.respuesta);
+              }
+            }
+          }
+         } catch { /* noop */ }
+      }).catch((error) => {
         console.error('Error al cargar sesión:', error);
         addNotification({
           type: 'error',
@@ -90,7 +115,7 @@ const SimulacionActiva: React.FC = () => {
     if (preguntaActual && !mostrandoRetroalimentacion && !preguntaYaRespondida && !pausada) {
       setTiempoRestante(preguntaActual.tiempo_estimado || 60);
       
-      const timer = setInterval(() => {
+       const timer = setInterval(() => {
         setTiempoRestante((prev) => {
           if (prev <= 1) {
             clearInterval(timer);
@@ -104,32 +129,23 @@ const SimulacionActiva: React.FC = () => {
     }
   }, [preguntaActual, mostrandoRetroalimentacion, preguntaYaRespondida, pausada]);
 
-  // Atajos de teclado: A/B/C/D para opciones y flechas para navegación
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (!preguntaActual || mostrandoRetroalimentacion) return;
-      if (pausada) return;
-      const key = e.key.toLowerCase();
-      if (["a","b","c","d"].includes(key)) {
-        const may = key.toUpperCase();
-        if (!preguntaYaRespondida) setRespuestaSeleccionada(may);
-      }
-      if (e.key === 'ArrowRight') {
-        handleSiguientePregunta();
-      }
-      if (e.key === 'ArrowLeft') {
-        handleAnteriorPregunta();
-      }
-    };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
-  }, [preguntaActual, mostrandoRetroalimentacion, preguntaYaRespondida, pausada]);
+  // (Opcional) Atajos de teclado desactivados para simplificar dependencias de hooks
 
   const handleResponder = async () => {
     if (!respuestaSeleccionada || !preguntaActual) return;
 
     try {
       await responderPregunta(respuestaSeleccionada);
+      // Limpiar borrador de esa pregunta
+      try {
+        const draftRaw = localStorage.getItem('simulacion-draft');
+        if (draftRaw) {
+          const draft = JSON.parse(draftRaw);
+          if (draft?.sesionId === sesionId && draft?.preguntaId === preguntaActual.id) {
+            localStorage.removeItem('simulacion-draft');
+          }
+        }
+          } catch { /* noop */ }
       
       // Mostrar retroalimentación
       setUltimaRespuesta({
@@ -141,7 +157,9 @@ const SimulacionActiva: React.FC = () => {
         explicacionGeneral: preguntaActual.explicacion,
         explicacionIncorrectas: preguntaActual.explicacion_opciones_incorrectas
       });
-      setMostrandoRetroalimentacion(true);
+      if (retroInmediata) {
+        setMostrandoRetroalimentacion(true);
+      }
       
       addNotification({
         type: respuestaSeleccionada === preguntaActual.respuesta_correcta ? 'success' : 'warning',
@@ -303,6 +321,18 @@ const SimulacionActiva: React.FC = () => {
               >
                 Índice
               </Button>
+              <label className="flex items-center gap-2 text-sm text-gray-600">
+                <input
+                  type="checkbox"
+                  className="rounded"
+                  checked={retroInmediata}
+                  onChange={(e) => {
+                    setRetroInmediata(e.target.checked);
+                    try { localStorage.setItem('simulacion-retro-inmediata', String(e.target.checked)); } catch { /* noop */ }
+                  }}
+                />
+                Retro. inmediata
+              </label>
               <Button
                 variant="outline"
                 size="sm"
@@ -330,10 +360,10 @@ const SimulacionActiva: React.FC = () => {
            <RetroalimentacionSimple
              esCorrecta={ultimaRespuesta.esCorrecta}
              respuestaSeleccionada={ultimaRespuesta.seleccionada}
-             respuestaCorrecta={preguntaActual.respuesta_correcta}
+             respuestaCorrecta={preguntaActual.respuesta_correcta || ''}
              opciones={preguntaActual.opciones}
-             retroEstructurada={preguntaActual.retroalimentacion_estructurada}
-             explicacionOpcionesIncorrectas={preguntaActual.explicacion_opciones_incorrectas}
+              retroEstructurada={preguntaActual.retroalimentacion_estructurada as unknown as Record<string, unknown>}
+              explicacionOpcionesIncorrectas={preguntaActual.explicacion_opciones_incorrectas as unknown as Record<string, unknown>}
              explicacionGeneral={ultimaRespuesta.explicacionGeneral}
              retroalimentacion={ultimaRespuesta.retroalimentacionPlano}
              onContinuar={handleSiguientePregunta}
@@ -403,7 +433,23 @@ const SimulacionActiva: React.FC = () => {
                 return (
                   <button
                     key={opcion}
-                    onClick={() => !preguntaYaRespondida && !pausada && setRespuestaSeleccionada(opcion)}
+                    onClick={() => {
+                      if (!preguntaYaRespondida && !pausada) {
+                        setRespuestaSeleccionada(opcion);
+                        // Guardar borrador local de respuesta
+                         try {
+                          localStorage.setItem(
+                            'simulacion-draft',
+                            JSON.stringify({
+                              sesionId,
+                              preguntaId: preguntaActual.id,
+                              respuesta: opcion,
+                              savedAt: Date.now()
+                            })
+                          );
+                         } catch { /* noop */ }
+                      }
+                    }}
                     disabled={preguntaYaRespondida || pausada}
                     className={`w-full text-left p-4 rounded-lg border-2 transition-all ${
                       preguntaYaRespondida
@@ -489,7 +535,7 @@ const SimulacionActiva: React.FC = () => {
         onClose={() => setMostrarIndice(false)}
         totalPreguntas={preguntasActuales.length}
         preguntaActualIndex={preguntaActualIndex}
-        respuestasActuales={respuestasActuales as any}
+         respuestasActuales={respuestasActuales as unknown as Array<{ pregunta: number; respuesta: string; es_correcta?: boolean }>} 
         preguntasIds={preguntasActuales.map(p => p.id)}
         onGoTo={(idx) => irAPregunta(idx)}
       />

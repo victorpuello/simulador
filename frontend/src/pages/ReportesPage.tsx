@@ -5,6 +5,7 @@ import BarChart from '../components/charts/BarChart';
 import DoughnutChart from '../components/charts/DoughnutChart';
 import ReporteICFES from '../components/reportes/ReporteICFES';
 import { reportesService, type EstadisticasGenerales, type EstadisticasMateria, type ProgresoDiario, type HistorialSesion, type ReporteICFES as ReporteICFESType } from '../services/reportes';
+import { exportToCSV } from '../utils/exportCSV';
 
 const ReportesPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -55,6 +56,40 @@ const ReportesPage: React.FC = () => {
       return `${horas}h ${mins}m`;
     }
     return `${mins}m`;
+  };
+
+  const exportarMateriasCSV = () => {
+    const rows = estadisticasMaterias.map(m => ({
+      materia: m.materia_nombre,
+      simulaciones: m.simulaciones_realizadas,
+      promedio_puntaje: m.promedio_puntaje,
+      mejor_puntaje: m.mejor_puntaje,
+      total_preguntas: m.total_preguntas,
+      preguntas_correctas: m.preguntas_correctas,
+      porcentaje_acierto: m.porcentaje_acierto,
+    }));
+    exportToCSV(rows, 'reportes_materias.csv');
+  };
+
+  const exportarProgresoCSV = () => {
+    const rows = progresoDiario.map(d => ({
+      fecha: new Date(d.fecha).toISOString().slice(0, 10),
+      promedio_puntaje: d.promedio_puntaje,
+      simulaciones: d.simulaciones,
+      tiempo_estudio_min: d.tiempo_estudio,
+    }));
+    exportToCSV(rows, 'reportes_progreso_diario.csv');
+  };
+
+  const exportarHistorialCSV = () => {
+    const rows = historial.map(h => ({
+      fecha_inicio: new Date(h.fecha_inicio).toISOString(),
+      materia: h.materia_nombre,
+      puntaje: h.puntuacion ?? 0,
+      duracion_minutos: h.duracion_minutos,
+      completada: h.completada ? 'Sí' : 'No',
+    }));
+    exportToCSV(rows, 'reportes_historial.csv');
   };
 
   if (loading) {
@@ -187,11 +222,17 @@ const ReportesPage: React.FC = () => {
       {/* Gráficos principales */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card title="Progreso Diario (Últimas 2 semanas)">
+          <div className="flex justify-end p-3">
+            <button onClick={exportarProgresoCSV} className="text-sm px-3 py-1.5 rounded bg-emerald-600 text-white hover:bg-emerald-700">Exportar CSV</button>
+          </div>
           <LineChart data={datosProgreso} height={300} />
         </Card>
         
         <Card title="Rendimiento por Materia">
-          <BarChart data={datosMaterias} height={300} />
+          <div className="flex justify-end p-3">
+            <button onClick={exportarMateriasCSV} className="text-sm px-3 py-1.5 rounded bg-emerald-600 text-white hover:bg-emerald-700">Exportar CSV</button>
+          </div>
+          <BarChart data={datosMaterias} height={260} />
         </Card>
       </div>
 
@@ -234,6 +275,9 @@ const ReportesPage: React.FC = () => {
       {/* Historial reciente */}
       {historial.length > 0 && (
         <Card title="Historial Reciente">
+          <div className="flex justify-end p-3">
+            <button onClick={exportarHistorialCSV} className="text-sm px-3 py-1.5 rounded bg-emerald-600 text-white hover:bg-emerald-700">Exportar CSV</button>
+          </div>
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>

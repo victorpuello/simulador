@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../ui/Card';
 import ConfirmacionSesionModal from '../ui/ConfirmacionSesionModal';
@@ -39,11 +39,11 @@ const SeleccionPrueba: React.FC<Props> = ({ onSeleccionarPrueba, isDocente = fal
   
   // Estado para modal de sesión activa
   const [mostrarModalSesion, setMostrarModalSesion] = useState(false);
-  const [sesionActivaDetalle, setSesionActivaDetalle] = useState<any>(null);
+  const [sesionActivaDetalle, setSesionActivaDetalle] = useState<{ id: number } | null>(null);
   const [accionPendiente, setAccionPendiente] = useState<{materia: number; cantidad_preguntas?: number; plantilla?: number} | null>(null);
 
   // Cargar materias disponibles
-  const cargarMaterias = async () => {
+  const cargarMaterias = useCallback(async () => {
     try {
       setLoading(true);
       const response = await simulacionService.getMateriasDisponibles();
@@ -59,11 +59,11 @@ const SeleccionPrueba: React.FC<Props> = ({ onSeleccionarPrueba, isDocente = fal
     } finally {
       setLoading(false);
     }
-  };
+  }, [addNotification]);
 
   useEffect(() => {
     cargarMaterias();
-  }, []);
+  }, [cargarMaterias]);
 
   // Obtener plantillas de la materia seleccionada
   const plantillasDisponibles = materiaSeleccionada 

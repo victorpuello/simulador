@@ -171,7 +171,7 @@ const PreguntaForm: React.FC<Props> = ({ pregunta, onSave, onCancel }) => {
         setFormData(prev => ({ ...prev, competencia: competenciaId }));
       }
     }
-  }, [competencias, pregunta]);
+  }, [competencias, pregunta, formData.competencia]);
 
   const cargarMaterias = async () => {
     try {

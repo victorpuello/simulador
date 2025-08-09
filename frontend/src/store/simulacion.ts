@@ -139,15 +139,13 @@ const useSimulacionStore = create<SimulacionState>((set, get) => ({
 
     set({ loading: true, error: null });
     try {
+      const pregunta = preguntasActuales[preguntaActualIndex];
       const params = {
         respuesta,
-        tiempo_respuesta: preguntasActuales[preguntaActualIndex].tiempo_estimado
-      };
+        tiempo_respuesta: pregunta.tiempo_estimado || 0,
+      } as Record<string, unknown>;
       
-      const sesionActualizada = await simulacionService.responderPregunta(
-        sesionActual.id,
-        params
-      );
+      const sesionActualizada = await simulacionService.responderPregunta(sesionActual.id as unknown as number, params);
 
       // Sincronizar respuestas desde backend para evitar discrepancias
       const respuestasServidor: RespuestaUsuario[] = (sesionActualizada.preguntas_sesion || [])

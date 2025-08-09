@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { 
   useSimulacionEstado, 
@@ -67,6 +67,7 @@ const SimulacionActiva: React.FC = () => {
   const [mostrarConfirmSalir, setMostrarConfirmSalir] = useState(false);
   const [mostrarImagen, setMostrarImagen] = useState(false);
   const [mostrarIndice, setMostrarIndice] = useState(false);
+  const respondiendoRef = useRef(false);
 
   // Pregunta actual
   const preguntaActual = preguntasActuales[preguntaActualIndex];
@@ -129,13 +130,128 @@ const SimulacionActiva: React.FC = () => {
     }
   }, [preguntaActual, mostrandoRetroalimentacion, preguntaYaRespondida, pausada]);
 
-  // (Opcional) Atajos de teclado desactivados para simplificar dependencias de hooks
+  // Atajos de teclado: navegación y respuesta rápida
+  useEffect(() => {
+    const isEditableTarget = (target: EventTarget | null): boolean => {
+      if (!(target instanceof HTMLElement)) return false;
+      const tag = target.tagName;
+      const editable = target.getAttribute('contenteditable');
+      return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || editable === 'true';
+    };
 
-  const handleResponder = async () => {
-    if (!respuestaSeleccionada || !preguntaActual) return;
+    const getLetraPorIndice = (index: number): string | null => {
+      if (!preguntaActual?.opciones) return null;
+      const letras = Object.keys(preguntaActual.opciones);
+      return letras[index] ?? null;
+    };
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.repeat) return; // evitar autorepeat al mantener la tecla
+      if (isEditableTarget(e.target)) return; // No interferir con campos de entrada
+
+      // Mapeo numérico 1-5 a opciones A-E (según orden en objeto)
+      if (/^[1-5]$/.test(e.key)) {
+        const idx = parseInt(e.key, 10) - 1;
+        const letra = getLetraPorIndice(idx);
+        if (letra) {
+          e.preventDefault();
+          setRespuestaSeleccionada(letra);
+          if (retroInmediata) {
+            // Si hay retro inmediata, responder de una con la letra elegida
+            handleResponder(letra);
+          }
+        }
+        return;
+      }
+
+      // Letras A-E directas
+      if (/^[a-eA-E]$/.test(e.key)) {
+        const letra = e.key.toUpperCase();
+        if (preguntaActual?.opciones && preguntaActual.opciones[letra]) {
+          e.preventDefault();
+          setRespuestaSeleccionada(letra);
+          if (retroInmediata) {
+            handleResponder(letra);
+          }
+        }
+        return;
+      }
+
+      switch (e.key) {
+        case 'Enter': {
+          if (!mostrandoRetroalimentacion) {
+            if (respuestaSeleccionada) {
+              e.preventDefault();
+              handleResponder(respuestaSeleccionada);
+            }
+          } else {
+            e.preventDefault();
+            handleSiguientePregunta();
+          }
+          break;
+        }
+        case 'ArrowRight': {
+          // Avanzar solo si ya se mostró retro o si la pregunta ya está respondida
+          const yaRespondida = preguntaYaRespondida || mostrandoRetroalimentacion;
+          if (yaRespondida) {
+            e.preventDefault();
+            handleSiguientePregunta();
+          }
+          break;
+        }
+        case 'ArrowLeft': {
+          if (preguntaActualIndex > 0) {
+            e.preventDefault();
+            handleAnteriorPregunta();
+          }
+          break;
+        }
+        case ' ': { // Space
+          e.preventDefault();
+          if (pausada) {
+            reanudarSimulacion();
+          } else {
+            pausarSimulacion();
+          }
+          break;
+        }
+        case 'i':
+        case 'I': {
+          e.preventDefault();
+          setMostrarIndice((prev) => !prev);
+          break;
+        }
+        case 'Escape': {
+          e.preventDefault();
+          if (mostrandoRetroalimentacion) {
+            setMostrandoRetroalimentacion(false);
+          } else {
+            setMostrarConfirmSalir(true);
+          }
+          break;
+        }
+        default:
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+    // Dependencies intencionalmente acotadas para evitar recrear el listener
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // Nota: omitimos dependencias que recrean funciones para mantener el listener estable
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [preguntaActual, preguntaActualIndex, respuestasActuales, preguntasActuales, preguntaYaRespondida, retroInmediata, mostrandoRetroalimentacion, pausada]);
+
+  const handleResponder = async (respuesta?: string) => {
+    const seleccion = respuesta ?? respuestaSeleccionada;
+    if (!seleccion || !preguntaActual) return;
+    if (respondiendoRef.current) return;
+    if (mostrandoRetroalimentacion || preguntaYaRespondida) return;
 
     try {
-      await responderPregunta(respuestaSeleccionada);
+      respondiendoRef.current = true;
+      await responderPregunta(seleccion);
       // Limpiar borrador de esa pregunta
       try {
         const draftRaw = localStorage.getItem('simulacion-draft');
@@ -149,9 +265,9 @@ const SimulacionActiva: React.FC = () => {
       
       // Mostrar retroalimentación
       setUltimaRespuesta({
-        seleccionada: respuestaSeleccionada,
+        seleccionada: seleccion,
         correcta: preguntaActual.respuesta_correcta,
-        esCorrecta: respuestaSeleccionada === preguntaActual.respuesta_correcta,
+        esCorrecta: seleccion === preguntaActual.respuesta_correcta,
         retroalimentacion: preguntaActual.retroalimentacion_estructurada,
         retroalimentacionPlano: preguntaActual.retroalimentacion,
         explicacionGeneral: preguntaActual.explicacion,
@@ -162,9 +278,9 @@ const SimulacionActiva: React.FC = () => {
       }
       
       addNotification({
-        type: respuestaSeleccionada === preguntaActual.respuesta_correcta ? 'success' : 'warning',
-        title: respuestaSeleccionada === preguntaActual.respuesta_correcta ? '¡Correcto!' : 'Incorrecto',
-        message: respuestaSeleccionada === preguntaActual.respuesta_correcta 
+        type: seleccion === preguntaActual.respuesta_correcta ? 'success' : 'warning',
+        title: seleccion === preguntaActual.respuesta_correcta ? '¡Correcto!' : 'Incorrecto',
+        message: seleccion === preguntaActual.respuesta_correcta 
           ? '¡Excelente respuesta!' 
           : 'No te preocupes, sigue practicando.',
         duration: 3000
@@ -177,6 +293,8 @@ const SimulacionActiva: React.FC = () => {
         message: 'No se pudo registrar la respuesta. Intenta nuevamente.',
         duration: 5000
       });
+    } finally {
+      respondiendoRef.current = false;
     }
   };
 
@@ -487,7 +605,7 @@ const SimulacionActiva: React.FC = () => {
                 {!preguntaYaRespondida ? (
                   <Button
                     variant="primary"
-                    onClick={handleResponder}
+                    onClick={() => handleResponder()}
                     disabled={!respuestaSeleccionada || loading || pausada}
                   >
                     {loading ? 'Guardando...' : 'Responder'}
